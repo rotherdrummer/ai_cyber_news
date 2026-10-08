@@ -1,0 +1,27 @@
+﻿id,name,developer,jurisdiction,weights,released,access,tier,cyber_evidence,evidence_url,updated
+deepseek-v4-1,DeepSeek V4.1 Flash / V4 Pro,DeepSeek,China,Open,,"Downloadable, MIT",Open flagship,V4-Pro put 4–7 months behind the closed frontier by AISI,https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber,2026-10-08
+fable-5-1,Claude Fable 5.1,Anthropic,United States,Closed,2026-09-01,"Public, with extra safeguards for biology, cyber and LLM R&D",Mythos-class,,,2026-10-08
+falcon,Falcon H1,Technology Innovation Institute (UAE),Sovereign programmes,Open,,Downloadable,Open flagship,,,2026-10-08
+gemini-3-8-flash,Gemini 3.8 Flash / Flash Cyber,Google DeepMind,United States,Closed,2026-09-02,Public,"Fast tier, with a cyber variant",,,2026-10-08
+gemini-4-argon,Gemini 4 Argon,Google DeepMind,United States,Closed,2026-09-30,Vetted cyber defenders only (Fairwind); no general date,Flagship,Shipped without cyber guardrails to vetted defenders,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08
+gemma,Gemma,Google DeepMind,United States,Open,,Downloadable,Open family,,,2026-10-08
+glm-5-3,GLM-5.3,Z.ai (Zhipu),China,Open,,Downloadable,Open flagship,Predecessor GLM-5.2 put 4–7 months behind the closed frontier by AISI,https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber,2026-10-08
+gpt-5-6-sol,GPT-5.6 Sol,OpenAI,United States,Closed,2026-07,Replaced in ChatGPT by GPT-6 Sol on 7 Oct 2026,Previous generation,78.5% on ExploitBench; supply-chain attacks in 6.3% of AISI simulations,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations,2026-10-08
+gpt-6-1-sol,GPT-6.1 Sol,OpenAI,United States,Closed,2026-09-29,"ChatGPT Work, Codex and API",Mid,,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08
+gpt-6-astra,GPT-6 Astra,OpenAI,United States,Closed,2026-09-03,Public; offensive tasks refused; looser access for vetted defenders via Daybreak,Flagship,Critical cyber threshold; 100% on ExploitBench with safeguards off; supply-chain attacks in 29.2% of AISI simulations,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations,2026-10-08
+gpt-6-luna,GPT-6 Luna,OpenAI,United States,Closed,2026-10-07,ChatGPT Free and Go,Free tier,"High cyber capability, below Critical (OpenAI); 44.66% on ExploitBench (self-reported)",https://deploymentsafety.openai.com/gpt-6-october,2026-10-08
+gpt-6-sol,GPT-6 Sol,OpenAI,United States,Closed,2026-10-07,"ChatGPT Plus, Pro, Business and Enterprise (chat); September version stays in Codex and ChatGPT Work",Flagship (ChatGPT),"High cyber capability, below Critical (OpenAI); 82.62% on ExploitBench (self-reported)",https://deploymentsafety.openai.com/gpt-6-october,2026-10-08
+gpt-oss,gpt-oss-120b / 20b,OpenAI,United States,Open,,Downloadable,OpenAI's only open model,,,2026-10-08
+grok-4-7,Grok 4.7,xAI,United States,Closed,,Public,Flagship,,,2026-10-08
+kimi-k3,Kimi K3,Moonshot AI,China,Open,2026-07,Downloadable,Open flagship,1 of 10 on AISI's simulated attack range,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities,2026-10-08
+lumen,Lumen Sovereign,Cosine (UK Sovereign AI),Sovereign programmes,Closed,,Due late 2026; air-gapped deployment,Sovereign frontier,"Training weighted towards cyber, financial compliance and clinical",,2026-10-08
+mai-thinking,MAI-Thinking-1,Microsoft AI,United States,Closed,,Public,Reasoning flagship,,,2026-10-08
+mimo,MiMo-V2.6-Pro,Xiaomi,China,Open,,Downloadable,Open flagship,,,2026-10-08
+mistral-large-3,Mistral Large 3,Mistral AI,Europe,Open,,"Downloadable, Apache 2.0",Flagship,,,2026-10-08
+mistral-large-4,Mistral Large 4,Mistral AI,Europe,Closed,2026-10-06,Guardrailed preview; weights promised by end of October,Flagship (preview),,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08
+muse-spark,Muse Spark 1.3,Meta,United States,Closed,,Public; closed since April 2026,Flagship,,,2026-10-08
+mythos-5-1,Claude Mythos 5.1,Anthropic,United States,Closed,2026-09-01,Restricted access,Gated cyber tier,Mythos 5 agents behind most of AISI's August incident report,https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing,2026-10-08
+mythos-preview,Claude Mythos Preview,Anthropic,United States,Closed,2026-04,Restricted (Project Glasswing),Earlier gated cyber model,6 of 10 on AISI's simulated attack range; 69% on ExploitBench,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities,2026-10-08
+opus-5-5,Claude Opus 5.5,Anthropic,United States,Closed,,Public,Flagship,METR pre-deployment evaluation published 22 Sep,https://metr.org/,2026-10-08
+qwen-3-8,Qwen3.8,Alibaba,China,Open,,Base weights downloadable; Qwen3.8-Max closed,Open flagship,,,2026-10-08
+sonnet-5-5,Claude Sonnet 5.5,Anthropic,United States,Closed,2026-09-28,Public,Workhorse,,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08

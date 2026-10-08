@@ -112,6 +112,23 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 .tscroll th,.tscroll td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--rule-soft)}
 .tscroll th{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
 .tscroll td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:12px}
+.tabs{display:flex;gap:0;margin-top:16px;border-bottom:1px solid var(--rule);overflow-x:auto}
+.tabs a{font-family:var(--f-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:10px 14px;color:var(--ink-2);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
+.tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+.vhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:20px 0 6px}
+.vhead h2{margin:0;font-family:var(--f-serif);font-size:24px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:10px;margin:12px 0}
+.note{background:var(--surface);border:1px solid var(--rule);padding:10px 12px;font-size:13px;color:var(--ink-2)}
+.note b{display:block;color:var(--ink);margin-bottom:2px}
+tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
+.w{display:inline-block;width:9px;height:9px;border:1.5px solid var(--ink);margin-right:6px;vertical-align:-1px}
+.w.closed{background:var(--ink)}
+.reg td,.reg th{min-width:128px}
+#modelRows td:nth-child(3),#modelRows td:nth-child(4){white-space:nowrap}
+.reg td.rowh{min-width:96px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);font-weight:600}
+.reg tr.ai td{background:var(--amber-bg)}
+.reg th small{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-family:var(--f-sans);font-size:11px;color:var(--ink-3)}
+.sources{margin-top:20px !important;border-top:0 !important;padding-top:0 !important}
 .empty{padding:24px;color:var(--ink-3);text-align:center}
 footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-family:var(--f-mono);font-size:11px;color:var(--ink-3);line-height:1.7}
 @media (max-width:560px){.item{grid-template-columns:1fr;gap:4px}.status{text-align:left}.count{margin-left:0}}
@@ -124,7 +141,11 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div><div class="eyebrow">Public AI cyber intelligence</div><h1>AI Cyber News</h1></div>
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
   </header>
+  <nav class="tabs" aria-label="Views">
+    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
+  </nav>
 
+  <div id="view-news">
   <section class="export" aria-labelledby="exp">
     <h2 id="exp">Download data for internal analysis</h2>
     <p>The same dataset this page shows, one row per item. Columns starting <code>tag_</code> are machine-assigned categories; every other column describes what the source reports.</p>
@@ -155,6 +176,9 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <div id="list"><div class="empty">Loading…</div></div>
 
+  </div>
+
+  <div id="view-sources" hidden>
   <section class="sources" id="sources" aria-labelledby="srch">
     <h2 id="srch">Sources used</h2>
     <p class="says">Every item is labelled <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Original source</b> (published by the organisation that did the work or holds the evidence) or <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Third-party report</b> (reported by someone else, used only where no original was found).</p>
@@ -164,6 +188,23 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="tscroll"><table><thead><tr><th>Date</th><th>Change</th><th>Why</th></tr></thead><tbody id="srcChanges"></tbody></table></div>
   </section>
 
+  </div>
+
+  <div id="view-models" hidden>
+    <div class="vhead"><h2>Frontier AI models</h2><div class="btns"><a class="btn" href="data/models.csv" download>Download CSV</a></div></div>
+    <p class="says">Who builds which models, under whose law, and whether the weights can be held in-house. Grouped by the jurisdiction that governs the developer. <span id="modelsUpdated"></span></p>
+    <div class="notes" id="modelNotes"></div>
+    <div class="seg" id="wfilter" role="group" aria-label="Weights" style="margin:6px 0 10px"></div>
+    <div class="tscroll"><table><thead><tr><th>Model</th><th>Developer</th><th>Weights</th><th>Released</th><th>Access</th><th>Published cyber evidence</th></tr></thead><tbody id="modelRows"></tbody></table></div>
+  </div>
+
+  <div id="view-regulation" hidden>
+    <div class="vhead"><h2>Regulatory landscape</h2><div class="btns"><a class="btn" href="data/regulation.csv" download>Download CSV</a></div></div>
+    <p class="says">AI, cyber and digital health assurance frameworks in the UK and EU, at a glance. For orientation, not legal advice; check current guidance before quoting.</p>
+    <div class="tscroll reg"><table><thead id="regHead"></thead><tbody id="regBody"></tbody></table></div>
+    <h3 style="margin:18px 0 6px;font-size:15px">Recent changes</h3>
+    <div class="tscroll"><table><thead><tr><th>Date</th><th>Framework</th><th>Change</th></tr></thead><tbody id="regChanges"></tbody></table></div>
+  </div>
   <footer>
     Every item links to its source; summaries describe what the source reports. Ratings, risk areas and themes are machine-assigned and can be wrong. Check the source before you quote anything.<br>
     Public sources only. Not an official product of any organisation.
@@ -242,13 +283,44 @@ function render(){
     list.appendChild(el("article",{cls:"item "+r.tag_rating,id:r.id},[el("div",{cls:"when",text:fmt(r.published)}),body]));
   });
 }
-function jump(id){area="";rag="";period="all";["q","type","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
+function jump(id){if(location.hash&&location.hash!=="#news"&&VIEWS.indexOf(location.hash.slice(1))>=0){history.replaceState(null,"","#news");showView()}area="";rag="";period="all";["q","type","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
 function renderSources(d){
   (d.principles||[]).forEach(function(t){$("principles").appendChild(el("li",{text:t}))});
   (d.categories||[]).forEach(function(c){var ul=el("ul");(c.sources||[]).forEach(function(x){var u=safe(x.url);ul.appendChild(el("li",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:x.name}):x.name,x.added?el("span",{cls:"added",text:"since "+fmt(x.added)+" "+x.added.slice(0,4)}):null]))});
     $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
   (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
 }
+var VIEWS=["news","models","regulation","sources"],modelsData=null,wf="";
+function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
+  VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
+  [].forEach.call(document.querySelectorAll(".tabs a"),function(a){if(a.getAttribute("data-v")===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});}
+function renderModels(){
+  var tb=$("modelRows");tb.textContent="";if(!modelsData)return;
+  var order=["United States","Europe","China","Sovereign programmes","Other"],cur=null;
+  modelsData.models.filter(function(m){return !wf||m.weights===wf}).sort(function(a,b){var ja=order.indexOf(a.jurisdiction),jb=order.indexOf(b.jurisdiction);if(ja!==jb)return ja-jb;if(a.developer!==b.developer)return a.developer<b.developer?-1:1;return (a.released||"")<(b.released||"")?1:-1}).forEach(function(m){
+    if(m.jurisdiction!==cur){cur=m.jurisdiction;tb.appendChild(el("tr",{cls:"grp"},[el("td",{colspan:"6",text:cur})]))}
+    var u=safe(m.evidence_url);
+    tb.appendChild(el("tr",null,[el("td",null,[el("b",{text:m.name}),m.tier?el("div",{cls:"pub",text:m.tier}):null]),el("td",{text:m.developer}),
+      el("td",null,[el("span",{cls:"w"+(m.weights==="Closed"?" closed":"")}),m.weights]),el("td",{text:m.released||"\u2013"}),el("td",{text:m.access}),
+      el("td",null,m.cyber_evidence?[m.cyber_evidence+" ",u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:"source"}):null]:["\u2013"])]));
+  });
+}
+function loadModels(d){modelsData=d;$("modelsUpdated").textContent=d.updated?"Last change "+d.updated+".":"";
+  (d.notes||[]).forEach(function(n){$("modelNotes").appendChild(el("div",{cls:"note"},[el("b",{text:n.title}),n.text]))});
+  ["","Closed","Open"].forEach(function(v){var b=el("button",{type:"button","data-v":v},[v?el("span",{cls:"w"+(v==="Closed"?" closed":"")}):null,(v?v+" weights":"All")]);b.addEventListener("click",function(){wf=v;[].forEach.call($("wfilter").children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});renderModels()});$("wfilter").appendChild(b)});
+  $("wfilter").firstChild.setAttribute("aria-pressed","true");renderModels();}
+function loadRegulation(d){
+  var fw=d.frameworks||[];var rows=[["What","what"],["Legal force","legal"],["Risk classes","risk"],["Applies to","applies"],["Focus","focus"],["Regulator / owner","owner"],["Teeth","teeth"],["AI angle","ai"],["Current status","status"]];
+  $("regHead").appendChild(el("tr",null,[el("th",{text:""})].concat(fw.map(function(f){return el("th",null,[f.name,el("small",{text:f.sub||""})])}))));
+  rows.forEach(function(r){$("regBody").appendChild(el("tr",{cls:r[1]==="ai"?"ai":""},[el("td",{cls:"rowh",text:r[0]})].concat(fw.map(function(f){
+    if(r[1]==="status"){var u=safe(f.statusUrl);return el("td",null,[(f.status||"")+" ",u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:"source"}):null,f.statusDate?el("div",{cls:"pub",text:"as of "+f.statusDate}):null])}
+    return el("td",{text:f[r[1]]||""})}))))});
+  var ch=[];fw.forEach(function(f){(f.changes||[]).forEach(function(c){ch.push({date:c.date,fw:f.name,text:c.text,url:c.url})})});
+  ch.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){var u=safe(c.url);$("regChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.fw}),el("td",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:c.text}):c.text])]))});
+}
+window.addEventListener("hashchange",showView);showView();
+fetch("data/models.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadModels).catch(function(){});
+fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadRegulation).catch(function(){});
 function build(){
   PERIODS.forEach(function(p){var b=el("button",{type:"button","data-v":p[0]},[p[1]+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){period=p[0];render()});$("periods").appendChild(b)});
   [""].concat(RAGS).forEach(function(v){var b=el("button",{type:"button","data-v":v},[v?el("span",{cls:"dot "+v}):null,(v||"All")+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){rag=v;render()});$("rags").appendChild(b)});
@@ -265,7 +337,7 @@ fetch("data/items.json",{cache:"no-store"}).then(function(r){return r.json()}).t
   fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){$("qlinks").appendChild(el("a",{cls:"btn",href:p.file,download:"",text:p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2")+" CSV"}))})}).catch(function(){});
   fetch("data/sources.json",{cache:"no-store"}).then(function(r){return r.json()}).then(renderSources).catch(function(){});
   build();render();
-  if(location.hash&&byId[location.hash.slice(1)])jump(location.hash.slice(1));
+  var h0=location.hash.slice(1);if(h0&&byId[h0]){history.replaceState(null,"","#news");showView();jump(h0)}
 }).catch(function(){$("list").textContent="";$("list").appendChild(el("div",{cls:"empty",text:"The data didn't load. Reload the page to try again."}))});
 })();
 </script>

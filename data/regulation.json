@@ -1,0 +1,146 @@
+{
+ "updated": "2026-10-08",
+ "frameworks": [
+  {
+   "ai": "AI systems are in scope as part of essential services",
+   "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
+   "changes": [
+    {
+     "date": "2026-10-08",
+     "text": "Lords Report stage scheduled for 26 October (provisional)",
+     "url": "https://bills.parliament.uk/bills/4035/stages"
+    },
+    {
+     "date": "2026-09-07",
+     "text": "Bill amended in Lords Grand Committee",
+     "url": "https://bills.parliament.uk/bills/4035"
+    },
+    {
+     "date": "2026-07-21",
+     "text": "DSIT broken up; departmental home for cyber policy and the Bill not yet confirmed",
+     "url": "https://www.ukauthority.com/articles/dsit-scrapped-as-burnham-government-reshapes-whitehall-tech-functions"
+    }
+   ],
+   "focus": "Keeping essential services running; incident reporting",
+   "legal": "Statutory",
+   "name": "NIS / CSRB",
+   "order": 1,
+   "owner": "DHSC (delegated to NHS England) + NCSC",
+   "risk": "None; scope depends on sector and size thresholds",
+   "status": "CSR Bill amended in Lords Grand Committee; Lords Report stage scheduled for 26 October 2026 (provisional)",
+   "statusDate": "2026-10-08",
+   "statusUrl": "https://bills.parliament.uk/bills/4035/stages",
+   "sub": "Network & Information Systems",
+   "teeth": "Fines of up to £17m today, raised under the CSRB",
+   "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",
+   "id": "nis-csrb"
+  },
+  {
+   "ai": "Main purpose; Article 15 covers cybersecurity. A medical device needing a notified body (Class IIa and above) counts as high-risk AI",
+   "applies": "AI providers and deployers placing AI on the EU market or whose outputs are used in the EU",
+   "changes": [
+    {
+     "date": "2026-07-01",
+     "text": "AI Omnibus formally adopted, deferring high-risk deadlines",
+     "url": "https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/"
+    }
+   ],
+   "focus": "AI safety, transparency, robustness and cybersecurity",
+   "legal": "Statutory (EU)",
+   "name": "EU AI Act",
+   "order": 2,
+   "owner": "EU AI Office + national authorities",
+   "risk": "Prohibited / high / limited / minimal risk",
+   "status": "AI Omnibus adopted: standalone high-risk obligations apply from 2 Dec 2027, product-embedded from 2 Aug 2028",
+   "statusDate": "2026-07-01",
+   "statusUrl": "https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/",
+   "sub": "Regulation (EU) 2024/1689",
+   "teeth": "Fines of up to €35m or 7% of global turnover",
+   "what": "EU law regulating AI by risk level",
+   "id": "eu-ai-act"
+  },
+  {
+   "ai": "Main route for approving clinical AI (plus the AI Airlock sandbox). Much AI software is still Class I and self-declared; planned reforms would move it to IIa or higher",
+   "applies": "Makers of medical devices, incl. software and AI",
+   "changes": [
+    {
+     "date": "2026-09-10",
+     "text": "National Commission into the Regulation of AI in Healthcare publishes recommendations; government response to follow",
+     "url": "https://www.gov.uk/government/publications/national-commission-into-the-regulation-of-ai-in-healthcare-recommendations-for-a-future-regulatory-framework"
+    },
+    {
+     "date": "2026-10-06",
+     "text": "Government accepts all 44 recommendations; Programme Board to oversee delivery; implementation roadmap by spring 2027; AI Airlock Phase 3 opens",
+     "url": "https://www.gov.uk/government/news/government-backs-recommendations-of-nhs-doctors-led-ai-commission"
+    }
+   ],
+   "focus": "Clinical safety and performance of devices",
+   "legal": "Statutory (UK MDR 2002)",
+   "name": "MHRA",
+   "order": 3,
+   "owner": "MHRA",
+   "risk": "Class I (self-declared), IIa, IIb, III (Approved Body review)",
+   "status": "Government accepted all 44 National Commission recommendations on 6 Oct. MHRA draft guidance on changes to AI-enabled devices due by December 2026; consultation on AI device qualification and classification in 2027. Medical Devices (Amendment) Regulations 2026 adoption still anticipated December 2026",
+   "statusDate": "2026-10-06",
+   "statusUrl": "https://www.gov.uk/government/publications/government-response-to-the-national-commissions-recommendations-on-the-regulation-of-ai-in-healthcare",
+   "sub": "Medical devices incl. SaMD / AIaMD",
+   "teeth": "Market withdrawal, prosecution",
+   "what": "UK regulator for medical devices, including software and AI as a medical device",
+   "id": "mhra"
+  },
+  {
+   "ai": "Main NHS control for clinical AI risk at deployment, incl. non-device AI such as ambient scribes",
+   "applies": "Suppliers (0129) and NHS / care organisations (0160) of any health IT",
+   "changes": [],
+   "focus": "Patient-safety hazards: Clinical Safety Officer, hazard log, safety case",
+   "legal": "Mandatory information standards (s250 Health and Social Care Act 2012)",
+   "name": "DCB0129 / DCB0160",
+   "order": 4,
+   "owner": "NHS England",
+   "risk": "None fixed; each hazard scored by severity × likelihood",
+   "status": "Standards under review; consultation closed 11 September 2026, outcome awaited",
+   "statusDate": "2026-09-11",
+   "statusUrl": "",
+   "sub": "Clinical risk management",
+   "teeth": "Non-compliance with a legal standard; CQC and assurance findings",
+   "what": "Clinical risk management standards for health IT: DCB0129 for manufacturers, DCB0160 for deploying organisations",
+   "id": "dcb"
+  },
+  {
+   "ai": "Covers AI where it touches patient data",
+   "applies": "Any organisation accessing NHS patient data or systems",
+   "changes": [],
+   "focus": "Data security and protection, now aligned to the CAF",
+   "legal": "Mandatory by contract and policy",
+   "name": "DSPT",
+   "order": 5,
+   "owner": "NHS England",
+   "risk": "None",
+   "status": "No change recorded since the dashboard started",
+   "statusDate": "2026-10-08",
+   "statusUrl": "",
+   "sub": "Data Security & Protection Toolkit",
+   "teeth": "Loss of access, audit findings",
+   "what": "NHS annual self-assessment of data security",
+   "id": "dspt"
+  },
+  {
+   "ai": "Screens AI products before purchase; checks DCB0129 evidence",
+   "applies": "Suppliers of digital health tech to the NHS",
+   "changes": [],
+   "focus": "Clinical safety, data protection, technical security, interoperability, usability",
+   "legal": "Expected in procurement, not law",
+   "name": "DTAC",
+   "order": 6,
+   "owner": "NHS England",
+   "risk": "None",
+   "status": "DTAC v2.0 in effect since April 2025",
+   "statusDate": "2026-10-08",
+   "statusUrl": "",
+   "sub": "Digital Technology Assessment Criteria",
+   "teeth": "Supplier not procured",
+   "what": "NHS baseline criteria for buying digital health tech",
+   "id": "dtac"
+  }
+ ]
+}
