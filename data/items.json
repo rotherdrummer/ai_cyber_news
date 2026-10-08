@@ -21,9 +21,15 @@
    "machine-assigned tags": [
     "tag_risk_area",
     "tag_themes",
-    "tag_significant",
+    "tag_rating",
+    "tag_rating_reason",
     "related_ids"
    ]
+  },
+  "rating_criteria": {
+   "Red": "Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation results; or an authoritative warning that the threat has materially changed.",
+   "Amber": "A significant change that may matter soon: notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
+   "Green": "Background: evaluation methods, general research, routine releases without cyber evidence, and commentary."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."
  },
@@ -43,8 +49,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-1d5e9140f9",
@@ -61,8 +68,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": "wf-c05d9dadad"
+   "related_ids": "wf-c05d9dadad",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-f61b399e6c",
@@ -79,8 +87,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": "wf-c05d9dadad"
+   "related_ids": "wf-c05d9dadad",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-5d326920eb",
@@ -97,8 +106,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": "wf-c05d9dadad"
+   "related_ids": "wf-c05d9dadad",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-c05d9dadad",
@@ -115,8 +125,9 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;vulnerability-research;evaluation;health",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-24ea6cb285",
@@ -133,8 +144,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": "wf-c05d9dadad"
+   "related_ids": "wf-c05d9dadad",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-8b89c15bf0",
@@ -151,8 +163,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": "wf-c05d9dadad"
+   "related_ids": "wf-c05d9dadad",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-18a374a12b",
@@ -169,8 +182,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;open-weight",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-61aec3d6a2",
@@ -187,8 +201,9 @@
    "health_named": "Yes",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "guidance;regulation;health;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-ecf45a9e28",
@@ -205,8 +220,9 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "defender-access;health;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-e259723d62",
@@ -223,8 +239,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d31908868f",
@@ -241,8 +258,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-8fa7fac43f",
@@ -259,8 +277,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d0b88eb41c",
@@ -277,8 +296,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;defender-access;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-9163d85095",
@@ -295,8 +315,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-15d590cef9",
@@ -313,8 +334,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;supply-chain",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-06dedcddfc",
@@ -331,8 +353,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-4c0e977247",
@@ -349,8 +372,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": "wf-15d590cef9"
+   "related_ids": "wf-15d590cef9",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-6bf6e31b61",
@@ -367,8 +391,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": "wf-15d590cef9"
+   "related_ids": "wf-15d590cef9",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-1b4dfb2201",
@@ -385,8 +410,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": "wf-15d590cef9"
+   "related_ids": "wf-15d590cef9",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-edb6d33071",
@@ -403,8 +429,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-74fe088e6f",
@@ -421,8 +448,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-4c1b1f6e92",
@@ -439,8 +467,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-3bf5b69e6f",
@@ -457,8 +486,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-c4a030d5c2",
@@ -475,8 +505,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-43c2f2e1c1",
@@ -493,8 +524,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;threat-actor-reporting;regulation;threat-actor-reporting",
-   "tag_significant": "No",
-   "related_ids": "wf-e7f1c4ad8d"
+   "related_ids": "wf-e7f1c4ad8d",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-31439593f1",
@@ -511,8 +543,9 @@
    "health_named": "Yes",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation;health;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d9655ec9bb",
@@ -529,8 +562,9 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;threat-actor-reporting;regulation;health;threat-actor-reporting",
-   "tag_significant": "Yes",
-   "related_ids": "wf-e7f1c4ad8d"
+   "related_ids": "wf-e7f1c4ad8d",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-e7f1c4ad8d",
@@ -547,8 +581,9 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;agents;threat-actor-reporting;health",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-ffbdf687a0",
@@ -565,8 +600,9 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;agents;incident;threat-actor-reporting;regulation;health;threat-actor-reporting",
-   "tag_significant": "Yes",
-   "related_ids": "wf-e7f1c4ad8d"
+   "related_ids": "wf-e7f1c4ad8d",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-4842ced313",
@@ -583,8 +619,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
-   "tag_significant": "No",
-   "related_ids": "wf-e7f1c4ad8d"
+   "related_ids": "wf-e7f1c4ad8d",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-0b67388ebc",
@@ -601,8 +638,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "guidance",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d6f61b80d2",
@@ -619,8 +657,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
-   "tag_significant": "No",
-   "related_ids": "wf-9f412cd575"
+   "related_ids": "wf-9f412cd575",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-9f412cd575",
@@ -637,8 +676,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;supply-chain",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-63b57d4e85",
@@ -655,8 +695,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d15c6287be",
@@ -673,8 +714,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-04030eaac0",
@@ -691,8 +733,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-8c5ed0ec9a",
@@ -709,8 +752,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-2ba2cfa1c5",
@@ -727,8 +771,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;vulnerability-research",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-eb1f3189b9",
@@ -745,8 +790,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-ff556930fd",
@@ -763,8 +809,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-57a310d332",
@@ -781,8 +828,9 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "regulation;landscape-change",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-4392971e2f",
@@ -799,8 +847,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-a7877d617b",
@@ -817,8 +866,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-8a6561ba2a",
@@ -835,8 +885,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-17ac340a1a",
@@ -853,8 +904,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "incident",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-8e0f840d23",
@@ -871,8 +923,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-bd74d15fe9",
@@ -889,8 +942,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;defender-access;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-3a71128fd6",
@@ -907,8 +961,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-322addcca2",
@@ -925,8 +980,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "vulnerability-research;incident;regulation",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-3c903e68d2",
@@ -943,8 +999,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;agents;incident",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-188d1bbbc2",
@@ -961,8 +1018,9 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "model-release;guidance;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-9f9513236f",
@@ -979,8 +1037,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;evaluation;open-weight",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-8c738c9baf",
@@ -997,8 +1056,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-5df9e0e374",
@@ -1015,8 +1075,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;open-weight",
-   "tag_significant": "No",
-   "related_ids": "wf-9f9513236f"
+   "related_ids": "wf-9f9513236f",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-14de46a77f",
@@ -1033,8 +1094,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;agents;incident",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-1d538b7247",
@@ -1051,8 +1113,9 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "regulation;landscape-change",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-3c32233960",
@@ -1069,8 +1132,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-34e3dbeb90",
@@ -1087,8 +1151,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;open-weight",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-203b7c8f72",
@@ -1105,8 +1170,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident"
   },
   {
    "id": "wf-7e8b5eef48",
@@ -1123,8 +1189,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-ac689e8c63",
@@ -1141,8 +1208,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-ba8edb0ede",
@@ -1159,8 +1227,9 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "model-release;regulation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-9119080067",
@@ -1177,8 +1246,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "incident;guidance",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-2c621cc48f",
@@ -1195,8 +1265,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-1f0811be0f",
@@ -1213,8 +1284,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-4c802253bb",
@@ -1231,8 +1303,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-a549140237",
@@ -1249,8 +1322,9 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-ee85ea1a75",
@@ -1267,8 +1341,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;regulation",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-d69455fd2c",
@@ -1285,8 +1360,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "tag_significant": "No",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background"
   },
   {
    "id": "wf-83992c1d01",
@@ -1303,8 +1379,9 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "agents;guidance",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-37fba4498a",
@@ -1321,8 +1398,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;agents",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-eaa3a64265",
@@ -1339,8 +1417,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research",
-   "tag_significant": "Yes",
-   "related_ids": ""
+   "related_ids": "",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Material change in threat or agent behaviour"
   },
   {
    "id": "wf-8468b9ca97",
@@ -1357,8 +1436,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": "wf-9f9513236f"
+   "related_ids": "wf-9f9513236f",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   },
   {
    "id": "wf-6e797ad503",
@@ -1375,8 +1455,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation",
-   "tag_significant": "No",
-   "related_ids": "wf-9f9513236f"
+   "related_ids": "wf-9f9513236f",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch"
   }
  ]
 }

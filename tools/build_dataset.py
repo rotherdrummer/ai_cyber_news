@@ -68,6 +68,25 @@ PUB_OVERRIDE = {
 def pid(*parts):
     return "wf-" + hashlib.sha1("|".join(parts).encode()).hexdigest()[:10]
 
+
+# ---- RAG rating: potential importance, machine-assigned with fixed, published criteria ----
+RAG_CRITERIA = {
+ "Red": "Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation results; or an authoritative warning that the threat has materially changed.",
+ "Amber": "A significant change that may matter soon: notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
+ "Green": "Background: evaluation methods, general research, routine releases without cyber evidence, and commentary.",
+}
+RED_KEYS = ["intrusion","breach","Hugging Face","unsanctioned agent","Countering misuse","Threat Tracker","rated Critical",
+            "performs unsanctioned supply-chain","accelerating vulnerability discovery","ExploitBench: GPT-6 Astra","AISI unsanctioned supply-chain attacks: GPT-6 Astra"]
+GREEN_KEYS = ["Item response theory","optimal stopping","Optimal stopping","Transect","Prefill awareness","lie detectors","RealityTest",
+              "preferences predict","Control Red Team","lawsuit","Export controls","UK AI Bill","Sonnet 5.5","Mistral Large 4",
+              "pre-deployment evaluation","supply-chain attacks: GPT-5.5","Claude Opus 4.7"]
+def rag(rec):
+    t = rec["title"]
+    if rec["item_type"] in ("Incident","Threat finding"): return "Red","Real-world malicious activity or incident"
+    if any(k.lower() in t.lower() for k in RED_KEYS): return "Red","Material change in threat or agent behaviour"
+    if any(k.lower() in t.lower() for k in GREEN_KEYS): return "Green","Background"
+    return "Amber","Significant change to watch"
+
 items = []
 report_ids = {}
 for f in sorted(glob.glob(os.path.join(DB, "register", "*.json"))):
@@ -118,6 +137,10 @@ for f in sorted(glob.glob(os.path.join(DB, "evidence", "*.json"))):
         "tag_themes":";".join(["evaluation"]+(["open-weight"] if e.get("weights")=="open" else [])+(["vulnerability-research"] if "exploit" in e["test"].lower() or "sec-bench" in e["test"].lower() else [])),
         "tag_significant":"No","related_ids":parent})
 
+for r in items:
+    r["tag_rating"], r["tag_rating_reason"] = rag(r)
+    r.pop("tag_significant", None)
+
 # de-duplicate exact ids, newest first
 seen=set(); uniq=[]
 for r in sorted(items, key=lambda r:(r["published"], r["title"]), reverse=True):
@@ -126,11 +149,11 @@ for r in sorted(items, key=lambda r:(r["published"], r["title"]), reverse=True):
 items = uniq
 
 COLS = ["id","published","collected","item_type","title","publisher","url","source_type","source_says","key_findings",
-        "evidence_links","health_named","tag_risk_area","tag_themes","tag_significant","related_ids"]
+        "evidence_links","health_named","tag_risk_area","tag_themes","tag_rating","tag_rating_reason","related_ids"]
 
 os.makedirs(os.path.join(OUT,"data"), exist_ok=True)
 meta = {"name":"Watchfloor public AI cyber intelligence dataset","updated":COLLECTED,"item_count":len(items),
-        "fields":{"source fields":COLS[:12],"machine-assigned tags":["tag_risk_area","tag_themes","tag_significant","related_ids"]},
+        "fields":{"source fields":COLS[:12],"machine-assigned tags":["tag_risk_area","tag_themes","tag_rating","tag_rating_reason","related_ids"]},"rating_criteria":RAG_CRITERIA,
         "note":"Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."}
 json.dump({"meta":meta,"items":items}, open(os.path.join(OUT,"data","items.json"),"w"), ensure_ascii=False, indent=1)
 
@@ -144,4 +167,4 @@ for r in items:
 for q,rows in quarters.items(): write_csv(os.path.join(OUT,"data",f"{q}.csv"), rows)
 print(len(items),"items;", {q:len(r) for q,r in sorted(quarters.items())})
 from collections import Counter
-print(Counter(r["tag_risk_area"] for r in items)); print(Counter(r["source_type"] for r in items))
+print(Counter(r["tag_risk_area"] for r in items)); print(Counter(r["tag_rating"] for r in items)); print(Counter(r["source_type"] for r in items))

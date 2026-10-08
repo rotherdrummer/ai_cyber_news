@@ -15,6 +15,6 @@ A public-source dataset of AI and cyber security intelligence, and a static dash
 
 Columns describing the source: `id`, `published`, `collected`, `item_type`, `title`, `publisher`, `url`, `source_type` (Primary or Secondary), `source_says`, `key_findings`, `evidence_links`, `health_named`.
 
-Machine-assigned categorisation (not findings): `tag_risk_area`, `tag_themes`, `tag_significant`, `related_ids`.
+Machine-assigned categorisation (not findings): `tag_risk_area`, `tag_themes`, `tag_rating` (Red, Amber, Green), `tag_rating_reason`, `related_ids`. The rating criteria are in `data/items.json` under `meta.rating_criteria`.
 
 Risk areas: AI-enabled cyber threats, Autonomous AI risk, Secure AI adoption, Cross-cutting.
