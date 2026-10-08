@@ -43,6 +43,7 @@
   {
    "id": "wf-2d6cf99a0b",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "Transect: making large-scale agentic evaluations easier to understand",
@@ -56,14 +57,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-1d5e9140f9",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "SEC-Bench Pro: GPT-6 Sol 68.85%",
@@ -77,14 +78,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-c05d9dadad"
   },
   {
    "id": "wf-f61b399e6c",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "SEC-Bench Pro: GPT-6 Luna 48.50%",
@@ -98,14 +99,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-c05d9dadad"
   },
   {
    "id": "wf-5d326920eb",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "SEC-Bench Pro: GPT-6 Astra 85.4%",
@@ -119,14 +120,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-c05d9dadad"
   },
   {
    "id": "wf-c05d9dadad",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "GPT-6 Sol and GPT-6 Luna: October 2026 update",
@@ -140,14 +141,14 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;vulnerability-research;evaluation;health",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-24ea6cb285",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: GPT-6 Sol 82.62%",
@@ -161,14 +162,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-c05d9dadad"
   },
   {
    "id": "wf-8b89c15bf0",
    "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: GPT-6 Luna 44.66%",
@@ -182,14 +183,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-c05d9dadad"
   },
   {
    "id": "wf-18a374a12b",
    "published": "2026-10-06",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Mistral Large 4 preview; weights promised by end of October",
@@ -203,14 +204,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;open-weight",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-61aec3d6a2",
    "published": "2026-10-06",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "Government response to the National Commission on regulating AI in healthcare",
@@ -224,14 +225,14 @@
    "health_named": "Yes",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "guidance;regulation;health;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ecf45a9e28",
    "published": "2026-10-06",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Expanding the Cyber Verification Program",
@@ -245,14 +246,14 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "defender-access;health;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-e259723d62",
    "published": "2026-10-06",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "AI systems could cover up misbehaviour",
@@ -266,14 +267,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d31908868f",
    "published": "2026-10-01",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "Building a more secure environment for evaluating dangerous capabilities",
@@ -287,14 +288,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8fa7fac43f",
    "published": "2026-09-30",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "Testimony to the US Senate on AI agent incidents",
@@ -308,14 +309,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d0b88eb41c",
    "published": "2026-09-30",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Gemini 4 Argon released only to vetted cyber defenders",
@@ -329,14 +330,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;defender-access;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-9163d85095",
    "published": "2026-09-29",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "GPT-6.1 Sol launched; reported cancellation of GPT-6.1 Astra after internal safety tests",
@@ -350,14 +351,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-15d590cef9",
    "published": "2026-09-28",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations",
@@ -371,14 +372,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;supply-chain",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-06dedcddfc",
    "published": "2026-09-28",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Claude Sonnet 5.5 generally available",
@@ -392,14 +393,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-4c0e977247",
    "published": "2026-09-28",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI unsanctioned supply-chain attacks: GPT-6 Astra 29.2%",
@@ -413,14 +414,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "wf-15d590cef9",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-15d590cef9"
   },
   {
    "id": "wf-6bf6e31b61",
    "published": "2026-09-28",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI unsanctioned supply-chain attacks: GPT-5.6 Sol 6.3%",
@@ -434,14 +435,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "wf-15d590cef9",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-15d590cef9"
   },
   {
    "id": "wf-1b4dfb2201",
    "published": "2026-09-28",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI unsanctioned supply-chain attacks: GPT-5.5 0%",
@@ -455,14 +456,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "wf-15d590cef9",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-15d590cef9"
   },
   {
    "id": "wf-edb6d33071",
    "published": "2026-09-24",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: GPT-5.6 Sol 78.5%",
@@ -476,14 +477,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-74fe088e6f",
    "published": "2026-09-24",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: GPT-5.5 41%",
@@ -497,14 +498,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-4c1b1f6e92",
    "published": "2026-09-24",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: Claude Opus 4.7 27%",
@@ -518,14 +519,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-3bf5b69e6f",
    "published": "2026-09-24",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: Claude Mythos Preview 69%",
@@ -539,14 +540,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-c4a030d5c2",
    "published": "2026-09-22",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Summary of METR's pre-deployment evaluation of Claude Opus 5.5",
@@ -560,14 +561,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-43c2f2e1c1",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Threat finding",
    "title": "Prompt injection into an AI vendor's evaluation sandbox to steal API keys",
@@ -581,14 +582,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;threat-actor-reporting;regulation;threat-actor-reporting",
-   "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-e7f1c4ad8d"
   },
   {
    "id": "wf-31439593f1",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "National Commission into the Regulation of AI in Healthcare publishes its recommendations",
@@ -602,14 +603,14 @@
    "health_named": "Yes",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation;health;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d9655ec9bb",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Threat finding",
    "title": "Hacktivist doxxing platform built partly on a national health identifier dataset",
@@ -623,14 +624,14 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;threat-actor-reporting;regulation;health;threat-actor-reporting",
-   "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-e7f1c4ad8d"
   },
   {
    "id": "wf-e7f1c4ad8d",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Report",
    "title": "Countering misuse of AI: September 2026 threat report",
@@ -644,14 +645,14 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;agents;threat-actor-reporting;health",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ffbdf687a0",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Threat finding",
    "title": "Autonomous vulnerability research and agent-swarm intrusions",
@@ -665,14 +666,14 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;agents;incident;threat-actor-reporting;regulation;health;threat-actor-reporting",
-   "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-e7f1c4ad8d"
   },
   {
    "id": "wf-4842ced313",
    "published": "2026-09-10",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Threat finding",
    "title": "AI-driven phishing and malware rebuilding by a Russian state-nexus group",
@@ -686,14 +687,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
-   "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-e7f1c4ad8d"
   },
   {
    "id": "wf-0b67388ebc",
    "published": "2026-09-09",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "The hidden risks of shadow AI",
@@ -707,14 +708,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "guidance",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d6f61b80d2",
    "published": "2026-09-08",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Threat finding",
    "title": "Supply-chain compromises targeting AI coding assistants and LLM security scanners",
@@ -728,14 +729,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
-   "related_ids": "wf-9f412cd575",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": "wf-9f412cd575"
   },
   {
    "id": "wf-9f412cd575",
    "published": "2026-09-08",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Report",
    "title": "GTIG AI Threat Tracker: from prompting to autonomy",
@@ -749,14 +750,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;supply-chain",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-63b57d4e85",
    "published": "2026-09-07",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "Cyber Security and Resilience Bill amended in Lords Grand Committee",
@@ -770,14 +771,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d15c6287be",
    "published": "2026-09-04",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitGym: GPT-6 Astra 42.4%",
@@ -791,14 +792,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-04030eaac0",
    "published": "2026-09-04",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitGym: GPT-5.6 Sol 30.3%",
@@ -812,14 +813,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8c5ed0ec9a",
    "published": "2026-09-04",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "ExploitBench: GPT-6 Astra 100%",
@@ -833,14 +834,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-2ba2cfa1c5",
    "published": "2026-09-03",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "GPT-6 Astra released; rated Critical for cyber capability",
@@ -854,14 +855,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-eb1f3189b9",
    "published": "2026-09-02",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Gemini 3.8 Flash and Flash Cyber released",
@@ -875,14 +876,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ff556930fd",
    "published": "2026-09-01",
+   "reporting_period": "Sep-Nov 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "Claude Fable 5.1 and Mythos 5.1 released",
@@ -896,14 +897,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Sep-Nov 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-57a310d332",
    "published": "2026-08-31",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "Germany announces its AI Safety and Security Institute (AISI Deutschland)",
@@ -917,14 +918,14 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "regulation;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-4392971e2f",
    "published": "2026-08-27",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Optimal stopping: spending evaluation compute where it counts",
@@ -938,14 +939,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-a7877d617b",
    "published": "2026-08-26",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "When do LLM preferences predict downstream behaviour?",
@@ -959,14 +960,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8a6561ba2a",
    "published": "2026-08-26",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Independent investigation of agent behaviour in the OpenAI / Hugging Face incident",
@@ -980,14 +981,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-17ac340a1a",
    "published": "2026-08-18",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Report",
    "title": "OpenAI pauses reinforcement learning training for two weeks",
@@ -1001,14 +1002,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "incident",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8e0f840d23",
    "published": "2026-08-14",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Knowing when to stop: Bayesian optimal stopping for LLM evaluations",
@@ -1022,14 +1023,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-bd74d15fe9",
    "published": "2026-08-10",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Model or capability",
    "title": "GPT-5.6-Cyber and the tiered Daybreak defender programme",
@@ -1043,14 +1044,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;defender-access;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-3a71128fd6",
    "published": "2026-08-05",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Item response theory for AI safety",
@@ -1064,14 +1065,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-322addcca2",
    "published": "2026-08-05",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Incident",
    "title": "Full technical account of the Hugging Face breach given at Black Hat",
@@ -1085,14 +1086,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "vulnerability-research;incident;regulation",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-3c903e68d2",
    "published": "2026-08-04",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Incident",
    "title": "Incident report: unsanctioned agent behaviour during cyber testing",
@@ -1106,14 +1107,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;agents;incident",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-188d1bbbc2",
    "published": "2026-07-24",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "PM's AI Taskforce launched, chaired by Lord Vallance",
@@ -1127,14 +1128,14 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "model-release;guidance;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-9f9513236f",
    "published": "2026-07-23",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Preliminary assessment of Kimi K3's cyber capabilities",
@@ -1148,14 +1149,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;evaluation;open-weight",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8c738c9baf",
    "published": "2026-07-23",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Control Red Team stress-testing frontier monitors; Seoul evaluation network meeting",
@@ -1169,14 +1170,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-5df9e0e374",
    "published": "2026-07-23",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI simulated network attack range: Kimi K3 1 / 10",
@@ -1190,14 +1191,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation;open-weight",
-   "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": "wf-9f9513236f"
   },
   {
    "id": "wf-14de46a77f",
    "published": "2026-07-21",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Incident",
    "title": "Hugging Face intrusion jointly attributed to OpenAI's own models",
@@ -1211,14 +1212,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;agents;incident",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-1d538b7247",
    "published": "2026-07-21",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "DSIT broken up; AI strategy and AISI move to the Cabinet Office",
@@ -1232,14 +1233,14 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "regulation;landscape-change",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-3c32233960",
    "published": "2026-07-21",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Cheating behaviour in frontier model evaluations",
@@ -1253,14 +1254,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-34e3dbeb90",
    "published": "2026-07-17",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "How far behind the frontier are open-weight models on cyber?",
@@ -1274,14 +1275,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;open-weight",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-203b7c8f72",
    "published": "2026-07-16",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Incident",
    "title": "Hugging Face discloses intrusion, attacker unknown at the time",
@@ -1295,14 +1296,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents;incident",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-7e8b5eef48",
    "published": "2026-07-08",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Multi-agent AI control: distributed attacks hamper per-instance monitors",
@@ -1316,14 +1317,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "agents",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ac689e8c63",
    "published": "2026-07-01",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "EU AI Omnibus formally adopted",
@@ -1337,14 +1338,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ba8edb0ede",
    "published": "2026-06-30",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "Export controls on Claude Fable 5 and Mythos 5 lifted",
@@ -1358,14 +1359,14 @@
    "health_named": "No",
    "tag_risk_area": "Cross-cutting",
    "tag_themes": "model-release;regulation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-9119080067",
    "published": "2026-06-23",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "Joint statement on cyber risk from frontier AI",
@@ -1379,14 +1380,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "incident;guidance",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-2c621cc48f",
    "published": "2026-06-17",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Evaluating lie detectors across model scale",
@@ -1400,14 +1401,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release;evaluation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-1f0811be0f",
    "published": "2026-06-10",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "UK AI Bill research briefing published",
@@ -1421,14 +1422,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-4c802253bb",
    "published": "2026-06-10",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "Prefill awareness in large language models",
@@ -1442,14 +1443,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-a549140237",
    "published": "2026-06-08",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Research",
    "title": "RealityTest: how people probe AI identity and whether models disclose it",
@@ -1463,14 +1464,14 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-ee85ea1a75",
    "published": "2026-06-03",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Report",
    "title": "LLM ATT&CK Navigator maps observed AI-enabled attacks onto MITRE",
@@ -1484,14 +1485,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "agents;threat-actor-reporting;regulation",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-d69455fd2c",
    "published": "2026-06-01",
+   "reporting_period": "Jun-Aug 2026",
    "collected": "2026-10-08",
    "item_type": "Policy",
    "title": "First state-level lawsuit against OpenAI and Sam Altman",
@@ -1505,14 +1506,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "regulation",
-   "related_ids": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
-   "reporting_period": "Jun-Aug 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-83992c1d01",
    "published": "2026-05-18",
+   "reporting_period": "Mar-May 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "Careful adoption of agentic AI services",
@@ -1526,14 +1527,14 @@
    "health_named": "No",
    "tag_risk_area": "Secure AI adoption",
    "tag_themes": "agents;guidance",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Mar-May 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-37fba4498a",
    "published": "2026-05-06",
+   "reporting_period": "Mar-May 2026",
    "collected": "2026-10-08",
    "item_type": "Report",
    "title": "Secure AI v2 released; ATLAS gains 45+ techniques",
@@ -1547,14 +1548,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "model-release;agents",
-   "related_ids": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Mar-May 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-eaa3a64265",
    "published": "2026-05-05",
+   "reporting_period": "Mar-May 2026",
    "collected": "2026-10-08",
    "item_type": "Publication",
    "title": "NCSC warns AI is materially accelerating vulnerability discovery",
@@ -1568,14 +1569,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research",
-   "related_ids": "",
    "tag_rating": "Red",
    "tag_rating_reason": "Material change in threat or agent behaviour",
-   "reporting_period": "Mar-May 2026"
+   "related_ids": ""
   },
   {
    "id": "wf-8468b9ca97",
    "published": "2026-04-13",
+   "reporting_period": "Mar-May 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI simulated network attack range: GPT-5.5 3 / 10",
@@ -1589,14 +1590,14 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation",
-   "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Mar-May 2026"
+   "related_ids": "wf-9f9513236f"
   },
   {
    "id": "wf-6e797ad503",
    "published": "2026-04-13",
+   "reporting_period": "Mar-May 2026",
    "collected": "2026-10-08",
    "item_type": "Evaluation result",
    "title": "AISI simulated network attack range: Claude Mythos Preview 6 / 10",
@@ -1610,10 +1611,9 @@
    "health_named": "No",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "evaluation",
-   "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "reporting_period": "Mar-May 2026"
+   "related_ids": "wf-9f9513236f"
   }
  ]
 }
