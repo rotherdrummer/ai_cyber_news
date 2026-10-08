@@ -1,0 +1,433 @@
+{
+ "updated": "2026-10-07",
+ "tests": [
+  {
+   "name": "ExploitBench",
+   "category": "Offensive cyber",
+   "run_by": "Carnegie Mellon University (Seunghyun Lee and Prof. David Brumley)",
+   "what": "How far an AI agent gets in building working exploits for real, already-patched bugs in Chrome's JavaScript engine, scored across 16 capability steps from reaching the bug to full control.",
+   "scored": "% of 16 capability flags",
+   "max": 100,
+   "rows": [
+    {
+     "model": "GPT-6 Astra",
+     "value": 100,
+     "display": "100%",
+     "date": "2026-09-04",
+     "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
+     "measured_by": "OpenAI (reported at launch, safeguards off)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Sol",
+     "value": 82.62,
+     "display": "82.62%",
+     "date": "2026-10-07",
+     "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.6 Sol",
+     "value": 78.5,
+     "display": "78.5%",
+     "date": "2026-09-24",
+     "url": "https://epoch.ai/benchmarks/exploitbench",
+     "measured_by": "Carnegie Mellon",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "Claude Mythos Preview",
+     "value": 69,
+     "display": "69%",
+     "date": "2026-09-24",
+     "url": "https://epoch.ai/benchmarks/exploitbench",
+     "measured_by": "Carnegie Mellon",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Luna",
+     "value": 44.66,
+     "display": "44.66%",
+     "date": "2026-10-07",
+     "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.5",
+     "value": 41,
+     "display": "41%",
+     "date": "2026-09-24",
+     "url": "https://epoch.ai/benchmarks/exploitbench",
+     "measured_by": "Carnegie Mellon",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "Claude Opus 4.7",
+     "value": 27,
+     "display": "27%",
+     "date": "2026-09-24",
+     "url": "https://epoch.ai/benchmarks/exploitbench",
+     "measured_by": "Carnegie Mellon",
+     "self_reported": false,
+     "weights": "Closed"
+    }
+   ]
+  },
+  {
+   "name": "SEC-Bench Pro",
+   "category": "Offensive cyber",
+   "run_by": "Reported by OpenAI",
+   "what": "Security engineering tasks including vulnerability finding and exploitation.",
+   "scored": "% score",
+   "max": 100,
+   "rows": [
+    {
+     "model": "GPT-6 Astra",
+     "value": 85.4,
+     "display": "85.4%",
+     "date": "2026-10-07",
+     "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Sol",
+     "value": 68.85,
+     "display": "68.85%",
+     "date": "2026-10-07",
+     "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Luna",
+     "value": 48.5,
+     "display": "48.50%",
+     "date": "2026-10-07",
+     "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    }
+   ]
+  },
+  {
+   "name": "ExploitGym",
+   "category": "Offensive cyber",
+   "run_by": "Reported by OpenAI",
+   "what": "Exploit development tasks in a test environment.",
+   "scored": "% success",
+   "max": 100,
+   "rows": [
+    {
+     "model": "GPT-6 Astra",
+     "value": 42.4,
+     "display": "42.4%",
+     "date": "2026-09-04",
+     "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.6 Sol",
+     "value": 30.3,
+     "display": "30.3%",
+     "date": "2026-09-04",
+     "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    }
+   ]
+  },
+  {
+   "name": "AISI simulated network attack range",
+   "category": "Offensive cyber",
+   "run_by": "UK AI Security Institute",
+   "what": "Whether a model can carry out a 32-step simulated attack on a corporate network from start to finish without help. The range has no active defenders.",
+   "scored": "attempts completing all 32 steps, out of 10",
+   "max": 10,
+   "rows": [
+    {
+     "model": "Claude Mythos Preview",
+     "value": 6,
+     "display": "6 / 10",
+     "date": "2026-04-13",
+     "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.5",
+     "value": 3,
+     "display": "3 / 10",
+     "date": "2026-04-13",
+     "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "Kimi K3",
+     "value": 1,
+     "display": "1 / 10",
+     "date": "2026-07-23",
+     "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Open"
+    }
+   ]
+  },
+  {
+   "name": "AISI unsanctioned supply-chain attacks",
+   "category": "Agent behaviour",
+   "run_by": "UK AI Security Institute",
+   "what": "How often a model, given a task, carries out a software supply-chain attack it was not authorised to perform. Simulated, with the model's cyber safeguards switched off.",
+   "scored": "% of simulated runs",
+   "max": 100,
+   "rows": [
+    {
+     "model": "GPT-6 Astra",
+     "value": 29.2,
+     "display": "29.2%",
+     "date": "2026-09-28",
+     "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.6 Sol",
+     "value": 6.3,
+     "display": "6.3%",
+     "date": "2026-09-28",
+     "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-5.5",
+     "value": 0,
+     "display": "0%",
+     "date": "2026-09-28",
+     "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
+     "measured_by": "AI Security Institute",
+     "self_reported": false,
+     "weights": "Closed"
+    }
+   ]
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "General professional work",
+   "run_by": "Artificial Analysis (dataset by OpenAI)",
+   "what": "Whether a model can produce the documents, spreadsheets and slides real professionals produce, judged blind against experts averaging 14 years in the role. Elo score anchored at 1600; higher is better.",
+   "scored": "Elo (1600 = anchor)",
+   "max": null,
+   "scale": [
+    1400,
+    1900
+   ],
+   "rows": [
+    {
+     "model": "Claude Opus 5.5",
+     "value": 1846,
+     "display": "1846",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Claude Fable 5.1",
+     "value": 1735,
+     "display": "1735",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Claude Opus 5",
+     "value": 1708,
+     "display": "1708",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Grok 4.7",
+     "value": 1695,
+     "display": "1695",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Muse Spark 1.3",
+     "value": 1674,
+     "display": "1674",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-5.6 Sol",
+     "value": 1588,
+     "display": "1588",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-6 Astra",
+     "value": 1542,
+     "display": "1542",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-6 Sol",
+     "value": 1487,
+     "display": "1487",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Gemini 3.8 Flash",
+     "value": 1412,
+     "display": "1412",
+     "date": "2026-09-24",
+     "url": "https://artificialanalysis.ai/",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    }
+   ]
+  },
+  {
+   "name": "HealthBench Professional",
+   "category": "Clinical",
+   "run_by": "OpenAI (published April 2026); leaderboard maintained by Arcophos",
+   "what": "Physician-graded performance on 525 real clinician tasks: consults, documentation and research. Physician-written answers score 0.437 against the same rubrics.",
+   "scored": "0 to 1 rubric agreement",
+   "max": 1,
+   "baseline": 0.437,
+   "baseline_label": "physicians",
+   "rows": [
+    {
+     "model": "Claude Fable 5",
+     "value": 0.66,
+     "display": "0.660",
+     "date": "2026-09-24",
+     "url": "",
+     "measured_by": "Arcophos leaderboard",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-6 Astra",
+     "value": 0.634,
+     "display": "0.634",
+     "date": "2026-09-24",
+     "url": "",
+     "measured_by": "Arcophos leaderboard",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Claude Fable 5.1",
+     "value": 0.621,
+     "display": "0.621",
+     "date": "2026-09-24",
+     "url": "",
+     "measured_by": "Arcophos leaderboard",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-5.6 Sol",
+     "value": 0.605,
+     "display": "0.605",
+     "date": "2026-09-24",
+     "url": "",
+     "measured_by": "Arcophos leaderboard",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Claude Opus 5",
+     "value": 0.598,
+     "display": "0.598",
+     "date": "2026-09-24",
+     "url": "",
+     "measured_by": "Arcophos leaderboard",
+     "self_reported": false,
+     "weights": "Closed",
+     "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    }
+   ]
+  }
+ ],
+ "caveats": [
+  {
+   "title": "Configuration is half the score",
+   "text": "Reasoning effort, tool access and agent scaffolds change results more than model choice does. A score without its configuration is not comparable."
+  },
+  {
+   "title": "Lab model is not the shipped model",
+   "text": "Cyber scores are usually measured on unrestricted internal builds. Products on sale are deliberately weaker, so lab figures overstate what a customer gets and understate what an attacker with open weights gets."
+  },
+  {
+   "title": "Self-reported results",
+   "text": "Results a developer reports about its own model are marked. They are not independently checked and may not match the benchmark owner's scoring."
+  },
+  {
+   "title": "None of them measure your risk",
+   "text": "No benchmark covers data residency, supply chain, model provenance or clinical safety in service. Benchmarks narrow a shortlist; they are not assurance."
+  }
+ ]
+}

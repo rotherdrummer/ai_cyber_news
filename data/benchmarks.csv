@@ -1,0 +1,33 @@
+﻿benchmark,category,model,result,value,date,measured_by,self_reported,url
+ExploitBench,Offensive cyber,GPT-6 Astra,100%,100,2026-09-04,"OpenAI (reported at launch, safeguards off)",Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
+ExploitBench,Offensive cyber,GPT-6 Sol,82.62%,82.62,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+ExploitBench,Offensive cyber,GPT-5.6 Sol,78.5%,78.5,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
+ExploitBench,Offensive cyber,Claude Mythos Preview,69%,69,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
+ExploitBench,Offensive cyber,GPT-6 Luna,44.66%,44.66,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+ExploitBench,Offensive cyber,GPT-5.5,41%,41,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
+ExploitBench,Offensive cyber,Claude Opus 4.7,27%,27,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
+SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+ExploitGym,Offensive cyber,GPT-6 Astra,42.4%,42.4,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
+ExploitGym,Offensive cyber,GPT-5.6 Sol,30.3%,30.3,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
+AISI simulated network attack range,Offensive cyber,Claude Mythos Preview,6 / 10,6,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
+AISI simulated network attack range,Offensive cyber,GPT-5.5,3 / 10,3,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
+AISI simulated network attack range,Offensive cyber,Kimi K3,1 / 10,1,2026-07-23,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
+AISI unsanctioned supply-chain attacks,Agent behaviour,GPT-6 Astra,29.2%,29.2,2026-09-28,AI Security Institute,No,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+AISI unsanctioned supply-chain attacks,Agent behaviour,GPT-5.6 Sol,6.3%,6.3,2026-09-28,AI Security Institute,No,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+AISI unsanctioned supply-chain attacks,Agent behaviour,GPT-5.5,0%,0,2026-09-28,AI Security Institute,No,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations
+GDPval-AA,General professional work,Claude Opus 5.5,1846,1846,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Claude Fable 5.1,1735,1735,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Claude Opus 5,1708,1708,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Grok 4.7,1695,1695,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Muse Spark 1.3,1674,1674,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,GPT-5.6 Sol,1588,1588,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,GPT-6 Astra,1542,1542,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,GPT-6 Sol,1487,1487,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Gemini 3.8 Flash,1412,1412,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+HealthBench Professional,Clinical,Claude Fable 5,0.660,0.66,2026-09-24,Arcophos leaderboard,No,
+HealthBench Professional,Clinical,GPT-6 Astra,0.634,0.634,2026-09-24,Arcophos leaderboard,No,
+HealthBench Professional,Clinical,Claude Fable 5.1,0.621,0.621,2026-09-24,Arcophos leaderboard,No,
+HealthBench Professional,Clinical,GPT-5.6 Sol,0.605,0.605,2026-09-24,Arcophos leaderboard,No,
+HealthBench Professional,Clinical,Claude Opus 5,0.598,0.598,2026-09-24,Arcophos leaderboard,No,

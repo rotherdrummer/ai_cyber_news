@@ -129,6 +129,20 @@ tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px
 .reg tr.ai td{background:var(--amber-bg)}
 .reg th small{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-family:var(--f-sans);font-size:11px;color:var(--ink-3)}
 .sources{margin-top:20px !important;border-top:0 !important;padding-top:0 !important}
+.tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:12px}
+.test{background:var(--surface);border:1px solid var(--rule);padding:14px 16px;display:grid;gap:8px;align-content:start;min-width:0}
+.test h4{margin:0;font-size:16px}
+.test .cat{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.test p{margin:0;font-size:12.5px;color:var(--ink-2)}
+.test .meta{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-3)}
+.brow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2px 10px;font-size:12.5px}
+.brow .n{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brow .val{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.track{grid-column:1/-1;height:7px;background:var(--surface-2);position:relative}
+.fill{height:100%;background:var(--accent)}
+.brow.self .fill{background:repeating-linear-gradient(135deg,var(--accent) 0 4px,transparent 4px 7px);outline:1px solid var(--accent);outline-offset:-1px}
+.base{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--ink-2)}
+.legend2{font-size:11.5px;color:var(--ink-3)}
 .empty{padding:24px;color:var(--ink-3);text-align:center}
 footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-family:var(--f-mono);font-size:11px;color:var(--ink-3);line-height:1.7}
 @media (max-width:560px){.item{grid-template-columns:1fr;gap:4px}.status{text-align:left}.count{margin-left:0}}
@@ -142,7 +156,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
+    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
   </nav>
 
   <div id="view-news">
@@ -196,6 +210,14 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="notes" id="modelNotes"></div>
     <div class="seg" id="wfilter" role="group" aria-label="Weights" style="margin:6px 0 10px"></div>
     <div class="tscroll"><table><thead><tr><th>Model</th><th>Developer</th><th>Weights</th><th>Released</th><th>Access</th><th>Published cyber evidence</th></tr></thead><tbody id="modelRows"></tbody></table></div>
+  </div>
+
+  <div id="view-benchmarks" hidden>
+    <div class="vhead"><h2>Benchmarks</h2><div class="btns"><a class="btn" href="data/benchmarks.csv" download>Download CSV</a></div></div>
+    <p class="says">Published results on the evaluations most worth quoting: offensive cyber capability, agent behaviour, general professional work and clinical tasks. <span id="benchUpdated"></span></p>
+    <div class="tests" id="tests"></div>
+    <h3 style="margin:18px 0 6px;font-size:15px">Before quoting any of these</h3>
+    <div class="notes" id="caveats"></div>
   </div>
 
   <div id="view-regulation" hidden>
@@ -290,7 +312,7 @@ function renderSources(d){
     $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
   (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
 }
-var VIEWS=["news","models","regulation","sources"],modelsData=null,wf="";
+var VIEWS=["news","models","benchmarks","regulation","sources"],modelsData=null,wf="";
 function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
   VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
   [].forEach.call(document.querySelectorAll(".tabs a"),function(a){if(a.getAttribute("data-v")===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});}
@@ -318,6 +340,23 @@ function loadRegulation(d){
   var ch=[];fw.forEach(function(f){(f.changes||[]).forEach(function(c){ch.push({date:c.date,fw:f.name,text:c.text,url:c.url})})});
   ch.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){var u=safe(c.url);$("regChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.fw}),el("td",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:c.text}):c.text])]))});
 }
+function loadBench(d){
+  $("benchUpdated").textContent=d.updated?"Latest result "+d.updated+".":"";
+  (d.tests||[]).forEach(function(t){
+    var lo=t.scale?t.scale[0]:0,hi=t.scale?t.scale[1]:(t.max||Math.max.apply(null,t.rows.map(function(r){return r.value}))||1);
+    var card=el("div",{cls:"test"},[el("div",{cls:"cat",text:t.category}),el("h4",{text:t.name}),el("p",{text:t.what}),el("div",{cls:"meta",text:"Run by "+t.run_by+" \u00b7 "+t.scored})]);
+    t.rows.forEach(function(r){var u=safe(r.url);
+      var b=el("div",{cls:"brow"+(r.self_reported?" self":"")},[el("span",{cls:"n",title:r.measured_by+(r.note?" \u00b7 "+r.note:"")},[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:r.model}):r.model," ",el("span",{cls:"pub",text:r.date+(r.weights==="Open"?" \u00b7 open weights":"")+(r.self_reported?" \u00b7 self-reported":"")})]),el("span",{cls:"val",text:r.display})]);
+      var tr=el("div",{cls:"track"}),f=el("div",{cls:"fill"});f.style.width=Math.max(0,Math.min(100,100*(r.value-lo)/(hi-lo)))+"%";tr.appendChild(f);
+      var bl=t.baseline!=null?t.baseline:(t.scale?1600:null);if(bl!=null){var m=el("div",{cls:"base",title:t.baseline_label||"anchor"});m.style.left=(100*(bl-lo)/(hi-lo))+"%";tr.appendChild(m)}
+      b.appendChild(tr);card.appendChild(b)});
+    if(t.baseline!=null)card.appendChild(el("div",{cls:"legend2",text:"Vertical line: "+(t.baseline_label||"baseline")+" ("+t.baseline+")"}));
+    if(t.scale)card.appendChild(el("div",{cls:"legend2",text:"Bars start at "+lo+". Vertical line: the 1600 anchor."}));
+    $("tests").appendChild(card)});
+  $("tests").appendChild(el("div",{cls:"legend2",text:"Hatched bars are self-reported by the developer. Scores from different benchmarks are not comparable."}));
+  (d.caveats||[]).forEach(function(c){$("caveats").appendChild(el("div",{cls:"note"},[el("b",{text:c.title}),c.text]))});
+}
+fetch("data/benchmarks.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadBench).catch(function(){});
 window.addEventListener("hashchange",showView);showView();
 fetch("data/models.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadModels).catch(function(){});
 fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadRegulation).catch(function(){});
