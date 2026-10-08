@@ -18,6 +18,6 @@ Columns describing the source: `id`, `published`, `reporting_period`, `collected
 
 `source_relation` is **Original source** (published by the organisation that did the work or holds the evidence) or **Third-party report** (reported by someone else; used only where no original was found). `source_category` is one of UK government, AI developer, Independent evaluator, Legal and policy analysis, News and model trackers.
 
-Machine-assigned categorisation (not findings): `tag_risk_area`, `tag_themes`, `tag_significant`, `related_ids`.
+Machine-assigned categorisation (not findings): `tag_risk_area`, `tag_themes`, `tag_rating` (Red, Amber, Green), `tag_rating_reason`, `related_ids`. Rating criteria are in `data/items.json` under `meta.rating_criteria`.
 
 Risk areas: AI-enabled cyber threats, Autonomous AI risk, Secure AI adoption, Cross-cutting.
