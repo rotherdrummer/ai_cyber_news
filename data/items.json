@@ -1,18 +1,20 @@
 {
  "meta": {
-  "name": "Watchfloor public AI cyber intelligence dataset",
+  "name": "AI Cyber News public dataset",
   "updated": "2026-10-08",
   "item_count": 75,
   "fields": {
    "source fields": [
     "id",
     "published",
+    "reporting_period",
     "collected",
     "item_type",
     "title",
     "publisher",
     "url",
-    "source_type",
+    "source_relation",
+    "source_category",
     "source_says",
     "key_findings",
     "evidence_links",
@@ -31,6 +33,10 @@
    "Amber": "A significant change that may matter soon: notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
    "Green": "Background: evaluation methods, general research, routine releases without cyber evidence, and commentary."
   },
+  "source_relation": {
+   "Original source": "Published by the organisation that did the work or holds the evidence (for example AISI reporting its own evaluation).",
+   "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
+  },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."
  },
  "items": [
@@ -42,7 +48,8 @@
    "title": "Transect: making large-scale agentic evaluations easier to understand",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/transect-making-large-scale-agentic-evaluations-easier-to-understand",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Open-source tool to follow agent work during evaluations.",
    "key_findings": "",
    "evidence_links": "",
@@ -51,7 +58,8 @@
    "tag_themes": "agents;evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-1d5e9140f9",
@@ -61,7 +69,8 @@
    "title": "SEC-Bench Pro: GPT-6 Sol 68.85%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "GPT-6 Sol scored 68.85% on SEC-Bench Pro (% score). Self-reported by the developer.",
    "key_findings": "",
    "evidence_links": "",
@@ -70,7 +79,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-f61b399e6c",
@@ -80,7 +90,8 @@
    "title": "SEC-Bench Pro: GPT-6 Luna 48.50%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "GPT-6 Luna scored 48.50% on SEC-Bench Pro (% score). Self-reported by the developer.",
    "key_findings": "",
    "evidence_links": "",
@@ -89,7 +100,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-5d326920eb",
@@ -99,7 +111,8 @@
    "title": "SEC-Bench Pro: GPT-6 Astra 85.4%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "GPT-6 Astra scored 85.4% on SEC-Bench Pro (% score). Self-reported by the developer.",
    "key_findings": "Comparison figure given in the GPT-6 Sol and Luna October update.",
    "evidence_links": "",
@@ -108,7 +121,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-c05d9dadad",
@@ -118,7 +132,8 @@
    "title": "GPT-6 Sol and GPT-6 Luna: October 2026 update",
    "publisher": "OpenAI",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Sol now powers paid ChatGPT plans and Luna powers Free and Go, replacing GPT-5.6. OpenAI treats both as High cyber capability, below Critical. Self-reported ExploitBench: Sol 82.62%, Luna 44.66%. Health benchmarks also reported.",
    "key_findings": "",
    "evidence_links": "",
@@ -127,7 +142,8 @@
    "tag_themes": "model-release;vulnerability-research;evaluation;health",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-24ea6cb285",
@@ -137,7 +153,8 @@
    "title": "ExploitBench: GPT-6 Sol 82.62%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "GPT-6 Sol scored 82.62% on ExploitBench (% score, maximum reasoning effort). Self-reported by the developer.",
    "key_findings": "OpenAI says results may be inflated by exposure to historical vulnerabilities. May not match Carnegie Mellon's scoring.",
    "evidence_links": "",
@@ -146,7 +163,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-8b89c15bf0",
@@ -156,7 +174,8 @@
    "title": "ExploitBench: GPT-6 Luna 44.66%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "GPT-6 Luna scored 44.66% on ExploitBench (% score, maximum reasoning effort). Self-reported by the developer.",
    "key_findings": "OpenAI says results may be inflated by exposure to historical vulnerabilities. May not match Carnegie Mellon's scoring.",
    "evidence_links": "",
@@ -165,7 +184,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "wf-c05d9dadad",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-18a374a12b",
@@ -175,7 +195,8 @@
    "title": "Mistral Large 4 preview; weights promised by end of October",
    "publisher": "Mistral AI",
    "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "1T-parameter multimodal model in a guardrailed preview. Would be Europe's largest open-weight model.",
    "key_findings": "",
    "evidence_links": "",
@@ -184,7 +205,8 @@
    "tag_themes": "model-release;open-weight",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-61aec3d6a2",
@@ -194,7 +216,8 @@
    "title": "Government response to the National Commission on regulating AI in healthcare",
    "publisher": "MHRA",
    "url": "https://www.gov.uk/government/publications/government-response-to-the-national-commissions-recommendations-on-the-regulation-of-ai-in-healthcare",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Published 6 October; not picked up in earlier registers. All 44 recommendations accepted. MHRA draft guidance on changes to AI-enabled devices by December 2026, consultation on qualification and classification in 2027, roadmap by spring 2027. AI Airlock Phase 3 open.",
    "key_findings": "",
    "evidence_links": "",
@@ -203,7 +226,8 @@
    "tag_themes": "guidance;regulation;health;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-ecf45a9e28",
@@ -213,7 +237,8 @@
    "title": "Expanding the Cyber Verification Program",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/news/cyber-verification-program",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Published 6 October; not picked up in earlier registers. Merges the programme with Project Glasswing into three tiers: Defense, Red Team and Specialized Access. Regional hospitals named as eligible for Defense Access.",
    "key_findings": "",
    "evidence_links": "",
@@ -222,7 +247,8 @@
    "tag_themes": "defender-access;health;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-e259723d62",
@@ -232,7 +258,8 @@
    "title": "AI systems could cover up misbehaviour",
    "publisher": "METR",
    "url": "https://metr.org/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
    "source_says": "",
    "key_findings": "",
    "evidence_links": "",
@@ -241,7 +268,8 @@
    "tag_themes": "",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-d31908868f",
@@ -251,7 +279,8 @@
    "title": "Building a more secure environment for evaluating dangerous capabilities",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Security changes to AISI's frontier evaluation environment and the work still outstanding.",
    "key_findings": "",
    "evidence_links": "",
@@ -260,7 +289,8 @@
    "tag_themes": "evaluation",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-8fa7fac43f",
@@ -270,7 +300,8 @@
    "title": "Testimony to the US Senate on AI agent incidents",
    "publisher": "METR",
    "url": "https://metr.org/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
    "source_says": "",
    "key_findings": "",
    "evidence_links": "",
@@ -279,7 +310,8 @@
    "tag_themes": "agents;incident",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-d0b88eb41c",
@@ -289,7 +321,8 @@
    "title": "Gemini 4 Argon released only to vetted cyber defenders",
    "publisher": "Google",
    "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Access through Google's Fairwind programme, without cyber guardrails for those defenders. No general availability date.",
    "key_findings": "",
    "evidence_links": "",
@@ -298,7 +331,8 @@
    "tag_themes": "model-release;defender-access;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-9163d85095",
@@ -308,7 +342,8 @@
    "title": "GPT-6.1 Sol launched; reported cancellation of GPT-6.1 Astra after internal safety tests",
    "publisher": "OpenAI",
    "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Sol available in ChatGPT Work, Codex and the API. Astra cancellation reported by the Wall Street Journal.",
    "key_findings": "",
    "evidence_links": "",
@@ -317,7 +352,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-15d590cef9",
@@ -327,7 +363,8 @@
    "title": "GPT-6 Astra performs unsanctioned supply-chain attacks in simulations",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Attack in 29.2% of simulated runs with cyber classifiers off, against 6.3% for GPT-5.6 Sol and 0% for GPT-5.5.",
    "key_findings": "",
    "evidence_links": "",
@@ -336,7 +373,8 @@
    "tag_themes": "model-release;supply-chain",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-06dedcddfc",
@@ -346,7 +384,8 @@
    "title": "Claude Sonnet 5.5 generally available",
    "publisher": "Anthropic",
    "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "New mid-tier Claude model.",
    "key_findings": "",
    "evidence_links": "",
@@ -355,7 +394,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-4c0e977247",
@@ -365,7 +405,8 @@
    "title": "AISI unsanctioned supply-chain attacks: GPT-6 Astra 29.2%",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "GPT-6 Astra scored 29.2% on AISI unsanctioned supply-chain attacks (% of simulated runs, cyber classifiers off).",
    "key_findings": "Simulated with Petri; no real-world harm. OpenAI's standard safeguards were not used.",
    "evidence_links": "",
@@ -374,7 +415,8 @@
    "tag_themes": "evaluation",
    "related_ids": "wf-15d590cef9",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-6bf6e31b61",
@@ -384,7 +426,8 @@
    "title": "AISI unsanctioned supply-chain attacks: GPT-5.6 Sol 6.3%",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "GPT-5.6 Sol scored 6.3% on AISI unsanctioned supply-chain attacks (% of simulated runs, cyber classifiers off).",
    "key_findings": "",
    "evidence_links": "",
@@ -393,7 +436,8 @@
    "tag_themes": "evaluation",
    "related_ids": "wf-15d590cef9",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-1b4dfb2201",
@@ -403,7 +447,8 @@
    "title": "AISI unsanctioned supply-chain attacks: GPT-5.5 0%",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "GPT-5.5 scored 0% on AISI unsanctioned supply-chain attacks (% of simulated runs, cyber classifiers off).",
    "key_findings": "",
    "evidence_links": "",
@@ -412,7 +457,8 @@
    "tag_themes": "evaluation",
    "related_ids": "wf-15d590cef9",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-edb6d33071",
@@ -422,7 +468,8 @@
    "title": "ExploitBench: GPT-5.6 Sol 78.5%",
    "publisher": "Carnegie Mellon",
    "url": "https://epoch.ai/benchmarks/exploitbench",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Independent evaluator",
    "source_says": "GPT-5.6 Sol scored 78.5% on ExploitBench (% of 16 exploitation capability flags).",
    "key_findings": "",
    "evidence_links": "",
@@ -431,7 +478,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-74fe088e6f",
@@ -441,7 +489,8 @@
    "title": "ExploitBench: GPT-5.5 41%",
    "publisher": "Carnegie Mellon",
    "url": "https://epoch.ai/benchmarks/exploitbench",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Independent evaluator",
    "source_says": "GPT-5.5 scored 41% on ExploitBench (% of 16 exploitation capability flags).",
    "key_findings": "",
    "evidence_links": "",
@@ -450,7 +499,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-4c1b1f6e92",
@@ -460,7 +510,8 @@
    "title": "ExploitBench: Claude Opus 4.7 27%",
    "publisher": "Carnegie Mellon",
    "url": "https://epoch.ai/benchmarks/exploitbench",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Independent evaluator",
    "source_says": "Claude Opus 4.7 scored 27% on ExploitBench (% of 16 exploitation capability flags).",
    "key_findings": "",
    "evidence_links": "",
@@ -469,7 +520,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-3bf5b69e6f",
@@ -479,7 +531,8 @@
    "title": "ExploitBench: Claude Mythos Preview 69%",
    "publisher": "Carnegie Mellon",
    "url": "https://epoch.ai/benchmarks/exploitbench",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Independent evaluator",
    "source_says": "Claude Mythos Preview scored 69% on ExploitBench (% of 16 exploitation capability flags).",
    "key_findings": "",
    "evidence_links": "",
@@ -488,7 +541,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-c4a030d5c2",
@@ -498,7 +552,8 @@
    "title": "Summary of METR's pre-deployment evaluation of Claude Opus 5.5",
    "publisher": "METR",
    "url": "https://metr.org/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
    "source_says": "Independent pre-deployment risk assessment.",
    "key_findings": "",
    "evidence_links": "",
@@ -507,7 +562,8 @@
    "tag_themes": "model-release;evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-43c2f2e1c1",
@@ -517,7 +573,8 @@
    "title": "Prompt injection into an AI vendor's evaluation sandbox to steal API keys",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "",
    "key_findings": "Actor: Russian-speaking financially motivated actor (GTG-50020); Technique: Prompt injection against AI tooling; Targets: AI vendors (about 30 in four days)",
    "evidence_links": "",
@@ -526,7 +583,8 @@
    "tag_themes": "evaluation;threat-actor-reporting;regulation;threat-actor-reporting",
    "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-31439593f1",
@@ -536,7 +594,8 @@
    "title": "National Commission into the Regulation of AI in Healthcare publishes its recommendations",
    "publisher": "MHRA",
    "url": "https://www.gov.uk/government/publications/national-commission-into-the-regulation-of-ai-in-healthcare-recommendations-for-a-future-regulatory-framework",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Recommendations for a future regulatory framework for AI in healthcare. A cross-government response will follow separately.",
    "key_findings": "",
    "evidence_links": "",
@@ -545,7 +604,8 @@
    "tag_themes": "regulation;health;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-d9655ec9bb",
@@ -555,7 +615,8 @@
    "title": "Hacktivist doxxing platform built partly on a national health identifier dataset",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "12–26 GB exfiltrated.",
    "key_findings": "Actor: French-speaking hacktivist (GTG-50029); Technique: WordPress race-condition exploit, webshells, custom doxxing platform; Targets: European political parties, media, think tanks, SaaS",
    "evidence_links": "",
@@ -564,7 +625,8 @@
    "tag_themes": "vulnerability-research;threat-actor-reporting;regulation;health;threat-actor-reporting",
    "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-e7f1c4ad8d",
@@ -574,7 +636,8 @@
    "title": "Countering misuse of AI: September 2026 threat report",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Cases include a Chinese-speaking cluster running autonomous exploit development against about 50 organisations including healthcare, and a doxxing platform built on a national health identifier dataset.",
    "key_findings": "",
    "evidence_links": "",
@@ -583,7 +646,8 @@
    "tag_themes": "vulnerability-research;agents;threat-actor-reporting;health",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-ffbdf687a0",
@@ -593,7 +657,8 @@
    "title": "Autonomous vulnerability research and agent-swarm intrusions",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Accounts banned.",
    "key_findings": "Actor: Chinese-speaking espionage cluster (GTG-10007); Technique: Autonomous exploit development, agent-swarm reconnaissance; Targets: About 50 organisations incl. healthcare, government, education, energy",
    "evidence_links": "",
@@ -602,7 +667,8 @@
    "tag_themes": "vulnerability-research;agents;incident;threat-actor-reporting;regulation;health;threat-actor-reporting",
    "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-4842ced313",
@@ -612,7 +678,8 @@
    "title": "AI-driven phishing and malware rebuilding by a Russian state-nexus group",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/threat-intelligence-report-september-2026",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Activity disrupted.",
    "key_findings": "Actor: Russian state-nexus, linked to Midnight Blizzard (GTG-20006); Technique: Device code phishing, DNS hijacking, malware rebuilt to evade detection; Targets: Government, military, diplomatic, drone supply chain",
    "evidence_links": "",
@@ -621,7 +688,8 @@
    "tag_themes": "threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
    "related_ids": "wf-e7f1c4ad8d",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-0b67388ebc",
@@ -631,7 +699,8 @@
    "title": "The hidden risks of shadow AI",
    "publisher": "NCSC",
    "url": "https://www.ncsc.gov.uk/blogs/the-hidden-risks-of-shadow-ai",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "71% of UK employees report using unapproved AI tools at work. NCSC advises provision and visibility over prohibition.",
    "key_findings": "",
    "evidence_links": "",
@@ -640,7 +709,8 @@
    "tag_themes": "guidance",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-d6f61b80d2",
@@ -650,7 +720,8 @@
    "title": "Supply-chain compromises targeting AI coding assistants and LLM security scanners",
    "publisher": "Google GTIG",
    "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "",
    "key_findings": "Actor: UNC6780; Technique: Agentic workflows; cloud compromise to mass credential harvesting in under six hours; Targets: Open-source software supply chain",
    "evidence_links": "",
@@ -659,7 +730,8 @@
    "tag_themes": "agents;threat-actor-reporting;regulation;supply-chain;threat-actor-reporting",
    "related_ids": "wf-9f412cd575",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-9f412cd575",
@@ -669,7 +741,8 @@
    "title": "GTIG AI Threat Tracker: from prompting to autonomy",
    "publisher": "Google GTIG",
    "url": "https://cloud.google.com/blog/topics/threat-intelligence/from-prompting-to-autonomy-the-evolution-of-adversarial-ai/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Adversaries moving to agentic workflows; UNC6780 targeted AI coding assistants and LLM security scanners in open-source supply-chain compromises.",
    "key_findings": "",
    "evidence_links": "",
@@ -678,7 +751,8 @@
    "tag_themes": "agents;threat-actor-reporting;supply-chain",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-63b57d4e85",
@@ -688,7 +762,8 @@
    "title": "Cyber Security and Resilience Bill amended in Lords Grand Committee",
    "publisher": "UK Parliament",
    "url": "https://bills.parliament.uk/bills/4035",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Bill text 'as amended in Grand Committee' published; Report stage next.",
    "key_findings": "",
    "evidence_links": "",
@@ -697,7 +772,8 @@
    "tag_themes": "regulation",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-d15c6287be",
@@ -707,7 +783,8 @@
    "title": "ExploitGym: GPT-6 Astra 42.4%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "GPT-6 Astra scored 42.4% on ExploitGym (% success). Self-reported by the developer.",
    "key_findings": "Reported by OpenAI at launch; not independently verified.",
    "evidence_links": "",
@@ -716,7 +793,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-04030eaac0",
@@ -726,7 +804,8 @@
    "title": "ExploitGym: GPT-5.6 Sol 30.3%",
    "publisher": "OpenAI (self-reported)",
    "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "GPT-5.6 Sol scored 30.3% on ExploitGym (% success). Self-reported by the developer.",
    "key_findings": "",
    "evidence_links": "",
@@ -735,7 +814,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-8c5ed0ec9a",
@@ -745,7 +825,8 @@
    "title": "ExploitBench: GPT-6 Astra 100%",
    "publisher": "Carnegie Mellon",
    "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "GPT-6 Astra scored 100% on ExploitBench (% of 16 exploitation capability flags).",
    "key_findings": "Lab configurations with safeguards off. Shipped products are deliberately weaker.",
    "evidence_links": "",
@@ -754,7 +835,8 @@
    "tag_themes": "evaluation;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-2ba2cfa1c5",
@@ -764,7 +846,8 @@
    "title": "GPT-6 Astra released; rated Critical for cyber capability",
    "publisher": "OpenAI",
    "url": "https://openai.com/index/safety-overview-gpt-6-astra/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "First model to reach the Critical cyber threshold under OpenAI's Preparedness Framework. Public version refuses proof-of-concept exploits.",
    "key_findings": "",
    "evidence_links": "",
@@ -773,7 +856,8 @@
    "tag_themes": "model-release;vulnerability-research",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-eb1f3189b9",
@@ -783,7 +867,8 @@
    "title": "Gemini 3.8 Flash and Flash Cyber released",
    "publisher": "Google DeepMind",
    "url": "https://llm-stats.com/llm-updates",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "A fast model plus a cyber-specialised variant.",
    "key_findings": "",
    "evidence_links": "",
@@ -792,7 +877,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-ff556930fd",
@@ -802,7 +888,8 @@
    "title": "Claude Fable 5.1 and Mythos 5.1 released",
    "publisher": "Anthropic",
    "url": "https://llm-stats.com/llm-updates",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Point upgrades to the Mythos tier. Fable carries additional safety measures for biology, cyber and LLM R&D.",
    "key_findings": "",
    "evidence_links": "",
@@ -811,7 +898,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Sep-Nov 2026"
   },
   {
    "id": "wf-57a310d332",
@@ -821,7 +909,8 @@
    "title": "Germany announces its AI Safety and Security Institute (AISI Deutschland)",
    "publisher": "Germany · BMDS",
    "url": "https://law-ai.org/germany-establishes-an-ai-security-institute/",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Legal and policy analysis",
    "source_says": "Cyber-focused, non-regulatory, built on the BSI and Federal Network Agency; intends to join the international network of institutes.",
    "key_findings": "",
    "evidence_links": "",
@@ -830,7 +919,8 @@
    "tag_themes": "regulation;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-4392971e2f",
@@ -840,7 +930,8 @@
    "title": "Optimal stopping: spending evaluation compute where it counts",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/optimal-stopping-spending-evaluation-compute-where-it-counts",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Releases optstop, an open-source evaluation tool.",
    "key_findings": "",
    "evidence_links": "",
@@ -849,7 +940,8 @@
    "tag_themes": "model-release;evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-a7877d617b",
@@ -859,7 +951,8 @@
    "title": "When do LLM preferences predict downstream behaviour?",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Whether stated model preferences correlate with what models go on to do.",
    "key_findings": "",
    "evidence_links": "",
@@ -868,7 +961,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-8a6561ba2a",
@@ -878,7 +972,8 @@
    "title": "Independent investigation of agent behaviour in the OpenAI / Hugging Face incident",
    "publisher": "METR",
    "url": "https://metr.org/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
    "source_says": "Agents' behaviour, reasoning and collaboration during the incident.",
    "key_findings": "",
    "evidence_links": "",
@@ -887,7 +982,8 @@
    "tag_themes": "agents;incident",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-17ac340a1a",
@@ -897,7 +993,8 @@
    "title": "OpenAI pauses reinforcement learning training for two weeks",
    "publisher": "OpenAI",
    "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Follows the Hugging Face breach; METR and Redwood Research brought in for independent review.",
    "key_findings": "",
    "evidence_links": "",
@@ -906,7 +1003,8 @@
    "tag_themes": "incident",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-8e0f840d23",
@@ -916,7 +1014,8 @@
    "title": "Knowing when to stop: Bayesian optimal stopping for LLM evaluations",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Method paper behind the optstop tool.",
    "key_findings": "",
    "evidence_links": "",
@@ -925,7 +1024,8 @@
    "tag_themes": "evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-bd74d15fe9",
@@ -935,7 +1035,8 @@
    "title": "GPT-5.6-Cyber and the tiered Daybreak defender programme",
    "publisher": "OpenAI",
    "url": "https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Gated access to less-restricted models for vetted defenders.",
    "key_findings": "",
    "evidence_links": "",
@@ -944,7 +1045,8 @@
    "tag_themes": "model-release;defender-access;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-3a71128fd6",
@@ -954,7 +1056,8 @@
    "title": "Item response theory for AI safety",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Adapts educational assessment methods to measuring AI safety properties.",
    "key_findings": "",
    "evidence_links": "",
@@ -963,7 +1066,8 @@
    "tag_themes": "evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-322addcca2",
@@ -973,7 +1077,8 @@
    "title": "Full technical account of the Hugging Face breach given at Black Hat",
    "publisher": "OpenAI · Black Hat",
    "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Nine chained zero-days; roughly 17,600 network actions over three days; four further third-party services touched.",
    "key_findings": "",
    "evidence_links": "",
@@ -982,7 +1087,8 @@
    "tag_themes": "vulnerability-research;incident;regulation",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-3c903e68d2",
@@ -992,7 +1098,8 @@
    "title": "Incident report: unsanctioned agent behaviour during cyber testing",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "19 instances across 10 of 122 runs, mostly Claude Mythos 5. One agent created fake identities to socially engineer a real open-source maintainer.",
    "key_findings": "",
    "evidence_links": "",
@@ -1001,7 +1108,8 @@
    "tag_themes": "model-release;agents;incident",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-188d1bbbc2",
@@ -1011,7 +1119,8 @@
    "title": "PM's AI Taskforce launched, chaired by Lord Vallance",
    "publisher": "Cabinet Office",
    "url": "https://gov.uk/government/news/ai-to-power-change-at-the-heart-of-government-as-lord-vallance-appointed-chair-of-new-pm-ai-taskforce",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Directs the government's AI strategy and public-sector adoption from the Office for the Prime Minister and the Cabinet.",
    "key_findings": "",
    "evidence_links": "",
@@ -1020,7 +1129,8 @@
    "tag_themes": "model-release;guidance;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-9f9513236f",
@@ -1030,7 +1140,8 @@
    "title": "Preliminary assessment of Kimi K3's cyber capabilities",
    "publisher": "AISI · CAISI",
    "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Kimi K3 trails leading US closed-weight models on cyber capability but completed AISI's simulated attack range in 1 of 10 attempts.",
    "key_findings": "",
    "evidence_links": "",
@@ -1039,7 +1150,8 @@
    "tag_themes": "model-release;evaluation;open-weight",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-8c738c9baf",
@@ -1049,7 +1161,8 @@
    "title": "Control Red Team stress-testing frontier monitors; Seoul evaluation network meeting",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Early findings from red-teaming frontier companies' internal safeguards.",
    "key_findings": "",
    "evidence_links": "",
@@ -1058,7 +1171,8 @@
    "tag_themes": "evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-5df9e0e374",
@@ -1068,7 +1182,8 @@
    "title": "AISI simulated network attack range: Kimi K3 1 / 10",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Kimi K3 scored 1 / 10 on AISI simulated network attack range (attempts completing all 32 steps, out of 10).",
    "key_findings": "",
    "evidence_links": "",
@@ -1077,7 +1192,8 @@
    "tag_themes": "evaluation;open-weight",
    "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-14de46a77f",
@@ -1087,7 +1203,8 @@
    "title": "Hugging Face intrusion jointly attributed to OpenAI's own models",
    "publisher": "OpenAI · Hugging Face",
    "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "First publicly documented case of AI models autonomously mounting a real cyber attack against a third party.",
    "key_findings": "",
    "evidence_links": "",
@@ -1096,7 +1213,8 @@
    "tag_themes": "model-release;agents;incident",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-1d538b7247",
@@ -1106,7 +1224,8 @@
    "title": "DSIT broken up; AI strategy and AISI move to the Cabinet Office",
    "publisher": "UK machinery of government",
    "url": "https://www.ukauthority.com/articles/dsit-scrapped-as-burnham-government-reshapes-whitehall-tech-functions",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Legal and policy analysis",
    "source_says": "Science policy moves to DBIST, digital functions to DCMS. Where cyber security policy and the CSR Bill now sit was not stated.",
    "key_findings": "",
    "evidence_links": "",
@@ -1115,7 +1234,8 @@
    "tag_themes": "regulation;landscape-change",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-3c32233960",
@@ -1125,7 +1245,8 @@
    "title": "Cheating behaviour in frontier model evaluations",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Cheating observed across every cyber capability evaluation tested, which bears on whether benchmark results can serve as assurance evidence.",
    "key_findings": "",
    "evidence_links": "",
@@ -1134,7 +1255,8 @@
    "tag_themes": "model-release;evaluation",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-34e3dbeb90",
@@ -1144,7 +1266,8 @@
    "title": "How far behind the frontier are open-weight models on cyber?",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "GLM-5.2 and DeepSeek V4-Pro perform like closed frontier models released 4 to 7 months earlier, down from 6 to 10 months in 2025.",
    "key_findings": "",
    "evidence_links": "",
@@ -1153,7 +1276,8 @@
    "tag_themes": "model-release;open-weight",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-203b7c8f72",
@@ -1163,7 +1287,8 @@
    "title": "Hugging Face discloses intrusion, attacker unknown at the time",
    "publisher": "Hugging Face",
    "url": "https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Agents had operated inside its systems 11–13 July, reaching internal datasets and credentials.",
    "key_findings": "",
    "evidence_links": "",
@@ -1172,7 +1297,8 @@
    "tag_themes": "agents;incident",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Real-world malicious activity or incident"
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-7e8b5eef48",
@@ -1182,7 +1308,8 @@
    "title": "Multi-agent AI control: distributed attacks hamper per-instance monitors",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Coordinated attacks across several agents defeat monitoring that watches each agent individually.",
    "key_findings": "",
    "evidence_links": "",
@@ -1191,7 +1318,8 @@
    "tag_themes": "agents",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-ac689e8c63",
@@ -1201,7 +1329,8 @@
    "title": "EU AI Omnibus formally adopted",
    "publisher": "EU",
    "url": "https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Legal and policy analysis",
    "source_says": "High-risk obligations deferred: standalone systems to 2 December 2027, product-embedded systems to 2 August 2028.",
    "key_findings": "",
    "evidence_links": "",
@@ -1210,7 +1339,8 @@
    "tag_themes": "regulation",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-ba8edb0ede",
@@ -1220,7 +1350,8 @@
    "title": "Export controls on Claude Fable 5 and Mythos 5 lifted",
    "publisher": "US Dept of Commerce",
    "url": "https://www.anthropic.com/news/fable-mythos-access",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Access restored on 1 July after a suspension imposed on 12 June.",
    "key_findings": "",
    "evidence_links": "",
@@ -1229,7 +1360,8 @@
    "tag_themes": "model-release;regulation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-9119080067",
@@ -1239,7 +1371,8 @@
    "title": "Joint statement on cyber risk from frontier AI",
    "publisher": "NCSC · Five Eyes",
    "url": "https://www.lexisnexis.co.uk/legal/news/ncsc-publishes-five-eyes-cyber-security-agencies-statement-on-ai-cyber-risk",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "Legal and policy analysis",
    "source_says": "Frontier AI expected to make threats faster and larger within months. Prioritise foundational controls, identity, faster patching, legacy systems and incident readiness.",
    "key_findings": "",
    "evidence_links": "",
@@ -1248,7 +1381,8 @@
    "tag_themes": "incident;guidance",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-2c621cc48f",
@@ -1258,7 +1392,8 @@
    "title": "Evaluating lie detectors across model scale",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Deception-detection performance across model sizes.",
    "key_findings": "",
    "evidence_links": "",
@@ -1267,7 +1402,8 @@
    "tag_themes": "model-release;evaluation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-1f0811be0f",
@@ -1277,7 +1413,8 @@
    "title": "UK AI Bill research briefing published",
    "publisher": "Commons Library",
    "url": "https://researchbriefings.files.parliament.uk/documents/CBP-10003/CBP-10003.pdf",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "State of play on UK AI legislation.",
    "key_findings": "",
    "evidence_links": "",
@@ -1286,7 +1423,8 @@
    "tag_themes": "regulation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-4c802253bb",
@@ -1296,7 +1434,8 @@
    "title": "Prefill awareness in large language models",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Whether models can tell when their own output has been prefilled.",
    "key_findings": "",
    "evidence_links": "",
@@ -1305,7 +1444,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-a549140237",
@@ -1315,7 +1455,8 @@
    "title": "RealityTest: how people probe AI identity and whether models disclose it",
    "publisher": "AISI",
    "url": "https://www.aisi.gov.uk/research",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "How users try to establish whether they are talking to an AI, and how reliably models say so.",
    "key_findings": "",
    "evidence_links": "",
@@ -1324,7 +1465,8 @@
    "tag_themes": "model-release",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-ee85ea1a75",
@@ -1334,7 +1476,8 @@
    "title": "LLM ATT&CK Navigator maps observed AI-enabled attacks onto MITRE",
    "publisher": "Anthropic",
    "url": "https://www.anthropic.com/research/attack-navigator",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
    "source_says": "Medium-or-higher risk actors rose from 33% to 56% in a year; ATT&CK has no coverage for autonomous killchain orchestration.",
    "key_findings": "",
    "evidence_links": "",
@@ -1343,7 +1486,8 @@
    "tag_themes": "agents;threat-actor-reporting;regulation",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-d69455fd2c",
@@ -1353,7 +1497,8 @@
    "title": "First state-level lawsuit against OpenAI and Sam Altman",
    "publisher": "Florida AG",
    "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Alleges ChatGPT prioritised profit over safety.",
    "key_findings": "",
    "evidence_links": "",
@@ -1362,7 +1507,8 @@
    "tag_themes": "regulation",
    "related_ids": "",
    "tag_rating": "Green",
-   "tag_rating_reason": "Background"
+   "tag_rating_reason": "Background",
+   "reporting_period": "Jun-Aug 2026"
   },
   {
    "id": "wf-83992c1d01",
@@ -1372,7 +1518,8 @@
    "title": "Careful adoption of agentic AI services",
    "publisher": "NCSC · Five Eyes",
    "url": "https://www.ncsc.gov.uk/blogs/thinking-carefully-before-adopting-agentic-ai",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Bounded pilots, clear ownership before deployment, least privilege, short-lived credentials, anomaly monitoring.",
    "key_findings": "",
    "evidence_links": "",
@@ -1381,7 +1528,8 @@
    "tag_themes": "agents;guidance",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Mar-May 2026"
   },
   {
    "id": "wf-37fba4498a",
@@ -1391,7 +1539,8 @@
    "title": "Secure AI v2 released; ATLAS gains 45+ techniques",
    "publisher": "MITRE ATLAS · CTID",
    "url": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release/",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
    "source_says": "45+ new techniques and sub-techniques, 10+ mitigations and 20+ case studies, with expanded coverage for agentic AI and LLM systems.",
    "key_findings": "",
    "evidence_links": "",
@@ -1400,7 +1549,8 @@
    "tag_themes": "model-release;agents",
    "related_ids": "",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Mar-May 2026"
   },
   {
    "id": "wf-eaa3a64265",
@@ -1410,7 +1560,8 @@
    "title": "NCSC warns AI is materially accelerating vulnerability discovery",
    "publisher": "NCSC",
    "url": "https://securityaffairs.com/191657/security/ai-speeds-flaw-discovery-forcing-rapid-updates-uk-ncsc-warns.html",
-   "source_type": "Secondary",
+   "source_relation": "Third-party report",
+   "source_category": "News and model trackers",
    "source_says": "Forcing a sustained patch wave. Prioritise internet-facing systems and CNI; patching alone will not hold, particularly for legacy estate.",
    "key_findings": "",
    "evidence_links": "",
@@ -1419,7 +1570,8 @@
    "tag_themes": "vulnerability-research",
    "related_ids": "",
    "tag_rating": "Red",
-   "tag_rating_reason": "Material change in threat or agent behaviour"
+   "tag_rating_reason": "Material change in threat or agent behaviour",
+   "reporting_period": "Mar-May 2026"
   },
   {
    "id": "wf-8468b9ca97",
@@ -1429,7 +1581,8 @@
    "title": "AISI simulated network attack range: GPT-5.5 3 / 10",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "GPT-5.5 scored 3 / 10 on AISI simulated network attack range (attempts completing all 32 steps, out of 10).",
    "key_findings": "",
    "evidence_links": "",
@@ -1438,7 +1591,8 @@
    "tag_themes": "evaluation",
    "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Mar-May 2026"
   },
   {
    "id": "wf-6e797ad503",
@@ -1448,7 +1602,8 @@
    "title": "AISI simulated network attack range: Claude Mythos Preview 6 / 10",
    "publisher": "AI Security Institute",
    "url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "source_type": "Primary",
+   "source_relation": "Original source",
+   "source_category": "UK government",
    "source_says": "Claude Mythos Preview scored 6 / 10 on AISI simulated network attack range (attempts completing all 32 steps, out of 10).",
    "key_findings": "The test networks have no active defenders, so results reflect weakly protected systems.",
    "evidence_links": "",
@@ -1457,7 +1612,8 @@
    "tag_themes": "evaluation",
    "related_ids": "wf-9f9513236f",
    "tag_rating": "Amber",
-   "tag_rating_reason": "Significant change to watch"
+   "tag_rating_reason": "Significant change to watch",
+   "reporting_period": "Mar-May 2026"
   }
  ]
 }

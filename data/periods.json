@@ -1,0 +1,20 @@
+[
+ {
+  "key": "2026-09",
+  "label": "Sep-Nov 2026",
+  "file": "data/period-2026-09.csv",
+  "items": 41
+ },
+ {
+  "key": "2026-06",
+  "label": "Jun-Aug 2026",
+  "file": "data/period-2026-06.csv",
+  "items": 29
+ },
+ {
+  "key": "2026-03",
+  "label": "Mar-May 2026",
+  "file": "data/period-2026-03.csv",
+  "items": 5
+ }
+]

@@ -14,6 +14,20 @@ PRIMARY_DOMAINS = ["aisi.gov.uk","ncsc.gov.uk","gov.uk","anthropic.com","openai.
 SECONDARY_HINTS = ["wikipedia.org","llm-stats.com","local-ai-zone","securityaffairs","lexisnexis","law-ai.org",
   "addleshawgoddard","qualio","ukauthority","infoworld","epoch.ai","digitalapplied","benchlm","axios.com"]
 
+SOURCE_CATEGORIES = [
+ ("UK government", ["aisi.gov.uk","ncsc.gov.uk","gov.uk","parliament.uk"]),
+ ("AI developer", ["anthropic.com","openai.com","cloud.google.com","deepmind.google"]),
+ ("Independent evaluator", ["metr.org","mitre.org","epoch.ai"]),
+ ("Legal and policy analysis", ["law-ai.org","addleshawgoddard","lexisnexis","qualio","ukauthority"]),
+ ("News and model trackers", ["wikipedia.org","securityaffairs","infoworld","axios.com","llm-stats.com","local-ai-zone","digitalapplied","benchlm"]),
+]
+def source_category(url):
+    u = (url or "").lower()
+    for name, keys in SOURCE_CATEGORIES:
+        if any(k in u for k in keys): return name
+    return "Other"
+def source_relation(url):
+    return "Original source" if source_type(url) == "Primary" else "Third-party report"
 def source_type(url):
     u = (url or "").lower()
     if any(h in u for h in ["wikipedia.org","llm-stats.com","local-ai-zone","securityaffairs","lexisnexis","law-ai.org",
@@ -97,7 +111,7 @@ for f in sorted(glob.glob(os.path.join(DB, "register", "*.json"))):
         typ = {"threat":"Report","gov":"Publication","research":"Research","capability":"Model or capability","policy":"Policy"}.get(it["cat"],"Other")
         if it["cat"] in ("threat","gov") and any(k in title.lower() for k in ["incident","intrusion","breach"]): typ = "Incident"
         rec = {"id":iid,"published":pub,"collected":COLLECTED,"item_type":typ,"title":title,"publisher":it.get("source",""),
-               "url":it.get("url",""),"source_type":source_type(it.get("url","")),"source_says":it.get("summary",""),
+               "url":it.get("url",""),"source_relation":source_relation(it.get("url","")),"source_category":source_category(it.get("url","")),"source_says":it.get("summary",""),
                "key_findings":"","evidence_links":"","health_named":"Yes" if any(k in (title+it.get("summary","")).lower() for k in ["health","hospital"]) else "No",
                "tag_risk_area":area(title),"tag_themes":";".join(themes(title,it["cat"],it.get("summary",""))),
                "tag_significant":"Yes" if it.get("major") else "No","related_ids":""}
@@ -114,7 +128,7 @@ for f in sorted(glob.glob(os.path.join(DB, "threats", "*.json"))):
     findings = "; ".join(x for x in [t.get("actor") and "Actor: "+t["actor"], t.get("technique") and "Technique: "+t["technique"],
                                       t.get("sectors") and "Targets: "+t["sectors"]] if x)
     items.append({"id":iid,"published":t["date"],"collected":COLLECTED,"item_type":"Incident" if t.get("kind")=="incident" else "Threat finding",
-        "title":t["title"],"publisher":t.get("publisher",""),"url":t.get("url",""),"source_type":source_type(t.get("url","")),
+        "title":t["title"],"publisher":t.get("publisher",""),"url":t.get("url",""),"source_relation":source_relation(t.get("url","")),"source_category":source_category(t.get("url","")),
         "source_says":t.get("summary",""),"key_findings":findings,"evidence_links":"",
         "health_named":"Yes" if t.get("health") else "No",
         "tag_risk_area":"Autonomous AI risk" if t.get("kind")=="incident" else "AI-enabled cyber threats",
@@ -130,7 +144,7 @@ for f in sorted(glob.glob(os.path.join(DB, "evidence", "*.json"))):
     note = e.get("note") or ""
     sr = "self-reported" in (e.get("evaluator","")).lower()
     items.append({"id":pid(e.get("url",""), title),"published":e["date"],"collected":COLLECTED,"item_type":"Evaluation result",
-        "title":title,"publisher":e.get("evaluator",""),"url":e.get("url",""),"source_type":source_type(e.get("url","")),
+        "title":title,"publisher":e.get("evaluator",""),"url":e.get("url",""),"source_relation":source_relation(e.get("url","")),"source_category":source_category(e.get("url","")),
         "source_says":f"{e['model']} scored {e.get('result','')} on {e['test']} ({e.get('unit','')})."+(" Self-reported by the developer." if sr else ""),
         "key_findings":note,"evidence_links":"","health_named":"No",
         "tag_risk_area":"Autonomous AI risk" if "unsanctioned" in e["test"].lower() else "AI-enabled cyber threats",
@@ -148,23 +162,36 @@ for r in sorted(items, key=lambda r:(r["published"], r["title"]), reverse=True):
     seen.add(r["id"]); uniq.append(r)
 items = uniq
 
-COLS = ["id","published","collected","item_type","title","publisher","url","source_type","source_says","key_findings",
+COLS = ["id","published","reporting_period","collected","item_type","title","publisher","url","source_relation","source_category","source_says","key_findings",
         "evidence_links","health_named","tag_risk_area","tag_themes","tag_rating","tag_rating_reason","related_ids"]
 
 os.makedirs(os.path.join(OUT,"data"), exist_ok=True)
-meta = {"name":"Watchfloor public AI cyber intelligence dataset","updated":COLLECTED,"item_count":len(items),
-        "fields":{"source fields":COLS[:12],"machine-assigned tags":["tag_risk_area","tag_themes","tag_rating","tag_rating_reason","related_ids"]},"rating_criteria":RAG_CRITERIA,
-        "note":"Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."}
-json.dump({"meta":meta,"items":items}, open(os.path.join(OUT,"data","items.json"),"w"), ensure_ascii=False, indent=1)
+meta = {"name":"AI Cyber News public dataset","updated":COLLECTED,"item_count":len(items),
+        "fields":{"source fields":[c for c in COLS if not c.startswith("tag_") and c!="related_ids"],"machine-assigned tags":["tag_risk_area","tag_themes","tag_rating","tag_rating_reason","related_ids"]},"rating_criteria":RAG_CRITERIA,
+        "source_relation":{"Original source":"Published by the organisation that did the work or holds the evidence (for example AISI reporting its own evaluation).","Third-party report":"Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."},"note":"Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."}
 
 def write_csv(path, rows):
     with open(path,"w",newline="",encoding="utf-8-sig") as fh:  # BOM so Excel opens UTF-8 cleanly
         w = csv.DictWriter(fh, fieldnames=COLS); w.writeheader(); [w.writerow(r) for r in rows]
-write_csv(os.path.join(OUT,"data","items.csv"), items)
+MONS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
+def reporting_quarter(d):
+    y, m = int(d[:4]), int(d[5:7])
+    start_m = {6:6,7:6,8:6, 9:9,10:9,11:9, 12:12,1:12,2:12, 3:3,4:3,5:3}[m]
+    start_y = y - 1 if m in (1,2) else y
+    end_m = (start_m + 1) % 12 + 1
+    end_y = start_y + 1 if start_m == 12 else start_y
+    label = f"{MONS[start_m-1]}-{MONS[end_m-1]} {end_y}" if start_y == end_y else f"{MONS[start_m-1]} {start_y}-{MONS[end_m-1]} {end_y}"
+    return f"{start_y}-{start_m:02d}", label
 quarters = {}
 for r in items:
-    y,m = r["published"][:4], int(r["published"][5:7]); quarters.setdefault(f"{y}-Q{(m-1)//3+1}",[]).append(r)
-for q,rows in quarters.items(): write_csv(os.path.join(OUT,"data",f"{q}.csv"), rows)
-print(len(items),"items;", {q:len(r) for q,r in sorted(quarters.items())})
+    key, label = reporting_quarter(r["published"]); r["reporting_period"] = label
+    quarters.setdefault(key, {"label": label, "rows": []})["rows"].append(r)
+for q,v in quarters.items(): write_csv(os.path.join(OUT,"data",f"period-{q}.csv"), v["rows"])
+json.dump([{"key":q,"label":v["label"],"file":f"data/period-{q}.csv","items":len(v["rows"])} for q,v in sorted(quarters.items(), reverse=True)],
+          open(os.path.join(OUT,"data","periods.json"),"w"), indent=1)
+print(len(items),"items;", {v["label"]:len(v["rows"]) for q,v in sorted(quarters.items())})
 from collections import Counter
-print(Counter(r["tag_risk_area"] for r in items)); print(Counter(r["tag_rating"] for r in items)); print(Counter(r["source_type"] for r in items))
+print(Counter(r["tag_risk_area"] for r in items)); print(Counter(r["tag_rating"] for r in items)); print(Counter(r["source_relation"] for r in items)); print(Counter(r["source_category"] for r in items))
+
+json.dump({"meta":meta,"items":items}, open(os.path.join(OUT,"data","items.json"),"w"), ensure_ascii=False, indent=1)
+write_csv(os.path.join(OUT,"data","items.csv"), items)

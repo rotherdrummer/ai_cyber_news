@@ -1,0 +1,36 @@
+{
+ "updated": "2026-10-08",
+ "principles": [
+  "Public sources only. Nothing confidential, internal or personal is collected.",
+  "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
+  "UK government sources are checked first, then AI developers' own threat and safety reporting, then independent evaluators."
+ ],
+ "categories": [
+  {"name":"UK government","why":"Authoritative UK assessments, guidance and legislation, and the UK's own testing of frontier AI.",
+   "sources":[
+    {"name":"AI Security Institute (blog and research)","url":"https://www.aisi.gov.uk/blog","added":"2026-05-05"},
+    {"name":"National Cyber Security Centre","url":"https://www.ncsc.gov.uk/","added":"2026-05-05"},
+    {"name":"GOV.UK (Cabinet Office, DHSC, MHRA announcements)","url":"https://www.gov.uk/","added":"2026-05-05"},
+    {"name":"UK Parliament bill pages (Cyber Security and Resilience Bill)","url":"https://bills.parliament.uk/bills/4035","added":"2026-10-08"}]},
+  {"name":"AI developer","why":"First-hand reporting of real misuse of their models, and of the cyber capability of new models before and at release.",
+   "sources":[
+    {"name":"Anthropic threat intelligence","url":"https://www.anthropic.com/threat-intelligence","added":"2026-05-05"},
+    {"name":"OpenAI threat reporting, system cards and deployment safety","url":"https://openai.com/index/disrupting-malicious-ai-uses","added":"2026-05-05"},
+    {"name":"Google Threat Intelligence Group","url":"https://cloud.google.com/blog/topics/threat-intelligence","added":"2026-10-08"}]},
+  {"name":"Independent evaluator","why":"Capability and behaviour evidence from organisations that test models but don't build them, and the shared catalogue of attacks on AI systems.",
+   "sources":[
+    {"name":"METR","url":"https://metr.org/","added":"2026-10-08"},
+    {"name":"MITRE ATLAS","url":"https://atlas.mitre.org/","added":"2026-05-06"},
+    {"name":"ExploitBench (Carnegie Mellon), via Epoch AI","url":"https://epoch.ai/benchmarks/exploitbench","added":"2026-10-08"}]},
+  {"name":"Legal and policy analysis","why":"Explains regulatory changes (for example EU AI Act timelines) where the official text is hard to read or not yet published.",
+   "sources":[{"name":"Law firm and policy institute briefings, case by case","url":"","added":"2026-10-08"}]},
+  {"name":"News and model trackers","why":"Early warning of model releases and incidents. Always replaced by an original source when one is published.",
+   "sources":[{"name":"Model release trackers and reputable technology news, case by case","url":"","added":"2026-10-08"}]}
+ ],
+ "changes": [
+  {"date":"2026-10-08","change":"Dashboard launched as AI Cyber News, carrying over the register started in May 2026.","why":"Move from a private register to a public dataset that internal analysis can draw on."},
+  {"date":"2026-10-08","change":"Added Google Threat Intelligence Group, METR, ExploitBench and UK Parliament bill pages.","why":"Fill gaps in threat reporting, independent capability evidence and UK legislation."},
+  {"date":"2026-10-08","change":"OpenAI's 'Disrupting malicious uses of AI' reports noted as quiet: none since February 2026.","why":"Kept as a source; OpenAI system cards and deployment safety pages used in the meantime."},
+  {"date":"2026-10-08","change":"BBC News cannot be read automatically, so mainstream coverage is not collected.","why":"Mainstream news is background only; original sources are used instead."}
+ ]
+}

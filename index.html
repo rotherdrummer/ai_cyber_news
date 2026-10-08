@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Watchfloor</title>
+<title>AI Cyber News</title>
 <style>
 :root{
   --f-serif:Georgia,"Iowan Old Style","Times New Roman",Times,serif;
@@ -98,6 +98,20 @@ details.how dt{display:flex;gap:6px;align-items:center;font-weight:600}
 details.how dd{margin:0}
 details.custom{font-size:13px;color:var(--ink-2)}
 details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
+.sources{margin-top:44px;border-top:2px solid var(--ink);padding-top:16px;display:grid;gap:12px}
+.sources h2{margin:0;font-family:var(--f-serif);font-size:22px}
+.sources h3{margin:8px 0 0;font-size:15px}
+.sources ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:13.5px;display:grid;gap:4px;max-width:80ch}
+.scat{background:var(--surface);border:1px solid var(--rule);padding:12px 14px;margin-bottom:8px}
+.scat h4{margin:0 0 4px;font-size:14px}
+.scat p{margin:0 0 6px;font-size:13px;color:var(--ink-2)}
+.scat li{font-size:13px}
+.scat .added{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-3);margin-left:6px}
+.tscroll{overflow-x:auto;border:1px solid var(--rule);background:var(--surface)}
+.tscroll table{border-collapse:collapse;width:100%;font-size:13px}
+.tscroll th,.tscroll td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--rule-soft)}
+.tscroll th{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
+.tscroll td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:12px}
 .empty{padding:24px;color:var(--ink-3);text-align:center}
 footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-family:var(--f-mono);font-size:11px;color:var(--ink-3);line-height:1.7}
 @media (max-width:560px){.item{grid-template-columns:1fr;gap:4px}.status{text-align:left}.count{margin-left:0}}
@@ -107,17 +121,18 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 <div class="marking">Open-source intelligence · public sources only · not an official product of any organisation</div>
 <div class="wrap">
   <header>
-    <div><div class="eyebrow">Public AI cyber intelligence</div><h1>Watchfloor</h1></div>
+    <div><div class="eyebrow">Public AI cyber intelligence</div><h1>AI Cyber News</h1></div>
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
   </header>
 
   <section class="export" aria-labelledby="exp">
-    <h2 id="exp">Download data for Copilot analysis</h2>
+    <h2 id="exp">Download data for internal analysis</h2>
     <p>The same dataset this page shows, one row per item. Columns starting <code>tag_</code> are machine-assigned categories; every other column describes what the source reports.</p>
     <div class="btns">
       <a class="btn primary" href="data/items.csv" download>Download CSV (all items)</a>
       <span id="qlinks" class="btns"></span>
       <a class="btn" href="data/items.json">JSON</a>
+      <a class="btn" href="#sources">Sources used</a>
     </div>
   </section>
 
@@ -132,12 +147,22 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   <div class="controls" role="group" aria-label="Filters">
     <input id="q" type="search" placeholder="Search titles, publishers, findings…" aria-label="Search">
     <select id="type" aria-label="Item type"><option value="">All item types</option></select>
-    <select id="src" aria-label="Source type"><option value="">Primary and secondary</option><option>Primary</option><option>Secondary</option></select>
+    <select id="src" aria-label="Original or third-party"><option value="">Original and third-party</option><option>Original source</option><option>Third-party report</option></select>
+    <select id="cat" aria-label="Source category"><option value="">All source categories</option></select>
     <details class="custom"><summary>Custom dates</summary><label class="chk">From <input id="from" type="date"></label> <label class="chk">To <input id="to" type="date"></label></details>
     <span class="count" id="count"></span>
   </div>
 
   <div id="list"><div class="empty">Loading…</div></div>
+
+  <section class="sources" id="sources" aria-labelledby="srch">
+    <h2 id="srch">Sources used</h2>
+    <p class="says">Every item is labelled <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Original source</b> (published by the organisation that did the work or holds the evidence) or <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Third-party report</b> (reported by someone else, used only where no original was found).</p>
+    <ul id="principles"></ul>
+    <div id="srcCats"></div>
+    <h3>Changes to sources</h3>
+    <div class="tscroll"><table><thead><tr><th>Date</th><th>Change</th><th>Why</th></tr></thead><tbody id="srcChanges"></tbody></table></div>
+  </section>
 
   <footer>
     Every item links to its source; summaries describe what the source reports. Ratings, risk areas and themes are machine-assigned and can be wrong. Check the source before you quote anything.<br>
@@ -162,19 +187,24 @@ var TODAY=(function(){try{return new Intl.DateTimeFormat("en-CA",{timeZone:"Euro
 var T=new Date(TODAY+"T00:00:00Z");
 var WEEK=iso(new Date(T.getTime()-((T.getUTCDay()+6)%7)*864e5));           /* Monday */
 var MONTH=TODAY.slice(0,8)+"01";
-var QSTART=TODAY.slice(0,5)+String(Math.floor((+TODAY.slice(5,7)-1)/3)*3+1).padStart(2,"0")+"-01";
-var PERIODS=[["all","All",""],["today","Today",TODAY],["week","This week",WEEK],["month","This month",MONTH],["quarter","This quarter",QSTART]];
+var QSTART=(function(){var y=+TODAY.slice(0,4),m=+TODAY.slice(5,7);var sm={1:12,2:12,3:3,4:3,5:3,6:6,7:6,8:6,9:9,10:9,11:9,12:12}[m];if(m<3)y--;return y+"-"+String(sm).padStart(2,"0")+"-01"})();
+var QLABEL=(function(){var sm=+QSTART.slice(5,7);return MON[sm-1].slice(0,3)+"\u2013"+MON[(sm+1)%12].slice(0,3)})();
+var PERIODS=[["all","All",""],["today","Today",TODAY],["week","This week",WEEK],["month","This month",MONTH],["quarter","This quarter ("+QLABEL+")",QSTART]];
 function since(p){for(var i=0;i<PERIODS.length;i++)if(PERIODS[i][0]===p)return PERIODS[i][2];return ""}
 function bucket(d){if(d>=TODAY)return "Today";if(d>=WEEK)return "Earlier this week";if(d>=MONTH)return "Earlier this month";if(d>=QSTART)return "Earlier this quarter";return MON[+d.slice(5,7)-1]+" "+d.slice(0,4)}
 
+var RANK={Red:0,Amber:1,Green:2};
+function groupKey(d){if(d>=TODAY)return "4";if(d>=WEEK)return "3";if(d>=MONTH)return "2";if(d>=QSTART)return "1";return "0"+d.slice(0,7)}
+function order(a,b){var ga=groupKey(a.published),gb=groupKey(b.published);if(ga!==gb)return ga<gb?1:-1;var ra=RANK[a.tag_rating],rb=RANK[b.tag_rating];if(ra!==rb)return ra-rb;return a.published<b.published?1:a.published>b.published?-1:0}
 function base(skip){ /* filters except the one named in skip, for button counts */
-  var q=$("q").value.trim().toLowerCase(),ty=$("type").value,src=$("src").value,f=$("from").value,t=$("to").value,s0=since(period);
+  var q=$("q").value.trim().toLowerCase(),ty=$("type").value,src=$("src").value,cat=$("cat").value,f=$("from").value,t=$("to").value,s0=since(period);
   return all.filter(function(r){
     if(skip!=="area"&&area&&r.tag_risk_area!==area)return false;
     if(skip!=="rag"&&rag&&r.tag_rating!==rag)return false;
     if(skip!=="period"&&s0&&r.published<s0)return false;
     if(ty&&r.item_type!==ty)return false;
-    if(src&&r.source_type!==src)return false;
+    if(src&&r.source_relation!==src)return false;
+    if(cat&&r.source_category!==cat)return false;
     if(f&&r.published<f)return false;
     if(t&&r.published>t)return false;
     if(q&&[r.title,r.publisher,r.source_says,r.key_findings,r.tag_themes].join(" ").toLowerCase().indexOf(q)<0)return false;
@@ -201,7 +231,7 @@ function render(){
     var u=safe(r.url);
     var title=u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:r.title}):el("span",{text:r.title});
     var body=el("div",{cls:"body"},[
-      el("div",{cls:"line1"},[el("span",{cls:"pill rag "+r.tag_rating,title:r.tag_rating_reason||"",text:r.tag_rating}),el("span",{cls:areaCls(r.tag_risk_area),text:r.tag_risk_area}),el("span",{cls:"pill src",text:r.source_type}),el("span",{cls:"pill src",text:r.item_type}),el("span",{cls:"pub",text:r.publisher})]),
+      el("div",{cls:"line1"},[el("span",{cls:"pill rag "+r.tag_rating,title:r.tag_rating_reason||"",text:r.tag_rating}),el("span",{cls:areaCls(r.tag_risk_area),text:r.tag_risk_area}),el("span",{cls:"pill src",title:r.source_relation==="Original source"?"Published by the organisation that did the work or holds the evidence":"Reported by someone else; used where no original was found",text:r.source_relation}),el("span",{cls:"pill src",text:r.source_category}),el("span",{cls:"pill src",text:r.item_type}),el("span",{cls:"pub",text:r.publisher})]),
       el("h3",null,[title]),
       r.source_says?el("p",{cls:"says"},[el("b",{text:"Source says"}),r.source_says]):null,
       r.key_findings?el("p",{cls:"says"},[el("b",{text:"Findings"}),r.key_findings]):null,
@@ -212,21 +242,28 @@ function render(){
     list.appendChild(el("article",{cls:"item "+r.tag_rating,id:r.id},[el("div",{cls:"when",text:fmt(r.published)}),body]));
   });
 }
-function jump(id){area="";rag="";period="all";["q","type","src","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
+function jump(id){area="";rag="";period="all";["q","type","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
+function renderSources(d){
+  (d.principles||[]).forEach(function(t){$("principles").appendChild(el("li",{text:t}))});
+  (d.categories||[]).forEach(function(c){var ul=el("ul");(c.sources||[]).forEach(function(x){var u=safe(x.url);ul.appendChild(el("li",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:x.name}):x.name,x.added?el("span",{cls:"added",text:"since "+fmt(x.added)+" "+x.added.slice(0,4)}):null]))});
+    $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
+  (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
+}
 function build(){
   PERIODS.forEach(function(p){var b=el("button",{type:"button","data-v":p[0]},[p[1]+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){period=p[0];render()});$("periods").appendChild(b)});
   [""].concat(RAGS).forEach(function(v){var b=el("button",{type:"button","data-v":v},[v?el("span",{cls:"dot "+v}):null,(v||"All")+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){rag=v;render()});$("rags").appendChild(b)});
   [""].concat(AREAS).forEach(function(a){var b=el("button",{type:"button","data-a":a},[el("span",{cls:"k",text:a||"All areas"}),el("span",{cls:"v"})]);b.addEventListener("click",function(){area=a;render()});$("areas").appendChild(b)});
 }
-["q","type","src","from","to"].forEach(function(k){$(k).addEventListener("input",render)});
+["q","type","src","cat","from","to"].forEach(function(k){$(k).addEventListener("input",render)});
 fetch("data/items.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
-  all=d.items.slice().sort(function(a,b){return a.published<b.published?1:a.published>b.published?-1:0});
+  all=d.items.slice().sort(order);
   all.forEach(function(r){byId[r.id]=r});
   $("updated").textContent=d.meta.updated;$("total").textContent=all.length;
   var crit=d.meta.rating_criteria||{};RAGS.forEach(function(k){if(crit[k]){$("criteria").appendChild(el("dt",null,[el("span",{cls:"dot "+k}),k]));$("criteria").appendChild(el("dd",{text:crit[k]}))}});
   var types={};all.forEach(function(r){types[r.item_type]=1});Object.keys(types).sort().forEach(function(t){$("type").appendChild(el("option",{text:t}))});
-  var qs={};all.forEach(function(r){var y=r.published.slice(0,4),m=+r.published.slice(5,7);qs[y+"-Q"+(Math.floor((m-1)/3)+1)]=1});
-  Object.keys(qs).sort().reverse().forEach(function(q){$("qlinks").appendChild(el("a",{cls:"btn",href:"data/"+q+".csv",download:"",text:q+" CSV"}))});
+  var cats={};all.forEach(function(r){cats[r.source_category]=1});Object.keys(cats).sort().forEach(function(c){$("cat").appendChild(el("option",{text:c}))});
+  fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){$("qlinks").appendChild(el("a",{cls:"btn",href:p.file,download:"",text:p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2")+" CSV"}))})}).catch(function(){});
+  fetch("data/sources.json",{cache:"no-store"}).then(function(r){return r.json()}).then(renderSources).catch(function(){});
   build();render();
   if(location.hash&&byId[location.hash.slice(1)])jump(location.hash.slice(1));
 }).catch(function(){$("list").textContent="";$("list").appendChild(el("div",{cls:"empty",text:"The data didn't load. Reload the page to try again."}))});
