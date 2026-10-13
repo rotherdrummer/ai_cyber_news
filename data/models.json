@@ -76,9 +76,9 @@
    "released": "2026-09-30",
    "access": "Vetted cyber defenders only (Fairwind); no general date",
    "tier": "Flagship",
-   "cyber_evidence": "Shipped without cyber guardrails to vetted defenders",
+   "cyber_evidence": "Shipped without cyber guardrails to vetted defenders; AISI evaluating it (UK minister, 12 Oct 2026)",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08"
+   "updated": "2026-10-13"
   },
   {
    "id": "gemma",
@@ -352,6 +352,19 @@
    "cyber_evidence": "",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
    "updated": "2026-10-08"
+  },
+  {
+   "id": "haiku-5-5",
+   "name": "Claude Haiku 5.5",
+   "developer": "Anthropic",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-10-07",
+   "access": "Public",
+   "tier": "Mid",
+   "cyber_evidence": "Cyber safeguards block penetration testing; broader use via Cyber Verification Program",
+   "evidence_url": "https://www.anthropic.com/claude-haiku-5-5",
+   "updated": "2026-10-13"
   }
  ]
 }

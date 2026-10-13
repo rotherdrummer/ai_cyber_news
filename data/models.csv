@@ -3,7 +3,7 @@ deepseek-v4-1,DeepSeek V4.1 Flash / V4 Pro,DeepSeek,China,Open,,"Downloadable, M
 fable-5-1,Claude Fable 5.1,Anthropic,United States,Closed,2026-09-01,"Public, with extra safeguards for biology, cyber and LLM R&D",Mythos-class,,,2026-10-08
 falcon,Falcon H1,Technology Innovation Institute (UAE),Sovereign programmes,Open,,Downloadable,Open flagship,,,2026-10-08
 gemini-3-8-flash,Gemini 3.8 Flash / Flash Cyber,Google DeepMind,United States,Closed,2026-09-02,Public,"Fast tier, with a cyber variant",,,2026-10-08
-gemini-4-argon,Gemini 4 Argon,Google DeepMind,United States,Closed,2026-09-30,Vetted cyber defenders only (Fairwind); no general date,Flagship,Shipped without cyber guardrails to vetted defenders,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08
+gemini-4-argon,Gemini 4 Argon,Google DeepMind,United States,Closed,2026-09-30,Vetted cyber defenders only (Fairwind); no general date,Flagship,"Shipped without cyber guardrails to vetted defenders; AISI evaluating it (UK minister, 12 Oct 2026)",https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-13
 gemma,Gemma,Google DeepMind,United States,Open,,Downloadable,Open family,,,2026-10-08
 glm-5-3,GLM-5.3,Z.ai (Zhipu),China,Open,,Downloadable,Open flagship,Predecessor GLM-5.2 put 4–7 months behind the closed frontier by AISI,https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber,2026-10-08
 gpt-5-6-sol,GPT-5.6 Sol,OpenAI,United States,Closed,2026-07,Replaced in ChatGPT by GPT-6 Sol on 7 Oct 2026,Previous generation,78.5% on ExploitBench; supply-chain attacks in 6.3% of AISI simulations,https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations,2026-10-08
@@ -25,3 +25,4 @@ mythos-preview,Claude Mythos Preview,Anthropic,United States,Closed,2026-04,Rest
 opus-5-5,Claude Opus 5.5,Anthropic,United States,Closed,,Public,Flagship,METR pre-deployment evaluation published 22 Sep,https://metr.org/,2026-10-08
 qwen-3-8,Qwen3.8,Alibaba,China,Open,,Base weights downloadable; Qwen3.8-Max closed,Open flagship,,,2026-10-08
 sonnet-5-5,Claude Sonnet 5.5,Anthropic,United States,Closed,2026-09-28,Public,Workhorse,,https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html,2026-10-08
+haiku-5-5,Claude Haiku 5.5,Anthropic,United States,Closed,2026-10-07,Public,Mid,Cyber safeguards block penetration testing; broader use via Cyber Verification Program,https://www.anthropic.com/claude-haiku-5-5,2026-10-13
