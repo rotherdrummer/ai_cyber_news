@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-10-14",
-  "item_count": 91,
+  "item_count": 93,
   "fields": {
    "source fields": [
     "id",
@@ -40,6 +40,48 @@
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings."
  },
  "items": [
+  {
+   "id": "wf-0787f79803",
+   "published": "2026-10-14",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Policy",
+   "title": "Anthropic signs MOU with the Government of Singapore",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/singapore-office-opening",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic opened a Singapore office and signed an MOU with Singapore's Ministry of Digital Development and Information. It covers joint work on AI safety, security and model testing, including technical exchanges on incident response. The Cyber Security Agency of Singapore is exploring how Claude could help its work.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "model-release;incident",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-cc59e5d1d3",
+   "published": "2026-10-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Policy",
+   "title": "UK-Canada renewed AI security partnership",
+   "publisher": "Cabinet Office",
+   "url": "https://www.gov.uk/government/news/uk-canada-renewed-ai-security-partnership",
+   "source_relation": "Original source",
+   "source_category": "UK government",
+   "source_says": "The UK and Canada renewed their AI security partnership. The UK AI Security Institute and the Canadian AI Safety Institute will exchange information on frontier AI capabilities, risks and evaluation methods, and explore coordinated evaluations. On cyber, the partners will share sensitive reporting through Five Eyes channels and develop interoperable AI security standards.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "evaluation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
   {
    "id": "wf-5679180041",
    "published": "2026-10-13",
