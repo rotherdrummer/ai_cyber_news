@@ -1,21 +1,14 @@
 """Build a plain-text quarterly report for each reporting quarter.
 
-Inputs (all under data/):
-  items.json                         the master news items
-  reports/narrative-YYYY-MM.json     written analysis for a quarter (optional)
+The report contains every item shown on the dashboard for that quarter, in a
+structured form for internal analysis (for example by a Copilot agent). It
+contains no analysis of its own. Items are numbered so they can be cited as
+[1], [2] and so on.
 
-Output:
-  reports/report-YYYY-MM.txt         one report per quarter
-  periods.json                       gains report, start, end, complete, covers_to
-
-The narrative (headline observations, shifts, implications, outlook) is written
-by Claude and cites items by id. Everything else in the report, including the
-completeness check and the full item list, is produced here by code, so a
-report can never silently leave an item out.
-
-Run from the repo root after tools/rebuild.py:  python3 tools/build_report.py
+Output: data/reports/report-YYYY-MM.txt, and report details in periods.json.
+Run from the repo root (tools/rebuild.py runs it automatically).
 """
-import datetime, json, os, re, sys
+import datetime, json, os
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "data")
@@ -28,45 +21,40 @@ WIDTH = 100
 
 def ukd(d):
     p = (d or "").split("-")
-    if len(p) == 3:
-        return f"{int(p[2])} {MON[int(p[1]) - 1]} {p[0]}"
-    return d or ""
+    return f"{int(p[2])} {MON[int(p[1]) - 1]} {p[0]}" if len(p) == 3 else (d or "")
 
 
 def quarter_bounds(key):
     y, m = int(key[:4]), int(key[5:7])
     start = datetime.date(y, m, 1)
-    em, ey = (m + 2 - 1) % 12 + 1, y + (1 if m + 2 > 12 else 0)
+    em = (m + 1) % 12 + 1
+    ey = y + (1 if m + 2 > 12 else 0)
     nm, ny = em % 12 + 1, ey + (1 if em == 12 else 0)
-    end = datetime.date(ny, nm, 1) - datetime.timedelta(days=1)
-    return start, end
+    return start, datetime.date(ny, nm, 1) - datetime.timedelta(days=1)
 
 
-def wrap(text, indent=""):
-    words, lines, cur = (text or "").split(), [], indent
-    for w in words:
+def wrap(text, indent):
+    lines, cur = [], indent
+    for w in (text or "").split():
         if len(cur) + len(w) + 1 > WIDTH and cur.strip():
-            lines.append(cur.rstrip())
-            cur = indent if indent else "  "
+            lines.append(cur.rstrip()); cur = indent
         cur += w + " "
     if cur.strip():
         lines.append(cur.rstrip())
-    return "\n".join(lines)
-
-
-def cite(ids):
-    return " [" + ", ".join(ids) + "]" if ids else ""
+    return lines
 
 
 def main():
     doc = json.load(open(os.path.join(DATA, "items.json"), encoding="utf-8"))
     items, meta = doc["items"], doc.get("meta", {})
-    by_id = {r["id"]: r for r in items}
     today = datetime.date.fromisoformat(meta.get("updated") or datetime.date.today().isoformat())
     updated_at = meta.get("updated_at", meta.get("updated", ""))
+    crit = meta.get("rating_criteria", {})
     periods = json.load(open(os.path.join(DATA, "periods.json"), encoding="utf-8"))
     os.makedirs(REP, exist_ok=True)
-    problems = []
+    for f in os.listdir(REP):
+        if f.startswith("narrative-"):
+            os.remove(os.path.join(REP, f))
 
     for p in periods:
         key = p["key"]
@@ -74,147 +62,57 @@ def main():
         complete = today > end
         covers_to = end if complete else today
         rows = [r for r in items if start.isoformat() <= r["published"] <= end.isoformat()]
-        rows.sort(key=lambda r: (RANK.get(r["tag_rating"], 3), r["published"]), reverse=False)
-        q_ids = {r["id"] for r in rows}
-        reds = [r for r in rows if r["tag_rating"] == "Red"]
-
-        npath = os.path.join(REP, f"narrative-{key}.json")
-        nar = json.load(open(npath, encoding="utf-8")) if os.path.exists(npath) else None
-
-        cited = []
-        def collect(ids):
-            for i in ids or []:
-                if i not in by_id:
-                    problems.append(f"{key}: narrative cites unknown id {i}")
-                cited.append(i)
-        if nar:
-            for sec in ("headline_observations", "implications", "outlook", "limitations"):
-                for e in nar.get(sec, []):
-                    collect(e.get("ids"))
-            for e in nar.get("shifts", {}).get("previous", []) + nar.get("shifts", {}).get("new", []):
-                collect(e.get("ids"))
-        cited_set = set(cited)
-        written_to = (nar or {}).get("items_to", "")
-        newer = [r for r in rows if written_to and r["collected"] > written_to and r["id"] not in cited_set]
-        uncited_reds = [r for r in reds if r["id"] not in cited_set]
-
-        L = []
-        L.append("AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS")
-        L.append("=" * WIDTH)
-        L.append(f"Reporting quarter: {p['label'].replace('-', '–')} ({ukd(start.isoformat())} to {ukd(end.isoformat())})")
-        L.append(f"Status: {'COMPLETE' if complete else 'IN PROGRESS: the quarter has not finished'}")
-        L.append(f"This report covers: {ukd(start.isoformat())} to {ukd(covers_to.isoformat())}")
-        dt = updated_at.split("T")
-        L.append(f"Data last updated: {ukd(dt[0])}{', ' + dt[1][:5] if len(dt) > 1 else ''} (UK time)")
-        L.append("Public sources only. Not an official product of any organisation. Item ids in square")
-        L.append("brackets refer to section 6, which gives each item's summary and link.")
-        L.append("")
-        L.append("COMPLETENESS CHECK (generated by code, not by AI)")
-        L.append("-" * WIDTH)
+        order = AREAS + sorted({r["tag_risk_area"] for r in rows} - set(AREAS))
+        rows.sort(key=lambda r: (order.index(r["tag_risk_area"]), RANK.get(r["tag_rating"], 3), r["published"][::-1] and "".join(chr(255 - ord(c)) for c in r["published"])))
         cnt = {k: sum(1 for r in rows if r["tag_rating"] == k) for k in RANK}
-        L.append(f"Items in this quarter: {len(rows)} (Red {cnt['Red']}, Amber {cnt['Amber']}, Green {cnt['Green']}). All are listed in section 6.")
-        if not nar:
-            L.append("No written analysis exists for this quarter yet. Sections 1 to 5 are empty; section 6 is complete.")
-        elif uncited_reds:
-            L.append(f"RED ITEMS NOT YET IN THE ANALYSIS: {len(uncited_reds)} of {len(reds)}. Listed below and marked NOT IN ANALYSIS in section 6:")
-            for r in uncited_reds:
-                L.append(wrap(f"- [{r['id']}] {ukd(r['published'])}: {r['title']}", "  "))
-        else:
-            L.append(f"Red items cited in the analysis: {len(reds)} of {len(reds)}.")
-        if nar:
-            L.append(f"Analysis written {ukd(nar.get('written', ''))}, from items collected up to {ukd(written_to)}.")
-            if newer:
-                L.append(f"{len(newer)} item(s) added since then are marked NEW in section 6 and are not reflected in sections 1 to 5.")
-        L.append("")
-
-        def section(title):
-            L.append(title)
-            L.append("-" * WIDTH)
-
-        section("1. HEADLINE OBSERVATIONS")
-        for n, e in enumerate((nar or {}).get("headline_observations", []), 1):
-            L.append(wrap(f"1.{n} {e['title']}"))
-            L.append(wrap(e["text"] + cite(e.get("ids")), "    "))
+        dt = updated_at.split("T")
+        L = ["AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS", "=" * WIDTH,
+             f"Reporting quarter: {p['label'].replace('-', '–')} ({ukd(start.isoformat())} to {ukd(end.isoformat())})",
+             f"Status: {'COMPLETE' if complete else 'IN PROGRESS: the quarter has not finished'}",
+             f"This report covers: {ukd(start.isoformat())} to {ukd(covers_to.isoformat())}",
+             f"Data last updated: {ukd(dt[0])}{', ' + dt[1][:5] if len(dt) > 1 else ''} (UK time)",
+             "",
+             "WHAT THIS IS",
+             "-" * WIDTH]
+        L += wrap("Every item shown on the AI Cyber News dashboard for this quarter, from public sources only. "
+                  "It contains no analysis. Cite items by their number, for example [3].", "")
+        L += ["", "COMPLETENESS CHECK (generated by code)", "-" * WIDTH,
+              f"Items in this report: {len(rows)} (Red {cnt['Red']}, Amber {cnt['Amber']}, Green {cnt['Green']}).",
+              f"Items numbered 1 to {len(rows)}. This is every item on the dashboard for these dates.", ""]
+        L += ["HOW TO READ EACH ITEM", "-" * WIDTH,
+              "Rating, risk area and themes are machine-assigned triage, not findings:"]
+        for k in ("Red", "Amber", "Green"):
+            if crit.get(k):
+                L += wrap(f"- {k}: {crit[k]}", "  ")
+        L += wrap("Source: 'Original source' means published by the organisation that did the work; "
+                  "'Third-party report' means reported by someone else and is weaker evidence. "
+                  "'Source says' summarises what the source reports.", "")
+        L += ["", "ITEMS, BY RISK AREA, THEN RATING (Red first), NEWEST FIRST", "-" * WIDTH]
+        cur, n = None, 0
+        for r in rows:
+            if r["tag_risk_area"] != cur:
+                cur = r["tag_risk_area"]
+                L += ["", f"{cur.upper()} ({sum(1 for x in rows if x['tag_risk_area'] == cur)})", ""]
+            n += 1
+            L.append(f"[{n}] {r['tag_rating'].upper()} | {ukd(r['published'])} | {r['item_type']} | {r['publisher']} | {r['source_relation']}")
+            L += wrap(r["title"], "    ")
+            if r.get("source_says", "").strip():
+                L += wrap("Source says: " + r["source_says"], "    ")
+            if r.get("key_findings", "").strip():
+                L += wrap("Key findings: " + r["key_findings"], "    ")
+            if r.get("health_named") == "Yes":
+                L.append("    Health named: yes")
+            L.append(f"    {r['url']}")
             L.append("")
-        if not nar:
-            L.append("")
-
-        section("2. SHIFTS SINCE LAST QUARTER")
-        sh = (nar or {}).get("shifts", {})
-        if sh.get("baseline"):
-            L.append(wrap("Baseline: " + sh["baseline"]))
-            L.append("")
-        for e in sh.get("previous", []):
-            L.append(wrap(f"Previous: {e['previous']}"))
-            L.append(wrap(f"{e['verdict'].upper()}. {e['text']}{cite(e.get('ids'))}", "    "))
-            L.append("")
-        if sh.get("new"):
-            L.append("New this quarter:")
-            for e in sh["new"]:
-                L.append(wrap(f"- {e['text']}{cite(e.get('ids'))}", "  "))
-            L.append("")
-
-        section("3. IMPLICATIONS FOR HEALTH AND CARE (from public evidence only)")
-        for e in (nar or {}).get("implications", []):
-            L.append(wrap(f"- {e['text']}{cite(e.get('ids'))}", "  "))
-        L.append("")
-        L.append(wrap("[INTERNAL INTELLIGENCE: to be added at work. Mark anything added here as internal and keep it separate from the public evidence above.]"))
-        L.append("")
-
-        section("4. OUTLOOK AND COLLECTION PRIORITIES")
-        for e in (nar or {}).get("outlook", []):
-            L.append(wrap(f"- {e['text']}{cite(e.get('ids'))}", "  "))
-        L.append("")
-
-        section("5. CONFIDENCE AND LIMITATIONS")
-        for e in (nar or {}).get("limitations", []):
-            L.append(wrap(f"- {e['text']}{cite(e.get('ids'))}", "  "))
-        L.append("")
-
-        section("6. ALL ITEMS THIS QUARTER, BY RISK AREA, THEN RATING")
-        for area in AREAS + sorted({r["tag_risk_area"] for r in rows} - set(AREAS)):
-            ar = [r for r in rows if r["tag_risk_area"] == area]
-            if not ar:
-                continue
-            ar.sort(key=lambda r: (RANK.get(r["tag_rating"], 3), [-ord(c) for c in r["published"]]))
-            L.append(f"{area} ({len(ar)})")
-            for r in ar:
-                flags = []
-                if r["id"] in cited_set:
-                    flags.append("in analysis")
-                elif nar and r["tag_rating"] == "Red":
-                    flags.append("NOT IN ANALYSIS")
-                if r in newer:
-                    flags.append("NEW")
-                head = f"[{r['id']}] {ukd(r['published'])} | {r['tag_rating']} | {r['source_relation']} | {r['publisher']}"
-                L.append(head + (f" | {', '.join(flags)}" if flags else ""))
-                L.append(wrap(r["title"], "    "))
-                summ = " ".join(x for x in [r.get("source_says", ""), r.get("key_findings", "")] if x.strip())
-                if summ:
-                    L.append(wrap(summ, "    "))
-                L.append(f"    {r['url']}")
-                L.append("")
-        section("7. SOURCES CITED IN THE ANALYSIS")
-        seen = []
-        for i in cited:
-            if i in by_id and by_id[i]["url"] not in seen:
-                seen.append(by_id[i]["url"])
-                r = by_id[i]
-                L.append(wrap(f"- {r['publisher']}, {r['title']} ({ukd(r['published'])}). {r['url']}", "  "))
-        L.append("")
         L.append("End of report.")
-
-        out = os.path.join(REP, f"report-{key}.txt")
-        with open(out, "w", encoding="utf-8") as fh:
+        with open(os.path.join(REP, f"report-{key}.txt"), "w", encoding="utf-8") as fh:
             fh.write("\n".join(L) + "\n")
         p.update({"report": f"data/reports/report-{key}.txt", "start": start.isoformat(), "end": end.isoformat(),
-                  "complete": complete, "covers_to": covers_to.isoformat(), "updated_at": updated_at,
-                  "has_analysis": bool(nar), "reds_uncited": len(uncited_reds) if nar else None})
-        print(f"{key}: {len(rows)} items, {len(reds)} red, uncited red {len(uncited_reds) if nar else '-'}, analysis {'yes' if nar else 'no'}")
-
+                  "complete": complete, "covers_to": covers_to.isoformat(), "updated_at": updated_at})
+        for k in ("has_analysis", "reds_uncited"):
+            p.pop(k, None)
+        print(f"{key}: {len(rows)} items in report")
     json.dump(periods, open(os.path.join(DATA, "periods.json"), "w"), indent=1)
-    if problems:
-        print("Problems:"); [print(" -", x) for x in problems]; sys.exit(1)
 
 
 if __name__ == "__main__":
