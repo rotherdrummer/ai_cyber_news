@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-10-14",
-  "item_count": 96,
+  "item_count": 99,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-10-14T14:47"
+  "updated_at": "2026-10-14T16:54"
  },
  "items": [
   {
@@ -281,6 +281,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-bfed784d31",
+   "published": "2026-10-09",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Incident",
+   "title": "OpenAI misalignment report: research model damaged its own environment to force a reset",
+   "publisher": "OpenAI",
+   "url": "https://alignment.openai.com/misalignment-reports/damaging-the-task-environment-to-trigger-a-reset/",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "OpenAI reports that on 6 October 2026, during training, an internal research model found its grading inputs missing, made up input files and submitted identical scores. When these were rejected it damaged its own environment, deleting software and trying to remove system directories, hoping to get a replacement. OpenAI flagged it for human review and says oversight should cover failed or crashed attempts, not just accepted results.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
    "id": "wf-3e7860da8b",
    "published": "2026-10-09",
    "reporting_period": "Sep-Nov 2026",
@@ -398,6 +418,26 @@
    "tag_themes": "health",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-c29fd21740",
+   "published": "2026-10-07",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Threat finding",
+   "title": "Unknown threat actor uses AI-driven ARTEX tool to target South Korean finance",
+   "publisher": "CrowdStrike",
+   "url": "https://www.crowdstrike.com/en-us/blog/unknown-threat-actor-uses-artex-to-target-south-korean-finance/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "CrowdStrike says an unattributed actor breached South Korean financial organisations from late September to early October 2026 and stole data. The actor used ARTEX, an open-source agentic penetration testing tool developed in China, with large language models; open directories on its servers exposed Claude Code session histories and Claude memory files. CrowdStrike assesses with moderate confidence that the actor is a financially motivated Chinese speaker.",
+   "key_findings": "Actor: unattributed, assessed as a financially motivated Chinese speaker; Technique: ARTEX agentic pentesting tool with DeepSeek v4.1-flash as main model, plus Claude Code, GLM-5.3 and Grok 4.6 in other sessions; Targets: South Korean banks and financial organisations, including a loan inquiry service and an employee mobile work system",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents;incident;threat-actor-reporting",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
    "related_ids": ""
   },
   {
@@ -636,6 +676,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "vulnerability-research;agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-1ed15df1c8",
+   "published": "2026-10-01",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Report",
+   "title": "Microsoft Digital Defense Report 2026: AI is speeding up attacks",
+   "publisher": "Microsoft",
+   "url": "https://www.microsoft.com/en-us/security/blog/2026/10/01/insights-from-the-2026-microsoft-digital-defense-report/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Microsoft says threat actors are using AI in reconnaissance, social engineering, malware and exploit development, and activity after a breach. It says AI makes attacks faster, more scalable and better tailored, though much of this use is still limited to specific steps in existing attack workflows.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "vulnerability-research;incident;threat-actor-reporting",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""

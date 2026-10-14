@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-14",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -30,6 +30,21 @@
      "name": "UK Parliament bill pages (Cyber Security and Resilience Bill)",
      "url": "https://bills.parliament.uk/bills/4035",
      "added": "2026-10-08"
+    },
+    {
+     "name": "MI5 AI Threat Assessment Centre",
+     "url": "https://www.mi5.gov.uk/about-us/ai-threat-assessment-centre",
+     "added": "2026-10-14"
+    },
+    {
+     "name": "Cabinet Office",
+     "url": "https://www.gov.uk/government/organisations/cabinet-office",
+     "added": "2026-10-14"
+    },
+    {
+     "name": "MHRA",
+     "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
+     "added": "2026-10-14"
     }
    ]
   },
@@ -99,6 +114,26 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-14",
+   "change": "Added MI5 AI Threat Assessment Centre to core sources",
+   "why": "Rule 1(i): a UK government body set up in October 2026 to produce all-source assessments of AI national security threats."
+  },
+  {
+   "date": "2026-10-14",
+   "change": "Added Cabinet Office to core sources",
+   "why": "Rule 1(ii): it published 3 News items in the last 90 days (PM's AI Taskforce on 24 July, the Minister for AI speech on 12 October and the UK-Canada AI security partnership on 13 October)."
+  },
+  {
+   "date": "2026-10-14",
+   "change": "Added MHRA to core sources and removed the MHRA AI as a medical device reforms hint",
+   "why": "Rule 1(ii): it published 3 News items in the last 90 days (National Commission recommendations on 10 September, the government response on 6 October and the MHRA 2030 Strategy on 14 October)."
+  },
+  {
+   "date": "2026-10-14",
+   "change": "Added Carnegie Mellon (ExploitBench) to core sources",
+   "why": "Rule 1(ii): it is the publisher of 5 ExploitBench result items in the last 90 days (4 September and 24 September 2026)."
+  },
   {
    "date": "2026-10-14",
    "change": "Core and hint lists are now kept by fixed rules: promote to core a UK government body or national AI safety or security institute with an AI security remit, or any organisation with 3 or more News items in 90 days; move a core organisation to hints after 180 days with nothing relevant. AISI, NCSC and the CSR Bill are fixed.",

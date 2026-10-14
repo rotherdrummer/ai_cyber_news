@@ -89,6 +89,59 @@
    "feed": "",
    "added": "2026-10-14",
    "fixed": true
+  },
+  {
+   "name": "MI5 AI Threat Assessment Centre",
+   "domains": [
+    "mi5.gov.uk"
+   ],
+   "pages": [
+    "https://www.mi5.gov.uk/about-us/ai-threat-assessment-centre",
+    "https://www.mi5.gov.uk/news"
+   ],
+   "feed": "",
+   "added": "2026-10-14",
+   "reason": "Rule 1(i)"
+  },
+  {
+   "name": "Cabinet Office",
+   "domains": [
+    "gov.uk"
+   ],
+   "pages": [
+    "https://www.gov.uk/government/organisations/cabinet-office"
+   ],
+   "feed": "https://www.gov.uk/government/organisations/cabinet-office.atom",
+   "added": "2026-10-14",
+   "reason": "Rule 1(ii)",
+   "note": "AI and cyber announcements only, including the Minister for AI and the PM's AI Taskforce."
+  },
+  {
+   "name": "MHRA",
+   "domains": [
+    "gov.uk"
+   ],
+   "pages": [
+    "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency"
+   ],
+   "feed": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
+   "added": "2026-10-14",
+   "reason": "Rule 1(ii)",
+   "note": "AI as a medical device and AI in health regulation."
+  },
+  {
+   "name": "Carnegie Mellon (ExploitBench)",
+   "domains": [
+    "exploitbench.ai"
+   ],
+   "pages": [
+    "https://exploitbench.ai/",
+    "https://epoch.ai/benchmarks/exploitbench"
+   ],
+   "feed": "",
+   "added": "2026-10-14",
+   "reason": "Rule 1(ii)",
+   "note": "ExploitBench results, published on its leaderboard and mirrored by Epoch AI."
   }
  ],
  "hints": [
@@ -119,10 +172,6 @@
   },
   {
    "name": "EU AI Act implementation",
-   "added": "2026-10-14"
-  },
-  {
-   "name": "MHRA AI as a medical device reforms",
    "added": "2026-10-14"
   },
   {
