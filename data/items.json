@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-10-14",
-  "item_count": 97,
+  "item_count": 96,
   "fields": {
    "source fields": [
     "id",
@@ -38,7 +38,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-10-14T14:21"
+  "updated_at": "2026-10-14T14:27"
  },
  "items": [
   {
@@ -984,27 +984,6 @@
    "tag_themes": "evaluation;vulnerability-research",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
-   "related_ids": ""
-  },
-  {
-   "id": "wf-c4a030d5c2",
-   "published": "2026-09-22",
-   "reporting_period": "Sep-Nov 2026",
-   "collected": "2026-10-08",
-   "item_type": "Research",
-   "title": "Summary of METR's pre-deployment evaluation of Claude Opus 5.5",
-   "publisher": "METR",
-   "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
-   "source_relation": "Original source",
-   "source_category": "Independent evaluator",
-   "source_says": "METR's independent pre-deployment evaluation found Claude Opus 5.5 is likely a modest improvement over Fable 5.1 on AI R&D tasks and unlikely to fully automate AI R&D. The summary does not cover cyber capabilities.",
-   "key_findings": "",
-   "evidence_links": "",
-   "health_named": "No",
-   "tag_risk_area": "Autonomous AI risk",
-   "tag_themes": "model-release;evaluation",
-   "tag_rating": "Green",
-   "tag_rating_reason": "Background",
    "related_ids": ""
   },
   {

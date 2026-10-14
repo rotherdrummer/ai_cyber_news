@@ -47,6 +47,19 @@
    "moved_from_news": "2026-10-14"
   },
   {
+   "id": "wf-c4a030d5c2",
+   "date": "2026-09-22",
+   "category": "Model launch",
+   "title": "Summary of METR's pre-deployment evaluation of Claude Opus 5.5",
+   "publisher": "METR",
+   "url": "https://metr.org/blog/2026-09-22-claude-opus-5-5/",
+   "summary": "METR's independent pre-deployment evaluation found Claude Opus 5.5 is likely a modest improvement over Fable 5.1 on AI R&D tasks and unlikely to fully automate AI R&D. The summary does not cover cyber capabilities.",
+   "why_not_cyber": "Evaluation of a model release with no cyber security findings.",
+   "source_relation": "Original source",
+   "added": "2026-10-14",
+   "moved_from_news": "2026-10-14"
+  },
+  {
    "id": "wf-d69455fd2c",
    "date": "2026-06-01",
    "category": "Legal and policy",
