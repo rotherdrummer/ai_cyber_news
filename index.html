@@ -118,7 +118,11 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 .tscroll th,.tscroll td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--rule-soft)}
 .tscroll th{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
 .tscroll td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:12px}
-.tabs{display:flex;gap:0;margin-top:16px;border-bottom:1px solid var(--rule);overflow-x:auto}
+.tabs{display:flex;gap:0;margin-top:16px;border-bottom:1px solid var(--rule);overflow-x:auto;align-items:flex-end}
+.tabs a.primary{font-size:15px;font-weight:600;color:var(--ink);padding:10px 18px 10px 4px;margin-right:10px}
+.tabs .tlbl{font-family:var(--f-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3);padding:0 6px 13px 14px;border-left:1px solid var(--rule);white-space:nowrap}
+.tabs a:not(.primary){font-size:11px}
+.tabs a.dl{margin-left:auto}
 .tabs a{font-family:var(--f-mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;padding:10px 11px;color:var(--ink-2);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap}
 .tabs a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
 .vhead{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:20px 0 6px}
@@ -185,7 +189,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources">Download report</a>
+    <a href="#news" data-v="news" class="primary">News</a><span class="tlbl">Reference</span><a href="#models" data-v="models">Frontier models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources" class="dl">Download report</a>
   </nav>
 
   <div id="view-news">
