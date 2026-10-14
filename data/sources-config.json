@@ -1,5 +1,5 @@
 {
- "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Organisations are added or removed only by John's decision on the private watch page; pages the routine finds on a core organisation's own website are added automatically. Every change is logged in data/sources.json changes.",
+ "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. The routine changes these lists only by fixed rules: Rule 1 promotes an organisation to core if it is a UK government body or national AI safety or security institute with a stated AI security remit, or has published 3 or more News items in the last 90 days; Rule 2 moves a core organisation to hints after 180 days with nothing relevant, unless it is marked fixed. Pages found on a core organisation's own website are added automatically. Every change is logged in data/sources.json changes.",
  "updated": "2026-10-14",
  "core": [
   {
@@ -12,7 +12,8 @@
     "https://www.aisi.gov.uk/research"
    ],
    "feed": "",
-   "added": "2026-10-14"
+   "added": "2026-10-14",
+   "fixed": true
   },
   {
    "name": "NCSC",
@@ -23,7 +24,8 @@
     "https://www.ncsc.gov.uk/section/keep-up-to-date/all-topics"
    ],
    "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
-   "added": "2026-10-14"
+   "added": "2026-10-14",
+   "fixed": true
   },
   {
    "name": "Anthropic",
@@ -85,7 +87,8 @@
     "https://bills.parliament.uk/bills/4035/stages"
    ],
    "feed": "",
-   "added": "2026-10-14"
+   "added": "2026-10-14",
+   "fixed": true
   }
  ],
  "hints": [

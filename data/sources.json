@@ -101,6 +101,11 @@
  "changes": [
   {
    "date": "2026-10-14",
+   "change": "Core and hint lists are now kept by fixed rules: promote to core a UK government body or national AI safety or security institute with an AI security remit, or any organisation with 3 or more News items in 90 days; move a core organisation to hints after 180 days with nothing relevant. AISI, NCSC and the CSR Bill are fixed.",
+   "why": "Make source coverage decisions objective and auditable rather than case by case."
+  },
+  {
+   "date": "2026-10-14",
    "change": "Core sources are now organisations checked across their whole website for AI and cyber material. Added Anthropic's research page and OpenAI's misalignment reports page to the pages checked.",
    "why": "Four cyber-relevant Anthropic posts appeared only on its research page and were missed; John wants every core organisation covered thoroughly."
   },
