@@ -8,7 +8,7 @@ Master files (edited by hand or by the daily update):
   data/sources.json     sources and change log (no CSV)
 
 For each item, blank fields are filled in (id, source_relation, source_category,
-tag_risk_area, tag_themes, tag_rating, tag_rating_reason). Fields already set are kept,
+tag_themes, tag_rating, tag_rating_reason). Fields already set are kept,
 so a hand correction is never overwritten. reporting_period is always recomputed.
 
 Run from the repo root:  python3 tools/rebuild.py
@@ -22,7 +22,7 @@ DATA = os.path.join(ROOT, "data")
 TODAY = datetime.date.today().isoformat()
 
 COLS = ["id","published","reporting_period","collected","item_type","title","publisher","url","source_relation",
-        "source_category","source_says","key_findings","evidence_links","health_named","tag_risk_area","tag_themes",
+        "source_category","source_says","key_findings","evidence_links","health_named","tag_themes",
         "tag_rating","tag_rating_reason","related_ids"]
 ITEM_TYPES = ["Report","Publication","Research","Model or capability","Policy","Incident","Threat finding","Evaluation result","Other"]
 
@@ -49,22 +49,8 @@ def source_category(url):
         if any(k in u for k in keys): return name
     return "Other"
 
-# ---------- risk area and themes ----------
-AREA_RULES = [
- ("Autonomous AI risk", ["unsanctioned","cheating behaviour","multi-agent","attributed to OpenAI's own","Hugging Face","pauses reinforcement",
-    "agent behaviour","cover up","Senate on AI agent","secure environment for evaluating","Transect","Control Red Team","lie detectors",
-    "preferences predict","Prefill awareness","RealityTest","Item response theory","optimal stopping","pre-deployment evaluation",
-    "cancellation of GPT-6.1 Astra","loss of control","self-exfiltrat","sandbag","rogue agent"]),
- ("Secure AI adoption", ["agentic AI services","shadow AI","National Commission","AI Bill","EU AI Omnibus","Resilience Bill","lawsuit",
-    "guidance","secure by design","deployment"]),
- ("Cross-cutting", ["DSIT","Taskforce","Germany","Export controls"]),
-]
+# ---------- themes ----------
 LANDSCAPE = ["DSIT","Taskforce","Germany","National Commission","Government response","Cyber Verification Program","Daybreak","Argon"]
-def area(title):
-    t = title.lower()
-    for a, keys in AREA_RULES:
-        if any(k.lower() in t for k in keys): return a
-    return "AI-enabled cyber threats"
 def themes(title, extra=""):
     t = (title + " " + extra).lower(); tags = []
     def add(x):
@@ -128,6 +114,8 @@ def write_csv(path, cols, rows):
 
 def main():
     doc = json.load(open(os.path.join(DATA, "items.json"), encoding="utf-8"))
+    tags = doc.get("meta", {}).get("fields", {}).get("machine-assigned tags")
+    if isinstance(tags, list) and "tag_risk_area" in tags: tags.remove("tag_risk_area")
     errors, items, seen = [], [], set()
     for i, r in enumerate(doc["items"]):
         for c in COLS: r.setdefault(c, "")
@@ -147,7 +135,6 @@ def main():
         r["source_relation"] = r["source_relation"] or source_relation(r["url"])
         r["source_category"] = r["source_category"] or source_category(r["url"])
         r["health_named"] = r["health_named"] or ("Yes" if any(k in (r["title"]+r["source_says"]).lower() for k in ["health","hospital","nhs"]) else "No")
-        r["tag_risk_area"] = r["tag_risk_area"] or area(r["title"])
         r["tag_themes"] = r["tag_themes"] or ";".join(themes(r["title"], r["source_says"]))
         if not r["tag_rating"]: r["tag_rating"], r["tag_rating_reason"] = rag(r)
         key = (r["url"], r["title"].strip().lower())

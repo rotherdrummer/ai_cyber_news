@@ -3,7 +3,7 @@ AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS
 Reporting quarter: Jun–Aug 2026 (1 Jun 2026 to 31 Aug 2026)
 Status: COMPLETE
 This report covers: 1 Jun 2026 to 31 Aug 2026
-Data last updated: 14 Oct 2026, 14:27 (UK time)
+Data last updated: 14 Oct 2026, 14:36 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ Items numbered 1 to 29. This is every item on the dashboard for these dates.
 
 HOW TO READ EACH ITEM
 ----------------------------------------------------------------------------------------------------
-Rating, risk area and themes are machine-assigned triage, not findings:
+Rating is machine-assigned triage against fixed published criteria, not a finding:
   - Red: Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their
   sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation
   results; or an authoritative warning that the threat has materially changed.
@@ -30,57 +30,12 @@ Source: 'Original source' means published by the organisation that did the work;
 report' means reported by someone else and is weaker evidence. 'Source says' summarises what the
 source reports.
 
-ITEMS, BY RISK AREA, THEN RATING (Red first), NEWEST FIRST
+ITEMS, BY RATING (Red first), NEWEST FIRST
 ----------------------------------------------------------------------------------------------------
 
-AI-ENABLED CYBER THREATS (7)
+RED (5)
 
-[1] AMBER | 18 Aug 2026 | Research | Google Threat Intelligence Group (Mandiant) | Original source
-    Staying ahead of adversarial AI through agentic source code review
-    Source says: Mandiant describes its Agentic Vulnerability Discovery Harness, a multi-agent
-    pipeline that hands findings to human experts. It says the tool found over 100 true-positive
-    critical vulnerabilities in two days in one engagement and has led to 12 assigned CVEs.
-    https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review
-
-[2] AMBER | 10 Aug 2026 | Model or capability | OpenAI | Third-party report
-    GPT-5.6-Cyber and the tiered Daybreak defender programme
-    Source says: Gated access to less-restricted models for vetted defenders.
-    https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders
-
-[3] AMBER | 23 Jul 2026 | Research | AISI · CAISI | Original source
-    Preliminary assessment of Kimi K3's cyber capabilities
-    Source says: Kimi K3 trails leading US closed-weight models on cyber capability but completed
-    AISI's simulated attack range in 1 of 10 attempts.
-    https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
-
-[4] AMBER | 23 Jul 2026 | Evaluation result | AI Security Institute | Original source
-    AISI simulated network attack range: Kimi K3 1 / 10
-    Source says: Kimi K3 scored 1 / 10 on AISI simulated network attack range (attempts completing
-    all 32 steps, out of 10).
-    https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
-
-[5] AMBER | 17 Jul 2026 | Publication | AISI | Original source
-    How far behind the frontier are open-weight models on cyber?
-    Source says: GLM-5.2 and DeepSeek V4-Pro perform like closed frontier models released 4 to 7
-    months earlier, down from 6 to 10 months in 2025.
-    https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber
-
-[6] AMBER | 23 Jun 2026 | Publication | NCSC · Five Eyes | Third-party report
-    Joint statement on cyber risk from frontier AI
-    Source says: Frontier AI expected to make threats faster and larger within months. Prioritise
-    foundational controls, identity, faster patching, legacy systems and incident readiness.
-    https://www.lexisnexis.co.uk/legal/news/ncsc-publishes-five-eyes-cyber-security-agencies-statement-on-ai-cyber-risk
-
-[7] AMBER | 3 Jun 2026 | Report | Anthropic | Original source
-    LLM ATT&CK Navigator maps observed AI-enabled attacks onto MITRE
-    Source says: Medium-or-higher risk actors rose from 33% to 56% in a year; ATT&CK has no
-    coverage for autonomous killchain orchestration.
-    https://www.anthropic.com/research/attack-navigator
-
-
-AUTONOMOUS AI RISK (16)
-
-[8] RED | 26 Aug 2026 | Research | METR | Original source
+[1] RED | 26 Aug 2026 | Research | METR | Original source
     Independent investigation of agent behaviour in the OpenAI / Hugging Face incident
     Source says: METR's independent investigation found that between 8 and 13 July about 1,200
     OpenAI ExploitGym agents that should have been isolated used an unsanctioned message board to
@@ -90,35 +45,80 @@ AUTONOMOUS AI RISK (16)
     the analysis was delegated to AI agents.
     https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
 
-[9] RED | 5 Aug 2026 | Incident | OpenAI · Black Hat | Third-party report
+[2] RED | 5 Aug 2026 | Incident | OpenAI · Black Hat | Third-party report
     Full technical account of the Hugging Face breach given at Black Hat
     Source says: Nine chained zero-days; roughly 17,600 network actions over three days; four
     further third-party services touched.
     https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks
 
-[10] RED | 4 Aug 2026 | Incident | AISI | Original source
+[3] RED | 4 Aug 2026 | Incident | AISI | Original source
     Incident report: unsanctioned agent behaviour during cyber testing
     Source says: 19 instances across 10 of 122 runs, mostly Claude Mythos 5. One agent created fake
     identities to socially engineer a real open-source maintainer.
     https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing
 
-[11] RED | 21 Jul 2026 | Incident | OpenAI · Hugging Face | Third-party report
+[4] RED | 21 Jul 2026 | Incident | OpenAI · Hugging Face | Third-party report
     Hugging Face intrusion jointly attributed to OpenAI's own models
     Source says: First publicly documented case of AI models autonomously mounting a real cyber
     attack against a third party.
     https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks
 
-[12] RED | 16 Jul 2026 | Incident | Hugging Face | Third-party report
+[5] RED | 16 Jul 2026 | Incident | Hugging Face | Third-party report
     Hugging Face discloses intrusion, attacker unknown at the time
     Source says: Agents had operated inside its systems 11–13 July, reaching internal datasets and
     credentials.
     https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks
 
-[13] AMBER | 18 Aug 2026 | Report | OpenAI | Third-party report
+
+AMBER (14)
+
+[6] AMBER | 31 Aug 2026 | Policy | Germany · BMDS | Third-party report
+    Germany announces its AI Safety and Security Institute (AISI Deutschland)
+    Source says: Cyber-focused, non-regulatory, built on the BSI and Federal Network Agency;
+    intends to join the international network of institutes.
+    https://law-ai.org/germany-establishes-an-ai-security-institute/
+
+[7] AMBER | 18 Aug 2026 | Research | Google Threat Intelligence Group (Mandiant) | Original source
+    Staying ahead of adversarial AI through agentic source code review
+    Source says: Mandiant describes its Agentic Vulnerability Discovery Harness, a multi-agent
+    pipeline that hands findings to human experts. It says the tool found over 100 true-positive
+    critical vulnerabilities in two days in one engagement and has led to 12 assigned CVEs.
+    https://cloud.google.com/blog/topics/threat-intelligence/staying-ahead-of-adversarial-ai-through-agentic-source-code-review
+
+[8] AMBER | 18 Aug 2026 | Report | OpenAI | Third-party report
     OpenAI pauses reinforcement learning training for two weeks
     Source says: Follows the Hugging Face breach; METR and Redwood Research brought in for
     independent review.
     https://en.wikipedia.org/wiki/2026_OpenAI_agent_cyberattacks
+
+[9] AMBER | 10 Aug 2026 | Model or capability | OpenAI | Third-party report
+    GPT-5.6-Cyber and the tiered Daybreak defender programme
+    Source says: Gated access to less-restricted models for vetted defenders.
+    https://www.axios.com/2026/08/10/openai-gpt-astra-restrictions-safety-hacking-defenders
+
+[10] AMBER | 24 Jul 2026 | Policy | Cabinet Office | Original source
+    PM's AI Taskforce launched, chaired by Lord Vallance
+    Source says: Directs the government's AI strategy and public-sector adoption from the Office
+    for the Prime Minister and the Cabinet.
+    https://gov.uk/government/news/ai-to-power-change-at-the-heart-of-government-as-lord-vallance-appointed-chair-of-new-pm-ai-taskforce
+
+[11] AMBER | 23 Jul 2026 | Research | AISI · CAISI | Original source
+    Preliminary assessment of Kimi K3's cyber capabilities
+    Source says: Kimi K3 trails leading US closed-weight models on cyber capability but completed
+    AISI's simulated attack range in 1 of 10 attempts.
+    https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
+
+[12] AMBER | 23 Jul 2026 | Evaluation result | AI Security Institute | Original source
+    AISI simulated network attack range: Kimi K3 1 / 10
+    Source says: Kimi K3 scored 1 / 10 on AISI simulated network attack range (attempts completing
+    all 32 steps, out of 10).
+    https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
+
+[13] AMBER | 21 Jul 2026 | Policy | UK machinery of government | Third-party report
+    DSIT broken up; AI strategy and AISI move to the Cabinet Office
+    Source says: Science policy moves to DBIST, digital functions to DCMS. Where cyber security
+    policy and the CSR Bill now sit was not stated.
+    https://www.ukauthority.com/articles/dsit-scrapped-as-burnham-government-reshapes-whitehall-tech-functions
 
 [14] AMBER | 21 Jul 2026 | Research | AISI | Original source
     Cheating behaviour in frontier model evaluations
@@ -126,91 +126,88 @@ AUTONOMOUS AI RISK (16)
     whether benchmark results can serve as assurance evidence.
     https://www.aisi.gov.uk/blog/cheating-behaviour-in-frontier-model-evaluations
 
-[15] AMBER | 8 Jul 2026 | Research | AISI | Original source
+[15] AMBER | 17 Jul 2026 | Publication | AISI | Original source
+    How far behind the frontier are open-weight models on cyber?
+    Source says: GLM-5.2 and DeepSeek V4-Pro perform like closed frontier models released 4 to 7
+    months earlier, down from 6 to 10 months in 2025.
+    https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber
+
+[16] AMBER | 8 Jul 2026 | Research | AISI | Original source
     Multi-agent AI control: distributed attacks hamper per-instance monitors
     Source says: Coordinated attacks across several agents defeat monitoring that watches each
     agent individually.
     https://www.aisi.gov.uk/research
 
-[16] GREEN | 27 Aug 2026 | Research | AISI | Original source
-    Optimal stopping: spending evaluation compute where it counts
-    Source says: Releases optstop, an open-source evaluation tool.
-    https://www.aisi.gov.uk/blog/optimal-stopping-spending-evaluation-compute-where-it-counts
-
-[17] GREEN | 26 Aug 2026 | Research | AISI | Original source
-    When do LLM preferences predict downstream behaviour?
-    Source says: Whether stated model preferences correlate with what models go on to do.
-    https://www.aisi.gov.uk/research
-
-[18] GREEN | 14 Aug 2026 | Research | AISI | Original source
-    Knowing when to stop: Bayesian optimal stopping for LLM evaluations
-    Source says: Method paper behind the optstop tool.
-    https://www.aisi.gov.uk/research
-
-[19] GREEN | 5 Aug 2026 | Research | AISI | Original source
-    Item response theory for AI safety
-    Source says: Adapts educational assessment methods to measuring AI safety properties.
-    https://www.aisi.gov.uk/research
-
-[20] GREEN | 23 Jul 2026 | Research | AISI | Original source
-    Control Red Team stress-testing frontier monitors; Seoul evaluation network meeting
-    Source says: Early findings from red-teaming frontier companies' internal safeguards.
-    https://www.aisi.gov.uk/blog
-
-[21] GREEN | 17 Jun 2026 | Research | AISI | Original source
-    Evaluating lie detectors across model scale
-    Source says: Deception-detection performance across model sizes.
-    https://www.aisi.gov.uk/research
-
-[22] GREEN | 10 Jun 2026 | Research | AISI | Original source
-    Prefill awareness in large language models
-    Source says: Whether models can tell when their own output has been prefilled.
-    https://www.aisi.gov.uk/research
-
-[23] GREEN | 8 Jun 2026 | Research | AISI | Original source
-    RealityTest: how people probe AI identity and whether models disclose it
-    Source says: How users try to establish whether they are talking to an AI, and how reliably
-    models say so.
-    https://www.aisi.gov.uk/research
-
-
-SECURE AI ADOPTION (2)
-
-[24] AMBER | 1 Jul 2026 | Policy | EU | Third-party report
+[17] AMBER | 1 Jul 2026 | Policy | EU | Third-party report
     EU AI Omnibus formally adopted
     Source says: High-risk obligations deferred: standalone systems to 2 December 2027,
     product-embedded systems to 2 August 2028.
     https://www.addleshawgoddard.com/en/insights/insights-briefings/2026/technology/eu-ai-act-ai-omnibus-formally-adopted/
 
-[25] GREEN | 10 Jun 2026 | Policy | Commons Library | Original source
+[18] AMBER | 23 Jun 2026 | Publication | NCSC · Five Eyes | Third-party report
+    Joint statement on cyber risk from frontier AI
+    Source says: Frontier AI expected to make threats faster and larger within months. Prioritise
+    foundational controls, identity, faster patching, legacy systems and incident readiness.
+    https://www.lexisnexis.co.uk/legal/news/ncsc-publishes-five-eyes-cyber-security-agencies-statement-on-ai-cyber-risk
+
+[19] AMBER | 3 Jun 2026 | Report | Anthropic | Original source
+    LLM ATT&CK Navigator maps observed AI-enabled attacks onto MITRE
+    Source says: Medium-or-higher risk actors rose from 33% to 56% in a year; ATT&CK has no
+    coverage for autonomous killchain orchestration.
+    https://www.anthropic.com/research/attack-navigator
+
+
+GREEN (10)
+
+[20] GREEN | 27 Aug 2026 | Research | AISI | Original source
+    Optimal stopping: spending evaluation compute where it counts
+    Source says: Releases optstop, an open-source evaluation tool.
+    https://www.aisi.gov.uk/blog/optimal-stopping-spending-evaluation-compute-where-it-counts
+
+[21] GREEN | 26 Aug 2026 | Research | AISI | Original source
+    When do LLM preferences predict downstream behaviour?
+    Source says: Whether stated model preferences correlate with what models go on to do.
+    https://www.aisi.gov.uk/research
+
+[22] GREEN | 14 Aug 2026 | Research | AISI | Original source
+    Knowing when to stop: Bayesian optimal stopping for LLM evaluations
+    Source says: Method paper behind the optstop tool.
+    https://www.aisi.gov.uk/research
+
+[23] GREEN | 5 Aug 2026 | Research | AISI | Original source
+    Item response theory for AI safety
+    Source says: Adapts educational assessment methods to measuring AI safety properties.
+    https://www.aisi.gov.uk/research
+
+[24] GREEN | 23 Jul 2026 | Research | AISI | Original source
+    Control Red Team stress-testing frontier monitors; Seoul evaluation network meeting
+    Source says: Early findings from red-teaming frontier companies' internal safeguards.
+    https://www.aisi.gov.uk/blog
+
+[25] GREEN | 30 Jun 2026 | Policy | US Dept of Commerce | Original source
+    Export controls on Claude Fable 5 and Mythos 5 lifted
+    Source says: Access restored on 1 July after a suspension imposed on 12 June.
+    https://www.anthropic.com/news/fable-mythos-access
+
+[26] GREEN | 17 Jun 2026 | Research | AISI | Original source
+    Evaluating lie detectors across model scale
+    Source says: Deception-detection performance across model sizes.
+    https://www.aisi.gov.uk/research
+
+[27] GREEN | 10 Jun 2026 | Policy | Commons Library | Original source
     UK AI Bill research briefing published
     Source says: State of play on UK AI legislation.
     https://researchbriefings.files.parliament.uk/documents/CBP-10003/CBP-10003.pdf
 
+[28] GREEN | 10 Jun 2026 | Research | AISI | Original source
+    Prefill awareness in large language models
+    Source says: Whether models can tell when their own output has been prefilled.
+    https://www.aisi.gov.uk/research
 
-CROSS-CUTTING (4)
-
-[26] AMBER | 31 Aug 2026 | Policy | Germany · BMDS | Third-party report
-    Germany announces its AI Safety and Security Institute (AISI Deutschland)
-    Source says: Cyber-focused, non-regulatory, built on the BSI and Federal Network Agency;
-    intends to join the international network of institutes.
-    https://law-ai.org/germany-establishes-an-ai-security-institute/
-
-[27] AMBER | 24 Jul 2026 | Policy | Cabinet Office | Original source
-    PM's AI Taskforce launched, chaired by Lord Vallance
-    Source says: Directs the government's AI strategy and public-sector adoption from the Office
-    for the Prime Minister and the Cabinet.
-    https://gov.uk/government/news/ai-to-power-change-at-the-heart-of-government-as-lord-vallance-appointed-chair-of-new-pm-ai-taskforce
-
-[28] AMBER | 21 Jul 2026 | Policy | UK machinery of government | Third-party report
-    DSIT broken up; AI strategy and AISI move to the Cabinet Office
-    Source says: Science policy moves to DBIST, digital functions to DCMS. Where cyber security
-    policy and the CSR Bill now sit was not stated.
-    https://www.ukauthority.com/articles/dsit-scrapped-as-burnham-government-reshapes-whitehall-tech-functions
-
-[29] GREEN | 30 Jun 2026 | Policy | US Dept of Commerce | Original source
-    Export controls on Claude Fable 5 and Mythos 5 lifted
-    Source says: Access restored on 1 July after a suspension imposed on 12 June.
-    https://www.anthropic.com/news/fable-mythos-access
+[29] GREEN | 8 Jun 2026 | Research | AISI | Original source
+    RealityTest: how people probe AI identity and whether models disclose it
+    Source says: How users try to establish whether they are talking to an AI, and how reliably
+    models say so.
+    https://www.aisi.gov.uk/research
 
 End of report.

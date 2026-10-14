@@ -3,7 +3,7 @@ AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS
 Reporting quarter: Mar–May 2026 (1 Mar 2026 to 31 May 2026)
 Status: COMPLETE
 This report covers: 1 Mar 2026 to 31 May 2026
-Data last updated: 14 Oct 2026, 14:27 (UK time)
+Data last updated: 14 Oct 2026, 14:36 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ Items numbered 1 to 5. This is every item on the dashboard for these dates.
 
 HOW TO READ EACH ITEM
 ----------------------------------------------------------------------------------------------------
-Rating, risk area and themes are machine-assigned triage, not findings:
+Rating is machine-assigned triage against fixed published criteria, not a finding:
   - Red: Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their
   sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation
   results; or an authoritative warning that the threat has materially changed.
@@ -30,10 +30,10 @@ Source: 'Original source' means published by the organisation that did the work;
 report' means reported by someone else and is weaker evidence. 'Source says' summarises what the
 source reports.
 
-ITEMS, BY RISK AREA, THEN RATING (Red first), NEWEST FIRST
+ITEMS, BY RATING (Red first), NEWEST FIRST
 ----------------------------------------------------------------------------------------------------
 
-AI-ENABLED CYBER THREATS (4)
+RED (1)
 
 [1] RED | 5 May 2026 | Publication | NCSC | Third-party report
     NCSC warns AI is materially accelerating vulnerability discovery
@@ -41,33 +41,33 @@ AI-ENABLED CYBER THREATS (4)
     patching alone will not hold, particularly for legacy estate.
     https://securityaffairs.com/191657/security/ai-speeds-flaw-discovery-forcing-rapid-updates-uk-ncsc-warns.html
 
-[2] AMBER | 6 May 2026 | Report | MITRE ATLAS · CTID | Original source
+
+AMBER (4)
+
+[2] AMBER | 18 May 2026 | Publication | NCSC · Five Eyes | Original source
+    Careful adoption of agentic AI services
+    Source says: Bounded pilots, clear ownership before deployment, least privilege, short-lived
+    credentials, anomaly monitoring.
+    https://www.ncsc.gov.uk/blogs/thinking-carefully-before-adopting-agentic-ai
+
+[3] AMBER | 6 May 2026 | Report | MITRE ATLAS · CTID | Original source
     Secure AI v2 released; ATLAS gains 45+ techniques
     Source says: 45+ new techniques and sub-techniques, 10+ mitigations and 20+ case studies, with
     expanded coverage for agentic AI and LLM systems.
     https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release/
 
-[3] AMBER | 13 Apr 2026 | Evaluation result | AI Security Institute | Original source
+[4] AMBER | 13 Apr 2026 | Evaluation result | AI Security Institute | Original source
     AISI simulated network attack range: GPT-5.5 3 / 10
     Source says: GPT-5.5 scored 3 / 10 on AISI simulated network attack range (attempts completing
     all 32 steps, out of 10).
     https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
 
-[4] AMBER | 13 Apr 2026 | Evaluation result | AI Security Institute | Original source
+[5] AMBER | 13 Apr 2026 | Evaluation result | AI Security Institute | Original source
     AISI simulated network attack range: Claude Mythos Preview 6 / 10
     Source says: Claude Mythos Preview scored 6 / 10 on AISI simulated network attack range
     (attempts completing all 32 steps, out of 10).
     Key findings: The test networks have no active defenders, so results reflect weakly protected
     systems.
     https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
-
-
-SECURE AI ADOPTION (1)
-
-[5] AMBER | 18 May 2026 | Publication | NCSC · Five Eyes | Original source
-    Careful adoption of agentic AI services
-    Source says: Bounded pilots, clear ownership before deployment, least privilege, short-lived
-    credentials, anomaly monitoring.
-    https://www.ncsc.gov.uk/blogs/thinking-carefully-before-adopting-agentic-ai
 
 End of report.

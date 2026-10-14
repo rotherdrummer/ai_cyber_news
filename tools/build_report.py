@@ -15,7 +15,6 @@ DATA = os.path.join(ROOT, "data")
 REP = os.path.join(DATA, "reports")
 MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 RANK = {"Red": 0, "Amber": 1, "Green": 2}
-AREAS = ["AI-enabled cyber threats", "Autonomous AI risk", "Secure AI adoption", "Cross-cutting"]
 WIDTH = 100
 
 
@@ -62,8 +61,8 @@ def main():
         complete = today > end
         covers_to = end if complete else today
         rows = [r for r in items if start.isoformat() <= r["published"] <= end.isoformat()]
-        order = AREAS + sorted({r["tag_risk_area"] for r in rows} - set(AREAS))
-        rows.sort(key=lambda r: (order.index(r["tag_risk_area"]), RANK.get(r["tag_rating"], 3), r["published"][::-1] and "".join(chr(255 - ord(c)) for c in r["published"])))
+        rows.sort(key=lambda r: r["published"], reverse=True)
+        rows.sort(key=lambda r: RANK.get(r["tag_rating"], 3))
         cnt = {k: sum(1 for r in rows if r["tag_rating"] == k) for k in RANK}
         dt = updated_at.split("T")
         L = ["AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS", "=" * WIDTH,
@@ -80,19 +79,19 @@ def main():
               f"Items in this report: {len(rows)} (Red {cnt['Red']}, Amber {cnt['Amber']}, Green {cnt['Green']}).",
               f"Items numbered 1 to {len(rows)}. This is every item on the dashboard for these dates.", ""]
         L += ["HOW TO READ EACH ITEM", "-" * WIDTH,
-              "Rating, risk area and themes are machine-assigned triage, not findings:"]
+              "Rating is machine-assigned triage against fixed published criteria, not a finding:"]
         for k in ("Red", "Amber", "Green"):
             if crit.get(k):
                 L += wrap(f"- {k}: {crit[k]}", "  ")
         L += wrap("Source: 'Original source' means published by the organisation that did the work; "
                   "'Third-party report' means reported by someone else and is weaker evidence. "
                   "'Source says' summarises what the source reports.", "")
-        L += ["", "ITEMS, BY RISK AREA, THEN RATING (Red first), NEWEST FIRST", "-" * WIDTH]
+        L += ["", "ITEMS, BY RATING (Red first), NEWEST FIRST", "-" * WIDTH]
         cur, n = None, 0
         for r in rows:
-            if r["tag_risk_area"] != cur:
-                cur = r["tag_risk_area"]
-                L += ["", f"{cur.upper()} ({sum(1 for x in rows if x['tag_risk_area'] == cur)})", ""]
+            if r["tag_rating"] != cur:
+                cur = r["tag_rating"]
+                L += ["", f"{cur.upper()} ({sum(1 for x in rows if x['tag_rating'] == cur)})", ""]
             n += 1
             L.append(f"[{n}] {r['tag_rating'].upper()} | {ukd(r['published'])} | {r['item_type']} | {r['publisher']} | {r['source_relation']}")
             L += wrap(r["title"], "    ")
