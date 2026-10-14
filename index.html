@@ -182,7 +182,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 <div class="wrap">
   <header>
     <div><div class="eyebrow">Public AI cyber intelligence</div><h1>AI Cyber News</h1></div>
-    <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
+    <div class="status"><div><b>Updated</b> <span id="updated">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
     <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources">Download report</a>
@@ -478,7 +478,7 @@ function build(){
 fetch("data/items.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){
   all=d.items.slice().sort(order);
   all.forEach(function(r){byId[r.id]=r});
-  $("updated").textContent=d.meta.updated_at?ukdt(d.meta.updated_at):ukd(d.meta.updated);$("total").textContent=all.length;
+  $("updated").textContent=d.meta.updated_at?ukdt(d.meta.updated_at):ukd(d.meta.updated);
   var crit=d.meta.rating_criteria||{};RAGS.forEach(function(k){if(crit[k]){$("criteria").appendChild(el("dt",null,[el("span",{cls:"dot "+k}),k]));$("criteria").appendChild(el("dd",{text:crit[k]}))}});
   var types={};all.forEach(function(r){types[r.item_type]=1});Object.keys(types).sort().forEach(function(t){$("type").appendChild(el("option",{text:t}))});
   var cats={};all.forEach(function(r){cats[r.source_category]=1});Object.keys(cats).sort().forEach(function(c){$("cat").appendChild(el("option",{text:c}))});
