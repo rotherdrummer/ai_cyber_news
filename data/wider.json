@@ -1,0 +1,51 @@
+{
+ "updated": "2026-10-14",
+ "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
+ "categories": [
+  "Legal and policy",
+  "Model launch",
+  "Business and leadership",
+  "Other"
+ ],
+ "items": [
+  {
+   "id": "wf-ecff2656ae",
+   "date": "2026-10-12",
+   "category": "Model launch",
+   "title": "Meta releases Muse Wonder and Muse Wonder Full",
+   "publisher": "Meta",
+   "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+   "summary": "Meta released Muse Wonder and Muse Wonder Full, which it calls its most capable models to date. Muse Wonder is available through the Meta Model API and Muse Code; Muse Wonder Full is available to Muse Code subscribers. Meta says the models were released under its Meta Superintelligence Scaling Framework and that a full report with more safety evaluations will follow.",
+   "why_not_cyber": "Major model launch; no cyber evidence published yet (Meta says a fuller safety report will follow).",
+   "source_relation": "Original source",
+   "added": "2026-10-14",
+   "moved_from_news": "2026-10-14"
+  },
+  {
+   "id": "wf-06dedcddfc",
+   "date": "2026-09-28",
+   "category": "Model launch",
+   "title": "Claude Sonnet 5.5 generally available",
+   "publisher": "Anthropic",
+   "url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
+   "summary": "New mid-tier Claude model.",
+   "why_not_cyber": "Routine model release with no cyber evidence.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-08",
+   "moved_from_news": "2026-10-14"
+  },
+  {
+   "id": "wf-d69455fd2c",
+   "date": "2026-06-01",
+   "category": "Legal and policy",
+   "title": "First state-level lawsuit against OpenAI and Sam Altman",
+   "publisher": "Florida AG",
+   "url": "https://en.wikipedia.org/wiki/2026_in_artificial_intelligence",
+   "summary": "Alleges ChatGPT prioritised profit over safety.",
+   "why_not_cyber": "Legal action about AI safety in general, with no cyber angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-08",
+   "moved_from_news": "2026-10-14"
+  }
+ ]
+}

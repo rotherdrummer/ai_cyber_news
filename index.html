@@ -129,6 +129,11 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
 .w{display:inline-block;width:9px;height:9px;border:1.5px solid var(--ink);margin-right:6px;vertical-align:-1px}
 .w.closed{background:var(--ink)}
+.wnote{border-left:3px solid var(--ink-3);background:var(--surface);padding:10px 12px;margin:0 0 10px}
+.wnote .meta{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);margin-bottom:3px}
+.wnote h4{margin:0 0 4px;font-size:15px}
+.wnote p{margin:0 0 4px;font-size:13.5px;color:var(--ink-2)}
+.wnote .why{font-size:12.5px;color:var(--ink-3)}
 .agfig{margin:6px 0 14px;background:var(--surface);border:1px solid var(--rule);padding:12px}
 .agfig svg{width:100%;height:auto;display:block;max-width:680px}
 .agfig figcaption{margin-top:6px}
@@ -180,7 +185,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
+    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources">Sources used</a>
   </nav>
 
   <div id="view-news">
@@ -217,6 +222,13 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <div id="list"><div class="empty">Loading…</div></div>
 
+  </div>
+
+  <div id="view-wider" hidden>
+    <div class="vhead"><h2>Wider AI news</h2></div>
+    <p class="says" id="widerNote"></p>
+    <div class="seg" id="wfcat" role="group" aria-label="Category" style="margin:6px 0 12px"></div>
+    <div id="widerList"></div>
   </div>
 
   <div id="view-sources" hidden>
@@ -367,7 +379,7 @@ function renderSources(d){
     $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
   (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:ukd(c.date)}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
 }
-var VIEWS=["news","models","agents","benchmarks","regulation","sources"],modelsData=null,wf="",pf="";
+var VIEWS=["news","models","agents","benchmarks","regulation","wider","sources"],modelsData=null,wf="",pf="";
 function syncPos(){[].forEach.call($("poskey").querySelectorAll("button[data-v]"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-v")===pf?"true":"false")});$("poskey").querySelector(".clear").hidden=!pf}
 function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
   VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
@@ -440,6 +452,19 @@ function loadAgents(d){agentsData=d;$("agentsUpdated").textContent=d.updated?"Ch
   seg("ofilter",["","Yes","No"],["Open or closed","Open source","Closed"],function(v){of=v});
   renderAgents();}
 fetch("data/agents.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadAgents).catch(function(){});
+var widerData=null,wcat="";
+function renderWider(){var c=$("widerList");c.textContent="";if(!widerData)return;var cur=null;
+  widerData.items.filter(function(w){return !wcat||w.category===wcat}).forEach(function(w){var m=(w.date||"").slice(0,7);
+    if(m!==cur){cur=m;c.appendChild(el("div",{cls:"month",text:ukd(m)}))}
+    var u=safe(w.url);
+    c.appendChild(el("div",{cls:"wnote"},[el("div",{cls:"meta",text:ukd(w.date)+" \u00b7 "+w.category+" \u00b7 "+w.publisher+(w.source_relation==="Third-party report"?" \u00b7 third-party report":"")}),
+      el("h4",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:w.title}):w.title]),
+      w.summary?el("p",{text:w.summary}):null,
+      w.why_not_cyber?el("div",{cls:"why",text:"Why it's here, not in News: "+w.why_not_cyber}):null]))});
+  if(!c.children.length)c.appendChild(el("p",{cls:"says",text:"Nothing in this category yet."}));}
+fetch("data/wider.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){widerData=d;$("widerNote").textContent=(d.note||"")+(d.updated?" Last change "+ukd(d.updated)+".":"");
+  var seg=$("wfcat");[""].concat(d.categories||[]).forEach(function(v,i){var b=el("button",{type:"button","aria-pressed":i?"false":"true",text:v||"All"});b.addEventListener("click",function(){wcat=v;[].forEach.call(seg.children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});renderWider()});seg.appendChild(b)});
+  renderWider()}).catch(function(){});
 fetch("data/benchmarks.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadBench).catch(function(){});
 window.addEventListener("hashchange",showView);showView();
 fetch("data/models.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadModels).catch(function(){});

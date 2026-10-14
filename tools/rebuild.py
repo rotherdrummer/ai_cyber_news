@@ -195,6 +195,25 @@ def main():
     write_csv(os.path.join(DATA, "regulation.csv"),
               ["name","sub","what","legal","risk","applies","focus","owner","teeth","ai","status","statusDate","statusUrl"], regs)
 
+    wpath = os.path.join(DATA, "wider.json")
+    if os.path.exists(wpath):
+        wd = json.load(open(wpath, encoding="utf-8"))
+        cats = set(wd.get("categories", []))
+        for w in wd.get("items", []):
+            for c in ("date", "title", "url", "summary"):
+                if not str(w.get(c, "")).strip():
+                    errors.append(f"wider.json: '{w.get('title', '?')[:40]}' missing {c}")
+            if cats and w.get("category") not in cats:
+                w["category"] = "Other"
+        wd["items"].sort(key=lambda x: x.get("date", ""), reverse=True)
+        news_ids = {r["id"] for r in items}
+        for w in wd["items"]:
+            if w.get("id") in news_ids:
+                errors.append(f"wider.json: {w['id']} is also in items.json; an item belongs in one or the other")
+        if errors:
+            print("Validation failed:"); [print(" -", e) for e in errors]; sys.exit(1)
+        json.dump(wd, open(wpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+
     apath = os.path.join(DATA, "agents.json")
     agents = json.load(open(apath, encoding="utf-8"))["agents"] if os.path.exists(apath) else []
     if agents:
