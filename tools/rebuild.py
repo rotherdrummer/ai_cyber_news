@@ -203,6 +203,7 @@ def main():
         if errors:
             print("Validation failed:"); [print(" -", e) for e in errors]; sys.exit(1)
         json.dump(wd, open(wpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        write_csv(os.path.join(DATA, "wider.csv"), ["date","category","title","publisher","url","summary","why_not_cyber","source_relation","id"], wd["items"])
 
     apath = os.path.join(DATA, "agents.json")
     agents = json.load(open(apath, encoding="utf-8"))["agents"] if os.path.exists(apath) else []
@@ -217,6 +218,16 @@ def main():
             for t in bench["tests"] for r in t["rows"]]
     write_csv(os.path.join(DATA, "benchmarks.csv"),
               ["benchmark","category","model","result","value","date","measured_by","self_reported","url"], rows)
+
+    # One download with every CSV. Fixed timestamps so the zip only changes when the data does.
+    import zipfile
+    with zipfile.ZipFile(os.path.join(DATA, "ai-cyber-news-all-data.zip"), "w", zipfile.ZIP_DEFLATED) as z:
+        for name, arc in [("items.csv", "news.csv"), ("models.csv", "frontier-models.csv"), ("agents.csv", "agents-and-assistants.csv"),
+                          ("benchmarks.csv", "benchmarks.csv"), ("regulation.csv", "regulatory-landscape.csv"), ("wider.csv", "wider-ai-news.csv")]:
+            p = os.path.join(DATA, name)
+            if os.path.exists(p):
+                zi = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED
+                z.writestr(zi, open(p, "rb").read())
 
     print(f"{len(items)} items;", {v['label']: len(v['rows']) for k, v in sorted(quarters.items())},
           f"| {len(models)} models | {len(agents)} agents | {len(regs)} frameworks | {len(rows)} benchmark results")
