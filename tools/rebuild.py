@@ -160,7 +160,12 @@ def main():
         quarters.setdefault(k, {"label": label, "rows": []})["rows"].append(r)
 
     meta = doc.get("meta", {})
-    meta.update({"updated": TODAY, "item_count": len(items), "rating_criteria": RAG_CRITERIA})
+    try:
+        from zoneinfo import ZoneInfo
+        now_uk = datetime.datetime.now(ZoneInfo("Europe/London"))
+    except Exception:
+        now_uk = datetime.datetime.utcnow()
+    meta.update({"updated": TODAY, "updated_at": now_uk.strftime("%Y-%m-%dT%H:%M"), "item_count": len(items), "rating_criteria": RAG_CRITERIA})
     json.dump({"meta": meta, "items": items}, open(os.path.join(DATA, "items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     write_csv(os.path.join(DATA, "items.csv"), COLS, items)
     for k, v in quarters.items(): write_csv(os.path.join(DATA, f"period-{k}.csv"), COLS, v["rows"])
