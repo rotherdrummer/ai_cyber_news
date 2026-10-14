@@ -39,8 +39,8 @@ h1{font-family:var(--f-serif);font-size:clamp(34px,6vw,48px);margin:0;line-heigh
 .status{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);text-align:right;line-height:1.8}
 .status b{color:var(--ink-2);font-weight:500}
 
-.export{margin-top:20px;background:var(--surface);border:1px solid var(--rule);border-left:4px solid var(--accent);padding:16px 18px;display:grid;gap:10px}
-.export h2{margin:0;font-size:16px}
+.export{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.export h2{margin:0;font-size:13px;font-weight:600;color:var(--ink-2)}
 .export p{margin:0;font-size:13.5px;color:var(--ink-2);max-width:75ch}
 .btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .btn{display:inline-block;font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:9px 14px;border-radius:2px;text-decoration:none;border:1px solid var(--rule);color:var(--ink-2);background:var(--surface-2);font-weight:500}
@@ -162,12 +162,9 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   <div id="view-news">
   <section class="export" aria-labelledby="exp">
     <h2 id="exp">Download data for internal analysis</h2>
-    <p>The same dataset this page shows, one row per item. Columns starting <code>tag_</code> are machine-assigned categories; every other column describes what the source reports.</p>
     <div class="btns">
-      <a class="btn primary" href="data/items.csv" download>Download CSV (all items)</a>
       <span id="qlinks" class="btns"></span>
-      <a class="btn" href="data/items.json">JSON</a>
-      <a class="btn" href="#sources">Sources used</a>
+      <a class="btn" href="data/items.csv" download>All time</a>
     </div>
   </section>
 
@@ -374,7 +371,7 @@ fetch("data/items.json",{cache:"no-store"}).then(function(r){return r.json()}).t
   var crit=d.meta.rating_criteria||{};RAGS.forEach(function(k){if(crit[k]){$("criteria").appendChild(el("dt",null,[el("span",{cls:"dot "+k}),k]));$("criteria").appendChild(el("dd",{text:crit[k]}))}});
   var types={};all.forEach(function(r){types[r.item_type]=1});Object.keys(types).sort().forEach(function(t){$("type").appendChild(el("option",{text:t}))});
   var cats={};all.forEach(function(r){cats[r.source_category]=1});Object.keys(cats).sort().forEach(function(c){$("cat").appendChild(el("option",{text:c}))});
-  fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){$("qlinks").appendChild(el("a",{cls:"btn",href:p.file,download:"",text:p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2")+" CSV"}))})}).catch(function(){});
+  fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){$("qlinks").appendChild(el("a",{cls:"btn",href:p.file,download:"",text:p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2")}))})}).catch(function(){});
   fetch("data/sources.json",{cache:"no-store"}).then(function(r){return r.json()}).then(renderSources).catch(function(){});
   build();render();
   var h0=location.hash.slice(1);if(h0&&byId[h0]){history.replaceState(null,"","#news");showView();jump(h0)}
