@@ -7,7 +7,7 @@
   },
   {
    "title": "One model, many agents",
-   "text": "The same model can sit behind many agents. Claude powers Claude Code and Microsoft's Copilot Cowork; OpenClaw can run Claude, GPT or a local open-weight model. The Runs on column shows which."
+   "text": "The same model can sit behind many agents, and a model and its agent often have different names. Meta's Muse Spark (a model) powers Meta AI (the agent); Claude powers Claude Code and Microsoft's Copilot Cowork; OpenClaw can run Claude, GPT or a local open-weight model. The Runs on column shows which."
   },
   {
    "title": "Risk follows reach",
@@ -200,6 +200,40 @@
    "security_evidence": "",
    "security_url": "",
    "url": "https://www.techradar.com/pro/meta-buys-manus-for-usd2-billion-to-power-high-stakes-ai-agent-race",
+   "status_as_of": "2026-10-14"
+  },
+  {
+   "id": "openai-dots",
+   "name": "Dots",
+   "maker": "OpenAI",
+   "maker_note": "Launched at DevDay on 29 Sep 2026; one Dot per user at launch.",
+   "runs_on": "OpenAI models (not named)",
+   "same_developer": "Yes",
+   "type": "General-purpose agent",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "Always on: uses a computer and connected apps to research, draft documents and write software; reached through ChatGPT, Slack or Microsoft Teams",
+   "access": "ChatGPT Pro and Business Premium first; beta for Enterprise, Edu and Healthcare, off unless an admin enables it",
+   "security_evidence": "Users set boundaries on what a Dot may do on its own; admins control whether it is enabled. OpenAI has published no further security detail.",
+   "security_url": "https://letsdatascience.com/news/openai-introduces-dots-always-on-ai-agents-at-devday-2026-2ced4872",
+   "url": "https://news.bloombergtax.com/private-equity/openai-unveils-always-on-ai-agent-dots-new-500-paid-tier",
+   "status_as_of": "2026-10-14"
+  },
+  {
+   "id": "meta-ai-agent",
+   "name": "Meta AI (agent features)",
+   "maker": "Meta",
+   "maker_note": "Agent features rolled out from late July 2026, in selected countries first; WhatsApp to follow.",
+   "runs_on": "Meta's Muse Spark models (Muse Spark 1.1 at launch)",
+   "same_developer": "Yes",
+   "type": "General-purpose agent",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "Your email and calendar, the web, Facebook Marketplace shopping, recurring tasks run without you, documents and slides",
+   "access": "Public, through the Meta AI app and meta.ai in selected countries",
+   "security_evidence": "Meta has not detailed how it retains data or controls permissions for email and calendar access. Users can switch to Incognito chats instead.",
+   "security_url": "https://techeconomy.ng/meta-ai-grows-hands-muse-spark-1-1-turns-chatbot-into-an-agent",
+   "url": "https://techeconomy.ng/meta-ai-grows-hands-muse-spark-1-1-turns-chatbot-into-an-agent",
    "status_as_of": "2026-10-14"
   }
  ]
