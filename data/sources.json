@@ -101,6 +101,11 @@
  "changes": [
   {
    "date": "2026-10-14",
+   "change": "Core sources are now organisations checked across their whole website for AI and cyber material. Added Anthropic's research page and OpenAI's misalignment reports page to the pages checked.",
+   "why": "Four cyber-relevant Anthropic posts appeared only on its research page and were missed; John wants every core organisation covered thoroughly."
+  },
+  {
+   "date": "2026-10-14",
    "change": "Added a written inclusion test for stories from outside UK government and the frontier AI developers, and a Wider AI news tab for significant AI news with no cyber angle. Three items moved there from News.",
    "why": "Make inclusion criteria explicit and auditable, and keep significant non-cyber AI news visible without diluting the cyber dataset."
   },

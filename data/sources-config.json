@@ -1,27 +1,142 @@
 {
- "about": "The lists the daily routine works from. Core sources are checked directly on every run. Hints are places to look each run, without a guaranteed check. Changed only when John decides, via the private watch page or by hand; every change is logged in data/sources.json changes.",
+ "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Organisations are added or removed only by John's decision on the private watch page; pages the routine finds on a core organisation's own website are added automatically. Every change is logged in data/sources.json changes.",
  "updated": "2026-10-14",
  "core": [
-  {"name": "AISI", "pages": ["https://www.aisi.gov.uk/blog", "https://www.aisi.gov.uk/research"], "feed": "", "added": "2026-10-14"},
-  {"name": "NCSC", "pages": ["https://www.ncsc.gov.uk/section/keep-up-to-date/all-topics"], "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml", "added": "2026-10-14"},
-  {"name": "Anthropic", "pages": ["https://www.anthropic.com/news", "https://www.anthropic.com/threat-intelligence"], "feed": "", "added": "2026-10-14"},
-  {"name": "OpenAI", "pages": ["https://openai.com/news/", "https://deploymentsafety.openai.com"], "feed": "https://openai.com/news/rss.xml", "note": "Also its \"Disrupting malicious uses of AI\" reports.", "added": "2026-10-14"},
-  {"name": "Google GTIG", "pages": ["https://cloud.google.com/blog/topics/threat-intelligence"], "feed": "", "added": "2026-10-14"},
-  {"name": "METR", "pages": ["https://metr.org/"], "feed": "", "added": "2026-10-14"},
-  {"name": "UK Parliament, Cyber Security and Resilience Bill", "pages": ["https://bills.parliament.uk/bills/4035/stages"], "feed": "", "added": "2026-10-14"}
+  {
+   "name": "AISI",
+   "domains": [
+    "aisi.gov.uk"
+   ],
+   "pages": [
+    "https://www.aisi.gov.uk/blog",
+    "https://www.aisi.gov.uk/research"
+   ],
+   "feed": "",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "NCSC",
+   "domains": [
+    "ncsc.gov.uk"
+   ],
+   "pages": [
+    "https://www.ncsc.gov.uk/section/keep-up-to-date/all-topics"
+   ],
+   "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "Anthropic",
+   "domains": [
+    "anthropic.com"
+   ],
+   "pages": [
+    "https://www.anthropic.com/news",
+    "https://www.anthropic.com/threat-intelligence",
+    "https://www.anthropic.com/research"
+   ],
+   "feed": "",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "OpenAI",
+   "domains": [
+    "openai.com"
+   ],
+   "pages": [
+    "https://openai.com/news/",
+    "https://deploymentsafety.openai.com",
+    "https://alignment.openai.com/misalignment-reports/"
+   ],
+   "feed": "https://openai.com/news/rss.xml",
+   "note": "Also its \"Disrupting malicious uses of AI\" reports.",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "Google GTIG",
+   "domains": [
+    "cloud.google.com",
+    "blog.google"
+   ],
+   "pages": [
+    "https://cloud.google.com/blog/topics/threat-intelligence"
+   ],
+   "feed": "",
+   "added": "2026-10-14",
+   "note": "Threat intelligence and security posts only, not product marketing."
+  },
+  {
+   "name": "METR",
+   "domains": [
+    "metr.org"
+   ],
+   "pages": [
+    "https://metr.org/"
+   ],
+   "feed": "",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "UK Parliament, Cyber Security and Resilience Bill",
+   "domains": [
+    "bills.parliament.uk"
+   ],
+   "pages": [
+    "https://bills.parliament.uk/bills/4035/stages"
+   ],
+   "feed": "",
+   "added": "2026-10-14"
+  }
  ],
  "hints": [
-  {"name": "GOV.UK announcements on AI, cyber and AI in health (Cabinet Office AI Taskforce, DCMS, DHSC, MHRA)", "added": "2026-10-14"},
-  {"name": "MITRE ATLAS and CTID", "added": "2026-10-14"},
-  {"name": "ExploitBench and other cyber benchmarks cited by AISI or system cards", "added": "2026-10-14"},
-  {"name": "Frontier releases and system cards from Google DeepMind, xAI, Meta, Microsoft, Mistral, DeepSeek, Alibaba Qwen, Moonshot (Kimi), Z.ai (GLM)", "added": "2026-10-14"},
-  {"name": "Real-world AI security incidents", "added": "2026-10-14"},
-  {"name": "AI and cyber stories on BBC News", "url": "https://feeds.bbci.co.uk/news/technology/rss.xml", "added": "2026-10-14"},
-  {"name": "EU AI Act implementation", "added": "2026-10-14"},
-  {"name": "MHRA AI as a medical device reforms", "added": "2026-10-14"},
-  {"name": "DCB0129/DCB0160 review", "added": "2026-10-14"},
-  {"name": "DSPT and CAF", "added": "2026-10-14"},
-  {"name": "DTAC", "added": "2026-10-14"},
-  {"name": "Government response to the National Commission on regulating AI in healthcare", "added": "2026-10-14"}
+  {
+   "name": "GOV.UK announcements on AI, cyber and AI in health (Cabinet Office AI Taskforce, DCMS, DHSC, MHRA)",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "MITRE ATLAS and CTID",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "ExploitBench and other cyber benchmarks cited by AISI or system cards",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "Frontier releases and system cards from Google DeepMind, xAI, Meta, Microsoft, Mistral, DeepSeek, Alibaba Qwen, Moonshot (Kimi), Z.ai (GLM)",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "Real-world AI security incidents",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "AI and cyber stories on BBC News",
+   "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "EU AI Act implementation",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "MHRA AI as a medical device reforms",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "DCB0129/DCB0160 review",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "DSPT and CAF",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "DTAC",
+   "added": "2026-10-14"
+  },
+  {
+   "name": "Government response to the National Commission on regulating AI in healthcare",
+   "added": "2026-10-14"
+  }
  ]
 }

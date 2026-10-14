@@ -214,7 +214,7 @@ def main():
         if not isinstance(cfg.get("hints"), list): cerr.append("hints list missing")
         seen_names = set()
         for s in (cfg.get("core") or []):
-            if not s.get("name") or not s.get("pages"): cerr.append(f"core source needs a name and at least one page: {s}")
+            if not s.get("name") or not s.get("pages") or not s.get("domains"): cerr.append(f"core source needs a name, at least one domain and at least one page: {s}")
             for u in s.get("pages", []) + ([s["feed"]] if s.get("feed") else []):
                 if not str(u).startswith("https://"): cerr.append(f"core source {s.get('name')}: url must be https: {u}")
         for s in (cfg.get("core") or []) + (cfg.get("hints") or []):
