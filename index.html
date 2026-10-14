@@ -123,6 +123,9 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
 .w{display:inline-block;width:9px;height:9px;border:1.5px solid var(--ink);margin-right:6px;vertical-align:-1px}
 .w.closed{background:var(--ink)}
+.agfig{margin:6px 0 14px;background:var(--surface);border:1px solid var(--rule);padding:12px}
+.agfig svg{width:100%;height:auto;display:block;max-width:680px}
+.agfig figcaption{margin-top:6px}
 .ladder{display:inline-flex;gap:2px;align-items:flex-end;margin-right:6px;vertical-align:-1px}
 .ladder i{display:block;width:5px;border:1px solid var(--ink-3);background:transparent}
 .ladder i.on{background:var(--accent);border-color:var(--accent)}
@@ -136,6 +139,10 @@ tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px
 .poskey .clear{font-family:var(--f-mono);font-size:11px;text-decoration:underline;color:var(--ink-3)}
 .reg td,.reg th{min-width:128px}
 #modelRows td:nth-child(3),#modelRows td:nth-child(4){white-space:nowrap}
+.tscroll table.agt{table-layout:fixed;min-width:900px}
+.agt td:first-child{white-space:normal}
+.agt th:nth-child(1){width:17%}.agt th:nth-child(2){width:14%}.agt th:nth-child(3){width:17%}.agt th:nth-child(4){width:19%}.agt th:nth-child(5){width:13%}.agt th:nth-child(6){width:20%}
+.agfig svg{margin:0 auto}
 .reg td.rowh{min-width:96px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);font-weight:600}
 .reg tr.ai td{background:var(--amber-bg)}
 .reg th small{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-family:var(--f-sans);font-size:11px;color:var(--ink-3)}
@@ -167,7 +174,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div><div><b>Items</b> <span id="total">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
+    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#sources" data-v="sources">Sources used</a>
   </nav>
 
   <div id="view-news">
@@ -219,6 +226,30 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="poskey" id="poskey" aria-label="Place in the developer's range"></div>
     <div class="seg" id="wfilter" role="group" aria-label="Weights" style="margin:6px 0 10px"></div>
     <div class="tscroll"><table><thead><tr><th>Model</th><th>Developer</th><th>Weights</th><th>Released</th><th>Access</th><th>Published cyber evidence</th></tr></thead><tbody id="modelRows"></tbody></table></div>
+  </div>
+
+  <div id="view-agents" hidden>
+    <div class="vhead"><h2>Agents and assistants</h2><div class="btns"><a class="btn" href="data/agents.csv" download>Download CSV</a></div></div>
+    <p class="says">Software that uses a model to take actions, not just answer questions. <span id="agentsUpdated"></span></p>
+    <figure class="agfig" aria-labelledby="agcap">
+      <svg viewBox="0 0 680 300" role="img" aria-labelledby="agt agd"><title id="agt">Model versus agent</title><desc id="agd">In a chat assistant the model writes text and a person decides what to do. In an agent the model picks the next step, the agent software runs tools for it in a loop, and those tools act on your systems.</desc>
+      <defs><marker id="agarr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="currentColor" stroke-width="1.5"/></marker></defs>
+      <g fill="none" stroke="var(--ink-3)" stroke-dasharray="4 4"><rect x="20" y="10" width="250" height="190"/><rect x="300" y="10" width="360" height="190"/></g>
+      <g font-family="var(--f-mono)" font-size="12" fill="var(--ink-2)" text-anchor="middle"><text x="145" y="34">CHAT ASSISTANT</text><text x="480" y="34">AGENT</text></g>
+      <g fill="var(--surface)" stroke="var(--accent)"><rect x="50" y="56" width="190" height="56"/><rect x="320" y="56" width="150" height="56"/></g>
+      <rect x="515" y="56" width="125" height="56" fill="var(--surface)" stroke="var(--ink)"/>
+      <g font-size="14" fill="var(--ink)" text-anchor="middle" font-weight="600"><text x="145" y="80">Model (LLM)</text><text x="395" y="80">Model (LLM)</text><text x="577" y="80">Tools</text><text x="577" y="272">Your systems</text></g>
+      <g font-size="12" fill="var(--ink-2)" text-anchor="middle"><text x="145" y="99">Writes text</text><text x="395" y="99">Picks next step</text><text x="577" y="99">Web, code, files</text>
+        <text x="145" y="150">A person reads it</text><text x="145" y="168">and decides what to do</text><text x="480" y="160">Agent software runs this loop</text><text x="480" y="178">until the task is done</text></g>
+      <g stroke="var(--ink)" color="var(--ink)" stroke-width="1.2"><line x1="472" y1="74" x2="511" y2="74" marker-end="url(#agarr)"/><line x1="513" y1="96" x2="474" y2="96" marker-end="url(#agarr)"/><line x1="577" y1="114" x2="577" y2="244" marker-end="url(#agarr)"/></g>
+      <rect x="515" y="248" width="125" height="40" fill="none" stroke="var(--ink-3)"/>
+      </svg>
+      <figcaption id="agcap" class="pub">The model is the same in both; the agent decides what it can reach.</figcaption>
+    </figure>
+    <div class="notes" id="agentNotes"></div>
+    <div class="seg" id="afilter" role="group" aria-label="Type" style="margin:6px 0 6px"></div>
+    <div class="seg" id="ofilter" role="group" aria-label="Open source" style="margin:0 0 10px"></div>
+    <div class="tscroll"><table class="agt"><thead><tr><th>Agent</th><th>Made by</th><th>Runs on</th><th>Can act on</th><th>Access</th><th>Published security evidence</th></tr></thead><tbody id="agentRows"></tbody></table></div>
   </div>
 
   <div id="view-benchmarks" hidden>
@@ -322,7 +353,7 @@ function renderSources(d){
     $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
   (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:c.date}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
 }
-var VIEWS=["news","models","benchmarks","regulation","sources"],modelsData=null,wf="",pf="";
+var VIEWS=["news","models","agents","benchmarks","regulation","sources"],modelsData=null,wf="",pf="";
 function syncPos(){[].forEach.call($("poskey").querySelectorAll("button[data-v]"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-v")===pf?"true":"false")});$("poskey").querySelector(".clear").hidden=!pf}
 function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
   VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
@@ -376,6 +407,25 @@ function loadBench(d){
   $("tests").appendChild(el("div",{cls:"legend2",text:"Hatched bars are self-reported by the developer. Scores from different benchmarks are not comparable."}));
   (d.caveats||[]).forEach(function(c){$("caveats").appendChild(el("div",{cls:"note"},[el("b",{text:c.title}),c.text]))});
 }
+var agentsData=null,af="",of="";
+function renderAgents(){var tb=$("agentRows");tb.textContent="";if(!agentsData)return;
+  agentsData.agents.filter(function(a){return (!af||a.type===af)&&(!of||(of==="Yes"?/^(Yes|Partly)/.test(a.open_source):a.open_source==="No"))}).forEach(function(a){
+    var u=safe(a.url),su=safe(a.security_url);
+    tb.appendChild(el("tr",null,[
+      el("td",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer"},[el("b",{text:a.name})]):el("b",{text:a.name}),el("div",{cls:"pub",text:a.type+" \u00b7 "+a.delivery.toLowerCase()+" \u00b7 open source: "+a.open_source})]),
+      el("td",null,[a.maker,a.maker_note?el("div",{cls:"pub",text:a.maker_note}):null]),
+      el("td",null,[a.runs_on,el("div",{cls:"pub",text:a.same_developer==="Yes"?"Same company as the model":a.same_developer==="No"?"Uses other companies\u2019 models":a.same_developer==="Mixed"?"Own and other companies\u2019 models":"Model maker not confirmed"})]),
+      el("td",{text:a.can_act_on}),el("td",{text:a.access}),
+      el("td",null,a.security_evidence?[a.security_evidence+" ",su?el("a",{href:su,target:"_blank",rel:"noopener noreferrer",text:"source"}):null]:["None published found"])]))});
+  if(!tb.children.length)tb.appendChild(el("tr",null,[el("td",{colspan:"6",text:"No agents match these filters."})]));}
+function seg(id,vals,labels,set){var c=$(id);vals.forEach(function(v,i){var b=el("button",{type:"button","data-v":v,"aria-pressed":i?"false":"true",text:labels[i]});b.addEventListener("click",function(){set(v);[].forEach.call(c.children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});renderAgents()});c.appendChild(b)})}
+function loadAgents(d){agentsData=d;$("agentsUpdated").textContent=d.updated?"Checked "+d.updated+".":"";
+  (d.explainer||[]).forEach(function(n){$("agentNotes").appendChild(el("div",{cls:"note"},[el("b",{text:n.title}),n.text]))});
+  var types=[];d.agents.forEach(function(a){if(types.indexOf(a.type)<0)types.push(a.type)});types.sort();
+  seg("afilter",[""].concat(types),["All types"].concat(types),function(v){af=v});
+  seg("ofilter",["","Yes","No"],["Open or closed","Open source","Closed"],function(v){of=v});
+  renderAgents();}
+fetch("data/agents.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadAgents).catch(function(){});
 fetch("data/benchmarks.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadBench).catch(function(){});
 window.addEventListener("hashchange",showView);showView();
 fetch("data/models.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadModels).catch(function(){});

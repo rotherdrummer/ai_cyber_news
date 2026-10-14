@@ -11,6 +11,7 @@ A public-source dataset of AI and cyber security intelligence, and a static dash
 | `data/items.csv` | The same items as CSV (UTF-8 with BOM, opens in Excel). |
 | `data/period-YYYY-MM.csv` | Items in one reporting quarter (Jun–Aug, Sep–Nov, Dec–Feb, Mar–May), named by its first month. Listed in `data/periods.json`. |
 | `data/models.json`, `data/models.csv` | Frontier AI models by jurisdiction, weights, access, place in the developer's range (`position`, levels defined under `positions`), the developer's CEO (`developers`) and published cyber evidence. |
+| `data/agents.json`, `data/agents.csv` | AI agents and assistants: who makes them, which models they run on, what they can act on, access, and published security evidence. `explainer` holds the model-versus-agent notes shown on the page. |
 | `data/benchmarks.json`, `data/benchmarks.csv` | Published benchmark and evaluation results, with who measured them and whether they are self-reported. |
 | `data/regulation.json`, `data/regulation.csv` | Regulatory landscape for AI, cyber and digital health assurance, with status and change log. |
 | `data/sources.json` | The sources monitored, why each is used, and a log of changes to them. |

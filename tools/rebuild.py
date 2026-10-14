@@ -185,6 +185,11 @@ def main():
     write_csv(os.path.join(DATA, "regulation.csv"),
               ["name","sub","what","legal","risk","applies","focus","owner","teeth","ai","status","statusDate","statusUrl"], regs)
 
+    apath = os.path.join(DATA, "agents.json")
+    agents = json.load(open(apath, encoding="utf-8"))["agents"] if os.path.exists(apath) else []
+    if agents:
+        write_csv(os.path.join(DATA, "agents.csv"), list(dict.fromkeys(k for a in agents for k in a)), agents)
+
     bench = json.load(open(os.path.join(DATA, "benchmarks.json"), encoding="utf-8"))
     bench["updated"] = max([r["date"] for t in bench["tests"] for r in t["rows"]] or [bench.get("updated", "")])
     json.dump(bench, open(os.path.join(DATA, "benchmarks.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -195,7 +200,7 @@ def main():
               ["benchmark","category","model","result","value","date","measured_by","self_reported","url"], rows)
 
     print(f"{len(items)} items;", {v['label']: len(v['rows']) for k, v in sorted(quarters.items())},
-          f"| {len(models)} models | {len(regs)} frameworks | {len(rows)} benchmark results")
+          f"| {len(models)} models | {len(agents)} agents | {len(regs)} frameworks | {len(rows)} benchmark results")
 
 if __name__ == "__main__":
     main()
