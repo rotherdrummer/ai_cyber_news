@@ -22,6 +22,18 @@
    "moved_from_news": "2026-10-14"
   },
   {
+   "id": "wf-3c8e51a9d4",
+   "date": "2026-10-09",
+   "category": "Business and leadership",
+   "title": "Fired OpenAI researchers say they were let go for prioritising safety",
+   "publisher": "BBC News",
+   "url": "https://www.bbc.co.uk/news/articles/cvlydn8d3lkjo",
+   "summary": "Three former OpenAI safety and alignment researchers say they were fired for raising safety concerns. OpenAI says its investigation found they mishandled sensitive information and that the decision was not about safety concerns.",
+   "why_not_cyber": "Staffing dispute at a leading AI company with no cyber security angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-14"
+  },
+  {
    "id": "wf-06dedcddfc",
    "date": "2026-09-28",
    "category": "Model launch",

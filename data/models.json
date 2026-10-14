@@ -108,9 +108,9 @@
    "released": "",
    "access": "Downloadable",
    "tier": "Open flagship",
-   "cyber_evidence": "Predecessor GLM-5.2 put 4–7 months behind the closed frontier by AISI",
-   "evidence_url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
-   "updated": "2026-10-08",
+   "cyber_evidence": "Anthropic reports 50 of 410 ExploitBench successes, close to Claude Mythos Preview (56 of 410); NIST CAISI calls it the most cyber-capable open-weight model to date",
+   "evidence_url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+   "updated": "2026-10-14",
    "position": "Flagship"
   },
   {

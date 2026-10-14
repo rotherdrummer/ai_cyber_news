@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-10-14",
-  "item_count": 93,
+  "item_count": 97,
   "fields": {
    "source fields": [
     "id",
@@ -38,7 +38,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-10-14T14:15"
+  "updated_at": "2026-10-14T14:21"
  },
  "items": [
   {
@@ -189,6 +189,27 @@
    "related_ids": ""
   },
   {
+   "id": "wf-ee137219db",
+   "published": "2026-10-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Threat finding",
+   "title": "Strengthening our defenses against distillation attacks",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/research/distillation-defenses",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic reports covert distillation campaigns against Claude by overseas AI labs, often using fraudulent account networks, with one network running more than 20,000 fraudulent accounts at once. It says Moonshot's Kimi requests were secretly forwarded to Claude. Anthropic added new classifiers, stricter usage limits and account bans, and says extractable reasoning fell by 10 to 100 times.",
+   "key_findings": "Actor: overseas AI labs including Zhipu (Z.ai) and Moonshot AI, via proxy and fraudulent account networks; Technique: covert model distillation through large numbers of fraudulent API accounts and attempts to extract Claude's reasoning; Targets: Anthropic's Claude models",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "model-release;open-weight",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
    "id": "wf-ff494e3293",
    "published": "2026-10-12",
    "reporting_period": "Sep-Nov 2026",
@@ -226,6 +247,27 @@
    "health_named": "Yes",
    "tag_risk_area": "AI-enabled cyber threats",
    "tag_themes": "vulnerability-research;agents;incident;regulation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-21a205e1a7",
+   "published": "2026-10-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Research",
+   "title": "AI models may be capable of self-replicating without access to a datacenter",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/research/self-replicating-ai",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic's Frontier Red Team tested small open-weight models on cheap internet-connected devices. A 9B model ran inference on 8 of 9 hardware types, and in simplified tests GLM-5.2 and stronger models replicated across a firewalled network, reaching 8 of 8 nodes in 4 of 5 trials. The authors estimate small models could reach that capability by the end of this year and recommend ISP traffic monitoring, quarantine of infected devices and more secure default settings.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "model-release;open-weight",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
@@ -270,6 +312,27 @@
    "tag_themes": "model-release;evaluation",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-56b76aa222",
+   "published": "2026-10-08",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Research",
+   "title": "Launching an opt-in vulnerability-finding service for open-source software",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/research/launching-opt-in-vuln-finding-service-for-open-source",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic launched OSS Scanner, a free opt-in service that sends model-generated vulnerability reports to open-source maintainers without human review. It says its models found over 29,000 candidate vulnerabilities in six months and it has sent nearly 5,000 reports. Expert reviewers judged 85 of 97 checked critical and high-severity findings (88%) to meet its disclosure standard.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "model-release;vulnerability-research",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
   },
   {
@@ -709,6 +772,27 @@
    "health_named": "No",
    "tag_risk_area": "Autonomous AI risk",
    "tag_themes": "model-release",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-2902aac3bf",
+   "published": "2026-09-29",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-14",
+   "item_type": "Research",
+   "title": "GLM-5.3 and the spread of advanced cyber capabilities",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic reports that the open-weight GLM-5.3 succeeded in 50 of 410 ExploitBench attempts, against 56 of 410 for Claude Mythos Preview. On Anthropic's internal binary exploitation test it achieved full control-flow hijacks in 4% of trials, against 6% for Mythos Preview. Anthropic says simple techniques bypassed GLM-5.3's refusals between 64% and 100% of the time.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_risk_area": "AI-enabled cyber threats",
+   "tag_themes": "model-release;vulnerability-research;open-weight",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
