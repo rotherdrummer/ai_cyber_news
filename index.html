@@ -40,6 +40,12 @@ h1{font-family:var(--f-serif);font-size:clamp(34px,6vw,48px);margin:0;line-heigh
 .status b{color:var(--ink-2);font-weight:500}
 
 .export{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px}
+.rawcsv{font-family:var(--f-mono);font-size:11px;color:var(--ink-3);margin-left:6px}
+#qdlg{border:1px solid var(--ink);background:var(--surface);color:var(--ink);max-width:min(92vw,520px);padding:20px 22px}
+#qdlg::backdrop{background:rgba(0,0,0,.35)}
+#qdlg h3{margin:0 0 8px;font-size:17px}
+#qdlg p{margin:0 0 14px;font-size:14px;line-height:1.6;color:var(--ink-2)}
+#qdlg .btns{display:flex;gap:8px;flex-wrap:wrap}
 .export h2{margin:0;font-size:13px;font-weight:600;color:var(--ink-2)}
 .export p{margin:0;font-size:13.5px;color:var(--ink-2);max-width:75ch}
 .btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
@@ -179,11 +185,17 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <div id="view-news">
   <section class="export" aria-labelledby="exp">
-    <h2 id="exp">Download data for internal analysis</h2>
+    <h2 id="exp">Download report for internal analysis</h2>
     <div class="btns">
       <span id="qlinks" class="btns"></span>
-      <a class="btn" href="data/items.csv" download>All time</a>
+      <a class="rawcsv" href="data/items.csv" download>All data (CSV)</a>
     </div>
+  </section>
+  <dialog id="qdlg" aria-labelledby="qdlgh">
+    <h3 id="qdlgh">This quarter isn&rsquo;t over yet</h3>
+    <p id="qdlgb"></p>
+    <div class="btns"><a class="btn primary" id="qdlgy" download>Download anyway</a><button type="button" class="btn" id="qdlgn">Cancel</button></div>
+  </dialog>
   </section>
 
   <div class="areas" id="areas" role="group" aria-label="Filter by risk area"></div>
@@ -445,7 +457,20 @@ fetch("data/items.json",{cache:"no-store"}).then(function(r){return r.json()}).t
   var crit=d.meta.rating_criteria||{};RAGS.forEach(function(k){if(crit[k]){$("criteria").appendChild(el("dt",null,[el("span",{cls:"dot "+k}),k]));$("criteria").appendChild(el("dd",{text:crit[k]}))}});
   var types={};all.forEach(function(r){types[r.item_type]=1});Object.keys(types).sort().forEach(function(t){$("type").appendChild(el("option",{text:t}))});
   var cats={};all.forEach(function(r){cats[r.source_category]=1});Object.keys(cats).sort().forEach(function(c){$("cat").appendChild(el("option",{text:c}))});
-  fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){$("qlinks").appendChild(el("a",{cls:"btn",href:p.file,download:"",text:p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2")}))})}).catch(function(){});
+  fetch("data/periods.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(ps){ps.forEach(function(p){
+    var lab=p.label.replace(/([A-Za-z]{3})-([A-Za-z]{3})/,"$1\u2013$2"),f=p.report||p.file;
+    var a=el("a",{cls:"btn",href:f,download:"",text:lab+(p.complete===false?" (in progress)":"")});
+    if(p.complete===false){a.addEventListener("click",function(ev){var d=$("qdlg");if(!d||!d.showModal)return;ev.preventDefault();
+      var t=(p.updated_at||"");
+      $("qdlgb").innerHTML="";
+      $("qdlgb").appendChild(document.createTextNode("This report covers "));$("qdlgb").appendChild(el("b",{text:ukd(p.start)+" to "+ukd(p.covers_to)}));
+      $("qdlgb").appendChild(document.createTextNode(" (data last updated "+ukdt(t)+")."));$("qdlgb").appendChild(el("br"));
+      $("qdlgb").appendChild(document.createTextNode("Your "+lab+" bulletin should cover "));$("qdlgb").appendChild(el("b",{text:ukd(p.start)+" to "+ukd(p.end)}));
+      $("qdlgb").appendChild(document.createTextNode("."));$("qdlgb").appendChild(el("br"));
+      $("qdlgb").appendChild(document.createTextNode("Anything published after "+ukd(p.covers_to)+" won\u2019t be included."));
+      $("qdlgy").setAttribute("href",f);d.showModal();})}
+    $("qlinks").appendChild(a)})}).catch(function(){});
+  (function(){var d=$("qdlg");if(!d)return;$("qdlgn").addEventListener("click",function(){d.close()});$("qdlgy").addEventListener("click",function(){setTimeout(function(){d.close()},50)})})();
   fetch("data/sources.json",{cache:"no-store"}).then(function(r){return r.json()}).then(renderSources).catch(function(){});
   build();render();
   var h0=location.hash.slice(1);if(h0&&byId[h0]){history.replaceState(null,"","#news");showView();jump(h0)}

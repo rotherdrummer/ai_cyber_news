@@ -214,3 +214,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+    # Quarterly reports are rebuilt every time, so the download is always current.
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import build_report
+    build_report.main()
