@@ -116,6 +116,11 @@
  "changes": [
   {
    "date": "2026-10-14",
+   "change": "Source rules tightened. Core is now limited to UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading research bodies whose work AISI, NCSC or a frontier developer has cited. Other organisations with 2 or more News items in 90 days become hints. Existing core organisations re-checked against the new test: all qualify (MI5, Cabinet Office and MHRA under 1(i); Carnegie Mellon under 1(iii), as ExploitBench is cited by AISI).",
+   "why": "Keep core strict; volume alone should not make an organisation core."
+  },
+  {
+   "date": "2026-10-14",
    "change": "Added MI5 AI Threat Assessment Centre to core sources",
    "why": "Rule 1(i): a UK government body set up in October 2026 to produce all-source assessments of AI national security threats."
   },

@@ -1,5 +1,5 @@
 {
- "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. The routine changes these lists only by fixed rules: Rule 1 promotes an organisation to core if it is a UK government body or national AI safety or security institute with a stated AI security remit, or has published 3 or more News items in the last 90 days; Rule 2 moves a core organisation to hints after 180 days with nothing relevant, unless it is marked fixed. Pages found on a core organisation's own website are added automatically. Every change is logged in data/sources.json changes.",
+ "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
  "updated": "2026-10-14",
  "core": [
   {
@@ -113,7 +113,7 @@
    ],
    "feed": "https://www.gov.uk/government/organisations/cabinet-office.atom",
    "added": "2026-10-14",
-   "reason": "Rule 1(ii)",
+   "reason": "Rule 1(i)",
    "note": "AI and cyber announcements only, including the Minister for AI and the PM's AI Taskforce."
   },
   {
@@ -126,7 +126,7 @@
    ],
    "feed": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency.atom",
    "added": "2026-10-14",
-   "reason": "Rule 1(ii)",
+   "reason": "Rule 1(i)",
    "note": "AI as a medical device and AI in health regulation."
   },
   {
@@ -140,7 +140,7 @@
    ],
    "feed": "",
    "added": "2026-10-14",
-   "reason": "Rule 1(ii)",
+   "reason": "Rule 1(iii)",
    "note": "ExploitBench results, published on its leaderboard and mirrored by Epoch AI."
   }
  ],
