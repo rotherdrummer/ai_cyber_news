@@ -205,6 +205,26 @@ def main():
         json.dump(wd, open(wpath, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
         write_csv(os.path.join(DATA, "wider.csv"), ["date","category","title","publisher","url","summary","why_not_cyber","source_relation","id"], wd["items"])
 
+    # Source lists the routine works from: core (checked every run) and hints.
+    cpath = os.path.join(DATA, "sources-config.json")
+    if os.path.exists(cpath):
+        cfg = json.load(open(cpath, encoding="utf-8"))
+        cerr = []
+        if not isinstance(cfg.get("core"), list) or not cfg["core"]: cerr.append("core list missing or empty")
+        if not isinstance(cfg.get("hints"), list): cerr.append("hints list missing")
+        seen_names = set()
+        for s in (cfg.get("core") or []):
+            if not s.get("name") or not s.get("pages"): cerr.append(f"core source needs a name and at least one page: {s}")
+            for u in s.get("pages", []) + ([s["feed"]] if s.get("feed") else []):
+                if not str(u).startswith("https://"): cerr.append(f"core source {s.get('name')}: url must be https: {u}")
+        for s in (cfg.get("core") or []) + (cfg.get("hints") or []):
+            k = str(s.get("name", "")).strip().lower()
+            if not k: cerr.append(f"source with no name: {s}")
+            if k in seen_names: cerr.append(f"'{s.get('name')}' appears twice; a source is core or a hint, not both")
+            seen_names.add(k)
+        if cerr:
+            print("sources-config.json failed validation:"); [print(" -", e) for e in cerr]; sys.exit(1)
+
     apath = os.path.join(DATA, "agents.json")
     agents = json.load(open(apath, encoding="utf-8"))["agents"] if os.path.exists(apath) else []
     if agents:
