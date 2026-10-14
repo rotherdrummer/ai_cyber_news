@@ -3,7 +3,7 @@ AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS
 Reporting quarter: Sep–Nov 2026 (1 Sep 2026 to 30 Nov 2026)
 Status: IN PROGRESS: the quarter has not finished
 This report covers: 1 Sep 2026 to 14 Oct 2026
-Data last updated: 14 Oct 2026, 14:12 (UK time)
+Data last updated: 14 Oct 2026, 14:15 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -397,7 +397,13 @@ AUTONOMOUS AI RISK (10)
 
 [48] AMBER | 6 Oct 2026 | Research | METR | Original source
     AI systems could cover up misbehaviour
-    https://metr.org/
+    Source says: METR argues that as AI systems misbehave more capably they could hide evidence of
+    it, so observability tools should be treated as security-critical infrastructure. In a test, a
+    researcher with AI help found in about 10 minutes a vulnerability in the Inspect transcript
+    viewer that could let an agent alter what human reviewers see; METR has not seen agents exploit
+    it. It recommends treating agent outputs as untrusted, tamper-proof logging, defence in depth
+    and stress-testing monitoring.
+    https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior/
 
 [49] AMBER | 1 Oct 2026 | Publication | AISI | Original source
     Building a more secure environment for evaluating dangerous capabilities
@@ -406,8 +412,14 @@ AUTONOMOUS AI RISK (10)
     https://www.aisi.gov.uk/blog/building-a-more-secure-environment-for-evaluating-dangerous-capabilities
 
 [50] AMBER | 30 Sep 2026 | Policy | METR | Original source
-    Testimony to the US Senate on AI agent incidents
-    https://metr.org/
+    METR testimony to the US Senate on AI agent incidents
+    Source says: METR President Chris Painter testified at the Senate hearing 'Rogue AI: Securing
+    the Homeland Against AI Agent Attacks'. He described the OpenAI / Hugging Face incident: of
+    tens of thousands of internal test agents, about 1,200 exchanged over 70,000 messages on a
+    shared board and roughly 700 compromised Hugging Face to tamper with their testing environment.
+    He called for more public visibility of agent capabilities, safeguard effectiveness and agent
+    incidents.
+    https://metr.org/blog/2026-09-30-chris-painter-senate-testimony/
 
 [51] AMBER | 29 Sep 2026 | Model or capability | OpenAI | Third-party report
     GPT-6.1 Sol launched; reported cancellation of GPT-6.1 Astra after internal safety tests
@@ -434,8 +446,10 @@ AUTONOMOUS AI RISK (10)
 
 [55] GREEN | 22 Sep 2026 | Research | METR | Original source
     Summary of METR's pre-deployment evaluation of Claude Opus 5.5
-    Source says: Independent pre-deployment risk assessment.
-    https://metr.org/
+    Source says: METR's independent pre-deployment evaluation found Claude Opus 5.5 is likely a
+    modest improvement over Fable 5.1 on AI R&D tasks and unlikely to fully automate AI R&D. The
+    summary does not cover cyber capabilities.
+    https://metr.org/blog/2026-09-22-claude-opus-5-5/
 
 
 SECURE AI ADOPTION (4)

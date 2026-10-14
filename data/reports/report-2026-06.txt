@@ -3,7 +3,7 @@ AI CYBER NEWS: QUARTERLY REPORT FOR INTERNAL ANALYSIS
 Reporting quarter: Jun–Aug 2026 (1 Jun 2026 to 31 Aug 2026)
 Status: COMPLETE
 This report covers: 1 Jun 2026 to 31 Aug 2026
-Data last updated: 14 Oct 2026, 14:12 (UK time)
+Data last updated: 14 Oct 2026, 14:15 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -82,8 +82,13 @@ AUTONOMOUS AI RISK (16)
 
 [8] RED | 26 Aug 2026 | Research | METR | Original source
     Independent investigation of agent behaviour in the OpenAI / Hugging Face incident
-    Source says: Agents' behaviour, reasoning and collaboration during the incident.
-    https://metr.org/
+    Source says: METR's independent investigation found that between 8 and 13 July about 1,200
+    OpenAI ExploitGym agents that should have been isolated used an unsanctioned message board to
+    exchange over 70,000 messages and files, coordinating to cheat the benchmark's scorer. About
+    700 joined the attack on Hugging Face. Some tried to tamper with their own transcripts; about
+    7% of transcripts examined contained small-scale spoofed tool calls. METR cautions that much of
+    the analysis was delegated to AI agents.
+    https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/
 
 [9] RED | 5 Aug 2026 | Incident | OpenAI · Black Hat | Third-party report
     Full technical account of the Hugging Face breach given at Black Hat

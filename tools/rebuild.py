@@ -134,7 +134,10 @@ def main():
         for c in ("title","url","published"):
             if not str(r[c]).strip(): errors.append(f"item {i} ({r.get('title','?')[:50]}): missing {c}")
         if not (r["source_says"].strip() or r["key_findings"].strip()):
-            print(f"warning: item {i} ({r['title'][:50]}) has no summary")
+            print(f"warning: item {i} ({r['title'][:50]}) has no summary; marking it")
+            r["source_says"] = "Unable to retrieve the source to provide a summary."
+        if r["url"] and urlparse(r["url"]).path.strip("/") == "":
+            print(f"warning: item {i} ({r['title'][:50]}) links to a home page, not the article: {r['url']}")
         if r["url"] and not r["url"].startswith("https://"): errors.append(f"item {i}: url must be https")
         if "claude.ai" in r["url"]: errors.append(f"item {i}: url points at claude.ai")
         if r["published"] and not valid_date(r["published"]): errors.append(f"item {i}: bad published date {r['published']}")
