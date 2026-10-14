@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-08",
+ "updated": "2026-10-14",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -26,7 +26,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "V4-Pro put 4–7 months behind the closed frontier by AISI",
    "evidence_url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "fable-5-1",
@@ -39,7 +40,8 @@
    "tier": "Mythos-class",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "falcon",
@@ -52,7 +54,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "gemini-3-8-flash",
@@ -65,7 +68,8 @@
    "tier": "Fast tier, with a cyber variant",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Fast and low-cost"
   },
   {
    "id": "gemini-4-argon",
@@ -78,7 +82,8 @@
    "tier": "Flagship",
    "cyber_evidence": "Google says it solved all 12 end-to-end simulated cyberattack scenarios (previous generation: 5); cyber safeguards added for elevated cyber capability; AISI evaluating it (UK minister, 12 Oct 2026)",
    "evidence_url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
-   "updated": "2026-10-14"
+   "updated": "2026-10-14",
+   "position": "Flagship"
   },
   {
    "id": "gemma",
@@ -91,7 +96,8 @@
    "tier": "Open family",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Fast and low-cost"
   },
   {
    "id": "glm-5-3",
@@ -104,7 +110,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "Predecessor GLM-5.2 put 4–7 months behind the closed frontier by AISI",
    "evidence_url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "gpt-5-6-sol",
@@ -117,7 +124,8 @@
    "tier": "Previous generation",
    "cyber_evidence": "78.5% on ExploitBench; supply-chain attacks in 6.3% of AISI simulations",
    "evidence_url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Previous generation"
   },
   {
    "id": "gpt-6-1-sol",
@@ -130,7 +138,8 @@
    "tier": "Mid",
    "cyber_evidence": "",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Advanced"
   },
   {
    "id": "gpt-6-astra",
@@ -143,7 +152,8 @@
    "tier": "Flagship",
    "cyber_evidence": "Critical cyber threshold; 100% on ExploitBench with safeguards off; supply-chain attacks in 29.2% of AISI simulations",
    "evidence_url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "gpt-6-luna",
@@ -156,7 +166,8 @@
    "tier": "Free tier",
    "cyber_evidence": "High cyber capability, below Critical (OpenAI); 44.66% on ExploitBench (self-reported)",
    "evidence_url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Fast and low-cost"
   },
   {
    "id": "gpt-6-sol",
@@ -169,7 +180,8 @@
    "tier": "Flagship (ChatGPT)",
    "cyber_evidence": "High cyber capability, below Critical (OpenAI); 82.62% on ExploitBench (self-reported)",
    "evidence_url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Everyday"
   },
   {
    "id": "gpt-oss",
@@ -182,7 +194,8 @@
    "tier": "OpenAI's only open model",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Everyday"
   },
   {
    "id": "grok-4-7",
@@ -195,7 +208,8 @@
    "tier": "Flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "kimi-k3",
@@ -208,7 +222,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "1 of 10 on AISI's simulated attack range",
    "evidence_url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "lumen",
@@ -221,7 +236,8 @@
    "tier": "Sovereign frontier",
    "cyber_evidence": "Training weighted towards cyber, financial compliance and clinical",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Not yet released"
   },
   {
    "id": "mai-thinking",
@@ -234,7 +250,8 @@
    "tier": "Reasoning flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "mimo",
@@ -247,7 +264,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "mistral-large-3",
@@ -260,7 +278,8 @@
    "tier": "Flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "mistral-large-4",
@@ -273,7 +292,8 @@
    "tier": "Flagship (preview)",
    "cyber_evidence": "",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Not yet released"
   },
   {
    "id": "muse-spark",
@@ -286,7 +306,8 @@
    "tier": "Flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "mythos-5-1",
@@ -299,7 +320,8 @@
    "tier": "Gated cyber tier",
    "cyber_evidence": "Mythos 5 agents behind most of AISI's August incident report",
    "evidence_url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Restricted frontier"
   },
   {
    "id": "mythos-preview",
@@ -312,7 +334,8 @@
    "tier": "Earlier gated cyber model",
    "cyber_evidence": "6 of 10 on AISI's simulated attack range; 69% on ExploitBench",
    "evidence_url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Previous generation"
   },
   {
    "id": "opus-5-5",
@@ -325,7 +348,8 @@
    "tier": "Flagship",
    "cyber_evidence": "METR pre-deployment evaluation published 22 Sep",
    "evidence_url": "https://metr.org/",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Advanced"
   },
   {
    "id": "qwen-3-8",
@@ -338,7 +362,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Flagship"
   },
   {
    "id": "sonnet-5-5",
@@ -351,7 +376,8 @@
    "tier": "Workhorse",
    "cyber_evidence": "",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08"
+   "updated": "2026-10-08",
+   "position": "Everyday"
   },
   {
    "id": "haiku-5-5",
@@ -364,7 +390,121 @@
    "tier": "Mid",
    "cyber_evidence": "Cyber safeguards block penetration testing; broader use via Cyber Verification Program",
    "evidence_url": "https://www.anthropic.com/claude-haiku-5-5",
-   "updated": "2026-10-13"
+   "updated": "2026-10-13",
+   "position": "Fast and low-cost"
   }
- ]
+ ],
+ "positions": [
+  {
+   "name": "Restricted frontier",
+   "rank": 5,
+   "means": "The developer's most capable model, released only to vetted organisations."
+  },
+  {
+   "name": "Flagship",
+   "rank": 4,
+   "means": "The developer's most capable model that anyone can use or download."
+  },
+  {
+   "name": "Advanced",
+   "rank": 3,
+   "means": "High-end, a step below the flagship."
+  },
+  {
+   "name": "Everyday",
+   "rank": 2,
+   "means": "The default model most users get."
+  },
+  {
+   "name": "Fast and low-cost",
+   "rank": 1,
+   "means": "Smaller, cheaper and quicker, for high-volume tasks."
+  },
+  {
+   "name": "Previous generation",
+   "rank": 0,
+   "means": "Replaced by a newer model but still available."
+  },
+  {
+   "name": "Not yet released",
+   "rank": 0,
+   "means": "Announced or in limited preview."
+  }
+ ],
+ "developers": {
+  "OpenAI": {
+   "ceo": "Sam Altman",
+   "as_of": "2026-10-14",
+   "url": "https://www.unifygtm.com/insights/executives/openai-ceo"
+  },
+  "Anthropic": {
+   "ceo": "Dario Amodei",
+   "as_of": "2026-10-14",
+   "url": "https://www.unifygtm.com/insights/executives/anthropic-ceo"
+  },
+  "Google DeepMind": {
+   "ceo": "Koray Kavukcuoglu",
+   "as_of": "2026-10-14",
+   "url": "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/",
+   "label": "Led by",
+   "note": "Runs DeepMind day to day as SVP, reporting to Google CEO Sundar Pichai; Demis Hassabis stepped down as CEO in August 2026."
+  },
+  "xAI": {
+   "ceo": "Elon Musk",
+   "as_of": "2026-10-14",
+   "url": "https://en.wikipedia.org/wiki/SpaceXAI",
+   "label": "Led by",
+   "note": "Founder. xAI is now part of SpaceX and has no separately named CEO."
+  },
+  "Meta": {
+   "ceo": "Mark Zuckerberg",
+   "as_of": "2026-10-14",
+   "url": "https://www.fortune.com/2026/04/08/meta-unveils-muse-spark-mark-zuckerberg-ai-push"
+  },
+  "Microsoft AI": {
+   "ceo": "Mustafa Suleyman",
+   "as_of": "2026-10-14",
+   "url": "https://publication.aimagazine.com/ai-magazine-top-100-leaders-2026/0796921001767963467/p79"
+  },
+  "Mistral AI": {
+   "ceo": "Arthur Mensch",
+   "as_of": "2026-10-14",
+   "url": "https://en.wikipedia.org/wiki/Arthur_Mensch"
+  },
+  "DeepSeek": {
+   "ceo": "Liang Wenfeng",
+   "as_of": "2026-10-14",
+   "url": "https://aimagazine.com/news/liang-wenfeng-top-100-ai-leaders-2026"
+  },
+  "Moonshot AI": {
+   "ceo": "Yang Zhilin",
+   "as_of": "2026-10-14",
+   "url": "https://en.wikipedia.org/wiki/Moonshot_AI"
+  },
+  "Z.ai (Zhipu)": {
+   "ceo": "Zhang Peng",
+   "as_of": "2026-10-14",
+   "url": "https://www.caixinglobal.com/2026-07-02/in-profile-this-trio-is-charting-the-course-for-chinas-leading-ai-developer-102460058.html"
+  },
+  "Alibaba": {
+   "ceo": "Eddie Wu",
+   "as_of": "2026-10-14",
+   "url": "https://en.wikipedia.org/wiki/Eddie_Wu"
+  },
+  "Xiaomi": {
+   "ceo": "Lei Jun",
+   "as_of": "2026-10-14",
+   "url": "https://en.wikipedia.org/wiki/Xiaomi_MiMo"
+  },
+  "Technology Innovation Institute (UAE)": {
+   "ceo": "Najwa Aaraj",
+   "as_of": "2026-10-14",
+   "url": "https://www.tii.ae/node/4015"
+  },
+  "Cosine (UK Sovereign AI)": {
+   "ceo": "Alistair Pullen",
+   "as_of": "2026-10-14",
+   "url": "https://tech.eu/2026/06/08/cosine-secures-industry-backing-for-britain-s-first-sovereign-frontier-model/"
+  }
+ }
 }

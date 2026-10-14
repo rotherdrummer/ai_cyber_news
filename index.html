@@ -123,6 +123,13 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px;letter-spacing:.11em;text-transform:uppercase;color:var(--ink-2);font-weight:600}
 .w{display:inline-block;width:9px;height:9px;border:1.5px solid var(--ink);margin-right:6px;vertical-align:-1px}
 .w.closed{background:var(--ink)}
+.ladder{display:inline-flex;gap:2px;align-items:flex-end;margin-right:6px;vertical-align:-1px}
+.ladder i{display:block;width:5px;border:1px solid var(--ink-3);background:transparent}
+.ladder i.on{background:var(--accent);border-color:var(--accent)}
+.ladder.off i{border-style:dashed}
+.pos{display:block;margin-top:3px;font-size:12px;color:var(--ink-2);white-space:nowrap}
+.poskey{display:flex;flex-wrap:wrap;gap:6px 18px;margin:4px 0 12px;font-size:12.5px;color:var(--ink-2)}
+.poskey span{white-space:nowrap}
 .reg td,.reg th{min-width:128px}
 #modelRows td:nth-child(3),#modelRows td:nth-child(4){white-space:nowrap}
 .reg td.rowh{min-width:96px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);font-weight:600}
@@ -203,8 +210,9 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <div id="view-models" hidden>
     <div class="vhead"><h2>Frontier AI models</h2><div class="btns"><a class="btn" href="data/models.csv" download>Download CSV</a></div></div>
-    <p class="says">Who builds which models, under whose law, and whether the weights can be held in-house. Grouped by the jurisdiction that governs the developer. <span id="modelsUpdated"></span></p>
+    <p class="says">Who builds which models, under whose law, and whether the weights can be held in-house. Grouped by the jurisdiction that governs the developer. The bars show where each model sits in its developer’s own range (hover for what each level means); they don’t compare developers. <span id="modelsUpdated"></span></p>
     <div class="notes" id="modelNotes"></div>
+    <div class="poskey" id="poskey" aria-label="Place in the developer's range"></div>
     <div class="seg" id="wfilter" role="group" aria-label="Weights" style="margin:6px 0 10px"></div>
     <div class="tscroll"><table><thead><tr><th>Model</th><th>Developer</th><th>Weights</th><th>Released</th><th>Access</th><th>Published cyber evidence</th></tr></thead><tbody id="modelRows"></tbody></table></div>
   </div>
@@ -314,18 +322,23 @@ var VIEWS=["news","models","benchmarks","regulation","sources"],modelsData=null,
 function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
   VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
   [].forEach.call(document.querySelectorAll(".tabs a"),function(a){if(a.getAttribute("data-v")===v)a.setAttribute("aria-current","page");else a.removeAttribute("aria-current")});}
+function ladder(rank,off){var w=el("span",{cls:"ladder"+(off?" off":""),"aria-hidden":"true"});for(var i=1;i<=5;i++){var b=el("i",{cls:(!off&&i<=rank)?"on":""});b.style.height=(3+i*2)+"px";w.appendChild(b)}return w}
+function posInfo(name){var ps=(modelsData&&modelsData.positions)||[];for(var i=0;i<ps.length;i++)if(ps[i].name===name)return ps[i];return {name:name||"Not yet assessed",rank:0,means:"Not yet assessed."}}
 function renderModels(){
   var tb=$("modelRows");tb.textContent="";if(!modelsData)return;
+  var devs=modelsData.developers||{};
   var order=["United States","Europe","China","Sovereign programmes","Other"],cur=null;
-  modelsData.models.filter(function(m){return !wf||m.weights===wf}).sort(function(a,b){var ja=order.indexOf(a.jurisdiction),jb=order.indexOf(b.jurisdiction);if(ja!==jb)return ja-jb;if(a.developer!==b.developer)return a.developer<b.developer?-1:1;return (a.released||"")<(b.released||"")?1:-1}).forEach(function(m){
+  modelsData.models.filter(function(m){return !wf||m.weights===wf}).sort(function(a,b){var ja=order.indexOf(a.jurisdiction),jb=order.indexOf(b.jurisdiction);if(ja!==jb)return ja-jb;if(a.developer!==b.developer)return a.developer<b.developer?-1:1;var ra=posInfo(a.position).rank,rb=posInfo(b.position).rank;if(ra!==rb)return rb-ra;return (a.released||"")<(b.released||"")?1:-1}).forEach(function(m){
     if(m.jurisdiction!==cur){cur=m.jurisdiction;tb.appendChild(el("tr",{cls:"grp"},[el("td",{colspan:"6",text:cur})]))}
-    var u=safe(m.evidence_url);
-    tb.appendChild(el("tr",null,[el("td",null,[el("b",{text:m.name}),m.tier?el("div",{cls:"pub",text:m.tier}):null]),el("td",{text:m.developer}),
+    var u=safe(m.evidence_url),pi=posInfo(m.position),dv=devs[m.developer]||{},du=safe(dv.url);
+    tb.appendChild(el("tr",null,[el("td",null,[el("b",{text:m.name}),el("span",{cls:"pos",title:pi.means},[ladder(pi.rank,!pi.rank),pi.name])]),
+      el("td",null,[m.developer,dv.ceo?el("div",{cls:"pub",title:dv.note||""},[(dv.label||"CEO")+": ",du?el("a",{href:du,target:"_blank",rel:"noopener noreferrer",text:dv.ceo}):dv.ceo]):null]),
       el("td",null,[el("span",{cls:"w"+(m.weights==="Closed"?" closed":"")}),m.weights]),el("td",{text:m.released||"\u2013"}),el("td",{text:m.access}),
       el("td",null,m.cyber_evidence?[m.cyber_evidence+" ",u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:"source"}):null]:["\u2013"])]));
   });
 }
 function loadModels(d){modelsData=d;$("modelsUpdated").textContent=d.updated?"Last change "+d.updated+".":"";
+  var pk=$("poskey");pk.appendChild(el("b",{text:"Place in the developer\u2019s range:"}));(d.positions||[]).forEach(function(p){pk.appendChild(el("span",{title:p.means},[ladder(p.rank,!p.rank),p.name]))});
   (d.notes||[]).forEach(function(n){$("modelNotes").appendChild(el("div",{cls:"note"},[el("b",{text:n.title}),n.text]))});
   ["","Closed","Open"].forEach(function(v){var b=el("button",{type:"button","data-v":v},[v?el("span",{cls:"w"+(v==="Closed"?" closed":"")}):null,(v?v+" weights":"All")]);b.addEventListener("click",function(){wf=v;[].forEach.call($("wfilter").children,function(x){x.setAttribute("aria-pressed",x===b?"true":"false")});renderModels()});$("wfilter").appendChild(b)});
   $("wfilter").firstChild.setAttribute("aria-pressed","true");renderModels();}

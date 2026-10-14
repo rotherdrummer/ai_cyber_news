@@ -167,9 +167,19 @@ def main():
     json.dump([{"key": k, "label": v["label"], "file": f"data/period-{k}.csv", "items": len(v["rows"])}
                for k, v in sorted(quarters.items(), reverse=True)], open(os.path.join(DATA, "periods.json"), "w"), indent=1)
 
-    models = json.load(open(os.path.join(DATA, "models.json"), encoding="utf-8"))["models"]
-    mcols = list(dict.fromkeys(k for m in models for k in m))
-    write_csv(os.path.join(DATA, "models.csv"), mcols, models)
+    mdoc = json.load(open(os.path.join(DATA, "models.json"), encoding="utf-8"))
+    models, devs = mdoc["models"], mdoc.get("developers", {})
+    valid = {p["name"] for p in mdoc.get("positions", [])}
+    for m in models:  # position in the developer's range; new models default until someone assesses them
+        if m.get("position") not in valid:
+            print(f"warning: model {m.get('name')} has no valid position; set to 'Not yet assessed'")
+            m["position"] = "Not yet assessed"
+        if m.get("developer") not in devs:
+            print(f"warning: developer {m.get('developer')} has no CEO entry in models.json 'developers'")
+    json.dump(mdoc, open(os.path.join(DATA, "models.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+    rows_m = [dict(m, developer_ceo=devs.get(m.get("developer"), {}).get("ceo", "")) for m in models]
+    mcols = list(dict.fromkeys(k for m in rows_m for k in m))
+    write_csv(os.path.join(DATA, "models.csv"), mcols, rows_m)
 
     regs = json.load(open(os.path.join(DATA, "regulation.json"), encoding="utf-8"))["frameworks"]
     write_csv(os.path.join(DATA, "regulation.csv"),
