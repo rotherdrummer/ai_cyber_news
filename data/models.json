@@ -303,11 +303,11 @@
    "weights": "Closed",
    "released": "",
    "access": "Public; closed since April 2026",
-   "tier": "Flagship",
+   "tier": "Previous generation",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08",
-   "position": "Flagship"
+   "updated": "2026-10-14",
+   "position": "Previous generation"
   },
   {
    "id": "mythos-5-1",
@@ -392,6 +392,34 @@
    "evidence_url": "https://www.anthropic.com/claude-haiku-5-5",
    "updated": "2026-10-13",
    "position": "Fast and low-cost"
+  },
+  {
+   "id": "muse-wonder-full",
+   "name": "Muse Wonder Full",
+   "developer": "Meta",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-10-12",
+   "access": "Muse Code subscribers only; no API",
+   "tier": "Flagship",
+   "position": "Flagship",
+   "cyber_evidence": "Meta says developers and security teams can use the Muse Wonder models to find flaws in their own code. No cyber evaluation results published yet; Meta says a full safety report will follow.",
+   "evidence_url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+   "updated": "2026-10-14"
+  },
+  {
+   "id": "muse-wonder",
+   "name": "Muse Wonder",
+   "developer": "Meta",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-10-12",
+   "access": "Public via Meta Model API and Muse Code",
+   "tier": "Advanced",
+   "position": "Advanced",
+   "cyber_evidence": "No cyber evaluation results published yet; Meta says a full safety report will follow.",
+   "evidence_url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
+   "updated": "2026-10-14"
   }
  ],
  "positions": [
