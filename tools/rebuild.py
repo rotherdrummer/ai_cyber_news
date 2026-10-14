@@ -167,8 +167,13 @@ def main():
         now_uk = datetime.datetime.utcnow()
     meta.update({"updated": TODAY, "updated_at": now_uk.strftime("%Y-%m-%dT%H:%M"), "item_count": len(items), "rating_criteria": RAG_CRITERIA})
     json.dump({"meta": meta, "items": items}, open(os.path.join(DATA, "items.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-    write_csv(os.path.join(DATA, "items.csv"), COLS, items)
-    for k, v in quarters.items(): write_csv(os.path.join(DATA, f"period-{k}.csv"), COLS, v["rows"])
+    # Item CSVs carry row_number and rows_in_file so a reader (e.g. Copilot) can check it read every row.
+    def numbered(rows):
+        n = len(rows)
+        return [dict(r, row_number=i, rows_in_file=n) for i, r in enumerate(rows, 1)]
+    ICOLS = ["row_number", "rows_in_file"] + COLS
+    write_csv(os.path.join(DATA, "items.csv"), ICOLS, numbered(items))
+    for k, v in quarters.items(): write_csv(os.path.join(DATA, f"period-{k}.csv"), ICOLS, numbered(v["rows"]))
     json.dump([{"key": k, "label": v["label"], "file": f"data/period-{k}.csv", "items": len(v["rows"])}
                for k, v in sorted(quarters.items(), reverse=True)], open(os.path.join(DATA, "periods.json"), "w"), indent=1)
 

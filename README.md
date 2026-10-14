@@ -18,6 +18,9 @@ A public-source dataset of AI and cyber security intelligence, and a static dash
 
 ## Fields
 
+The item CSVs (`items.csv`, `period-*.csv`) start with `row_number` and `rows_in_file`, so anyone reading the file can check they have read every row.
+
+
 Columns describing the source: `id`, `published`, `reporting_period`, `collected`, `item_type`, `title`, `publisher`, `url`, `source_relation`, `source_category`, `source_says`, `key_findings`, `evidence_links`, `health_named`.
 
 `source_relation` is **Original source** (published by the organisation that did the work or holds the evidence) or **Third-party report** (reported by someone else; used only where no original was found). `source_category` is one of UK government, AI developer, Independent evaluator, Legal and policy analysis, News and model trackers.
