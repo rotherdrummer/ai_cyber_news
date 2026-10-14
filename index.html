@@ -47,7 +47,7 @@ h1{font-family:var(--f-serif);font-size:clamp(34px,6vw,48px);margin:0;line-heigh
 #qdlg p{margin:0 0 14px;font-size:14px;line-height:1.6;color:var(--ink-2)}
 #qdlg .btns{display:flex;gap:8px;flex-wrap:wrap}
 .export h2{margin:0;flex-basis:100%;font-family:var(--f-serif);font-size:22px}
-.export p{margin:0;font-size:13.5px;color:var(--ink-2);max-width:75ch}
+.export p{margin:0;font-size:13.5px;color:var(--ink-2)}
 .btns{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .btn{display:inline-block;font-family:var(--f-mono);font-size:12px;letter-spacing:.05em;text-transform:uppercase;padding:9px 14px;border-radius:2px;text-decoration:none;border:1px solid var(--rule);color:var(--ink-2);background:var(--surface-2);font-weight:500}
 .btn.primary{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
@@ -78,7 +78,7 @@ label.chk{font-size:13px;color:var(--ink-2);display:flex;gap:6px;align-items:cen
 .item h3{margin:0;font-size:15px;line-height:1.35}
 .item h3 a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
 .item h3 a:hover{color:var(--accent);border-color:var(--accent)}
-.says{margin:0;font-size:13.5px;color:var(--ink-2);max-width:76ch}
+.says{margin:0;font-size:13.5px;color:var(--ink-2)}
 .says b,.tags b{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);font-weight:600;margin-right:6px}
 .tags{font-size:12px;color:var(--ink-3)}
 .related{font-size:12.5px}
@@ -99,7 +99,7 @@ label.chk{font-size:13px;color:var(--ink-2);display:flex;gap:6px;align-items:cen
 .pill.rag.Red{background:var(--red-bg);color:var(--red)}.pill.rag.Amber{background:var(--amber-bg);color:var(--amber)}.pill.rag.Green{background:var(--green-bg);color:var(--green)}
 details.how{margin-top:10px;font-size:13px;color:var(--ink-2)}
 details.how summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3)}
-details.how dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:10px 0 0;max-width:80ch}
+details.how dl{display:grid;grid-template-columns:auto 1fr;gap:6px 12px;margin:10px 0 0}
 details.how dt{display:flex;gap:6px;align-items:center;font-weight:600}
 details.how dd{margin:0}
 details.custom{font-size:13px;color:var(--ink-2)}
@@ -107,7 +107,7 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 .sources{margin-top:44px;border-top:2px solid var(--ink);padding-top:16px;display:grid;gap:12px}
 .sources h2{margin:0;font-family:var(--f-serif);font-size:22px}
 .sources h3{margin:8px 0 0;font-size:15px}
-.sources ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:13.5px;display:grid;gap:4px;max-width:80ch}
+.sources ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:13.5px;display:grid;gap:4px}
 .scat{background:var(--surface);border:1px solid var(--rule);padding:12px 14px;margin-bottom:8px}
 .scat h4{margin:0 0 4px;font-size:14px}
 .scat p{margin:0 0 6px;font-size:13px;color:var(--ink-2)}
@@ -185,7 +185,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier AI models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources">Download report</a>
+    <a href="#news" data-v="news">News</a><a href="#models" data-v="models">Frontier models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources">Download report</a>
   </nav>
 
   <div id="view-news">
@@ -222,7 +222,9 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <p style="flex-basis:100%">One plain-text report per reporting quarter, listing every News item for that quarter. Wider AI news is not included.</p>
     <div class="btns">
       <span id="qlinks" class="btns"></span>
-      <a class="rawcsv" href="data/items.csv" download>All data (CSV)</a>
+    </div>
+    <div style="flex-basis:100%"><span class="rawcsv" style="margin-left:0">All data (CSV):</span><a class="rawcsv" href="data/items.csv" download>News</a> · <a class="rawcsv" href="data/models.csv" download>Frontier models</a> · <a class="rawcsv" href="data/agents.csv" download>Agents</a> · <a class="rawcsv" href="data/benchmarks.csv" download>Benchmarks</a> · <a class="rawcsv" href="data/regulation.csv" download>Regulation</a>
+      
     </div>
   </section>
   <dialog id="qdlg" aria-labelledby="qdlgh">
@@ -243,7 +245,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   </div>
 
   <div id="view-models" hidden>
-    <div class="vhead"><h2>Frontier AI models</h2><div class="btns"><a class="btn" href="data/models.csv" download>Download CSV</a></div></div>
+    <div class="vhead"><h2>Frontier models</h2></div>
     <p class="says">Who builds which models, under whose law, and whether the weights can be held in-house. Grouped by the jurisdiction that governs the developer. The bars show where each model sits in its developer’s own range (hover for what each level means); they don’t compare developers. <span id="modelsUpdated"></span></p>
     <div class="notes" id="modelNotes"></div>
     <div class="poskey" id="poskey" aria-label="Place in the developer's range"></div>
@@ -252,7 +254,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   </div>
 
   <div id="view-agents" hidden>
-    <div class="vhead"><h2>Agents and assistants</h2><div class="btns"><a class="btn" href="data/agents.csv" download>Download CSV</a></div></div>
+    <div class="vhead"><h2>Agents and assistants</h2></div>
     <p class="says">Software that uses a model to take actions, not just answer questions. <span id="agentsUpdated"></span></p>
     <figure class="agfig" aria-labelledby="agcap">
       <svg viewBox="0 0 680 300" role="img" aria-labelledby="agt agd"><title id="agt">Model versus agent</title><desc id="agd">In a chat assistant the model writes text and a person decides what to do. In an agent the model picks the next step, the agent software runs tools for it in a loop, and those tools act on your systems.</desc>
@@ -276,7 +278,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   </div>
 
   <div id="view-benchmarks" hidden>
-    <div class="vhead"><h2>Benchmarks</h2><div class="btns"><a class="btn" href="data/benchmarks.csv" download>Download CSV</a></div></div>
+    <div class="vhead"><h2>Benchmarks</h2></div>
     <p class="says">Published results on the evaluations most worth quoting: offensive cyber capability, agent behaviour, general professional work and clinical tasks. <span id="benchUpdated"></span></p>
     <div class="tests" id="tests"></div>
     <h3 style="margin:18px 0 6px;font-size:15px">Before quoting any of these</h3>
@@ -284,7 +286,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   </div>
 
   <div id="view-regulation" hidden>
-    <div class="vhead"><h2>Regulatory landscape</h2><div class="btns"><a class="btn" href="data/regulation.csv" download>Download CSV</a></div></div>
+    <div class="vhead"><h2>Regulatory landscape</h2></div>
     <p class="says">AI, cyber and digital health assurance frameworks in the UK and EU, at a glance. For orientation, not legal advice; check current guidance before quoting.</p>
     <div class="tscroll reg"><table><thead id="regHead"></thead><tbody id="regBody"></tbody></table></div>
     <h3 style="margin:18px 0 6px;font-size:15px">Recent changes</h3>
