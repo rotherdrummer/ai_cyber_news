@@ -3,13 +3,13 @@
   "key": "2026-09",
   "label": "Sep-Nov 2026",
   "file": "data/period-2026-09.csv",
-  "items": 51
+  "items": 56
  },
  {
   "key": "2026-06",
   "label": "Jun-Aug 2026",
   "file": "data/period-2026-06.csv",
-  "items": 29
+  "items": 30
  },
  {
   "key": "2026-03",

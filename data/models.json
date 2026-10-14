@@ -74,11 +74,11 @@
    "jurisdiction": "United States",
    "weights": "Closed",
    "released": "2026-09-30",
-   "access": "Vetted cyber defenders only (Fairwind); no general date",
+   "access": "Public via Gemini API, AI Studio and paid Gemini app tiers from 13 Oct 2026; unguarded access for vetted defenders through Fairwind",
    "tier": "Flagship",
-   "cyber_evidence": "Shipped without cyber guardrails to vetted defenders; AISI evaluating it (UK minister, 12 Oct 2026)",
-   "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-13"
+   "cyber_evidence": "Google says it solved all 12 end-to-end simulated cyberattack scenarios (previous generation: 5); cyber safeguards added for elevated cyber capability; AISI evaluating it (UK minister, 12 Oct 2026)",
+   "evidence_url": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+   "updated": "2026-10-14"
   },
   {
    "id": "gemma",
