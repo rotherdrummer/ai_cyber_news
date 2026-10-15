@@ -208,7 +208,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <span class="count" id="count"></span>
   </div>
 
-  <div id="list"><div class="empty">Loading…</div></div>
+  <article id="list" aria-label="News items"><div class="empty">Loading…</div></article>
 
   </div>
 
@@ -369,7 +369,7 @@ function render(){
     ]);
     var rel=(r.related_ids||"").split(";").filter(function(x){return byId[x]});
     if(rel.length){var p=el("div",{cls:"related"},["Related: "]);rel.forEach(function(id,i){var a=el("a",{href:"#"+id,text:byId[id].title});a.addEventListener("click",function(e){e.preventDefault();jump(id)});if(i)p.appendChild(document.createTextNode("; "));p.appendChild(a)});body.appendChild(p)}
-    list.appendChild(el("article",{cls:"item "+r.tag_rating,id:r.id},[el("div",{cls:"when",text:ukd(r.published)}),body]));
+    list.appendChild(el("section",{cls:"item "+r.tag_rating,id:r.id},[el("div",{cls:"when",text:ukd(r.published)}),body]));
   });
 }
 function jump(id){if(location.hash&&location.hash!=="#news"&&VIEWS.indexOf(location.hash.slice(1))>=0){history.replaceState(null,"","#news");showView()}area="";rag="";period="all";["q","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
