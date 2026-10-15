@@ -118,6 +118,7 @@ details.custom summary{cursor:pointer;font-family:var(--f-mono);font-size:11px;l
 .tscroll th,.tscroll td{text-align:left;vertical-align:top;padding:8px 10px;border-bottom:1px solid var(--rule-soft)}
 .tscroll th{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2)}
 .tscroll td:first-child{white-space:nowrap;font-family:var(--f-mono);font-size:12px}
+.listen{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:10px 0 4px}.listen .lsnow{font-family:var(--f-mono);font-size:11px;color:var(--ink-3)}.item.speaking{outline:2px solid var(--accent);outline-offset:4px}
 .tabs{display:flex;gap:0;margin-top:16px;border-bottom:1px solid var(--rule);overflow-x:auto;align-items:flex-end}
 .tabs a.primary{font-size:14px;font-weight:800;letter-spacing:.08em;color:var(--accent);background:var(--a2-bg);border:2px solid var(--accent);border-bottom:0;margin-right:8px;padding:9px 20px}
 .tabs a.primary[aria-current="page"]{background:var(--accent);color:var(--accent-ink);border-bottom:0}
@@ -206,6 +207,12 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <select id="cat" aria-label="Source category"><option value="">All source categories</option></select>
     <details class="custom"><summary>Custom dates</summary><label class="chk">From <input id="from" type="date"></label> <label class="chk">To <input id="to" type="date"></label></details>
     <span class="count" id="count"></span>
+  </div>
+  <div class="listen" id="listenBar" hidden>
+    <button type="button" class="btn" id="lsPlay">&#9654; Listen to these items</button>
+    <button type="button" class="btn" id="lsNext" hidden>Next item</button>
+    <button type="button" class="btn" id="lsStop" hidden>Stop</button>
+    <span class="lsnow" id="lsNow"></span>
   </div>
 
   <article id="list" aria-label="News items"><div class="empty">Loading…</div></article>
@@ -350,7 +357,7 @@ function counts(){
 }
 function render(){
   counts();
-  var rows=base("");
+  var rows=base("");shown=rows;if(window.speechSynthesis&&speaking)stopListen();
   var list=$("list");list.textContent="";
   $("count").textContent=rows.length+" of "+all.length+" items";
   if(!rows.length){list.appendChild(el("div",{cls:"empty",text:period==="today"?"Nothing published today matches these filters.":"No items match these filters."}));return}
@@ -372,6 +379,23 @@ function render(){
     list.appendChild(el("section",{cls:"item "+r.tag_rating,id:r.id},[el("div",{cls:"when",text:ukd(r.published)}),body]));
   });
 }
+var shown=[],speaking=false,lsIdx=0,lsVoice=null;
+function pickVoice(){try{var v=speechSynthesis.getVoices();lsVoice=v.filter(function(x){return /en-GB/i.test(x.lang)})[0]||v.filter(function(x){return /^en/i.test(x.lang)})[0]||null}catch(e){}}
+function sentences(t){return (t||"").replace(/\s+/g," ").match(/[^.!?]+[.!?]*/g)||[]}
+function itemText(r){var parts=[r.tag_rating+".",ukd(r.published)+".",r.publisher+".",r.title+"."];if(r.source_says)parts.push(r.source_says);if(r.key_findings)parts.push(r.key_findings.replace(/;/g,"."));return parts.join(" ")}
+function mark(i){[].forEach.call(document.querySelectorAll(".item.speaking"),function(n){n.classList.remove("speaking")});var r=shown[i];if(!r)return;var n=$(r.id);if(n){n.classList.add("speaking");n.scrollIntoView({block:"center",behavior:"smooth"})}$("lsNow").textContent="Item "+(i+1)+" of "+shown.length}
+function speakItem(i){
+  if(i>=shown.length){stopListen();$("lsNow").textContent="Finished";return}
+  lsIdx=i;mark(i);
+  var chunks=sentences(itemText(shown[i]));
+  chunks.forEach(function(c,k){var u=new SpeechSynthesisUtterance(c.trim());u.lang="en-GB";if(lsVoice)u.voice=lsVoice;u.rate=1;
+    if(k===chunks.length-1)u.onend=function(){if(speaking&&lsIdx===i)setTimeout(function(){if(speaking&&lsIdx===i)speakItem(i+1)},400)};
+    speechSynthesis.speak(u)});
+}
+function startListen(){if(!shown.length)return;speaking=true;pickVoice();speechSynthesis.cancel();$("lsPlay").hidden=true;$("lsNext").hidden=false;$("lsStop").hidden=false;speakItem(0)}
+function stopListen(){speaking=false;try{speechSynthesis.cancel()}catch(e){}[].forEach.call(document.querySelectorAll(".item.speaking"),function(n){n.classList.remove("speaking")});$("lsPlay").hidden=false;$("lsNext").hidden=true;$("lsStop").hidden=true;$("lsNow").textContent=""}
+function nextListen(){if(!speaking)return;var i=lsIdx+1;lsIdx=-1;speechSynthesis.cancel();setTimeout(function(){speakItem(i)},150)}
+if(window.speechSynthesis&&window.SpeechSynthesisUtterance){(function(){$("listenBar").hidden=false;pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}$("lsPlay").addEventListener("click",startListen);$("lsStop").addEventListener("click",stopListen);$("lsNext").addEventListener("click",nextListen)})()}
 function jump(id){if(location.hash&&location.hash!=="#news"&&VIEWS.indexOf(location.hash.slice(1))>=0){history.replaceState(null,"","#news");showView()}area="";rag="";period="all";["q","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
 function renderSources(d){
   (d.principles||[]).forEach(function(t){$("principles").appendChild(el("li",{text:t}))});
