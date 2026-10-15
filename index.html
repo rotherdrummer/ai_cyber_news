@@ -244,6 +244,17 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="btns"><a class="btn primary" id="qdlgy" download>Download anyway</a><button type="button" class="btn" id="qdlgn">Cancel</button></div>
   </dialog>
 
+  <section class="export brief" aria-labelledby="brh">
+    <h2 id="brh">Briefing for sharing</h2>
+    <p style="flex-basis:100%">A short Word briefing of public AI cyber news between two dates, for sharing with partners such as the 4-nations group. Red and Amber items in full, Green as titles, plus regulatory changes. Public information only.</p>
+    <div class="btns" style="align-items:center">
+      <label class="chk">From <input id="brFrom" type="date"></label>
+      <label class="chk">To <input id="brTo" type="date"></label>
+      <button type="button" class="btn primary" id="brGo">Download briefing (Word)</button>
+      <span class="lsnow" id="brMsg"></span>
+    </div>
+  </section>
+
   <section class="sources" id="sources" aria-labelledby="srch">
     <h2 id="srch">Sources used</h2>
     <p class="says">Every item is labelled <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Original source</b> (published by the organisation that did the work or holds the evidence) or <b style="font-family:inherit;letter-spacing:0;text-transform:none;font-size:inherit;color:var(--ink)">Third-party report</b> (reported by someone else, used only where no original was found).</p>
@@ -404,6 +415,51 @@ function resumeListen(){if(!speaking)return;paused=false;lsButtons();mark(lsIdx)
 function stopListen(){speaking=false;paused=false;lsGen++;try{speechSynthesis.cancel()}catch(e){}[].forEach.call(document.querySelectorAll(".item.speaking"),function(n){n.classList.remove("speaking")});lsButtons();$("lsNow").textContent=""}
 function nextListen(){if(!speaking)return;paused=false;lsGen++;speechSynthesis.cancel();lsButtons();setTimeout(function(){loadItem(lsIdx+1)},150)}
 if(window.speechSynthesis&&window.SpeechSynthesisUtterance){(function(){$("listenBar").hidden=false;pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}$("lsPlay").addEventListener("click",startListen);$("lsPause").addEventListener("click",pauseListen);$("lsResume").addEventListener("click",resumeListen);$("lsStop").addEventListener("click",stopListen);$("lsNext").addEventListener("click",nextListen)})()}
+var regData=null;
+function isoDay(d){return d.toISOString().slice(0,10)}
+function brInit(){var t=new Date(),f=new Date();f.setMonth(f.getMonth()-1);var last=null;try{last=localStorage.getItem("brLastTo")}catch(e){}
+  $("brFrom").value=last||isoDay(f);$("brTo").value=isoDay(t);$("brGo").addEventListener("click",makeBrief)}
+function loadDocx(cb){if(window.docx)return cb();var sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js";sc.onload=cb;sc.onerror=function(){$("brMsg").textContent="Couldn't load the Word builder. Check your connection and try again."};document.head.appendChild(sc)}
+function makeBrief(){
+  var f=$("brFrom").value,t=$("brTo").value;if(!f||!t||f>t){$("brMsg").textContent="Choose a From date on or before the To date.";return}
+  $("brMsg").textContent="Building…";
+  var go=function(){loadDocx(function(){try{buildBrief(f,t)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the briefing."}})};
+  if(regData)go();else fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){regData=d;go()}).catch(go);
+}
+function buildBrief(f,t){
+  var D=window.docx,P=D.Paragraph,TR=D.TextRun,H=D.HeadingLevel;
+  var rows=all.filter(function(r){return r.published>=f&&r.published<=t}).sort(function(a,b){return a.published<b.published?1:-1});
+  var red=rows.filter(function(r){return r.tag_rating==="Red"}),amb=rows.filter(function(r){return r.tag_rating==="Amber"}),grn=rows.filter(function(r){return r.tag_rating==="Green"});
+  var kids=[];
+  function para(text,opt){kids.push(new P(Object.assign({children:[new TR({text:text,font:"Arial",size:22})],spacing:{after:120}},opt||{})))}
+  function link(text,url){return new D.ExternalHyperlink({link:url,children:[new TR({text:text,style:"Hyperlink",font:"Arial",size:20})]})}
+  kids.push(new P({heading:H.TITLE,children:[new TR({text:"AI cyber security: public briefing",font:"Arial"})]}));
+  para(ukd(f)+" to "+ukd(t)+" · "+rows.length+" items ("+red.length+" Red, "+amb.length+" Amber, "+grn.length+" Green)");
+  para("Compiled from public sources by AI Cyber News. Ratings are machine-assigned triage against fixed published criteria, not assessments. Check the linked source before relying on any item.",{children:[new TR({text:"Compiled from public sources by AI Cyber News. Ratings are machine-assigned triage against fixed published criteria, not assessments. Check the linked source before relying on any item.",italics:true,font:"Arial",size:20})]});
+  function section(title,list){
+    if(!list.length)return;
+    kids.push(new P({heading:H.HEADING_1,children:[new TR({text:title+" ("+list.length+")",font:"Arial"})]}));
+    list.forEach(function(r){
+      kids.push(new P({spacing:{before:160,after:40},children:[new TR({text:ukd(r.published)+" · "+r.publisher+(r.health_named==="Yes"?" · Health and care named":""),font:"Arial",size:18,color:"555555"})]}));
+      kids.push(new P({spacing:{after:40},children:[new TR({text:r.title,bold:true,font:"Arial",size:22})]}));
+      var sum=r.source_says||(r.key_findings||"");if(sum)para(sum);
+      var u=safe(r.url);if(u)kids.push(new P({spacing:{after:120},children:[link(r.source_relation==="Third-party report"?"Source (third-party report)":"Source",u)]}));
+    });
+  }
+  section("Red: real-world activity or material change",red);
+  section("Amber: significant change to watch",amb);
+  if(grn.length){kids.push(new P({heading:H.HEADING_1,children:[new TR({text:"Green: background ("+grn.length+")",font:"Arial"})]}));
+    grn.forEach(function(r){var u=safe(r.url);kids.push(new P({bullet:{level:0},children:[new TR({text:ukd(r.published)+" · ",font:"Arial",size:20})].concat(u?[link(r.title,u)]:[new TR({text:r.title,font:"Arial",size:20})])}))})}
+  var ch=[];((regData&&regData.frameworks)||[]).forEach(function(fw){(fw.changes||[]).forEach(function(c){if(c.date>=f&&c.date<=t)ch.push({date:c.date,text:fw.name+": "+c.text,url:c.url})})});
+  if(ch.length){ch.sort(function(a,b){return a.date<b.date?1:-1});kids.push(new P({heading:H.HEADING_1,children:[new TR({text:"Regulatory changes",font:"Arial"})]}));
+    ch.forEach(function(c){var u=safe(c.url);kids.push(new P({bullet:{level:0},children:[new TR({text:ukd(c.date)+" · "+c.text+" ",font:"Arial",size:20})].concat(u?[link("Source",u)]:[])}))})}
+  if(!rows.length&&!ch.length)para("No items were published in this period.");
+  var foot=new D.Footer({children:[new P({alignment:D.AlignmentType.CENTER,children:[new TR({text:"Public information only. Not an official product of any organisation.",font:"Arial",size:16,color:"777777"})]})]});
+  var doc=new D.Document({styles:{default:{document:{run:{font:"Arial"}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:1100,right:1100}}},footers:{default:foot},children:kids}]});
+  D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber briefing "+f+" to "+t+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+    try{localStorage.setItem("brLastTo",t)}catch(e){}$("brMsg").textContent="Downloaded. Next time the From date will start at "+ukd(t)+"."});
+}
+brInit();
 function jump(id){if(location.hash&&location.hash!=="#news"&&VIEWS.indexOf(location.hash.slice(1))>=0){history.replaceState(null,"","#news");showView()}area="";rag="";period="all";["q","src","cat","from","to"].forEach(function(k){$(k).value=""});render();var n=$(id);if(n){n.scrollIntoView({block:"center"});n.classList.add("flash");setTimeout(function(){n.classList.remove("flash")},1500)}}
 function renderSources(d){
   (d.principles||[]).forEach(function(t){$("principles").appendChild(el("li",{text:t}))});
