@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-15",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3b8e1c47a2",
+   "date": "2026-10-14",
+   "category": "Legal and policy",
+   "title": "Arkansas and eight other states sue OpenAI over ChatGPT safety claims",
+   "publisher": "Arkansas Attorney General",
+   "url": "https://arkansasag.gov/news-release/attorney-general-griffin-sues-openai-for-misleading-arkansans-over-safety-of-chatgpt/",
+   "summary": "Arkansas Attorney General Tim Griffin sued OpenAI, alleging it promoted ChatGPT as safe while knowing its risks. Attorneys general in eight other states filed similar lawsuits the same day.",
+   "why_not_cyber": "Consumer protection and child safety case with no cyber security angle.",
+   "source_relation": "Original source",
+   "added": "2026-10-15"
+  },
+  {
+   "id": "wf-9d04f6e1b5",
+   "date": "2026-10-13",
+   "category": "Other",
+   "title": "Former OpenAI engineer charged over hidden recording device in executive meeting room",
+   "publisher": "US Department of Justice",
+   "url": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai",
+   "summary": "A Saudi national who worked as an OpenAI engineer was arrested on 9 October and charged over a hidden audio recorder found in an executive conference room. The complaint says a second similar device was in his bag.",
+   "why_not_cyber": "Physical insider surveillance case with no AI-enabled attack or AI system involved.",
+   "source_relation": "Original source",
+   "added": "2026-10-15"
+  },
   {
    "id": "wf-ecff2656ae",
    "date": "2026-10-12",

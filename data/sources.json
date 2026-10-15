@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-15",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -66,6 +66,21 @@
      "name": "Google Threat Intelligence Group",
      "url": "https://cloud.google.com/blog/topics/threat-intelligence",
      "added": "2026-10-08"
+    },
+    {
+     "name": "Google DeepMind model cards",
+     "url": "https://deepmind.google/models/model-cards/",
+     "added": "2026-10-15"
+    },
+    {
+     "name": "Meta AI blog and model cards",
+     "url": "https://ai.meta.com/blog/",
+     "added": "2026-10-15"
+    },
+    {
+     "name": "Microsoft Security blog",
+     "url": "https://www.microsoft.com/en-us/security/blog/",
+     "added": "2026-10-15"
     }
    ]
   },
@@ -114,6 +129,21 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-15",
+   "change": "Added Google DeepMind model cards (deepmind.google) to the Google core source",
+   "why": "Found while checking the organisation's website: the Gemini 4 Argon model card, published 13 October, carries cyber risk findings not in Google's blog posts."
+  },
+  {
+   "date": "2026-10-15",
+   "change": "Added Meta to core sources",
+   "why": "Rule 1(ii): Meta is a frontier developer listed in models.json and published a News item, the Muse Wonder model card with cyber evaluation results, on 12 October 2026."
+  },
+  {
+   "date": "2026-10-15",
+   "change": "Added Microsoft to core sources",
+   "why": "Rule 1(ii): Microsoft AI is a frontier developer listed in models.json and Microsoft published a News item, the Microsoft Digital Defense Report 2026, on 1 October 2026."
+  },
   {
    "date": "2026-10-14",
    "change": "Source rules tightened. Core is now limited to UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading research bodies whose work AISI, NCSC or a frontier developer has cited. Other organisations with 2 or more News items in 90 days become hints. Existing core organisations re-checked against the new test: all qualify (MI5, Cabinet Office and MHRA under 1(i); Carnegie Mellon under 1(iii), as ExploitBench is cited by AISI).",

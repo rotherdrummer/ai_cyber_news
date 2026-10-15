@@ -6,6 +6,7 @@ ExploitBench,Offensive cyber,Claude Mythos Preview,69%,69,2026-09-24,Carnegie Me
 ExploitBench,Offensive cyber,GPT-6 Luna,44.66%,44.66,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 ExploitBench,Offensive cyber,GPT-5.5,41%,41,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
 ExploitBench,Offensive cyber,Claude Opus 4.7,27%,27,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
+ExploitBench,Offensive cyber,Muse Wonder Full,58.9%,58.9,2026-10-12,Meta (self-reported),Yes,https://research.meta.ai/static/muse-wonder-model-card
 SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
@@ -26,6 +27,7 @@ GDPval-AA,General professional work,GPT-5.6 Sol,1588,1588,2026-09-24,Artificial 
 GDPval-AA,General professional work,GPT-6 Astra,1542,1542,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
 GDPval-AA,General professional work,GPT-6 Sol,1487,1487,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
 GDPval-AA,General professional work,Gemini 3.8 Flash,1412,1412,2026-09-24,Artificial Analysis,No,https://artificialanalysis.ai/
+GDPval-AA,General professional work,Muse Wonder Full,1857,1857,2026-10-12,Artificial Analysis,No,https://artificialanalysis.ai/articles/muse-wonder
 HealthBench Professional,Clinical,Claude Fable 5,0.660,0.66,2026-09-24,Arcophos leaderboard,No,
 HealthBench Professional,Clinical,GPT-6 Astra,0.634,0.634,2026-09-24,Arcophos leaderboard,No,
 HealthBench Professional,Clinical,Claude Fable 5.1,0.621,0.621,2026-09-24,Arcophos leaderboard,No,

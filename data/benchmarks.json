@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-07",
+ "updated": "2026-10-12",
  "tests": [
   {
    "name": "ExploitBench",
@@ -77,6 +77,16 @@
      "url": "https://epoch.ai/benchmarks/exploitbench",
      "measured_by": "Carnegie Mellon",
      "self_reported": false,
+     "weights": "Closed"
+    },
+    {
+     "model": "Muse Wonder Full",
+     "value": 58.9,
+     "display": "58.9%",
+     "date": "2026-10-12",
+     "url": "https://research.meta.ai/static/muse-wonder-model-card",
+     "measured_by": "Meta (self-reported)",
+     "self_reported": true,
      "weights": "Closed"
     }
    ]
@@ -341,6 +351,16 @@
      "self_reported": false,
      "weights": "Closed",
      "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "Muse Wonder Full",
+     "value": 1857,
+     "display": "1857",
+     "date": "2026-10-12",
+     "url": "https://artificialanalysis.ai/articles/muse-wonder",
+     "measured_by": "Artificial Analysis",
+     "self_reported": false,
+     "weights": "Closed"
     }
    ]
   },
