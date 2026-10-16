@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-16",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -81,6 +81,16 @@
      "name": "Microsoft Security blog",
      "url": "https://www.microsoft.com/en-us/security/blog/",
      "added": "2026-10-15"
+    },
+    {
+     "name": "Meta research blog",
+     "url": "https://research.meta.ai/blog/",
+     "added": "2026-10-16"
+    },
+    {
+     "name": "Anthropic Frontier Red Team",
+     "url": "https://www.anthropic.com/research/team/frontier-red-team",
+     "added": "2026-10-16"
     }
    ]
   },
@@ -129,6 +139,16 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-16",
+   "change": "Added https://research.meta.ai/blog/ to Meta",
+   "why": "Found while checking the organisation's website: it carries Meta's model releases, including Muse Spark Open on 15 October, while ai.meta.com/blog has nothing since July."
+  },
+  {
+   "date": "2026-10-16",
+   "change": "Added https://www.anthropic.com/research/team/frontier-red-team to Anthropic",
+   "why": "Found while checking the organisation's website: red.anthropic.com now redirects to this Frontier Red Team listing."
+  },
   {
    "date": "2026-10-15",
    "change": "Added Google DeepMind model cards (deepmind.google) to the Google core source",

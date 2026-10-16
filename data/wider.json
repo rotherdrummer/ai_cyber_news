@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-15",
+ "updated": "2026-10-16",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e51a9d7",
+   "date": "2026-10-15",
+   "category": "Model launch",
+   "title": "Microsoft AI describes MAI-Base-2, a 2.8T-parameter base model",
+   "publisher": "Microsoft AI",
+   "url": "https://microsoft.ai/news/frontier-pre-training-at-microsoft-ai/",
+   "summary": "Microsoft AI says MAI-Base-2 is a 2.8T-parameter mixture-of-experts base model with 80B active parameters, still in post-training. It plans to license weights to trusted partners through Foundry.",
+   "why_not_cyber": "A model announcement with no cyber evidence published.",
+   "source_relation": "Original source",
+   "added": "2026-10-16"
+  },
   {
    "id": "wf-3b8e1c47a2",
    "date": "2026-10-14",
