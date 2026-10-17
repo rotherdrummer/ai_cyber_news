@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-8e2d5f61a7",
+   "date": "2026-10-16",
+   "category": "Model launch",
+   "title": "ChatGPT Chrome extension can now read and act on open browser tabs",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/chatgpt-becomes-a-full-chrome-browser-assistant-that-reads-and-acts-on-your-open-tabs/",
+   "summary": "OpenAI's updated Chrome extension lets ChatGPT read open tabs and use Computer Use in Work mode to fill in forms, on all plans.",
+   "why_not_cyber": "Browser agent product launch with no security evidence published.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-17"
+  },
   {
    "id": "wf-3c8e51a9d7",
    "date": "2026-10-15",
@@ -19,6 +31,18 @@
    "why_not_cyber": "A model announcement with no cyber evidence published.",
    "source_relation": "Original source",
    "added": "2026-10-16"
+  },
+  {
+   "id": "wf-3c9a71e04b",
+   "date": "2026-10-15",
+   "category": "Business and leadership",
+   "title": "Anthropic reports $16.8bn quarterly revenue ahead of expected listing",
+   "publisher": "BBC News",
+   "url": "https://www.bbc.co.uk/news/articles/cqzjx448vxkgo",
+   "summary": "At an investor event, Anthropic reported revenue up 45% to $16.8bn for the quarter to September and an adjusted quarterly profit, ahead of an expected stock market listing.",
+   "why_not_cyber": "Business and finance news with no cyber angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-17"
   },
   {
    "id": "wf-3b8e1c47a2",

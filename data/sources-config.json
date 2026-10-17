@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "core": [
   {
    "name": "AISI",
@@ -21,7 +21,8 @@
     "ncsc.gov.uk"
    ],
    "pages": [
-    "https://www.ncsc.gov.uk/section/keep-up-to-date/all-topics"
+    "https://www.ncsc.gov.uk/section/keep-up-to-date/all-topics",
+    "https://www.ncsc.gov.uk/frontier-ai"
    ],
    "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
    "added": "2026-10-14",
@@ -174,6 +175,33 @@
    "added": "2026-10-15",
    "reason": "Rule 1(ii)",
    "note": "Microsoft AI is a listed frontier developer. Security blog and Digital Defense Report; AI and cyber material only."
+  },
+  {
+   "name": "Government Digital Service",
+   "domains": [
+    "gov.uk"
+   ],
+   "pages": [
+    "https://www.gov.uk/government/organisations/government-digital-service"
+   ],
+   "feed": "https://www.gov.uk/government/organisations/government-digital-service.atom",
+   "added": "2026-10-17",
+   "reason": "Rule 1(i)",
+   "note": "AI and cyber material only, including service manual guidance on AI in public services."
+  },
+  {
+   "name": "Reflection AI",
+   "domains": [
+    "reflection.ai"
+   ],
+   "pages": [
+    "https://reflection.ai/blog",
+    "https://reflection.ai/newsroom"
+   ],
+   "feed": "",
+   "added": "2026-10-17",
+   "reason": "Rule 1(ii)",
+   "note": "Beam model cards and safety reports; AI and cyber material only."
   }
  ],
  "hints": [
@@ -221,6 +249,30 @@
   {
    "name": "Government response to the National Commission on regulating AI in healthcare",
    "added": "2026-10-14"
+  },
+  {
+   "name": "Help Net Security",
+   "url": "https://www.helpnetsecurity.com/view/news/",
+   "added": "2026-10-17",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "The Hacker News",
+   "url": "https://thehackernews.com/",
+   "added": "2026-10-17",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "FBI (IC3 public service announcements)",
+   "url": "https://www.ic3.gov/PSA",
+   "added": "2026-10-17",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "CISA",
+   "url": "https://www.cisa.gov/resources-tools/resources",
+   "added": "2026-10-17",
+   "reason": "Rule 2"
   }
  ]
 }

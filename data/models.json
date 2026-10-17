@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -434,6 +434,20 @@
    "cyber_evidence": "Self-reported: refused 99.2% of cyber jailbreaks on Meta's internal benchmark and 94.8% across PolyGuard (cyber subset), RedCode and CyberBench 2024. No offensive capability scores published.",
    "evidence_url": "https://huggingface.co/meta-models/Muse-Spark-Open-816B-A42B",
    "updated": "2026-10-16"
+  },
+  {
+   "id": "reflection-beam",
+   "name": "Beam",
+   "developer": "Reflection AI",
+   "jurisdiction": "United States",
+   "weights": "Open",
+   "released": "2026-10-16",
+   "access": "Downloadable under Apache 2.0 from Hugging Face; also through Reflection's API platform",
+   "tier": "Reflection's first model, 501B mixture of experts",
+   "position": "Flagship",
+   "cyber_evidence": "Self-reported: solved 9 of 14 easy and about half of medium challenges in Irregular's 50-challenge CTF suite, and not the expert one; rated Limited for cyber offence. Refused or pivoted on 88.9% of harmful cyber requests.",
+   "evidence_url": "https://reflection.ai/beam-safety-report",
+   "updated": "2026-10-17"
   }
  ],
  "positions": [
@@ -547,6 +561,11 @@
    "ceo": "Alistair Pullen",
    "as_of": "2026-10-14",
    "url": "https://tech.eu/2026/06/08/cosine-secures-industry-backing-for-britain-s-first-sovereign-frontier-model/"
+  },
+  "Reflection AI": {
+   "ceo": "Misha Laskin",
+   "as_of": "2026-10-17",
+   "url": "https://aimagazine.com/news/what-is-nvidia-backed-reflection-ai-its-open-weight-model"
   }
  }
 }

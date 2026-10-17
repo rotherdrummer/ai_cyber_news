@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14",
+ "updated": "2026-10-17",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -27,10 +27,10 @@
    "open_source": "No",
    "can_act_on": "Files, terminal and shell, code execution, GitHub and GitLab, other tools via MCP connectors",
    "access": "Paid Claude plans (Pro, Max, Team, Enterprise) and API accounts",
-   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly.",
-   "security_url": "https://claude.com/product/claude-code",
+   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly. In October 2026 Noma Security disclosed SneakPeek, a Claude Code Desktop preview pane flaw (CVSS 8.7) that could leak SSH keys and tokens from a poisoned file; Anthropic fixed it.",
+   "security_url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data",
    "url": "https://claude.com/product/claude-code",
-   "status_as_of": "2026-10-14"
+   "status_as_of": "2026-10-17"
   },
   {
    "id": "claude-in-chrome",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-16",
+ "updated": "2026-10-17",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -45,6 +45,11 @@
      "name": "MHRA",
      "url": "https://www.gov.uk/government/organisations/medicines-and-healthcare-products-regulatory-agency",
      "added": "2026-10-14"
+    },
+    {
+     "name": "Government Digital Service",
+     "url": "https://www.gov.uk/government/organisations/government-digital-service",
+     "added": "2026-10-17"
     }
    ]
   },
@@ -91,6 +96,11 @@
      "name": "Anthropic Frontier Red Team",
      "url": "https://www.anthropic.com/research/team/frontier-red-team",
      "added": "2026-10-16"
+    },
+    {
+     "name": "Reflection AI",
+     "url": "https://reflection.ai/blog",
+     "added": "2026-10-17"
     }
    ]
   },
@@ -134,11 +144,72 @@
      "name": "Model release trackers and reputable technology news, case by case",
      "url": "",
      "added": "2026-10-08"
+    },
+    {
+     "name": "Help Net Security",
+     "url": "https://www.helpnetsecurity.com/view/news/",
+     "added": "2026-10-17"
+    },
+    {
+     "name": "The Hacker News",
+     "url": "https://thehackernews.com/",
+     "added": "2026-10-17"
+    }
+   ]
+  },
+  {
+   "name": "Other governments and agencies",
+   "why": "Warnings and guidance on AI cyber risk from partner-country agencies that the UK is likely to follow.",
+   "sources": [
+    {
+     "name": "FBI (IC3 public service announcements)",
+     "url": "https://www.ic3.gov/PSA",
+     "added": "2026-10-17"
+    },
+    {
+     "name": "CISA",
+     "url": "https://www.cisa.gov/resources-tools/resources",
+     "added": "2026-10-17"
     }
    ]
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-17",
+   "change": "Added https://www.ncsc.gov.uk/frontier-ai to NCSC",
+   "why": "Found while checking the organisation's website: the Frontier AI hub links all NCSC frontier AI and agentic AI blogs."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added Government Digital Service to core sources",
+   "why": "Rule 1(i): a UK public body with a remit for AI in government services; it published a News item on 15 October 2026 (service manual guidance requiring a security professional for AI services)."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added Reflection AI to core sources",
+   "why": "Rule 1(ii): Reflection AI is now a listed developer after releasing the open-weight Beam model on 16 October 2026, which has a published cyber offence rating."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added Help Net Security to hints",
+   "why": "Rule 2: publisher of 2 News items in the last 90 days (13 and 16 October 2026)."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added The Hacker News to hints",
+   "why": "Rule 2: publisher of 2 News items in the last 90 days (both 15 October 2026)."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added FBI to hints",
+   "why": "Rule 2: publisher or co-publisher of 2 News items in the last 90 days (IC3 election warnings of 15 and 16 October 2026)."
+  },
+  {
+   "date": "2026-10-17",
+   "change": "Added CISA to hints",
+   "why": "Rule 2: co-publisher of 2 News items in the last 90 days (the 16 October 2026 joint guidance with NIST and NSA, and the FBI and CISA election warning)."
+  },
   {
    "date": "2026-10-16",
    "change": "Added https://research.meta.ai/blog/ to Meta",
