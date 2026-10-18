@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-18",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -22,11 +22,11 @@
    "jurisdiction": "China",
    "weights": "Open",
    "released": "",
-   "access": "Downloadable, MIT",
+   "access": "Downloadable, MIT. V4.1 Flash updated to V4.1-Flash-1017 on 17 Oct 2026 (open weights; API name deepseek-flash)",
    "tier": "Open flagship",
    "cyber_evidence": "V4-Pro put 4–7 months behind the closed frontier by AISI",
    "evidence_url": "https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber",
-   "updated": "2026-10-08",
+   "updated": "2026-10-18",
    "position": "Flagship"
   },
   {

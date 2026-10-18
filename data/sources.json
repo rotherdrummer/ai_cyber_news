@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-18",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -101,6 +101,11 @@
      "name": "Reflection AI",
      "url": "https://reflection.ai/blog",
      "added": "2026-10-17"
+    },
+    {
+     "name": "Mistral AI news",
+     "url": "https://mistral.ai/news",
+     "added": "2026-10-18"
     }
    ]
   },
@@ -154,6 +159,11 @@
      "name": "The Hacker News",
      "url": "https://thehackernews.com/",
      "added": "2026-10-17"
+    },
+    {
+     "name": "The Register",
+     "url": "https://www.theregister.com/security/",
+     "added": "2026-10-18"
     }
    ]
   },
@@ -175,6 +185,26 @@
   }
  ],
  "changes": [
+  {
+   "date": "2026-10-18",
+   "change": "Added Mistral AI to core sources",
+   "why": "Rule 1(ii): Mistral AI is a listed developer in models.json and is the publisher of a News item (Mistral Large 4 preview, 6 October 2026)."
+  },
+  {
+   "date": "2026-10-18",
+   "change": "Added The Register to hints",
+   "why": "Rule 2: The Register is the publisher of 2 News items published in the last 90 days (15 October 2026 items on AI amendments to the CSR Bill and on Bank of America patching bugs found by Mythos)."
+  },
+  {
+   "date": "2026-10-18",
+   "change": "Added https://www.aisi.gov.uk/category/cyber to AISI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-18",
+   "change": "Added https://red.anthropic.com/2026/cvd/ to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
   {
    "date": "2026-10-17",
    "change": "Added https://www.ncsc.gov.uk/frontier-ai to NCSC",

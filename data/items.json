@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-10-17",
-  "item_count": 155,
+  "updated": "2026-10-18",
+  "item_count": 160,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-10-17T05:07"
+  "updated_at": "2026-10-18T05:00"
  },
  "items": [
   {
@@ -501,6 +501,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-7d22536816",
+   "published": "2026-10-15",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-18",
+   "item_type": "Report",
+   "title": "Censys: internet-exposed AI software up about 63% in nine months",
+   "publisher": "Help Net Security",
+   "url": "https://www.helpnetsecurity.com/2026/10/15/exposed-ai-infrastructure-report/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Censys's 2026 State of the Internet report found that public internet exposure of AI-related software rose from about 164,000 to about 268,000 IP addresses between October 2025 and July 2026. It also reports large numbers of exposed n8n hosts and OpenClaw control panels.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-17b7f1d626",
    "published": "2026-10-15",
    "reporting_period": "Sep-Nov 2026",
@@ -516,6 +536,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release;agents;evaluation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-75b481d1f6",
+   "published": "2026-10-15",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-18",
+   "item_type": "Report",
+   "title": "Bank of America hired 1,000 contractors to patch bugs found by Anthropic's Mythos",
+   "publisher": "The Register",
+   "url": "https://www.theregister.com/security/2026/10/15/bank-of-america-had-to-bring-in-1000-contractors-to-patch-all-the-bugs-mythos-identified/5303275",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "On its third-quarter earnings call, Bank of America's CEO said the bank hired 1,000 extra contractors in the second quarter to patch vulnerabilities found by Anthropic's Mythos model. He put spending on that work and on anti-money laundering remediation together at \"a couple of hundred million plus\".",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;vulnerability-research;threat-actor-reporting",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
@@ -661,6 +701,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-1a21a227e8",
+   "published": "2026-10-14",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-18",
+   "item_type": "Publication",
+   "title": "METR sets out its approach to working with AI companies",
+   "publisher": "METR",
+   "url": "https://metr.org/blog/2026-10-14-our-approach-to-risk-assessment/",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
+   "source_says": "METR explains how it works with AI companies on evaluations, assessments and investigations of loss-of-control risk. It sets out commitments on transparency, independence, confidentiality and security of non-public information, and says it discloses limits such as access constraints and redactions.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "evaluation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-c8844c10aa",
    "published": "2026-10-14",
    "reporting_period": "Sep-Nov 2026",
@@ -716,6 +776,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-7c1180f4ef",
+   "published": "2026-10-14",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-18",
+   "item_type": "Publication",
+   "title": "How an assessor could investigate acceleration from the automation of AI R&D",
+   "publisher": "METR",
+   "url": "https://metr.org/blog/2026-10-14-ai-rd-acceleration-assessment-proposal/",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
+   "source_says": "METR proposes how an independent assessor could study whether AI capabilities are speeding up because AI is automating AI research. It covers measuring capability progress, attributing gains to AI, finding bottlenecks and testing whether the methods would detect a large acceleration.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
@@ -1416,6 +1496,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-4bc6f92987",
+   "published": "2026-10-08",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-18",
+   "item_type": "Threat finding",
+   "title": "Cisco Talos: likely AI-assisted event lures used in real-time Google phishing against Taiwan researchers",
+   "publisher": "Cisco Talos",
+   "url": "https://blog.talosintelligence.com/uat-11985/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Talos describes a spear-phishing campaign by UAT-11985 that uses fake event invitations and an adversary-in-the-middle kit to capture Google passwords and MFA codes. Talos says the consistent structure and personalisation of the emails suggest the actor likely used AI-assisted content generation, but it cannot conclusively say the emails were written by an LLM.",
+   "key_findings": "Actor: UAT-11985 (APT; kit developer likely works in Simplified Chinese); Technique: likely AI-assisted lure writing, fake Google Forms links, altered QR codes on event posters, real-time adversary-in-the-middle relay to bypass MFA; Targets: people linked to Taiwan research organisations",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "threat-actor-reporting",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
    "related_ids": ""

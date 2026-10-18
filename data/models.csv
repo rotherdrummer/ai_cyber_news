@@ -1,5 +1,5 @@
 ﻿id,name,developer,jurisdiction,weights,released,access,tier,cyber_evidence,evidence_url,updated,position,developer_ceo
-deepseek-v4-1,DeepSeek V4.1 Flash / V4 Pro,DeepSeek,China,Open,,"Downloadable, MIT",Open flagship,V4-Pro put 4–7 months behind the closed frontier by AISI,https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber,2026-10-08,Flagship,Liang Wenfeng
+deepseek-v4-1,DeepSeek V4.1 Flash / V4 Pro,DeepSeek,China,Open,,"Downloadable, MIT. V4.1 Flash updated to V4.1-Flash-1017 on 17 Oct 2026 (open weights; API name deepseek-flash)",Open flagship,V4-Pro put 4–7 months behind the closed frontier by AISI,https://www.aisi.gov.uk/blog/how-far-behind-the-frontier-are-leading-open-weight-models-on-cyber,2026-10-18,Flagship,Liang Wenfeng
 fable-5-1,Claude Fable 5.1,Anthropic,United States,Closed,2026-09-01,"Public, with extra safeguards for biology, cyber and LLM R&D",Mythos-class,,,2026-10-08,Flagship,Dario Amodei
 falcon,Falcon H1,Technology Innovation Institute (UAE),Sovereign programmes,Open,,Downloadable,Open flagship,,,2026-10-08,Flagship,Najwa Aaraj
 gemini-3-8-flash,Gemini 3.8 Flash / Flash Cyber,Google DeepMind,United States,Closed,2026-09-02,Public,"Fast tier, with a cyber variant",,,2026-10-08,Fast and low-cost,Koray Kavukcuoglu
