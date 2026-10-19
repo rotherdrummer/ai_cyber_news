@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18",
+ "updated": "2026-10-19",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -288,11 +288,11 @@
    "jurisdiction": "Europe",
    "weights": "Closed",
    "released": "2026-10-06",
-   "access": "Guardrailed preview; weights promised by end of October",
+   "access": "Public preview API; vetted cyber partners and state authorities get a version with reduced moderation; weights promised by end of October",
    "tier": "Flagship (preview)",
-   "cyber_evidence": "",
-   "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08",
+   "cyber_evidence": "Self-reported: solves 93% of Cybench's 40 challenges and scores 82% on the Artificial Analysis Cyber Index reproduce-and-patch test; Mistral says it is in the top five on that index and refuses more cyber prompts than other open models.",
+   "evidence_url": "https://mistral.ai/news/mistral-large-4/",
+   "updated": "2026-10-19",
    "position": "Not yet released"
   },
   {

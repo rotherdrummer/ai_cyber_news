@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-17",
+ "updated": "2026-10-19",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3b9e71c4d2",
+   "date": "2026-10-18",
+   "category": "Business and leadership",
+   "title": "Anthropic commits 5% of its shares to a new public benefit fund",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/public-benefit-fund",
+   "summary": "Anthropic plans, subject to stockholder approval, to commit 5% of its shares to a new Anthropic Public Benefit Fund, with a further 2% at the board's discretion for each 50% rise in company value above a baseline. The fund's equity cannot be used for lobbying or political giving.",
+   "why_not_cyber": "Corporate governance and finance, with no security content.",
+   "source_relation": "Original source",
+   "added": "2026-10-19"
+  },
+  {
+   "id": "wf-a07c5e28f9",
+   "date": "2026-10-17",
+   "category": "Model launch",
+   "title": "DeepSeek releases open weights for V4.1-Flash-1017",
+   "publisher": "DeepSeek (Hugging Face)",
+   "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+   "summary": "DeepSeek published MIT-licensed weights for an update to V4.1-Flash, reporting gains on reasoning, coding and agentic benchmarks. The model card gives no cyber benchmark results and no safety section.",
+   "why_not_cyber": "No cyber evaluation or safety assessment was published.",
+   "source_relation": "Original source",
+   "added": "2026-10-19"
+  },
   {
    "id": "wf-8e2d5f61a7",
    "date": "2026-10-16",
