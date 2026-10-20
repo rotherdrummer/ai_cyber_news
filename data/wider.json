@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-20",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e1a7d52",
+   "date": "2026-10-19",
+   "category": "Legal and policy",
+   "title": "Two German courts hold Google liable for what its AI Overviews say",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/two-german-courts-now-hold-google-liable-for-what-its-ai-overviews-say/",
+   "summary": "Munich Regional Court I and Aachen Regional Court have treated Google's AI-generated search answers as Google's own statements. The Aachen court issued a preliminary injunction over false texts about a doctor, with fines of up to 250,000 euros per violation.",
+   "why_not_cyber": "A liability ruling on AI-generated content with no security angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-20"
+  },
   {
    "id": "wf-3b9e71c4d2",
    "date": "2026-10-18",

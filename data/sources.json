@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-18",
+ "updated": "2026-10-20",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -106,6 +106,21 @@
      "name": "Mistral AI news",
      "url": "https://mistral.ai/news",
      "added": "2026-10-18"
+    },
+    {
+     "name": "Anthropic Alignment Science blog",
+     "url": "https://alignment.anthropic.com/",
+     "added": "2026-10-20"
+    },
+    {
+     "name": "OpenAI safety and alignment news",
+     "url": "https://openai.com/news/safety-alignment/",
+     "added": "2026-10-20"
+    },
+    {
+     "name": "Google DeepMind blog",
+     "url": "https://deepmind.google/blog/",
+     "added": "2026-10-20"
     }
    ]
   },
@@ -324,6 +339,26 @@
    "date": "2026-10-08",
    "change": "BBC News cannot be read automatically, so mainstream coverage is not collected.",
    "why": "Mainstream news is background only; original sources are used instead."
+  },
+  {
+   "date": "2026-10-20",
+   "change": "Added https://alignment.anthropic.com/ to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-20",
+   "change": "Added https://openai.com/news/safety-alignment/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-20",
+   "change": "Added https://deepmind.google/blog/ to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-20",
+   "change": "Added https://metr.org/blog/ to METR",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }

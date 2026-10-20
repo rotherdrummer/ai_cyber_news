@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-20",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -252,6 +252,23 @@
    "security_url": "",
    "url": "https://about.fb.com/news/2026/10/introducing-muse-wonder-models/",
    "status_as_of": "2026-10-14"
+  },
+  {
+   "id": "cairn",
+   "name": "Cairn",
+   "maker": "Independent open-source project",
+   "maker_note": "Published on GitHub by a developer known as le1xia0; NorForge reports the author said it was not designed for hacking.",
+   "runs_on": "Not confirmed; NorForge saw workers named for Claude Code and the Pi agent driven by DeepSeek V4.1 Flash, including via OpenRouter",
+   "same_developer": "No",
+   "type": "General-purpose agent",
+   "delivery": "Installed software",
+   "open_source": "Yes",
+   "can_act_on": "Coordinates multiple AI agents against a target, sharing discovered facts and planned steps; used for penetration testing",
+   "access": "Free; self-hosted with a web control panel",
+   "security_evidence": "NorForge found more than 20 exposed Cairn control panels in malicious use by three groups, attempting intrusions on over 1,200 websites; the panels leaked hundreds of secrets.",
+   "security_url": "https://norforge.com/blog/inside_cairn",
+   "url": "https://norforge.com/blog/inside_cairn",
+   "status_as_of": "2026-10-20"
   }
  ]
 }

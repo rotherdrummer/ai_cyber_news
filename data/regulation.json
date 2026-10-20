@@ -1,10 +1,15 @@
 {
-  "updated": "2026-10-08",
+  "updated": "2026-10-20",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
       "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
       "changes": [
+        {
+          "date": "2026-10-19",
+          "text": "Government tabled Report stage amendments giving the Secretary of State functions on loss of control of AI agents, with a supplementary Delegated Powers Memorandum.",
+          "url": "https://bills-api.parliament.uk/api/v1/Publications/68147/Documents/8921/Download"
+        },
         {
           "date": "2026-10-15",
           "text": "Lords Report stage sitting date of 26 October 2026 now listed by Parliament (previously provisional).",
@@ -37,9 +42,9 @@
       "order": 1,
       "owner": "DHSC (delegated to NHS England) + NCSC",
       "risk": "None; scope depends on sector and size thresholds",
-      "status": "CSR Bill amended in Lords Grand Committee; Lords Report stage scheduled for 26 October 2026",
-      "statusDate": "2026-10-15",
-      "statusUrl": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
+      "status": "Government tables AI agent loss-of-control amendments for Lords Report stage, scheduled for 26 October 2026",
+      "statusDate": "2026-10-19",
+      "statusUrl": "https://bills-api.parliament.uk/api/v1/Publications/68147/Documents/8921/Download",
       "sub": "Network & Information Systems",
       "teeth": "Fines of up to £17m today, raised under the CSRB",
       "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",
