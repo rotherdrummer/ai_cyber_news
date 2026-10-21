@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -197,6 +197,17 @@
      "added": "2026-10-17"
     }
    ]
+  },
+  {
+   "name": "Security research firms",
+   "why": "Incident response and threat research from security companies, used when they report real AI-enabled attacks or attacks on AI services.",
+   "sources": [
+    {
+     "name": "Wiz",
+     "url": "https://www.wiz.io/blog",
+     "added": "2026-10-21"
+    }
+   ]
   }
  ],
  "changes": [
@@ -359,6 +370,16 @@
    "date": "2026-10-20",
    "change": "Added https://metr.org/blog/ to METR",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-21",
+   "change": "Added https://www.ncsc.gov.uk/collection/problem-book/ai-cyber to NCSC",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-21",
+   "change": "Added Wiz to hints",
+   "why": "Rule 2: Wiz published 2 News items in the last 90 days (AI-run cloud intrusions on 19 October and LLMjacking via phished cloud billing on 20 October)."
   }
  ]
 }

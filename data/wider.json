@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c91e07a5d",
+   "date": "2026-10-20",
+   "category": "Model launch",
+   "title": "Mistral releases Voxtral 3 speech models with voice cloning",
+   "publisher": "Mistral AI",
+   "url": "https://mistral.ai/news/voxtral-3/",
+   "summary": "Mistral released Voxtral 3, a family of speech-to-text and text-to-speech models and a voice agent SDK. Its speech model can clone a voice from about 30 minutes of audio.",
+   "why_not_cyber": "A product launch with no cyber evaluation or misuse evidence.",
+   "source_relation": "Original source",
+   "added": "2026-10-21"
+  },
   {
    "id": "wf-3c8e1a7d52",
    "date": "2026-10-19",
@@ -19,6 +31,18 @@
    "why_not_cyber": "A liability ruling on AI-generated content with no security angle.",
    "source_relation": "Third-party report",
    "added": "2026-10-20"
+  },
+  {
+   "id": "wf-8e24b6f1c0",
+   "date": "2026-10-19",
+   "category": "Legal and policy",
+   "title": "Canadian news publishers sue Anthropic over training data",
+   "publisher": "The Canadian Press (via ChatNewsToday)",
+   "url": "https://chatnewstoday.ca/2026/10/19/news-publishers-launch-copyright-suit-against-ai-company-anthropic-in-ontario/",
+   "summary": "Postmedia, Torstar, The Globe and Mail and The Canadian Press have sued Anthropic in an Ontario court, alleging copyright infringement and circumvention of technical protections in training Claude. The claims have not been tested in court.",
+   "why_not_cyber": "A copyright case with no security angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-21"
   },
   {
    "id": "wf-3b9e71c4d2",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20",
+ "updated": "2026-10-21",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -269,6 +269,23 @@
    "security_url": "https://norforge.com/blog/inside_cairn",
    "url": "https://norforge.com/blog/inside_cairn",
    "status_as_of": "2026-10-20"
+  },
+  {
+   "id": "opencode",
+   "name": "OpenCode",
+   "maker": "Independent open-source project",
+   "maker_note": "Not confirmed",
+   "runs_on": "Multiple AI providers through user-linked API keys",
+   "same_developer": "No",
+   "type": "Coding agent",
+   "delivery": "Both",
+   "open_source": "Yes",
+   "can_act_on": "Terminal and shell, files and code; connects to MCP servers",
+   "access": "Free to install; OpenCode Console hosted workspaces",
+   "security_evidence": "In October 2026 a breach exposed AI provider API keys linked by 1.4% of OpenCode Console users. Pillar Security also reported a remote code execution flaw (CVSS 9.8) in which a malicious MCP server could run code on Windows or WSL during OAuth sign-in; fixed in 1.18.33 without a CVE.",
+   "security_url": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
+   "url": "https://www.cyera.com/research/opencode-breach-what-happened-and-how-to-rotate-exposed-ai-api-keys",
+   "status_as_of": "2026-10-21"
   }
  ]
 }
