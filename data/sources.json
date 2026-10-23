@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-23",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -121,6 +121,11 @@
      "name": "Google DeepMind blog",
      "url": "https://deepmind.google/blog/",
      "added": "2026-10-20"
+    },
+    {
+     "name": "OpenAI Alignment blog",
+     "url": "https://alignment.openai.com/",
+     "added": "2026-10-23"
     }
    ]
   },
@@ -380,6 +385,11 @@
    "date": "2026-10-21",
    "change": "Added Wiz to hints",
    "why": "Rule 2: Wiz published 2 News items in the last 90 days (AI-run cloud intrusions on 19 October and LLMjacking via phished cloud billing on 20 October)."
+  },
+  {
+   "date": "2026-10-23",
+   "change": "Added https://alignment.openai.com/ to OpenAI",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }

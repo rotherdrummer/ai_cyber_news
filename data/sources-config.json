@@ -55,7 +55,8 @@
     "https://openai.com/news/",
     "https://deploymentsafety.openai.com",
     "https://alignment.openai.com/misalignment-reports/",
-    "https://openai.com/news/safety-alignment/"
+    "https://openai.com/news/safety-alignment/",
+    "https://alignment.openai.com/"
    ],
    "feed": "https://openai.com/news/rss.xml",
    "note": "Also its \"Disrupting malicious uses of AI\" reports.",

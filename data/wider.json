@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-23",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-9b41f07e2c",
+   "date": "2026-10-21",
+   "category": "Business and leadership",
+   "title": "OpenAI models come to Google Cloud",
+   "publisher": "Google Cloud",
+   "url": "https://cloud.google.com/blog/products/ai-machine-learning/google-cloud-brings-openai-models-to-customers",
+   "summary": "Google Cloud says OpenAI's GPT-6 Astra, GPT-6.1 Sol and GPT-6 Luna are in private preview in its Model Garden, bought through Google Cloud Marketplace. OpenAI says Microsoft remains its primary cloud partner.",
+   "why_not_cyber": "A cloud distribution deal with no cyber security content.",
+   "source_relation": "Original source",
+   "added": "2026-10-23"
+  },
   {
    "id": "wf-3c91e07a5d",
    "date": "2026-10-20",
@@ -43,6 +55,18 @@
    "why_not_cyber": "A copyright case with no security angle.",
    "source_relation": "Third-party report",
    "added": "2026-10-21"
+  },
+  {
+   "id": "wf-3c8e1a5d72",
+   "date": "2026-10-19",
+   "category": "Legal and policy",
+   "title": "US sanctions five Chinese entities over the theft of Google AI trade secrets by Linwei Ding",
+   "publisher": "US Department of State",
+   "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/10/imposing-sanctions-to-protect-americans-from-intellectual-property-theft-fact-sheet",
+   "summary": "The State Department designated Shanghai Zhisuan Technology, founded by former Google engineer Linwei Ding, and four MiraclePlus entities under the Protecting American Intellectual Property Act for significant theft of US trade secrets. OFAC added them to its Non-SDN Menu-Based Sanctions List on 19 October.",
+   "why_not_cyber": "Insider theft of AI trade secrets, with no cyber attack or AI misuse described.",
+   "source_relation": "Original source",
+   "added": "2026-10-23"
   },
   {
    "id": "wf-3b9e71c4d2",
