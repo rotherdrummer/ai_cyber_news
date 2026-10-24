@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-23",
+ "updated": "2026-10-24",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-7c3e9a1f04",
+   "date": "2026-10-23",
+   "category": "Legal and policy",
+   "title": "UK government launches the AI Biosecurity Lab with up to £300 million of backing",
+   "publisher": "Cabinet Office",
+   "url": "https://www.gov.uk/government/news/introducing-the-ai-biosecurity-lab",
+   "summary": "The government is setting up the AI Biosecurity Lab, backed by £100 million of public funding and up to £200 million of commitments from OpenAI, Anthropic and others. It will use frontier AI to detect biological threats earlier and speed up vaccines and treatments.",
+   "why_not_cyber": "It is about biological threats, not cyber security.",
+   "source_relation": "Original source",
+   "added": "2026-10-24"
+  },
   {
    "id": "wf-9b41f07e2c",
    "date": "2026-10-21",
