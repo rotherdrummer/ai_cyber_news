@@ -3,25 +3,25 @@
   "key": "2026-09",
   "label": "Sep-Nov 2026",
   "file": "data/period-2026-09.csv",
-  "items": 177,
+  "items": 180,
   "report": "data/reports/report-2026-09.txt",
   "start": "2026-09-01",
   "end": "2026-11-30",
   "complete": false,
-  "covers_to": "2026-10-24",
-  "updated_at": "2026-10-24T04:56"
+  "covers_to": "2026-10-25",
+  "updated_at": "2026-10-25T03:58"
  },
  {
   "key": "2026-06",
   "label": "Jun-Aug 2026",
   "file": "data/period-2026-06.csv",
-  "items": 29,
+  "items": 31,
   "report": "data/reports/report-2026-06.txt",
   "start": "2026-06-01",
   "end": "2026-08-31",
   "complete": true,
   "covers_to": "2026-08-31",
-  "updated_at": "2026-10-24T04:56"
+  "updated_at": "2026-10-25T03:58"
  },
  {
   "key": "2026-03",
@@ -33,6 +33,6 @@
   "end": "2026-05-31",
   "complete": true,
   "covers_to": "2026-05-31",
-  "updated_at": "2026-10-24T04:56"
+  "updated_at": "2026-10-25T03:58"
  }
 ]

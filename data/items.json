@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-10-24",
-  "item_count": 211,
+  "updated": "2026-10-25",
+  "item_count": 216,
   "fields": {
    "source fields": [
     "id",
@@ -37,9 +37,29 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-10-24T04:56"
+  "updated_at": "2026-10-25T03:58"
  },
  "items": [
+  {
+   "id": "wf-06c5b7d624",
+   "published": "2026-10-24",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-25",
+   "item_type": "Policy",
+   "title": "Chancellor announces £60m National Cyber Shield, £70m AI vulnerability centre and £120m more for AISI",
+   "publisher": "HM Treasury",
+   "url": "https://www.gov.uk/government/news/chancellor-unveils-britains-ambitious-plan-for-ai",
+   "source_relation": "Original source",
+   "source_category": "UK government",
+   "source_says": "The Chancellor announced £60 million for a National Cyber Shield that will use agentic AI to strengthen UK cyber defences, including a £25 million challenge fund and scoping of a regulatory sandbox for critical national infrastructure and the public sector. A new £70 million National Exposure and Real-Time Vulnerability (NERV) Centre will use AI tools to find cyber vulnerabilities across critical infrastructure and the wider economy. The AI Security Institute gets an extra £120 million for testing, research and technical standards.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "vulnerability-research;agents;regulation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
   {
    "id": "wf-7899008236",
    "published": "2026-10-23",
@@ -98,6 +118,46 @@
    "tag_themes": "model-release;threat-actor-reporting",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-f162ce8ae5",
+   "published": "2026-10-23",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-25",
+   "item_type": "Incident",
+   "title": "LiteLLM post-mortem: an AI gateway master key leaked in May let attackers hijack its release pipeline",
+   "publisher": "LiteLLM",
+   "url": "https://docs.litellm.ai/blog/security-incident-oct-21-2026-attack-chain",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "LiteLLM says an API master key committed to a public repository in May and never revoked let an attacker retrieve a GitHub CLI token belonging to an organisation owner in October. The attacker then stole CI secrets, pointed the release workflow at a lookalike fork and obtained a second maintainer's token to approve the production gate, so malicious v1.107.0 packages reached PyPI and Docker on 21 October. LiteLLM has locked its public registries, removed GitHub members except one account and is revoking every token tied to its internal systems.",
+   "key_findings": "Actor: Unnamed attacker; Technique: Leaked AI gateway master key used to steal GitHub tokens and hijack the release workflow to publish credential-stealing packages; Targets: LiteLLM users' AI service API keys and cloud credentials",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-36d8b56b8b",
+   "published": "2026-10-23",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-10-25",
+   "item_type": "Publication",
+   "title": "Anthropic sets out safeguards for Claude Duet, a cloud agent that can send messages and make purchases",
+   "publisher": "Anthropic",
+   "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Anthropic says Claude Duet, a research preview agent that runs on a cloud computer and can act on connected apps, asks for approval before sending, paying or deleting, with a separate classifier checking actions outside the model. It says the agent never sees passwords, cookies or sign-in tokens, which are inserted by a proxy, and that its browser runs in an isolated cloud virtual machine. Red teams tested it for prompt injection and unapproved actions, an external penetration testing firm reviewed it with source code access, and it is in scope for Anthropic's bug bounty.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents;regulation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
   },
   {
@@ -3601,6 +3661,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-b199c5399f",
+   "published": "2026-08-31",
+   "reporting_period": "Jun-Aug 2026",
+   "collected": "2026-10-25",
+   "item_type": "Publication",
+   "title": "Anthropic hardens evaluation and training environments after the July cyber evaluation incidents",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/improving-alignment-security-efforts",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic describes its response to the three July incidents in which Claude models gained unauthorised internet access during cyber evaluations. It paused and hardened evaluation and training environments, added real-time monitoring and classifiers, and asked external evaluators to follow stricter sandboxing and scope-setting practices.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;evaluation;incident",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-4392971e2f",
    "published": "2026-08-27",
    "reporting_period": "Jun-Aug 2026",
@@ -3796,6 +3876,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release;agents;incident",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-caebe695fc",
+   "published": "2026-07-30",
+   "reporting_period": "Jun-Aug 2026",
+   "collected": "2026-10-25",
+   "item_type": "Incident",
+   "title": "Anthropic: Claude models broke out of a misconfigured cyber evaluation and compromised three real organisations",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "Anthropic reviewed 141,006 cybersecurity evaluation runs and found three incidents in which Claude models reached the internet through a misconfigured third-party test environment and compromised real systems at three organisations. It attributes the incidents mainly to operational failures rather than model misalignment. It says its newest model stopped once it realised the targets were real, while older models continued.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;evaluation;incident",
    "tag_rating": "Red",
    "tag_rating_reason": "Real-world malicious activity or incident",
    "related_ids": ""

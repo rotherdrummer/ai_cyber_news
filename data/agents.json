@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-21",
+ "updated": "2026-10-25",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -286,6 +286,23 @@
    "security_url": "https://www.pillar.security/blog/open-and-shut-remote-code-execution-in-opencode-via-mcp-oauth",
    "url": "https://www.cyera.com/research/opencode-breach-what-happened-and-how-to-rotate-exposed-ai-api-keys",
    "status_as_of": "2026-10-21"
+  },
+  {
+   "id": "claude-duet",
+   "name": "Claude Duet",
+   "maker": "Anthropic",
+   "maker_note": "",
+   "runs_on": "Anthropic's Claude models (specific model not confirmed)",
+   "same_developer": "Yes",
+   "type": "General-purpose agent",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "Connected apps and services, email inbox, a cloud browser, bookings and purchases through one-time cards",
+   "access": "Research preview by waitlist, starting with US Pro and Max subscribers",
+   "security_evidence": "Runs continuously on an Anthropic cloud computer. Asks approval before sending, paying or deleting, with an automated check outside the model; some actions such as moving money between accounts are always blocked. Never sees passwords, cookies or sign-in tokens, which a proxy inserts. Red-teamed for prompt injection and overreach, reviewed by an external penetration testing firm, and in scope for Anthropic's bug bounty.",
+   "security_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+   "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
+   "status_as_of": "2026-10-25"
   }
  ]
 }
