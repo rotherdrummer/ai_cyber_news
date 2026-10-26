@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24",
+ "updated": "2026-10-26",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -19,6 +19,18 @@
    "why_not_cyber": "It is about biological threats, not cyber security.",
    "source_relation": "Original source",
    "added": "2026-10-24"
+  },
+  {
+   "id": "wf-7c3e91a4d2",
+   "date": "2026-10-23",
+   "category": "Legal and policy",
+   "title": "Texas Attorney General sues OpenAI and Sam Altman over alleged harm to minors from ChatGPT",
+   "publisher": "KBTX",
+   "url": "https://www.kbtx.com/2026/10/23/texas-attorney-general-ken-paxton-sues-chatgpt-maker-openai/",
+   "summary": "Ken Paxton filed suit in Collin County accusing OpenAI of deceiving and harming Texans. He seeks an injunction that would bar minors from ChatGPT and require court-appointed review of new models.",
+   "why_not_cyber": "A consumer protection and child safety case, not a security case.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-26"
   },
   {
    "id": "wf-9b41f07e2c",

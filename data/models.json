@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-19",
+ "updated": "2026-10-26",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -222,8 +222,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "1 of 10 on AISI's simulated attack range",
    "evidence_url": "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
-   "updated": "2026-10-08",
-   "position": "Flagship"
+   "updated": "2026-10-26",
+   "position": "Previous generation"
   },
   {
    "id": "lumen",
@@ -448,6 +448,20 @@
    "cyber_evidence": "Self-reported: solved 9 of 14 easy and about half of medium challenges in Irregular's 50-challenge CTF suite, and not the expert one; rated Limited for cyber offence. Refused or pivoted on 88.9% of harmful cyber requests.",
    "evidence_url": "https://reflection.ai/beam-safety-report",
    "updated": "2026-10-17"
+  },
+  {
+   "id": "kimi-k3-1-pro",
+   "name": "Kimi K3.1 Pro",
+   "developer": "Moonshot AI",
+   "jurisdiction": "China",
+   "weights": "Open",
+   "released": "2026-10-24",
+   "access": "Kimi.com, Kimi Code and API; full weights promised by 4 Nov 2026",
+   "tier": "Open flagship",
+   "position": "Flagship",
+   "cyber_evidence": "Developer says cyber data was removed from training for the open release; 81.0% on its own xdev-bench-hard (90.5% without removal)",
+   "evidence_url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
+   "updated": "2026-10-26"
   }
  ],
  "positions": [

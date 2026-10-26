@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-24",
+ "updated": "2026-10-26",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -50,6 +50,16 @@
      "name": "Government Digital Service",
      "url": "https://www.gov.uk/government/organisations/government-digital-service",
      "added": "2026-10-17"
+    },
+    {
+     "name": "MHRA MedRegs blog",
+     "url": "https://medregs.blog.gov.uk/",
+     "added": "2026-10-26"
+    },
+    {
+     "name": "UK Parliament Bills API (Cyber Security and Resilience Bill stages)",
+     "url": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
+     "added": "2026-10-26"
     }
    ]
   },
@@ -126,6 +136,16 @@
      "name": "OpenAI Alignment blog",
      "url": "https://alignment.openai.com/",
      "added": "2026-10-23"
+    },
+    {
+     "name": "Microsoft Security blog: AI and machine learning",
+     "url": "https://www.microsoft.com/en-us/security/blog/topic/ai-and-machine-learning/",
+     "added": "2026-10-26"
+    },
+    {
+     "name": "Moonshot AI (Kimi) blog",
+     "url": "https://www.kimi.com/en/blog",
+     "added": "2026-10-26"
     }
    ]
   },
@@ -400,6 +420,26 @@
    "date": "2026-10-24",
    "change": "Added Symantec to hints",
    "why": "Rule 2: Symantec published 2 News items in the last 90 days (the Aoki infostealer targeting AI assistant tokens, and an autonomous attack agent hijacking exposed AI model endpoints on 21 October)."
+  },
+  {
+   "date": "2026-10-26",
+   "change": "Added https://www.microsoft.com/en-us/security/blog/topic/ai-and-machine-learning/ to Microsoft",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-26",
+   "change": "Added https://medregs.blog.gov.uk/ to MHRA",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-26",
+   "change": "Added https://bills-api.parliament.uk/api/v1/Bills/4035/Stages to UK Parliament, Cyber Security and Resilience Bill",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-26",
+   "change": "Added Moonshot AI to core",
+   "why": "Rule 1(ii): Moonshot AI is a listed frontier developer and published its first News item, the Kimi K3.1 Pro release with cyber training data removed, on 24 October."
   }
  ]
 }
