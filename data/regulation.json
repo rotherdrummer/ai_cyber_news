@@ -1,10 +1,15 @@
 {
-  "updated": "2026-10-20",
+  "updated": "2026-10-27",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
       "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
       "changes": [
+        {
+          "date": "2026-10-26",
+          "text": "Lords Report stage completed. Government AI agent loss-of-control clause (Amendment 70) agreed; frontier AI developer incident reporting duty (Amendment 41) defeated 95 to 165; Amendment 163 on a yearly NIS review covering frontier AI and AISI audit powers agreed against the government, 202 to 155. Third Reading set for 2 November.",
+          "url": "https://hansard.parliament.uk/Lords/2026-10-26/debates/B413EFAE-E7D4-4742-986D-092884E0D8D1/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
+        },
         {
           "date": "2026-10-19",
           "text": "Government tabled Report stage amendments giving the Secretary of State functions on loss of control of AI agents, with a supplementary Delegated Powers Memorandum.",
@@ -42,9 +47,9 @@
       "order": 1,
       "owner": "DHSC (delegated to NHS England) + NCSC",
       "risk": "None; scope depends on sector and size thresholds",
-      "status": "Government tables AI agent loss-of-control amendments for Lords Report stage, scheduled for 26 October 2026",
-      "statusDate": "2026-10-19",
-      "statusUrl": "https://bills-api.parliament.uk/api/v1/Publications/68147/Documents/8921/Download",
+      "status": "Lords Report stage completed 26 October 2026 (AI agent loss-of-control clause agreed; government defeated on a yearly NIS review covering frontier AI); Lords Third Reading scheduled for 2 November 2026",
+      "statusDate": "2026-10-26",
+      "statusUrl": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
       "sub": "Network & Information Systems",
       "teeth": "Fines of up to £17m today, raised under the CSRB",
       "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",

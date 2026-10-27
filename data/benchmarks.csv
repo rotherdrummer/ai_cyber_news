@@ -7,9 +7,11 @@ ExploitBench,Offensive cyber,GPT-6 Luna,44.66%,44.66,2026-10-07,OpenAI (self-rep
 ExploitBench,Offensive cyber,GPT-5.5,41%,41,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
 ExploitBench,Offensive cyber,Claude Opus 4.7,27%,27,2026-09-24,Carnegie Mellon,No,https://epoch.ai/benchmarks/exploitbench
 ExploitBench,Offensive cyber,Muse Wonder Full,58.9%,58.9,2026-10-12,Meta (self-reported),Yes,https://research.meta.ai/static/muse-wonder-model-card
+ExploitBench,Offensive cyber,GPT-6.1 Terra,97.1%,97.1,2026-10-26,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-1-terra
 SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
+SEC-Bench Pro,Offensive cyber,GPT-6.1 Terra,83.33%,83.33,2026-10-26,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-1-terra
 ExploitGym,Offensive cyber,GPT-6 Astra,42.4%,42.4,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
 ExploitGym,Offensive cyber,GPT-5.6 Sol,30.3%,30.3,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
 AISI simulated network attack range,Offensive cyber,Claude Mythos Preview,6 / 10,6,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities

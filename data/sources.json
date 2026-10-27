@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -60,6 +60,16 @@
      "name": "UK Parliament Bills API (Cyber Security and Resilience Bill stages)",
      "url": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
      "added": "2026-10-26"
+    },
+    {
+     "name": "NCSC news and updates",
+     "url": "https://www.ncsc.gov.uk/section/keep-up-to-date",
+     "added": "2026-10-27"
+    },
+    {
+     "name": "HM Treasury",
+     "url": "https://www.gov.uk/government/organisations/hm-treasury",
+     "added": "2026-10-27"
     }
    ]
   },
@@ -146,6 +156,11 @@
      "name": "Moonshot AI (Kimi) blog",
      "url": "https://www.kimi.com/en/blog",
      "added": "2026-10-26"
+    },
+    {
+     "name": "OpenAI security news",
+     "url": "https://openai.com/news/security/",
+     "added": "2026-10-27"
     }
    ]
   },
@@ -236,6 +251,16 @@
      "name": "Symantec",
      "url": "https://www.security.com/threat-intelligence",
      "added": "2026-10-24"
+    },
+    {
+     "name": "Palo Alto Networks Unit 42",
+     "url": "https://unit42.paloaltonetworks.com/",
+     "added": "2026-10-27"
+    },
+    {
+     "name": "CrowdStrike",
+     "url": "https://www.crowdstrike.com/en-us/blog/",
+     "added": "2026-10-27"
     }
    ]
   }
@@ -440,6 +465,31 @@
    "date": "2026-10-26",
    "change": "Added Moonshot AI to core",
    "why": "Rule 1(ii): Moonshot AI is a listed frontier developer and published its first News item, the Kimi K3.1 Pro release with cyber training data removed, on 24 October."
+  },
+  {
+   "date": "2026-10-27",
+   "change": "Added https://www.ncsc.gov.uk/section/keep-up-to-date to NCSC",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-27",
+   "change": "Added https://openai.com/news/security/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-27",
+   "change": "Added Palo Alto Networks Unit 42 to hints",
+   "why": "Rule 2: Palo Alto Networks Unit 42 published 2 News items in the last 90 days (an AI-assisted espionage campaign against government Linux systems on 15 October and its retraction of an agentic AI attack report on 25 October)."
+  },
+  {
+   "date": "2026-10-27",
+   "change": "Added CrowdStrike to hints",
+   "why": "Rule 2: CrowdStrike published 2 News items in the last 90 days (the ARTEX tool used against South Korean finance on 7 October and four Claude Code-based attack campaigns on 21 October)."
+  },
+  {
+   "date": "2026-10-27",
+   "change": "Added HM Treasury to hints",
+   "why": "Rule 2: HM Treasury published 2 News items in the last 90 days (the AI security and cyber funding package on 24 October and the Chancellor's written statement adding £24m for public sector hardening on 26 October). It does not have an AI or cyber security remit, so it does not qualify for core."
   }
  ]
 }

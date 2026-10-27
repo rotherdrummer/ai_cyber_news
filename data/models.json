@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -462,6 +462,20 @@
    "cyber_evidence": "Developer says cyber data was removed from training for the open release; 81.0% on its own xdev-bench-hard (90.5% without removal)",
    "evidence_url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
    "updated": "2026-10-26"
+  },
+  {
+   "id": "gpt-6-1-terra",
+   "name": "GPT-6.1 Terra",
+   "developer": "OpenAI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-10-26",
+   "access": "ChatGPT Plus, Pro, Enterprise and Edu (ChatGPT Work and Codex) and API",
+   "tier": "Fast, high-volume",
+   "position": "Fast and low-cost",
+   "cyber_evidence": "Critical in cybersecurity (OpenAI Preparedness Framework); 97.1% on ExploitBench and 83.33% on SEC-Bench Pro (self-reported)",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+   "updated": "2026-10-27"
   }
  ],
  "positions": [

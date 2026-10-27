@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-12",
+ "updated": "2026-10-26",
  "tests": [
   {
    "name": "ExploitBench",
@@ -88,6 +88,16 @@
      "measured_by": "Meta (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "GPT-6.1 Terra",
+     "value": 97.1,
+     "display": "97.1%",
+     "date": "2026-10-26",
+     "url": "https://deploymentsafety.openai.com/gpt-6-1-terra",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -125,6 +135,16 @@
      "display": "48.50%",
      "date": "2026-10-07",
      "url": "https://deploymentsafety.openai.com/gpt-6-october",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6.1 Terra",
+     "value": 83.33,
+     "display": "83.33%",
+     "date": "2026-10-26",
+     "url": "https://deploymentsafety.openai.com/gpt-6-1-terra",
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"

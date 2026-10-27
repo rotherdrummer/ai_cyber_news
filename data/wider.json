@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-27",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,42 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c81e5a0d4",
+   "date": "2026-10-26",
+   "category": "Business and leadership",
+   "title": "Anthropic files S-1 for a proposed Nasdaq listing",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/s1-sec",
+   "summary": "Anthropic, PBC filed a Form S-1 with the US SEC for a proposed initial public offering of Class A stock, to list on the Nasdaq Global Select Market under the symbol ANT. The number of shares and price range are not yet set.",
+   "why_not_cyber": "A corporate finance filing with no security event.",
+   "source_relation": "Original source",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "wf-9b27f4e1c6",
+   "date": "2026-10-26",
+   "category": "Other",
+   "title": "AISI finds data filtering in open-weight protein models can be undone with about $80 of fine-tuning",
+   "publisher": "AI Security Institute",
+   "url": "https://www.aisi.gov.uk/blog/pretraining-data-filtering-in-open-weight-biological-models",
+   "summary": "AISI found that removing viral proteins from ESM-2 training data cut viral performance, but fine-tuning on the withheld data restored it for about $80 of compute. It concludes filtering raises the cost of recovering a capability rather than removing it.",
+   "why_not_cyber": "Biosecurity research, not cyber.",
+   "source_relation": "Original source",
+   "added": "2026-10-27"
+  },
+  {
+   "id": "wf-5e0d6a92b3",
+   "date": "2026-10-26",
+   "category": "Other",
+   "title": "AISI finds AI coding agents can rebuild published biological AI tools from a paper for under $20",
+   "publisher": "AI Security Institute",
+   "url": "https://www.aisi.gov.uk/blog/can-ai-coding-agents-rebuild-biological-ai-tools-from-a-paper",
+   "summary": "In AISI's ReproBAIT evaluation with SecureBio, coding agents rebuilt simpler biological design tools from their papers within 4 hours for under $20. AISI says withholding code does not by itself control access to such a tool's capability.",
+   "why_not_cyber": "Biosecurity capability research, not cyber.",
+   "source_relation": "Original source",
+   "added": "2026-10-27"
+  },
   {
    "id": "wf-7c3e9a1f04",
    "date": "2026-10-23",
