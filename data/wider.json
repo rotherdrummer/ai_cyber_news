@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-28",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,42 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e1a7d52",
+   "date": "2026-10-27",
+   "category": "Model launch",
+   "title": "Google DeepMind announces Genie 4 world model as a research preview",
+   "publisher": "Google DeepMind",
+   "url": "https://deepmind.google/blog/genie-4-a-new-generation-of-world-simulation/",
+   "summary": "Genie 4 generates interactive, photorealistic environments in real time with native audio. It is open to trusted testers first and is due to come to Google AI Ultra subscribers and early-access Gemini API partners.",
+   "why_not_cyber": "A world-simulation model with no cyber evaluation.",
+   "source_relation": "Original source",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "wf-9b41f06e2a",
+   "date": "2026-10-27",
+   "category": "Business and leadership",
+   "title": "Anthropic expands its GSA deal to offer Claude at 40% off to all levels of US government",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/expanding-partnership-gsa",
+   "summary": "Government customers get 40% off Claude Enterprise, Claude for Government and the API, now extended to state, local, tribal and territorial governments. Anthropic says about 500 US government organisations use Claude.",
+   "why_not_cyber": "A procurement deal; its cyber examples are customer anecdotes.",
+   "source_relation": "Original source",
+   "added": "2026-10-28"
+  },
+  {
+   "id": "wf-d27a5c19f4",
+   "date": "2026-10-27",
+   "category": "Legal and policy",
+   "title": "UK minister says Meta has delayed terms letting it crawl UK business websites for AI to 20 November, with the CMA engaging",
+   "publisher": "UK Parliament (Hansard)",
+   "url": "https://hansard.parliament.uk/Lords/2026-10-27/debates/67BF6D29-C525-4B11-9879-DB98F1D4A486/MetaAIDevelopment",
+   "summary": "In the Lords, Baroness Ramsey said Meta has delayed updated commercial terms that would let it crawl UK business users' websites for AI development until 20 November. The CMA is engaging directly with Meta on an expedited timeline.",
+   "why_not_cyber": "A copyright and competition issue, not cyber security.",
+   "source_relation": "Original source",
+   "added": "2026-10-28"
+  },
   {
    "id": "wf-3c81e5a0d4",
    "date": "2026-10-26",

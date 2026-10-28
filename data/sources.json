@@ -490,6 +490,21 @@
    "date": "2026-10-27",
    "change": "Added HM Treasury to hints",
    "why": "Rule 2: HM Treasury published 2 News items in the last 90 days (the AI security and cyber funding package on 24 October and the Chancellor's written statement adding £24m for public sector hardening on 26 October). It does not have an AI or cyber security remit, so it does not qualify for core."
+  },
+  {
+   "date": "2026-10-28",
+   "change": "Added https://www.anthropic.com/news/security to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-28",
+   "change": "Added https://blog.google/innovation-and-ai/technology/safety-security/ to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-28",
+   "change": "Added https://blogs.microsoft.com/on-the-issues/ to Microsoft",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }
