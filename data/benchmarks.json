@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-26",
+ "updated": "2026-10-28",
  "tests": [
   {
    "name": "ExploitBench",
@@ -148,6 +148,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "Gemini 4 Carbon",
+     "value": 88.2,
+     "display": "88.2%",
+     "date": "2026-10-28",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+     "measured_by": "Google DeepMind (self-reported, without guardrails)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -176,6 +186,16 @@
      "date": "2026-09-04",
      "url": "https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html",
      "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "Gemini 4 Carbon",
+     "value": 54.8,
+     "display": "54.8%",
+     "date": "2026-10-28",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
+     "measured_by": "Google DeepMind (self-reported, without guardrails)",
      "self_reported": true,
      "weights": "Closed"
     }

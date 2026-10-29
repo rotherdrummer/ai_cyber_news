@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e1a7b92",
+   "date": "2026-10-28",
+   "category": "Legal and policy",
+   "title": "Chancellor launches an independent review of NHS productivity and AI",
+   "publisher": "HM Treasury",
+   "url": "https://www.gov.uk/government/publications/budget-2026-document/budget-2026-html",
+   "summary": "The Budget says Mark Bailie will lead an independent review of NHS productivity and AI, reporting in early 2027 to inform the next spending review. The first £15 million AI Challenge Prize competition will focus on the NHS.",
+   "why_not_cyber": "AI adoption in health with no security angle.",
+   "source_relation": "Original source",
+   "added": "2026-10-29"
+  },
+  {
+   "id": "wf-a91d4f06ce",
+   "date": "2026-10-28",
+   "category": "Legal and policy",
+   "title": "noyb files complaints against Scale AI over monitoring of AI training-data workers",
+   "publisher": "The Record",
+   "url": "https://therecord.media/noyb-sues-scale-ai-for-worker-surveillance",
+   "summary": "noyb filed complaints in France, Italy, the Netherlands and Austria saying Scale AI's Outlier platform tracks freelance workers' web activity and unlawfully requires biometric checks. Scale calls the allegations unfounded.",
+   "why_not_cyber": "A privacy and employment complaint, not an AI security incident.",
+   "source_relation": "Third-party report",
+   "added": "2026-10-29"
+  },
   {
    "id": "wf-3c8e1a7d52",
    "date": "2026-10-27",

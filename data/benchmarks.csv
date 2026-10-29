@@ -12,8 +12,10 @@ SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-rep
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6.1 Terra,83.33%,83.33,2026-10-26,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-1-terra
+SEC-Bench Pro,Offensive cyber,Gemini 4 Carbon,88.2%,88.2,2026-10-28,"Google DeepMind (self-reported, without guardrails)",Yes,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/
 ExploitGym,Offensive cyber,GPT-6 Astra,42.4%,42.4,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
 ExploitGym,Offensive cyber,GPT-5.6 Sol,30.3%,30.3,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
+ExploitGym,Offensive cyber,Gemini 4 Carbon,54.8%,54.8,2026-10-28,"Google DeepMind (self-reported, without guardrails)",Yes,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/
 AISI simulated network attack range,Offensive cyber,Claude Mythos Preview,6 / 10,6,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
 AISI simulated network attack range,Offensive cyber,GPT-5.5,3 / 10,3,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
 AISI simulated network attack range,Offensive cyber,Kimi K3,1 / 10,1,2026-07-23,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
