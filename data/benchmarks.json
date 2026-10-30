@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-28",
+ "updated": "2026-10-29",
  "tests": [
   {
    "name": "ExploitBench",
@@ -98,6 +98,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Luna (29 Oct update)",
+     "value": 46.19,
+     "display": "46.19%",
+     "date": "2026-10-29",
+     "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -156,6 +166,16 @@
      "date": "2026-10-28",
      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
      "measured_by": "Google DeepMind (self-reported, without guardrails)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Luna (29 Oct update)",
+     "value": 51.75,
+     "display": "51.75%",
+     "date": "2026-10-29",
+     "url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum",
+     "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }

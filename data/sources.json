@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-27",
+ "updated": "2026-10-30",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -70,6 +70,11 @@
      "name": "HM Treasury",
      "url": "https://www.gov.uk/government/organisations/hm-treasury",
      "added": "2026-10-27"
+    },
+    {
+     "name": "UK Parliament Bills API (Cyber Security and Resilience Bill publications and amendment papers)",
+     "url": "https://bills-api.parliament.uk/api/v1/Bills/4035/Publications",
+     "added": "2026-10-30"
     }
    ]
   },
@@ -235,6 +240,11 @@
      "name": "CISA",
      "url": "https://www.cisa.gov/resources-tools/resources",
      "added": "2026-10-17"
+    },
+    {
+     "name": "Canadian Centre for Cyber Security",
+     "url": "https://www.cyber.gc.ca/en/news-events",
+     "added": "2026-10-30"
     }
    ]
   },
@@ -261,6 +271,21 @@
      "name": "CrowdStrike",
      "url": "https://www.crowdstrike.com/en-us/blog/",
      "added": "2026-10-27"
+    },
+    {
+     "name": "Forever Security",
+     "url": "https://forever.security/blog",
+     "added": "2026-10-30"
+    },
+    {
+     "name": "SOCRadar",
+     "url": "https://socradar.io/blog/",
+     "added": "2026-10-30"
+    },
+    {
+     "name": "Cisco Talos",
+     "url": "https://blog.talosintelligence.com/",
+     "added": "2026-10-30"
     }
    ]
   }
@@ -505,6 +530,31 @@
    "date": "2026-10-28",
    "change": "Added https://blogs.microsoft.com/on-the-issues/ to Microsoft",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-30",
+   "change": "Added https://bills-api.parliament.uk/api/v1/Bills/4035/Publications to UK Parliament, Cyber Security and Resilience Bill",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-10-30",
+   "change": "Added Forever Security to hints",
+   "why": "Rule 2: Forever Security published 2 News items in the last 90 days (a planted AGENTS.md file hijacking a coding agent on 22 October and embedded-browser flaws in five AI coding tools on 29 October)."
+  },
+  {
+   "date": "2026-10-30",
+   "change": "Added SOCRadar to hints",
+   "why": "Rule 2: SOCRadar published 2 News items in the last 90 days (ransomware affiliates running AI tooling on 20 October and the n0n operator using the opencode AI coding agent on 28 October)."
+  },
+  {
+   "date": "2026-10-30",
+   "change": "Added Canadian Centre for Cyber Security to hints",
+   "why": "Rule 2: The Canadian Centre for Cyber Security published 2 News items in the last 90 days (its use of frontier AI for malware reverse engineering on 9 October and its agentic AI threat bulletin dated 26 October). It is not a UK body, so it does not qualify for core."
+  },
+  {
+   "date": "2026-10-30",
+   "change": "Added Cisco Talos to hints",
+   "why": "Rule 2: Cisco Talos published 2 News items in the last 90 days (likely AI-assisted event lures on 8 October and the NIK C2 implant that calls OpenAI's API on 29 October)."
   }
  ]
 }

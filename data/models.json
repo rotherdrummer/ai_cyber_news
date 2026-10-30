@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-30",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -164,9 +164,9 @@
    "released": "2026-10-07",
    "access": "ChatGPT Free and Go",
    "tier": "Free tier",
-   "cyber_evidence": "High cyber capability, below Critical (OpenAI); 44.66% on ExploitBench (self-reported)",
-   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "updated": "2026-10-08",
+   "cyber_evidence": "High cyber capability, below Critical (OpenAI); 46.19% on ExploitBench and 51.75% on SEC-Bench Pro after the 29 October update (self-reported)",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum",
+   "updated": "2026-10-30",
    "position": "Fast and low-cost"
   },
   {
@@ -275,25 +275,25 @@
    "weights": "Open",
    "released": "",
    "access": "Downloadable, Apache 2.0",
-   "tier": "Flagship",
+   "tier": "Previous generation",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08",
-   "position": "Flagship"
+   "updated": "2026-10-30",
+   "position": "Previous generation"
   },
   {
    "id": "mistral-large-4",
    "name": "Mistral Large 4",
    "developer": "Mistral AI",
    "jurisdiction": "Europe",
-   "weights": "Closed",
+   "weights": "Open",
    "released": "2026-10-06",
-   "access": "Public preview API; vetted cyber partners and state authorities get a version with reduced moderation; weights promised by end of October",
-   "tier": "Flagship (preview)",
-   "cyber_evidence": "Self-reported: solves 93% of Cybench's 40 challenges and scores 82% on the Artificial Analysis Cyber Index reproduce-and-patch test; Mistral says it is in the top five on that index and refuses more cyber prompts than other open models.",
-   "evidence_url": "https://mistral.ai/news/mistral-large-4/",
-   "updated": "2026-10-19",
-   "position": "Not yet released"
+   "access": "Open weights on Hugging Face under the Mistral Ecosystem Open-Weight licence (modified MIT; hosted model services need a commercial licence); also Mistral API, OpenRouter, NVIDIA and Microsoft Foundry. A cyber variant is in vetted preview with design partners.",
+   "tier": "Flagship",
+   "cyber_evidence": "Self-reported: 51% on the Artificial Analysis Cyber Index and 96.6% refusal of malicious cyber requests; Mistral says it sees \"a potential for uplift to conduct real attacks\" and is changing its guardrails. Preview self-reported 93% on Cybench.",
+   "evidence_url": "https://mistral.ai/news/mistral-large-4-oss/",
+   "updated": "2026-10-30",
+   "position": "Flagship"
   },
   {
    "id": "muse-spark",

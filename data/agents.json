@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25",
+ "updated": "2026-10-30",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -27,10 +27,10 @@
    "open_source": "No",
    "can_act_on": "Files, terminal and shell, code execution, GitHub and GitLab, other tools via MCP connectors",
    "access": "Paid Claude plans (Pro, Max, Team, Enterprise) and API accounts",
-   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly. In October 2026 Noma Security disclosed SneakPeek, a Claude Code Desktop preview pane flaw (CVSS 8.7) that could leak SSH keys and tokens from a poisoned file; Anthropic fixed it. Also in October 2026, Anthropic fixed a High-rated plugin pin bypass (CVE-2026-86063) that could install attacker-controlled plugin code, in version 2.1.179.",
-   "security_url": "https://noma.security/noma-labs/sneakpeek-how-the-preview-pane-in-claude-code-desktop-can-exfiltrate-your-data",
+   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly. In October 2026 Noma Security disclosed SneakPeek, a Claude Code Desktop preview pane flaw (CVSS 8.7) that could leak SSH keys and tokens from a poisoned file; Anthropic fixed it. Also in October 2026, Anthropic fixed a High-rated plugin pin bypass (CVE-2026-86063) that could install attacker-controlled plugin code, in version 2.1.179. In October 2026 Symantec reported an unauthorised relay service that rewrites Claude Code settings to disable the sandbox and route traffic through its servers, seen at about a dozen organisations.",
+   "security_url": "https://www.security.com/threat-intelligence/openai-claude-unauthorized-relays",
    "url": "https://claude.com/product/claude-code",
-   "status_as_of": "2026-10-19"
+   "status_as_of": "2026-10-30"
   },
   {
    "id": "claude-in-chrome",
@@ -61,10 +61,10 @@
    "open_source": "Partly (the command-line tool is open source; the app is not)",
    "can_act_on": "Files, terminal and shell, code execution in a sandbox, optional internet access, GitHub",
    "access": "Paid ChatGPT plans",
-   "security_evidence": "In March 2026 researchers found a now-patched flaw where malicious GitHub branch names could inject commands and retrieve GitHub tokens. In October 2026 Codex CLI 0.163.0 tightened network proxy and sandbox controls and turned on cyber access programmes by default for API-key sessions.",
-   "security_url": "https://en.wikipedia.org/wiki/OpenAI_Codex_(AI_agent)",
+   "security_evidence": "In March 2026 researchers found a now-patched flaw where malicious GitHub branch names could inject commands and retrieve GitHub tokens. In October 2026 Codex CLI 0.163.0 tightened network proxy and sandbox controls and turned on cyber access programmes by default for API-key sessions. On 29 October 2026 Forever Security said a Codex flaw letting local pages read files outside the permitted folder was still unpatched, and Symantec reported a relay service that rewrites Codex settings to disable the sandbox and route traffic through its servers.",
+   "security_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
    "url": "https://openai.com/codex/",
-   "status_as_of": "2026-10-19"
+   "status_as_of": "2026-10-30"
   },
   {
    "id": "chatgpt-agent",
@@ -163,10 +163,10 @@
    "open_source": "No",
    "can_act_on": "Files, terminal and shell, code execution, other tools via MCP",
    "access": "Free and paid plans",
-   "security_evidence": "",
-   "security_url": "",
+   "security_evidence": "Forever Security reported a prompt injection through Cursor's built-in browser that could lead to code execution on the host; it was patched on 1 October 2026.",
+   "security_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
    "url": "https://cursor.com/docs/models",
-   "status_as_of": "2026-10-14"
+   "status_as_of": "2026-10-30"
   },
   {
    "id": "devin",
