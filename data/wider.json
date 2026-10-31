@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-10-31",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-0b7c11070c",
+   "date": "2026-10-30",
+   "category": "Legal and policy",
+   "title": "CMA opens a competition investigation into Meta's terms for using business website content, including for AI",
+   "publisher": "Competition and Markets Authority",
+   "url": "https://www.gov.uk/government/news/cma-opens-investigation-into-metas-commercial-terms--2",
+   "summary": "The CMA is investigating whether Meta's terms letting it use content from publishers' websites to build its products, including AI features, break competition law. No decision has been made and Meta has paused the rollout.",
+   "why_not_cyber": "A competition case about content use, with no security angle.",
+   "source_relation": "Original source",
+   "added": "2026-10-31"
+  },
+  {
+   "id": "wf-ceec40f6b8",
+   "date": "2026-10-29",
+   "category": "Legal and policy",
+   "title": "OpenAI publishes an updated Model Spec with rules for agent autonomy and oversight",
+   "publisher": "OpenAI",
+   "url": "https://model-spec.openai.com/2026-10-29.html",
+   "summary": "The 29 October Model Spec says models should act only within an agreed scope of autonomy, must not self-modify or deploy persistent agents without authorisation, and must stay open to monitoring, correction and shutdown.",
+   "why_not_cyber": "A model behaviour policy with no specific cyber security content.",
+   "source_relation": "Original source",
+   "added": "2026-10-31"
+  },
   {
    "id": "wf-3c8e1a7b92",
    "date": "2026-10-28",

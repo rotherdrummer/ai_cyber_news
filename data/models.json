@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -108,9 +108,9 @@
    "released": "",
    "access": "Downloadable",
    "tier": "Open flagship",
-   "cyber_evidence": "Anthropic reports 50 of 410 ExploitBench successes, close to Claude Mythos Preview (56 of 410); NIST CAISI calls it the most cyber-capable open-weight model to date",
-   "evidence_url": "https://www.anthropic.com/research/glm-5-3-and-the-spread-of-advanced-cyber-capabilities",
-   "updated": "2026-10-14",
+   "cyber_evidence": "Anthropic reports 50 of 410 ExploitBench successes, close to Claude Mythos Preview (56 of 410); NIST CAISI calls it the most cyber-capable open-weight model to date; Irregular: 3 of 13 multi-stage cyber scenarios completed with no refusals; Epoch AI: built Firefox exploits from published fixes for six releases",
+   "evidence_url": "https://epoch.ai/publications/open-weight-models-patch-gap",
+   "updated": "2026-10-31",
    "position": "Flagship"
   },
   {
@@ -148,11 +148,11 @@
    "jurisdiction": "United States",
    "weights": "Closed",
    "released": "2026-09-03",
-   "access": "Public; offensive tasks refused; looser access for vetted defenders via Daybreak",
+   "access": "Public; offensive tasks refused; looser access for vetted defenders via Daybreak; the same weights are offered as GPT-Rosalind-6 for life sciences through trusted access only (30 Oct 2026)",
    "tier": "Flagship",
    "cyber_evidence": "Critical cyber threshold; 100% on ExploitBench with safeguards off; supply-chain attacks in 29.2% of AISI simulations",
    "evidence_url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "updated": "2026-10-08",
+   "updated": "2026-10-31",
    "position": "Flagship"
   },
   {

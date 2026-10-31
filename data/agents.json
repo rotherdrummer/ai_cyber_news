@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-30",
+ "updated": "2026-10-31",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -27,10 +27,10 @@
    "open_source": "No",
    "can_act_on": "Files, terminal and shell, code execution, GitHub and GitLab, other tools via MCP connectors",
    "access": "Paid Claude plans (Pro, Max, Team, Enterprise) and API accounts",
-   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly. In October 2026 Noma Security disclosed SneakPeek, a Claude Code Desktop preview pane flaw (CVSS 8.7) that could leak SSH keys and tokens from a poisoned file; Anthropic fixed it. Also in October 2026, Anthropic fixed a High-rated plugin pin bypass (CVE-2026-86063) that could install attacker-controlled plugin code, in version 2.1.179. In October 2026 Symantec reported an unauthorised relay service that rewrites Claude Code settings to disable the sandbox and route traffic through its servers, seen at about a dozen organisations.",
-   "security_url": "https://www.security.com/threat-intelligence/openai-claude-unauthorized-relays",
+   "security_evidence": "Asks permission before changing files or running commands; an automatic mode on most paid plans lets it work longer while still stopping risky commands. Runs locally and calls the model API directly. In October 2026 Noma Security disclosed SneakPeek, a Claude Code Desktop preview pane flaw (CVSS 8.7) that could leak SSH keys and tokens from a poisoned file; Anthropic fixed it. Also in October 2026, Anthropic fixed a High-rated plugin pin bypass (CVE-2026-86063) that could install attacker-controlled plugin code, in version 2.1.179. In October 2026 Symantec reported an unauthorised relay service that rewrites Claude Code settings to disable the sandbox and route traffic through its servers, seen at about a dozen organisations. On 29 October 2026 a tampered copy of the Claude Code extension, not built by Anthropic, was served through Cursor's extension marketplace for about 11 hours and tried to plant an SSH backdoor; Anthropic said its systems were not compromised.",
+   "security_url": "https://www.microsoft.com/en-us/security/blog/2026/10/30/inside-malicious-claude-code-branded-cursor-extension-persistent-ssh-backdoor/",
    "url": "https://claude.com/product/claude-code",
-   "status_as_of": "2026-10-30"
+   "status_as_of": "2026-10-31"
   },
   {
    "id": "claude-in-chrome",
@@ -163,10 +163,10 @@
    "open_source": "No",
    "can_act_on": "Files, terminal and shell, code execution, other tools via MCP",
    "access": "Free and paid plans",
-   "security_evidence": "Forever Security reported a prompt injection through Cursor's built-in browser that could lead to code execution on the host; it was patched on 1 October 2026.",
-   "security_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+   "security_evidence": "Forever Security reported a prompt injection through Cursor's built-in browser that could lead to code execution on the host; it was patched on 1 October 2026. On 29 October 2026 tampered Claude Code extension versions 2.1.312 and 2.1.313 were served through Cursor's extension marketplace for about 11 hours and tried to add an attacker SSH key; Cursor removed them, shut the marketplace temporarily and rotated keys.",
+   "security_url": "https://cursor.com/blog/claude-code-extension-security-notice",
    "url": "https://cursor.com/docs/models",
-   "status_as_of": "2026-10-30"
+   "status_as_of": "2026-10-31"
   },
   {
    "id": "devin",
