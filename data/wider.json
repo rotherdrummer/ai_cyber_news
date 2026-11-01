@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-01",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "date": "2026-10-31",
+   "category": "Business and leadership",
+   "title": "OpenAI reportedly cuts its funding round target after a tepid investor response",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/10/31/openai-reportedly-lowers-funding-target-for-new-round/",
+   "summary": "Citing the Financial Times, TechCrunch reports OpenAI cut its funding target from $30 billion to $20 billion, with UAE investors leading. The Wall Street Journal reported $11 billion secured so far, at a $1.25 trillion valuation.",
+   "why_not_cyber": "Funding and valuation news with no security angle.",
+   "source_relation": "Third-party report",
+   "id": "wf-5836f9887f",
+   "added": "2026-11-01"
+  },
   {
    "id": "wf-0b7c11070c",
    "date": "2026-10-30",
@@ -19,6 +31,30 @@
    "why_not_cyber": "A competition case about content use, with no security angle.",
    "source_relation": "Original source",
    "added": "2026-10-31"
+  },
+  {
+   "date": "2026-10-30",
+   "category": "Legal and policy",
+   "title": "US Justice Department asks bankruptcy court for a privacy ombudsman over possible sale of Character.AI chat data",
+   "publisher": "The Record",
+   "url": "https://therecord.media/doj-raises-privacy-concerns-over-character-ai-sale",
+   "summary": "The DOJ's US Trustee office says Character.AI's privacy policy is ambiguous and may allow selling users' chat histories, including minors' and health data, in its bankruptcy asset sale. It asked for a consumer privacy ombudsman.",
+   "why_not_cyber": "Privacy and bankruptcy matter, not a security incident.",
+   "source_relation": "Third-party report",
+   "id": "wf-f5981454fd",
+   "added": "2026-11-01"
+  },
+  {
+   "date": "2026-10-30",
+   "category": "Legal and policy",
+   "title": "OpenAI says it will honour a shared robots.txt signal for AI training preferences",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/helping-websites-express-ai-training-preferences",
+   "summary": "OpenAI says it will honour a shared robots.txt signal that lets website operators state their AI training preferences to participating providers.",
+   "why_not_cyber": "Training data and copyright policy, no security angle.",
+   "source_relation": "Original source",
+   "id": "wf-69c4bacba0",
+   "added": "2026-11-01"
   },
   {
    "id": "wf-ceec40f6b8",
