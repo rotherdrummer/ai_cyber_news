@@ -555,6 +555,11 @@
    "date": "2026-10-30",
    "change": "Added Cisco Talos to hints",
    "why": "Rule 2: Cisco Talos published 2 News items in the last 90 days (likely AI-assisted event lures on 8 October and the NIK C2 implant that calls OpenAI's API on 29 October)."
+  },
+  {
+   "date": "2026-11-02",
+   "change": "Added https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/ to Microsoft",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }

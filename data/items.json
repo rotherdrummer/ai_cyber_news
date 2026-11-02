@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-11-01",
-  "item_count": 279,
+  "updated": "2026-11-02",
+  "item_count": 281,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-01T04:02"
+  "updated_at": "2026-11-02T04:02"
  },
  "items": [
   {
@@ -98,6 +98,46 @@
    "tag_themes": "model-release",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-aeb020fe34",
+   "published": "2026-10-30",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-02",
+   "item_type": "Incident",
+   "title": "Northflank tells customers to rotate all secrets after a breach; users report unauthorised use of their AI API keys",
+   "publisher": "Northflank",
+   "url": "https://status.northflank.com/cmvv0rn5a092f14rutwccodpp",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "A Wiz threat alert fired at 11:43 UTC on 30 October 2026, and Northflank told users to assume all environment variables had been decrypted and to rotate every secret and credential. Later updates said multiple users had confirmed unauthorised use of AI API keys stored on the platform. Northflank said this may fit the wider pattern of attacks on AI credentials in Wiz's Black October report.",
+   "key_findings": "",
+   "evidence_links": "https://www.bleepingcomputer.com/news/security/northflank-security-breach-leads-to-abuse-of-customers-ai-api-keys/",
+   "health_named": "No",
+   "tag_themes": "incident",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-76f1c6a2e7",
+   "published": "2026-10-30",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-02",
+   "item_type": "Threat finding",
+   "title": "LevelBlue SpiderLabs finds a wave of phishing kits it judges were largely written with AI tools, used to steal Microsoft 365 tokens",
+   "publisher": "LevelBlue SpiderLabs",
+   "url": "https://www.levelblue.com/blogs/spiderlabs-blog/blackapex-spy-and-counting-the-emerging-wave-of-vibe-coded-phishing-kits",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "SpiderLabs found more than 70 instances of phishing kits sharing one backend and admin panel, under names including BlackApex, DarkApex and SPY. It assesses with high confidence that the code was largely AI-generated or AI-assisted, citing emoticons, verbose logs, structured comments and clean, unobfuscated code. The kits use device code phishing to capture Microsoft 365 access and refresh tokens, so victims complete MFA themselves.",
+   "key_findings": "Actor: unattributed phishing kit operators; Technique: AI-assisted phishing kits using device code phishing, with lures posing as SharePoint, Zoom, Adobe Acrobat Sign, Excel, OneDrive and Microsoft Forms; Targets: Microsoft 365 business users",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "threat-actor-reporting",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Real-world malicious activity or incident",
    "related_ids": ""
   },
   {

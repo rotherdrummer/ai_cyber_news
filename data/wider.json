@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-01",
+ "updated": "2026-11-02",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -19,6 +19,30 @@
    "source_relation": "Third-party report",
    "id": "wf-5836f9887f",
    "added": "2026-11-01"
+  },
+  {
+   "id": "wf-c24d2dcf58",
+   "date": "2026-10-31",
+   "category": "Business and leadership",
+   "title": "Alibaba says its Qwen models will power Apple Intelligence in China",
+   "publisher": "CGTN",
+   "url": "https://news.cgtn.com/news/2026-10-31/Alibaba-s-Qwen-to-integrate-into-Apple-Intelligence-in-landmark-deal-1RHilSeJsbK/p.html",
+   "summary": "Alibaba announced that Qwen will be integrated into Apple Intelligence in China, reaching the developer beta on 4 November and users with iOS 27.3 in December.",
+   "why_not_cyber": "A commercial deal with no cyber evidence.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-02"
+  },
+  {
+   "id": "wf-824614f4b8",
+   "date": "2026-10-31",
+   "category": "Business and leadership",
+   "title": "Microsoft offers voluntary severance to about a quarter of its workforce while shielding AI-critical teams",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/microsoft-offers-a-quarter-of-its-workforce-voluntary-severance-while-shielding-ai-critical-teams/",
+   "summary": "Microsoft offered voluntary severance to about 60,000 staff at VP level and below in the US, Canada, India and the UK. Data centre, sales, cybersecurity and quantum teams are excluded.",
+   "why_not_cyber": "A workforce change at a leading AI company, not a security event.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-02"
   },
   {
    "id": "wf-0b7c11070c",
@@ -55,6 +79,18 @@
    "source_relation": "Original source",
    "id": "wf-69c4bacba0",
    "added": "2026-11-01"
+  },
+  {
+   "id": "wf-3dac2e8c31",
+   "date": "2026-10-30",
+   "category": "Business and leadership",
+   "title": "Alphabet loses just over $500bn in value after saying AI search mode is cutting search ad revenue",
+   "publisher": "BBC News",
+   "url": "https://www.bbc.co.uk/news/articles/cm9qzdqpxy48o",
+   "summary": "Alphabet's market value fell by just over $500bn after its chief business officer said AI mode in search was eating into ad sales.",
+   "why_not_cyber": "Market and business news with no security angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-02"
   },
   {
    "id": "wf-ceec40f6b8",

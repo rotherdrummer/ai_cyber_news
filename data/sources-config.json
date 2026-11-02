@@ -188,7 +188,8 @@
    "pages": [
     "https://www.microsoft.com/en-us/security/blog/",
     "https://www.microsoft.com/en-us/security/blog/topic/ai-and-machine-learning/",
-    "https://blogs.microsoft.com/on-the-issues/"
+    "https://blogs.microsoft.com/on-the-issues/",
+    "https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/"
    ],
    "feed": "https://www.microsoft.com/en-us/security/blog/feed/",
    "added": "2026-10-15",
