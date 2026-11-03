@@ -1,10 +1,15 @@
 {
-  "updated": "2026-10-27",
+  "updated": "2026-11-03",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
       "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
       "changes": [
+        {
+          "date": "2026-11-02",
+          "text": "Lords Third Reading completed with four technical government amendments. The bill returns to the Commons with Lords amendments, including Amendment 163 on a review covering frontier AI. No Commons date set.",
+          "url": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
+        },
         {
           "date": "2026-10-26",
           "text": "Lords Report stage completed. Government AI agent loss-of-control clause (Amendment 70) agreed; frontier AI developer incident reporting duty (Amendment 41) defeated 95 to 165; Amendment 163 on a yearly NIS review covering frontier AI and AISI audit powers agreed against the government, 202 to 155. Third Reading set for 2 November.",
@@ -47,9 +52,9 @@
       "order": 1,
       "owner": "DHSC (delegated to NHS England) + NCSC",
       "risk": "None; scope depends on sector and size thresholds",
-      "status": "Lords Report stage completed 26 October 2026 (AI agent loss-of-control clause agreed; government defeated on a yearly NIS review covering frontier AI); Lords Third Reading scheduled for 2 November 2026",
-      "statusDate": "2026-10-26",
-      "statusUrl": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
+      "status": "Lords Third Reading completed 2 November 2026; bill returned to the Commons with Lords amendments, including the frontier AI review (Amendment 163). Commons consideration of Lords amendments not yet scheduled",
+      "statusDate": "2026-11-02",
+      "statusUrl": "https://hansard.parliament.uk/Lords/2026-11-02/debates/9A654131-98CE-48C2-86D6-65BFA9A71414/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill",
       "sub": "Network & Information Systems",
       "teeth": "Fines of up to £17m today, raised under the CSRB",
       "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",

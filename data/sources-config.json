@@ -43,7 +43,8 @@
     "https://www.anthropic.com/research/team/frontier-red-team",
     "https://red.anthropic.com/2026/cvd/",
     "https://alignment.anthropic.com/",
-    "https://www.anthropic.com/news/security"
+    "https://www.anthropic.com/news/security",
+    "https://www.anthropic.com/engineering"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -173,7 +174,8 @@
    ],
    "pages": [
     "https://ai.meta.com/blog/",
-    "https://research.meta.ai/blog/"
+    "https://research.meta.ai/blog/",
+    "https://about.fb.com/news/"
    ],
    "feed": "",
    "added": "2026-10-15",

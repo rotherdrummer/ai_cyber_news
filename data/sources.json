@@ -560,6 +560,16 @@
    "date": "2026-11-02",
    "change": "Added https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/ to Microsoft",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-03",
+   "change": "Added https://www.anthropic.com/engineering to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-03",
+   "change": "Added https://about.fb.com/news/ to Meta",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }
