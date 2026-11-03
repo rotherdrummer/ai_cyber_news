@@ -11,6 +11,7 @@ A public-source dataset of AI and cyber security intelligence, and a static dash
 | `data/items.csv` | The same items as CSV (UTF-8 with BOM, opens in Excel). |
 | `data/period-YYYY-MM.csv` | Items in one reporting quarter (Jun–Aug, Sep–Nov, Dec–Feb, Mar–May), named by its first month. Listed in `data/periods.json`. |
 | `data/reports/report-YYYY-MM.txt` | Plain-text quarterly report for internal analysis: every dashboard item in the quarter, numbered, with no analysis. Rebuilt by `tools/rebuild.py`. |
+| (dashboard) Download report for any dates | The same plain-text format for any From/To dates, built in the browser on the Download report tab (for example for the monthly SMT update). Not stored in the repo. |
 | `data/models.json`, `data/models.csv` | Frontier AI models by jurisdiction, weights, access, place in the developer's range (`position`, levels defined under `positions`), the developer's CEO (`developers`) and published cyber evidence. |
 | `data/agents.json`, `data/agents.csv` | AI agents and assistants: who makes them, which models they run on, what they can act on, access, and published security evidence. `explainer` holds the model-versus-agent notes shown on the page. |
 | `data/benchmarks.json`, `data/benchmarks.csv` | Published benchmark and evaluation results, with who measured them and whether they are self-reported. |
