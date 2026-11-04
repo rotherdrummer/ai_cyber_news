@@ -9,6 +9,7 @@ ExploitBench,Offensive cyber,Claude Opus 4.7,27%,27,2026-09-24,Carnegie Mellon,N
 ExploitBench,Offensive cyber,Muse Wonder Full,58.9%,58.9,2026-10-12,Meta (self-reported),Yes,https://research.meta.ai/static/muse-wonder-model-card
 ExploitBench,Offensive cyber,GPT-6.1 Terra,97.1%,97.1,2026-10-26,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-1-terra
 ExploitBench,Offensive cyber,GPT-6 Luna (29 Oct update),46.19%,46.19,2026-10-29,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum
+ExploitBench,Offensive cyber,Muse Spark 1.3,28.7%,28.7,2026-10-23,Meta (self-reported),Yes,https://research.meta.ai/static/muse-spark-1-3-evaluation-report
 SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october

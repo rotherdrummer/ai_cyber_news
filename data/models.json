@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-31",
+ "updated": "2026-11-04",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -304,9 +304,9 @@
    "released": "",
    "access": "Public; closed since April 2026",
    "tier": "Previous generation",
-   "cyber_evidence": "",
-   "evidence_url": "",
-   "updated": "2026-10-14",
+   "cyber_evidence": "Evaluation report (23 October 2026) rates the unmitigated model moderate or lower for cybersecurity. Self-reported: CyberGym 80.5%, ExploitBench 28.7% capability coverage.",
+   "evidence_url": "https://research.meta.ai/static/muse-spark-1-3-evaluation-report",
+   "updated": "2026-11-04",
    "position": "Previous generation"
   },
   {

@@ -108,6 +108,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "Muse Spark 1.3",
+     "value": 28.7,
+     "display": "28.7%",
+     "date": "2026-10-23",
+     "url": "https://research.meta.ai/static/muse-spark-1-3-evaluation-report",
+     "measured_by": "Meta (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },

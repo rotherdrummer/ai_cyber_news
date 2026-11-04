@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03",
+ "updated": "2026-11-04",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -31,6 +31,18 @@
    "why_not_cyber": "A copyright case about AI training data, with no security angle.",
    "source_relation": "Third-party report",
    "added": "2026-11-03"
+  },
+  {
+   "id": "wf-831b2ca462",
+   "date": "2026-11-02",
+   "category": "Business and leadership",
+   "title": "OpenAI appoints former US Army Secretary Dan Driscoll as a national security adviser",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/dan-driscoll-joins-openai",
+   "summary": "OpenAI appointed Dan Driscoll as Senior Counselor for National Security Modernization, to advise on AI for national security modernisation, cyber resilience and work with US allies.",
+   "why_not_cyber": "An appointment, with no cyber finding or action.",
+   "source_relation": "Original source",
+   "added": "2026-11-04"
   },
   {
    "date": "2026-10-31",
