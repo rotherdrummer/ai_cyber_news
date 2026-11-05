@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -584,6 +584,11 @@
   {
    "date": "2026-11-04",
    "change": "Added https://microsoft.ai/news/ to Microsoft",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-05",
+   "change": "Added https://www.ncsc.gov.uk/collection/annual-review-2026 to NCSC",
    "why": "Found while checking the organisation's website"
   }
  ]

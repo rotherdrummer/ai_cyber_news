@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -456,12 +456,12 @@
    "jurisdiction": "China",
    "weights": "Open",
    "released": "2026-10-24",
-   "access": "Kimi.com, Kimi Code and API; full weights promised by 4 Nov 2026",
+   "access": "Kimi.com, Kimi Code and API; full open weights on Hugging Face since 2 Nov 2026 (custom licence, not gated)",
    "tier": "Open flagship",
    "position": "Flagship",
-   "cyber_evidence": "Developer says cyber data was removed from training for the open release; 81.0% on its own xdev-bench-hard (90.5% without removal)",
-   "evidence_url": "https://www.kimi.com/en/blog/kimi-k3-1-pro",
-   "updated": "2026-10-26"
+   "cyber_evidence": "Self-reported 74.7 on ExploitBench (pass@5, 300 turns) and 20.7 on ExploitGym in the open-weights model card; developer says cyber data was removed from training (81.0% on its own xdev-bench-hard, 90.5% without removal)",
+   "evidence_url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+   "updated": "2026-11-05"
   },
   {
    "id": "gpt-6-1-terra",

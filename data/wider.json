@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-04",
+ "updated": "2026-11-05",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-7c3e91a24d",
+   "date": "2026-11-04",
+   "category": "Business and leadership",
+   "title": "OpenAI to acquire Pierre Computer Company to expand Codex code tools",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/openai-to-acquire-pierre",
+   "summary": "OpenAI says it will acquire Pierre Computer Company, expanding Codex's tools for building, understanding and reviewing code.",
+   "why_not_cyber": "An acquisition with no stated security angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-05"
+  },
   {
    "id": "wf-3b8e1c7a52",
    "date": "2026-11-02",

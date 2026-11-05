@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-29",
+ "updated": "2026-11-02",
  "tests": [
   {
    "name": "ExploitBench",
@@ -118,6 +118,16 @@
      "measured_by": "Meta (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "Kimi K3.1 Pro",
+     "value": 74.7,
+     "display": "74.7% (pass@5, 300 turns)",
+     "date": "2026-11-02",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "measured_by": "Moonshot AI (self-reported)",
+     "self_reported": true,
+     "weights": "Open"
     }
    ]
   },
@@ -228,6 +238,16 @@
      "measured_by": "Google DeepMind (self-reported, without guardrails)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "Kimi K3.1 Pro",
+     "value": 20.7,
+     "display": "20.7%",
+     "date": "2026-11-02",
+     "url": "https://huggingface.co/moonshotai/Kimi-K3.1-Pro",
+     "measured_by": "Moonshot AI (self-reported)",
+     "self_reported": true,
+     "weights": "Open"
     }
    ]
   },
