@@ -252,12 +252,12 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
   </dialog>
 
   <section class="export brief" aria-labelledby="brh">
-    <h2 id="brh">Briefing for sharing</h2>
-    <p style="flex-basis:100%">A short Word briefing of public AI cyber news between two dates, for sharing with partners such as the 4-nations group. Red and Amber items in full, Green as titles, plus regulatory changes. Public information only.</p>
+    <h2 id="brh">Public bulletin</h2>
+    <p style="flex-basis:100%">A short Word bulletin of public AI cyber news between two dates, for sharing with partners such as the 4-nations group. Red and Amber items in full, Green as titles, plus regulatory changes. Public information only.</p>
     <div class="btns" style="align-items:center">
       <label class="chk">From <input id="brFrom" type="date"></label>
       <label class="chk">To <input id="brTo" type="date"></label>
-      <button type="button" class="btn primary" id="brGo">Download briefing (Word)</button>
+      <button type="button" class="btn primary" id="brGo">Download public bulletin (Word)</button>
       <span class="lsnow" id="brMsg"></span>
     </div>
   </section>
@@ -431,7 +431,7 @@ function loadDocx(cb){if(window.docx)return cb();var sc=document.createElement("
 function makeBrief(){
   var f=$("brFrom").value,t=$("brTo").value;if(!f||!t||f>t){$("brMsg").textContent="Choose a From date on or before the To date.";return}
   $("brMsg").textContent="Building…";
-  var go=function(){loadDocx(function(){try{buildBrief(f,t)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the briefing."}})};
+  var go=function(){loadDocx(function(){try{buildBrief(f,t)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the public bulletin."}})};
   if(regData)go();else fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){regData=d;go()}).catch(go);
 }
 function buildBrief(f,t){
@@ -441,7 +441,7 @@ function buildBrief(f,t){
   var kids=[];
   function para(text,opt){kids.push(new P(Object.assign({children:[new TR({text:text,font:"Arial",size:22})],spacing:{after:120}},opt||{})))}
   function link(text,url){return new D.ExternalHyperlink({link:url,children:[new TR({text:text,style:"Hyperlink",font:"Arial",size:20})]})}
-  kids.push(new P({heading:H.TITLE,children:[new TR({text:"AI cyber security: public briefing",font:"Arial"})]}));
+  kids.push(new P({heading:H.TITLE,children:[new TR({text:"AI cyber security: public bulletin",font:"Arial"})]}));
   para(ukd(f)+" to "+ukd(t)+" · "+rows.length+" items ("+red.length+" Red, "+amb.length+" Amber, "+grn.length+" Green)");
   para("Compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",{children:[new TR({text:"Compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",italics:true,font:"Arial",size:20})]});
   function section(title,list){
@@ -464,7 +464,7 @@ function buildBrief(f,t){
   if(!rows.length&&!ch.length)para("No items were published in this period.");
   var foot=new D.Footer({children:[new P({alignment:D.AlignmentType.CENTER,children:[new TR({text:"Public information only. Not an official product of any organisation.",font:"Arial",size:16,color:"777777"})]})]});
   var doc=new D.Document({styles:{default:{document:{run:{font:"Arial"}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:1100,right:1100}}},footers:{default:foot},children:kids}]});
-  D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber briefing "+f+" to "+t+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+  D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber public bulletin "+f+" to "+t+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
     try{localStorage.setItem("brLastTo",t)}catch(e){}$("brMsg").textContent="Downloaded. Next time the From date will start at "+ukd(t)+"."});
 }
 brInit();
