@@ -154,6 +154,9 @@ def main():
         r["health_named"] = r["health_named"] or ("Yes" if any(k in (r["title"]+r["source_says"]).lower() for k in ["health","hospital","nhs"]) else "No")
         r["tag_themes"] = r["tag_themes"] or ";".join(themes(r["title"], r["source_says"]))
         if not r["tag_rating"]: r["tag_rating"], r["tag_rating_reason"] = rag(r)
+        if r["tag_rating"] == "Red" and not re.match(r"Red \([1-5]\): ", r["tag_rating_reason"] or ""):
+            print(f"warning: item {i} ({r['title'][:50]}) is Red without a valid 'Red (1)' to 'Red (5)' reason; downgraded to Amber")
+            r["tag_rating"], r["tag_rating_reason"] = "Amber", "Marked Red without a valid criterion; downgraded to Amber"
         key = (r["url"], r["title"].strip().lower())
         if r["id"] in seen or key in seen: continue
         seen.add(r["id"]); seen.add(key); items.append({c: r[c] for c in COLS})

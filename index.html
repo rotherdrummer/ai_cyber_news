@@ -392,7 +392,8 @@ function render(){
       el("h3",null,[title]),
       r.source_says?el("p",{cls:"says"},[el("b",{text:"Source says"}),r.source_says]):null,
       r.key_findings?el("p",{cls:"says"},[el("b",{text:"Findings"}),r.key_findings]):null,
-      el("div",{cls:"tags"},[el("b",{text:"Tagged"}),[r.tag_rating_reason].concat((r.tag_themes||"").split(";")).filter(Boolean).join(" · ")])
+      (r.tag_rating==="Red"&&r.tag_rating_reason)?el("p",{cls:"says"},[el("b",{text:"Why Red"}),r.tag_rating_reason.replace(/^Red \((\d)\):\s*/,"Criterion $1: ")]):null,
+      el("div",{cls:"tags"},[el("b",{text:"Tagged"}),[r.tag_rating==="Red"?"":r.tag_rating_reason].concat((r.tag_themes||"").split(";")).filter(Boolean).join(" · ")])
     ]);
     var rel=(r.related_ids||"").split(";").filter(function(x){return byId[x]});
     if(rel.length){var p=el("div",{cls:"related"},["Related: "]);rel.forEach(function(id,i){var a=el("a",{href:"#"+id,text:byId[id].title});a.addEventListener("click",function(e){e.preventDefault();jump(id)});if(i)p.appendChild(document.createTextNode("; "));p.appendChild(a)});body.appendChild(p)}
