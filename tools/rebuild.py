@@ -92,7 +92,7 @@ def themes(title, extra=""):
 
 # ---------- rating (fixed, published criteria) ----------
 RAG_CRITERIA = {
- "Red": "Judged by Claude, with the reason recorded. Red only if at least one applies: (1) an AI-enabled attack, incident or AI-related data exposure affecting health and care anywhere, or the UK public sector or critical national infrastructure; (2) a step change in AI-enabled attacks, such as AI agents running intrusions largely on their own or AI campaigns at large scale, reported by a government agency, frontier AI developer or major security research team; (3) a UK or Five Eyes government warning or advisory on an AI-related threat that calls for action; (4) a frontier model rated at its developer's critical cyber level, or shown to find and exploit serious flaws in widely used software largely on its own; (5) a frontier AI agent taking unsanctioned actions on real systems outside its developer.",
+ "Red": "Judged by Claude, with the reason recorded. Red only if at least one applies: (1) an AI-enabled attack, incident or AI-related data exposure affecting health and care anywhere, or the UK public sector or critical national infrastructure; (2) a step change in AI-enabled attacks, such as AI agents running intrusions largely on their own or AI campaigns at large scale, reported by a government agency, frontier AI developer or major security research team; (3) a UK or Five Eyes government warning or advisory on an AI-related threat that calls for action; (4) a frontier model rated at its developer's critical cyber level, or shown to find and exploit serious flaws in widely used software largely on its own; (5) a frontier AI agent taking unsanctioned actions on real systems outside its developer; (6) a major change to AI cyber regulation, law or official guidance that UK health and care must follow or is likely to follow, such as a UK bill or regulation passing a key stage, a UK regulator setting a new AI security requirement, new UK government AI security guidance, or EU AI Act security obligations taking effect.",
  "Amber": "A significant change that may matter soon: other real-world AI misuse and incidents, notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
  "Green": "Background: evaluation methods, general research, routine releases without cyber evidence, and commentary.",
 }
@@ -154,10 +154,10 @@ def main():
         r["health_named"] = r["health_named"] or ("Yes" if any(k in (r["title"]+r["source_says"]).lower() for k in ["health","hospital","nhs"]) else "No")
         r["tag_themes"] = r["tag_themes"] or ";".join(themes(r["title"], r["source_says"]))
         if not r["tag_rating"]: r["tag_rating"], r["tag_rating_reason"] = rag(r)
-        if r["tag_rating"] == "Red" and not re.match(r"Red \([1-5]\): ", r["tag_rating_reason"] or ""):
+        if r["tag_rating"] == "Red" and not re.match(r"Red \([1-6]\): ", r["tag_rating_reason"] or ""):
             # Never downgrade: a real Red must not disappear from the bulletin. Flag the missing reason instead.
             was = (r["tag_rating_reason"] or "").strip()
-            print(f"warning: item {i} ({r['title'][:50]}) is Red without a valid 'Red (1)' to 'Red (5)' reason; kept Red, reason marked missing")
+            print(f"warning: item {i} ({r['title'][:50]}) is Red without a valid 'Red (1)' to 'Red (6)' reason; kept Red, reason marked missing")
             r["tag_rating_reason"] = "Criterion not recorded" + (f" (routine wrote: {was})" if was and not was.startswith("Criterion not recorded") else "")
         key = (r["url"], r["title"].strip().lower())
         if r["id"] in seen or key in seen: continue
