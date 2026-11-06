@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-11-06",
-  "item_count": 337,
+  "item_count": 341,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-06T11:06"
+  "updated_at": "2026-11-06T11:23"
  },
  "items": [
   {
@@ -76,6 +76,46 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-2e74d69257",
+   "published": "2026-11-05",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-06",
+   "item_type": "Research",
+   "title": "Reflection AI sets out how it evaluated open-weight Beam for cyber risk, including no completed end-to-end attack scenarios",
+   "publisher": "Reflection AI",
+   "url": "https://reflection.ai/blog/open-model-safety-lessons",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Reflection says independent evaluator Irregular found Beam solved 9 of 14 easy and about half of medium CTF challenges, and none of the expert ones. Beam completed no end-to-end CyScenarioBench scenarios and scores 34% on the Artificial Analysis Cyber Index. Reflection rates Beam Limited for cyber risk under its Open Safety Framework.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "evaluation;open-weight",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-571d8dfb12",
+   "published": "2026-11-05",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-06",
+   "item_type": "Incident",
+   "title": "Postman desktop app installed its own plugins and a startup hook into Claude Code and Codex without asking",
+   "publisher": "Notebookcheck",
+   "url": "https://www.notebookcheck.net/Postman-added-itself-to-Claude-Code-and-Codex-without-asking.1442933.0.html",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Postman 12.33.4 installed plugins for Claude Code and OpenAI Codex on 24 October, including a startup hook in Codex that directs the agent to Postman's skill. Users reported the same after an update to 12.35.1 on 3 November, with entries also reaching Cursor and GitHub Copilot CLI. Postman said on 5 November it is reverting the change, but plugins already installed must be removed by hand.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
@@ -301,6 +341,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-4b0b5287bb",
+   "published": "2026-11-04",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-06",
+   "item_type": "Report",
+   "title": "Illinois hospitals run a large drill on responding to an AI-driven cyber attack",
+   "publisher": "KFVS12",
+   "url": "https://www.kfvs12.com/2026/11/05/illinois-hospitals-drill-ai-driven-cyber-attack/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "The Illinois Health and Hospital Association ran one of the state's largest drills, in which hospitals practised responding to an AI-driven cyber attack. The scenario had a cyber group using AI to impersonate staff, disrupt systems, cut access to digital records and alter linked systems. OSF St. Anthony's Health Center in Alton found gaps in its plans, including caring for patients without records.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "Yes",
+   "tag_themes": "health",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-369acf38ba",
    "published": "2026-11-04",
    "reporting_period": "Sep-Nov 2026",
@@ -378,6 +438,26 @@
    "tag_themes": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-ab3c4bc729",
+   "published": "2026-11-04",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-06",
+   "item_type": "Threat finding",
+   "title": "Acronis: one operator ran a mesh of 12 AI agents against hundreds of organisations, exposing emergency patient-care data in Taipei",
+   "publisher": "Acronis Threat Research Unit",
+   "url": "https://www.acronis.com/en/tru/posts/bossai-inside-the-ai-attack-mesh-that-targeted-taiwans-emergency-services/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Acronis assesses with high confidence that a single operator in Taiwan ran the BOSSAI campaign using a mesh of 12 AI agents across 11 countries. The attack agents ran mostly on open-weight models with safety training removed, while commercial models handled infrastructure work and refused explicit attack requests. About 10 targets in three countries were confirmed compromised, and a Taipei fire-department patient-care platform exposed ECG readings, ambulance video and vital signs without credentials.",
+   "key_findings": "Actor: single operator assessed to be in Hualien City, Taiwan; Technique: mesh of AI agents on abliterated open-weight models with offensive tooling over MCP, output relayed between agents by hand; Targets: government emergency services, banks and lenders, universities and military systems in 11 countries, mainly Taiwan",
+   "evidence_links": "",
+   "health_named": "Yes",
+   "tag_themes": "model-release;agents;open-weight",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Red (1): affects health and care, or UK public services or critical infrastructure",
    "related_ids": ""
   },
   {

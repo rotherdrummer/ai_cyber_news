@@ -33,6 +33,30 @@
    "added": "2026-11-06"
   },
   {
+   "id": "wf-7c3e91a0b4",
+   "date": "2026-11-05",
+   "category": "Model launch",
+   "title": "Thinking Machines Lab launches Inkling 2 Small and plans an open-weight release",
+   "publisher": "Thinking Machines Lab",
+   "url": "https://thinkingmachines.ai/news/inkling-2-small/",
+   "summary": "Inkling 2 Small is a 594B-parameter mixture-of-experts model with 17B active parameters, launched with closed weights on Tinker. The company plans to release the weights under Apache 2.0 the following week, after external safety testing.",
+   "why_not_cyber": "Weights not yet released and no cyber benchmark figures published.",
+   "source_relation": "Original source",
+   "added": "2026-11-06"
+  },
+  {
+   "id": "wf-2d8f05c6e1",
+   "date": "2026-11-05",
+   "category": "Legal and policy",
+   "title": "US Department of Justice launches a Super Intelligence Task Force",
+   "publisher": "US Department of Justice",
+   "url": "https://www.justice.gov/opa/pr/department-justice-launches-super-intelligence-task-force",
+   "summary": "The task force will pursue misuse of advanced AI by foreign state actors, criminal groups and fraudsters, including misuse targeting critical US infrastructure. It is led by Associate Attorney General Stanley Woodward and Associate Deputy Attorney General Stephen Weiss.",
+   "why_not_cyber": "The announcement does not mention cyber attacks.",
+   "source_relation": "Original source",
+   "added": "2026-11-06"
+  },
+  {
    "id": "wf-7c3e91a24d",
    "date": "2026-11-04",
    "category": "Business and leadership",
