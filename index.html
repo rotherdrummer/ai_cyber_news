@@ -392,7 +392,7 @@ function render(){
       el("h3",null,[title]),
       r.source_says?el("p",{cls:"says"},[el("b",{text:"Source says"}),r.source_says]):null,
       r.key_findings?el("p",{cls:"says"},[el("b",{text:"Findings"}),r.key_findings]):null,
-      (r.tag_rating==="Red"&&r.tag_rating_reason)?el("p",{cls:"says"},[el("b",{text:"Why Red"}),r.tag_rating_reason.replace(/^Red \((\d)\):\s*/,"Criterion $1: ")]):null,
+      r.tag_rating==="Red"?el("p",{cls:"says"},[el("b",{text:"Why Red"}),(r.tag_rating_reason||"Criterion not recorded").replace(/^Red \((\d)\):\s*/,"Criterion $1: ")]):null,
       el("div",{cls:"tags"},[el("b",{text:"Tagged"}),[r.tag_rating==="Red"?"":r.tag_rating_reason].concat((r.tag_themes||"").split(";")).filter(Boolean).join(" · ")])
     ]);
     var rel=(r.related_ids||"").split(";").filter(function(x){return byId[x]});
@@ -497,7 +497,7 @@ function makeReport(){
   var cur=null;rows.forEach(function(r,i){
     if(r.tag_rating!==cur){cur=r.tag_rating;L=L.concat(["",cur.toUpperCase()+" ("+cnt[cur]+")",""])}
     L.push("["+(i+1)+"] "+r.tag_rating.toUpperCase()+" | "+ukd(r.published)+" | "+r.item_type+" | "+r.publisher+" | "+r.source_relation);
-    if(r.tag_rating==="Red"&&r.tag_rating_reason)L=L.concat(rpWrap("Why Red: "+r.tag_rating_reason,"    "));
+    if(r.tag_rating==="Red")L=L.concat(rpWrap("Why Red: "+(r.tag_rating_reason||"Criterion not recorded"),"    "));
     L=L.concat(rpWrap(r.title,"    "));
     if((r.source_says||"").trim())L=L.concat(rpWrap("Source says: "+r.source_says,"    "));
     if((r.key_findings||"").trim())L=L.concat(rpWrap("Key findings: "+r.key_findings,"    "));

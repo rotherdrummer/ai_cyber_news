@@ -94,8 +94,8 @@ def main():
                 L += ["", f"{cur.upper()} ({sum(1 for x in rows if x['tag_rating'] == cur)})", ""]
             n += 1
             L.append(f"[{n}] {r['tag_rating'].upper()} | {ukd(r['published'])} | {r['item_type']} | {r['publisher']} | {r['source_relation']}")
-            if r["tag_rating"] == "Red" and r.get("tag_rating_reason", "").strip():
-                L += wrap("Why Red: " + r["tag_rating_reason"], "    ")
+            if r["tag_rating"] == "Red":
+                L += wrap("Why Red: " + (r.get("tag_rating_reason", "").strip() or "Criterion not recorded"), "    ")
             L += wrap(r["title"], "    ")
             if r.get("source_says", "").strip():
                 L += wrap("Source says: " + r["source_says"], "    ")

@@ -155,8 +155,10 @@ def main():
         r["tag_themes"] = r["tag_themes"] or ";".join(themes(r["title"], r["source_says"]))
         if not r["tag_rating"]: r["tag_rating"], r["tag_rating_reason"] = rag(r)
         if r["tag_rating"] == "Red" and not re.match(r"Red \([1-5]\): ", r["tag_rating_reason"] or ""):
-            print(f"warning: item {i} ({r['title'][:50]}) is Red without a valid 'Red (1)' to 'Red (5)' reason; downgraded to Amber")
-            r["tag_rating"], r["tag_rating_reason"] = "Amber", "Marked Red without a valid criterion; downgraded to Amber"
+            # Never downgrade: a real Red must not disappear from the bulletin. Flag the missing reason instead.
+            was = (r["tag_rating_reason"] or "").strip()
+            print(f"warning: item {i} ({r['title'][:50]}) is Red without a valid 'Red (1)' to 'Red (5)' reason; kept Red, reason marked missing")
+            r["tag_rating_reason"] = "Criterion not recorded" + (f" (routine wrote: {was})" if was and not was.startswith("Criterion not recorded") else "")
         key = (r["url"], r["title"].strip().lower())
         if r["id"] in seen or key in seen: continue
         seen.add(r["id"]); seen.add(key); items.append({c: r[c] for c in COLS})
