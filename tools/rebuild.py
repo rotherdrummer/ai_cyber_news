@@ -14,7 +14,7 @@ so a hand correction is never overwritten. reporting_period is always recomputed
 Run from the repo root:  python3 tools/rebuild.py
 Exits non-zero, writing nothing, if any item fails validation.
 """
-import csv, datetime, hashlib, json, os, sys
+import re, csv, datetime, hashlib, json, os, sys
 from urllib.parse import urlparse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -38,11 +38,31 @@ SOURCE_CATEGORIES = [
  ("Legal and policy analysis", ["law-ai.org","addleshawgoddard","lexisnexis","qualio","ukauthority"]),
  ("News and model trackers", ["wikipedia.org","securityaffairs","infoworld","axios.com","llm-stats.com","local-ai-zone","digitalapplied","benchlm"]),
 ]
-def source_relation(url):
-    u = (url or "").lower()
-    if any(h in u for h in THIRD_PARTY_HINTS): return "Third-party report"
-    host = urlparse(u).netloc
-    return "Original source" if any(host.endswith(d) for d in ORIGINAL_HOSTS) else "Third-party report"
+NEWS_HOSTS = ["theregister.com","thehackernews.com","bleepingcomputer.com","wired.com","decrypt.co","foxbusiness.com",
+              "helpnetsecurity.com","bbc.co.uk","bbc.com","reuters.com","wmar2news.com","clickorlando.com","hankyung.com",
+              "thestandard.com.hk","euronews.com","semafor.com","federalnewsnetwork.com","theintercept.com","svt.se",
+              "timeslive.co.za","theglobeandmail.com","securityweek.com","darkreading.com","techcrunch.com","arstechnica.com",
+              "theverge.com","bloomberg.com","ft.com","theguardian.com","cnn.com","zdnet.com","cyberscoop.com","therecord.media",
+              "the-decoder.com","thecybersecguru.com","infosecurity-magazine.com","computerweekly.com","nytimes.com",
+              "washingtonpost.com","infoworld.com","axios.com","securityaffairs.com","ukauthority.com","wikipedia.org"]
+# Organisations whose own research or notices sit on a domain that doesn't carry their name.
+OWN_DOMAINS = {"symantec": ["security.com"], "kaspersky": ["securelist.com"], "eset": ["welivesecurity.com"],
+               "anthropic": ["claude.com"], "fbi": ["ic3.gov"], "financial conduct": ["fca.org.uk"],
+               "australian signals": ["cyber.gov.au"], "prime minister of australia": ["pm.gov.au"],
+               "ministry of commerce": ["mofcom.gov.cn"], "european commission": ["europa.eu"], "moonshot": ["kimi.com"],
+               "homeland security": ["federalregister.gov"]}
+MODEL_HUBS = ["huggingface.co"]  # a developer's own model card on a hub counts as its own publication
+def _on(host, domains): return any(host == d or host.endswith("." + d) for d in domains)
+def source_relation(url, publisher=""):
+    """Original source: on the website of the organisation that did the work (core hosts, the publisher's own
+    domain, or its model card on a model hub). Third-party report: news sites and anything reported by someone else."""
+    u = (url or "").lower(); host = urlparse(u).netloc; pub = (publisher or "").lower()
+    if any(h in u for h in THIRD_PARTY_HINTS) or _on(host, NEWS_HOSTS): return "Third-party report"
+    if any(host.endswith(d) for d in ORIGINAL_HOSTS): return "Original source"
+    if any(k in pub and _on(host, ds) for k, ds in OWN_DOMAINS.items()): return "Original source"
+    if _on(host, MODEL_HUBS) and pub: return "Original source"
+    toks = [t for t in re.split(r"[^a-z0-9]+", pub) if len(t) > 2 and t not in ("the","and","for","research","security","labs","news","via")]
+    return "Original source" if any(t in host for t in toks) else "Third-party report"
 def source_category(url):
     u = (url or "").lower()
     for name, keys in SOURCE_CATEGORIES:
@@ -72,22 +92,19 @@ def themes(title, extra=""):
 
 # ---------- rating (fixed, published criteria) ----------
 RAG_CRITERIA = {
- "Red": "Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation results; or an authoritative warning that the threat has materially changed.",
- "Amber": "A significant change that may matter soon: notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
+ "Red": "Judged by Claude, with the reason recorded. Red only if at least one applies: (1) an AI-enabled attack, incident or AI-related data exposure affecting health and care anywhere, or the UK public sector or critical national infrastructure; (2) a step change in AI-enabled attacks, such as AI agents running intrusions largely on their own or AI campaigns at large scale, reported by a government agency, frontier AI developer or major security research team; (3) a UK or Five Eyes government warning or advisory on an AI-related threat that calls for action; (4) a frontier model rated at its developer's critical cyber level, or shown to find and exploit serious flaws in widely used software largely on its own; (5) a frontier AI agent taking unsanctioned actions on real systems outside its developer.",
+ "Amber": "A significant change that may matter soon: other real-world AI misuse and incidents, notable capability gains, new government guidance or warnings, changes to who can access cyber-capable models, or regulatory and institutional changes.",
  "Green": "Background: evaluation methods, general research, routine releases without cyber evidence, and commentary.",
 }
-RED_KEYS = ["intrusion","breach","Hugging Face","unsanctioned agent","Countering misuse","Threat Tracker","rated Critical",
-            "performs unsanctioned supply-chain","accelerating vulnerability discovery","ExploitBench: GPT-6 Astra",
-            "AISI unsanctioned supply-chain attacks: GPT-6 Astra","Critical cyber","critical threshold"]
 GREEN_KEYS = ["Item response theory","optimal stopping","Transect","Prefill awareness","lie detectors","RealityTest",
               "preferences predict","Control Red Team","lawsuit","Export controls","UK AI Bill","Sonnet 5.5","Mistral Large 4",
               "pre-deployment evaluation","supply-chain attacks: GPT-5.5","Claude Opus 4.7"]
 def rag(rec):
+    # Fallback only: the daily routine (Claude) sets tag_rating and tag_rating_reason against RAG_CRITERIA.
+    # Anything it leaves unrated is never made Red automatically.
     t = rec["title"].lower()
-    if rec["item_type"] in ("Incident","Threat finding"): return "Red","Real-world malicious activity or incident"
-    if any(k.lower() in t for k in RED_KEYS): return "Red","Material change in threat or agent behaviour"
     if any(k.lower() in t for k in GREEN_KEYS): return "Green","Background"
-    return "Amber","Significant change to watch"
+    return "Amber","Not rated by the routine; defaulted to Amber"
 
 # ---------- reporting quarters: Jun-Aug, Sep-Nov, Dec-Feb, Mar-May ----------
 MONS = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]
@@ -132,7 +149,7 @@ def main():
         if r["item_type"] not in ITEM_TYPES: r["item_type"] = "Other"
         r["id"] = r["id"] or pid(r["url"], r["title"])
         r["collected"] = r["collected"] or TODAY
-        r["source_relation"] = r["source_relation"] or source_relation(r["url"])
+        r["source_relation"] = r["source_relation"] or source_relation(r["url"], r["publisher"])
         r["source_category"] = r["source_category"] or source_category(r["url"])
         r["health_named"] = r["health_named"] or ("Yes" if any(k in (r["title"]+r["source_says"]).lower() for k in ["health","hospital","nhs"]) else "No")
         r["tag_themes"] = r["tag_themes"] or ";".join(themes(r["title"], r["source_says"]))

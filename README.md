@@ -28,5 +28,5 @@ Columns describing the source: `id`, `published`, `reporting_period`, `collected
 
 `source_relation` is **Original source** (published by the organisation that did the work or holds the evidence) or **Third-party report** (reported by someone else; used only where no original was found). `source_category` is one of UK government, AI developer, Independent evaluator, Legal and policy analysis, News and model trackers.
 
-Machine-assigned categorisation (not findings): `tag_themes`, `tag_rating` (Red, Amber, Green), `tag_rating_reason`, `related_ids`. Rating criteria are in `data/items.json` under `meta.rating_criteria`.
+AI-assigned categorisation (not findings): `tag_themes`, `tag_rating` (Red, Amber, Green), `tag_rating_reason`, `related_ids`. Claude sets `tag_rating` and `tag_rating_reason` against the criteria in `data/items.json` under `meta.rating_criteria`; every Red records which criterion it meets. Items the routine leaves unrated default to Amber, never Red. `source_relation` is set by a fixed rule in `tools/rebuild.py`: the organisation's own website (or its model card on a model hub) is Original source; news sites and others are Third-party report.
 

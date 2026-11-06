@@ -3,7 +3,7 @@ AI CYBER NEWS: REPORT FOR INTERNAL ANALYSIS
 Reporting period: Mar–May 2026 quarter (1 Mar 2026 to 31 May 2026)
 Status: COMPLETE
 This report covers: 1 Mar 2026 to 31 May 2026
-Data last updated: 6 Nov 2026, 04:02 (UK time)
+Data last updated: 6 Nov 2026, 11:06 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -17,13 +17,19 @@ Items numbered 1 to 5. This is every item on the dashboard for these dates.
 
 HOW TO READ EACH ITEM
 ----------------------------------------------------------------------------------------------------
-Rating is machine-assigned triage against fixed published criteria, not a finding:
-  - Red: Evidence of real-world AI-enabled malicious activity or AI agents acting beyond their
-  sanction; a model rated at a critical cyber threshold; near-complete autonomous exploitation
-  results; or an authoritative warning that the threat has materially changed.
-  - Amber: A significant change that may matter soon: notable capability gains, new government
-  guidance or warnings, changes to who can access cyber-capable models, or regulatory and
-  institutional changes.
+Rating is AI-assigned triage against published criteria, not a finding. Each Red shows why it is Red:
+  - Red: Judged by Claude, with the reason recorded. Red only if at least one applies: (1) an
+  AI-enabled attack, incident or AI-related data exposure affecting health and care anywhere, or
+  the UK public sector or critical national infrastructure; (2) a step change in AI-enabled
+  attacks, such as AI agents running intrusions largely on their own or AI campaigns at large
+  scale, reported by a government agency, frontier AI developer or major security research team;
+  (3) a UK or Five Eyes government warning or advisory on an AI-related threat that calls for
+  action; (4) a frontier model rated at its developer's critical cyber level, or shown to find and
+  exploit serious flaws in widely used software largely on its own; (5) a frontier AI agent taking
+  unsanctioned actions on real systems outside its developer.
+  - Amber: A significant change that may matter soon: other real-world AI misuse and incidents,
+  notable capability gains, new government guidance or warnings, changes to who can access
+  cyber-capable models, or regulatory and institutional changes.
   - Green: Background: evaluation methods, general research, routine releases without cyber
   evidence, and commentary.
 Source: 'Original source' means published by the organisation that did the work; 'Third-party
@@ -36,6 +42,8 @@ ITEMS, BY RATING (Red first), NEWEST FIRST
 RED (1)
 
 [1] RED | 5 May 2026 | Publication | NCSC | Third-party report
+    Why Red: Red (3): UK or Five Eyes government warning on an AI-related threat that calls for
+    action
     NCSC warns AI is materially accelerating vulnerability discovery
     Source says: Forcing a sustained patch wave. Prioritise internet-facing systems and CNI;
     patching alone will not hold, particularly for legacy estate.

@@ -79,7 +79,7 @@ def main():
               f"Items in this report: {len(rows)} (Red {cnt['Red']}, Amber {cnt['Amber']}, Green {cnt['Green']}).",
               f"Items numbered 1 to {len(rows)}. This is every item on the dashboard for these dates.", ""]
         L += ["HOW TO READ EACH ITEM", "-" * WIDTH,
-              "Rating is machine-assigned triage against fixed published criteria, not a finding:"]
+              "Rating is AI-assigned triage against published criteria, not a finding. Each Red shows why it is Red:"]
         for k in ("Red", "Amber", "Green"):
             if crit.get(k):
                 L += wrap(f"- {k}: {crit[k]}", "  ")
@@ -94,6 +94,8 @@ def main():
                 L += ["", f"{cur.upper()} ({sum(1 for x in rows if x['tag_rating'] == cur)})", ""]
             n += 1
             L.append(f"[{n}] {r['tag_rating'].upper()} | {ukd(r['published'])} | {r['item_type']} | {r['publisher']} | {r['source_relation']}")
+            if r["tag_rating"] == "Red" and r.get("tag_rating_reason", "").strip():
+                L += wrap("Why Red: " + r["tag_rating_reason"], "    ")
             L += wrap(r["title"], "    ")
             if r.get("source_says", "").strip():
                 L += wrap("Source says: " + r["source_says"], "    ")
