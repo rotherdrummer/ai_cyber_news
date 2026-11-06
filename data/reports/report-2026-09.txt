@@ -3,7 +3,7 @@ AI CYBER NEWS: REPORT FOR INTERNAL ANALYSIS
 Reporting period: Sep–Nov 2026 quarter (1 Sep 2026 to 30 Nov 2026)
 Status: IN PROGRESS: the period has not finished
 This report covers: 1 Sep 2026 to 6 Nov 2026
-Data last updated: 6 Nov 2026, 11:23 (UK time)
+Data last updated: 6 Nov 2026, 11:41 (UK time)
 
 WHAT THIS IS
 ----------------------------------------------------------------------------------------------------
@@ -470,7 +470,7 @@ AMBER (268)
     Source says: OpenAI reports a pass@1 score of 87.02%, against 85.38% for GPT-6 Astra.
     https://deploymentsafety.openai.com/gpt-6-cyber
 
-[34] AMBER | 5 Nov 2026 | Incident | Notebookcheck | Original source
+[34] AMBER | 5 Nov 2026 | Incident | Notebookcheck | Third-party report
     Postman desktop app installed its own plugins and a startup hook into Claude Code and Codex
     without asking
     Source says: Postman 12.33.4 installed plugins for Claude Code and OpenAI Codex on 24 October,
@@ -557,7 +557,7 @@ AMBER (268)
     from OpenAI's own news feed; the article page could not be retrieved.
     https://openai.com/index/daybreak-red-aws-govcloud
 
-[44] AMBER | 4 Nov 2026 | Report | KFVS12 | Original source
+[44] AMBER | 4 Nov 2026 | Report | KFVS12 | Third-party report
     Illinois hospitals run a large drill on responding to an AI-driven cyber attack
     Source says: The Illinois Health and Hospital Association ran one of the state's largest
     drills, in which hospitals practised responding to an AI-driven cyber attack. The scenario had

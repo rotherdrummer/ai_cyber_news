@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-06T11:23"
+  "updated_at": "2026-11-06T11:41"
  },
  "items": [
   {
@@ -109,7 +109,7 @@
    "title": "Postman desktop app installed its own plugins and a startup hook into Claude Code and Codex without asking",
    "publisher": "Notebookcheck",
    "url": "https://www.notebookcheck.net/Postman-added-itself-to-Claude-Code-and-Codex-without-asking.1442933.0.html",
-   "source_relation": "Original source",
+   "source_relation": "Third-party report",
    "source_category": "Other",
    "source_says": "Postman 12.33.4 installed plugins for Claude Code and OpenAI Codex on 24 October, including a startup hook in Codex that directs the agent to Postman's skill. Users reported the same after an update to 12.35.1 on 3 November, with entries also reaching Cursor and GitHub Copilot CLI. Postman said on 5 November it is reverting the change, but plugins already installed must be removed by hand.",
    "key_findings": "",
@@ -349,7 +349,7 @@
    "title": "Illinois hospitals run a large drill on responding to an AI-driven cyber attack",
    "publisher": "KFVS12",
    "url": "https://www.kfvs12.com/2026/11/05/illinois-hospitals-drill-ai-driven-cyber-attack/",
-   "source_relation": "Original source",
+   "source_relation": "Third-party report",
    "source_category": "Other",
    "source_says": "The Illinois Health and Hospital Association ran one of the state's largest drills, in which hospitals practised responding to an AI-driven cyber attack. The scenario had a cyber group using AI to impersonate staff, disrupt systems, cut access to digital records and alter linked systems. OSF St. Anthony's Health Center in Alton found gaps in its plans, including caring for patients without records.",
    "key_findings": "",

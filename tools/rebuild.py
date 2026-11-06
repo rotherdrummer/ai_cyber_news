@@ -44,7 +44,7 @@ NEWS_HOSTS = ["theregister.com","thehackernews.com","bleepingcomputer.com","wire
               "timeslive.co.za","theglobeandmail.com","securityweek.com","darkreading.com","techcrunch.com","arstechnica.com",
               "theverge.com","bloomberg.com","ft.com","theguardian.com","cnn.com","zdnet.com","cyberscoop.com","therecord.media",
               "the-decoder.com","thecybersecguru.com","infosecurity-magazine.com","computerweekly.com","nytimes.com",
-              "washingtonpost.com","infoworld.com","axios.com","securityaffairs.com","ukauthority.com","wikipedia.org"]
+              "washingtonpost.com","notebookcheck.net","kfvs12.com","infoworld.com","axios.com","securityaffairs.com","ukauthority.com","wikipedia.org"]
 # Organisations whose own research or notices sit on a domain that doesn't carry their name.
 OWN_DOMAINS = {"symantec": ["security.com"], "kaspersky": ["securelist.com"], "eset": ["welivesecurity.com"],
                "anthropic": ["claude.com"], "fbi": ["ic3.gov"], "financial conduct": ["fca.org.uk"],
