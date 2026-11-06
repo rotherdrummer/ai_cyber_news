@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-02",
+ "updated": "2026-11-05",
  "tests": [
   {
    "name": "ExploitBench",
@@ -128,6 +128,16 @@
      "measured_by": "Moonshot AI (self-reported)",
      "self_reported": true,
      "weights": "Open"
+    },
+    {
+     "model": "GPT-6 Cyber",
+     "value": 100,
+     "display": "100% (ACE-normalised mean; possible contamination)",
+     "date": "2026-11-05",
+     "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -198,6 +208,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "GPT-6 Cyber",
+     "value": 87.02,
+     "display": "87.02% (pass@1)",
+     "date": "2026-11-05",
+     "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -248,6 +268,16 @@
      "measured_by": "Moonshot AI (self-reported)",
      "self_reported": true,
      "weights": "Open"
+    },
+    {
+     "model": "GPT-6 Cyber",
+     "value": 48.45,
+     "display": "48.45%",
+     "date": "2026-11-05",
+     "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },

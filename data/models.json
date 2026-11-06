@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -490,6 +490,20 @@
    "cyber_evidence": "SEC-bench Pro 88.2%, ExploitGym 54.8%, CWE-bench 71.0% (self-reported, without guardrails); 0.0% attack success on Gray Swan indirect prompt injection",
    "evidence_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/",
    "updated": "2026-10-29"
+  },
+  {
+   "id": "gpt-6-cyber",
+   "name": "GPT-6 Cyber",
+   "developer": "OpenAI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-05",
+   "access": "Approved Daybreak Red users and organisations only, with identity checks, SSO, MFA and API IP allowlisting",
+   "tier": "Restricted frontier",
+   "position": "Restricted frontier",
+   "cyber_evidence": "Critical in cybersecurity; self-reported 100% on ExploitBench (contamination possible), 48.45% on ExploitGym, 87.02% on SEC-Bench Pro",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-cyber",
+   "updated": "2026-11-06"
   }
  ],
  "positions": [

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-4c8e1a7b93",
+   "date": "2026-11-05",
+   "category": "Other",
+   "title": "METR estimates Anthropic's AI R&D is improving at about twice its earlier rate, mostly because of AI",
+   "publisher": "METR",
+   "url": "https://metr.org/blog/2026-11-05-anthropic-ai-rd-acceleration-assessment/",
+   "summary": "METR ran a high-access evaluation inside Anthropic from 12 August to 29 October 2026. It estimates capabilities on well-specified tasks are improving at roughly twice the pre-October 2025 rate, with about 80% of the speed-up due to AI, though with wide uncertainty.",
+   "why_not_cyber": "About the pace of AI research, not cyber security.",
+   "source_relation": "Original source",
+   "added": "2026-11-06"
+  },
+  {
+   "id": "wf-b27d05e6f1",
+   "date": "2026-11-05",
+   "category": "Model launch",
+   "title": "Baidu releases ERNIE 5.5 Flash Base as a 280-billion-parameter open-weight model",
+   "publisher": "Baidu",
+   "url": "https://huggingface.co/baidu/ERNIE-5.5-Flash-Base",
+   "summary": "Baidu has published the weights of ERNIE 5.5 Flash Base, a 280-billion-parameter base model, on Hugging Face.",
+   "why_not_cyber": "No cyber evaluation published.",
+   "source_relation": "Original source",
+   "added": "2026-11-06"
+  },
   {
    "id": "wf-7c3e91a24d",
    "date": "2026-11-04",

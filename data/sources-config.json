@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "core": [
   {
    "name": "AISI",
@@ -35,7 +35,8 @@
   {
    "name": "Anthropic",
    "domains": [
-    "anthropic.com"
+    "anthropic.com",
+    "claude.com"
    ],
    "pages": [
     "https://www.anthropic.com/news",
@@ -46,7 +47,8 @@
     "https://alignment.anthropic.com/",
     "https://www.anthropic.com/news/security",
     "https://www.anthropic.com/engineering",
-    "https://safeguards.anthropic.com/"
+    "https://safeguards.anthropic.com/",
+    "https://claude.com/resources/articles"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -235,7 +237,8 @@
     "mistral.ai"
    ],
    "pages": [
-    "https://mistral.ai/news"
+    "https://mistral.ai/news",
+    "https://docs.mistral.ai/resources/security-advisories"
    ],
    "feed": "https://mistral.ai/news/rss",
    "added": "2026-10-18",
@@ -385,6 +388,18 @@
    "name": "Cisco Talos",
    "url": "https://blog.talosintelligence.com/",
    "added": "2026-10-30",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "CERT-In",
+   "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADVLIST",
+   "added": "2026-11-06",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Check Point Research",
+   "url": "https://research.checkpoint.com/",
+   "added": "2026-11-06",
    "reason": "Rule 2"
   }
  ]

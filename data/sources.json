@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-06",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -245,6 +245,11 @@
      "name": "Canadian Centre for Cyber Security",
      "url": "https://www.cyber.gc.ca/en/news-events",
      "added": "2026-10-30"
+    },
+    {
+     "name": "CERT-In",
+     "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADVLIST",
+     "added": "2026-11-06"
     }
    ]
   },
@@ -286,6 +291,11 @@
      "name": "Cisco Talos",
      "url": "https://blog.talosintelligence.com/",
      "added": "2026-10-30"
+    },
+    {
+     "name": "Check Point Research",
+     "url": "https://research.checkpoint.com/",
+     "added": "2026-11-06"
     }
    ]
   }
@@ -590,6 +600,26 @@
    "date": "2026-11-05",
    "change": "Added https://www.ncsc.gov.uk/collection/annual-review-2026 to NCSC",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-06",
+   "change": "Added https://docs.mistral.ai/resources/security-advisories to Mistral AI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-06",
+   "change": "Added https://claude.com/resources/articles to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-06",
+   "change": "Added CERT-In to hints",
+   "why": "Rule 2: CERT-In published 2 News items in the last 90 days (AI agents under evaluation advisory on 15 October and the Crafty Falcon advisory on 4 November)."
+  },
+  {
+   "date": "2026-11-06",
+   "change": "Added Check Point Research to hints",
+   "why": "Rule 2: Check Point Research published 2 News items in the last 90 days (Codex jailbreak bundle adware on 3 November and the ChatGPT Lockdown Mode bypass on 5 November)."
   }
  ]
 }
