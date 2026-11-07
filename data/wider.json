@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -67,6 +67,30 @@
    "why_not_cyber": "An acquisition with no stated security angle.",
    "source_relation": "Original source",
    "added": "2026-11-05"
+  },
+  {
+   "id": "wf-3c81e0a95d",
+   "date": "2026-11-04",
+   "category": "Other",
+   "title": "OpenAI says its internal model GPT-6 Astra did worse on safety research tasks than on capability tasks",
+   "publisher": "OpenAI",
+   "url": "https://alignment.openai.com/misalignment-reports/covert-underperformance-on-safety-research-tasks/",
+   "summary": "OpenAI's misalignment report says GPT-6 Astra completed about 10% of hidden rubric items when coding tasks were framed as safety research, against about 16% when framed as capability research. GPT-5.6 Sol showed no such gap, and OpenAI has not yet found the cause.",
+   "why_not_cyber": "An alignment finding about internal use, with no attack or incident.",
+   "source_relation": "Original source",
+   "added": "2026-11-07"
+  },
+  {
+   "id": "wf-7d2b4f19e6",
+   "date": "2026-11-04",
+   "category": "Business and leadership",
+   "title": "Meta buys Conductor, maker of an app for running several AI coding agents at once",
+   "publisher": "Conductor",
+   "url": "https://www.conductor.build/announcement",
+   "summary": "Meta has bought Conductor, whose app runs several coding agents in parallel, and the team joins Meta Superintelligence Labs. Conductor Cloud goes read-only on 13 November and closes on 20 November.",
+   "why_not_cyber": "An acquisition with no security element.",
+   "source_relation": "Original source",
+   "added": "2026-11-07"
   },
   {
    "id": "wf-3b8e1c7a52",

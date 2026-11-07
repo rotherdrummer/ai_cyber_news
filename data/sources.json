@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -75,6 +75,11 @@
      "name": "UK Parliament Bills API (Cyber Security and Resilience Bill publications and amendment papers)",
      "url": "https://bills-api.parliament.uk/api/v1/Bills/4035/Publications",
      "added": "2026-10-30"
+    },
+    {
+     "name": "Department for Science, Innovation and Technology",
+     "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology",
+     "added": "2026-11-07"
     }
    ]
   },
@@ -296,6 +301,17 @@
      "name": "Check Point Research",
      "url": "https://research.checkpoint.com/",
      "added": "2026-11-06"
+    }
+   ]
+  },
+  {
+   "name": "Organisations reporting their own AI security incidents",
+   "why": "Companies that publish first-hand incident bulletins about AI-enabled attacks on their own systems.",
+   "sources": [
+    {
+     "name": "WorkOS security bulletins",
+     "url": "https://workos.com/security/bulletins",
+     "added": "2026-11-07"
     }
    ]
   }
@@ -620,6 +636,16 @@
    "date": "2026-11-06",
    "change": "Added Check Point Research to hints",
    "why": "Rule 2: Check Point Research published 2 News items in the last 90 days (Codex jailbreak bundle adware on 3 November and the ChatGPT Lockdown Mode bypass on 5 November)."
+  },
+  {
+   "date": "2026-11-07",
+   "change": "Added Department for Science, Innovation and Technology to core",
+   "why": "Rule 1(i): DSIT is a UK government department with an AI and cyber security remit and has published News items, including the 3 November agentic AI incident measures and the 6 November software market study."
+  },
+  {
+   "date": "2026-11-07",
+   "change": "Added WorkOS to hints",
+   "why": "Rule 2: WorkOS published 2 News items in the last 90 days (its 2 November breach bulletin and the 6 November update attributing it to a researcher's ARTEX agent)."
   }
  ]
 }
