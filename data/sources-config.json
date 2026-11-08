@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "core": [
   {
    "name": "AISI",
@@ -48,7 +48,8 @@
     "https://www.anthropic.com/news/security",
     "https://www.anthropic.com/engineering",
     "https://safeguards.anthropic.com/",
-    "https://claude.com/resources/articles"
+    "https://claude.com/resources/articles",
+    "https://code.claude.com/docs/en/changelog"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -81,7 +82,8 @@
     "https://cloud.google.com/blog/topics/threat-intelligence",
     "https://deepmind.google/models/model-cards/",
     "https://deepmind.google/blog/",
-    "https://blog.google/innovation-and-ai/technology/safety-security/"
+    "https://blog.google/innovation-and-ai/technology/safety-security/",
+    "https://cloud.google.com/blog/products/identity-security"
    ],
    "feed": "",
    "added": "2026-10-14",
@@ -418,6 +420,12 @@
    "name": "WorkOS",
    "url": "https://workos.com/security/bulletins",
    "added": "2026-11-07",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "SecurityWeek",
+   "url": "https://www.securityweek.com/",
+   "added": "2026-11-08",
    "reason": "Rule 2"
   }
  ]

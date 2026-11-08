@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-9e47b2d1f6",
+   "date": "2026-11-07",
+   "category": "Business and leadership",
+   "title": "Anthropic reportedly pushes ahead with a pre-Thanksgiving IPO at a lower valuation",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/anthropic-pushes-ahead-with-pre-thanksgiving-ipo-despite-tech-selloff-accepts-lower-valuation/",
+   "summary": "The Decoder, citing the Financial Times, reports that Anthropic plans to list before Thanksgiving, raising 80 to 100 billion dollars at a 1.25 to 1.75 trillion dollar valuation. It reports annualised revenue of about 81 billion dollars.",
+   "why_not_cyber": "Stock market listing news with no cyber angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-08"
+  },
+  {
+   "id": "wf-3c81e0a9d4",
+   "date": "2026-11-06",
+   "category": "Business and leadership",
+   "title": "OpenAI reportedly raises a further 11 billion dollars at a 1.25 trillion dollar valuation",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/06/openai-reportedly-raises-an-additional-11-billion-at-a-1-25-trillion-valuation/",
+   "summary": "TechCrunch, citing Bloomberg, reports that OpenAI raised a further 11 billion dollars at a 1.25 trillion dollar valuation. The round is expected to total about 20 billion dollars, short of a reported 30 billion dollar target.",
+   "why_not_cyber": "Funding news with no cyber angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-08"
+  },
   {
    "id": "wf-4c8e1a7b93",
    "date": "2026-11-05",

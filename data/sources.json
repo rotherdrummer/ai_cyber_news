@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -171,6 +171,16 @@
      "name": "OpenAI security news",
      "url": "https://openai.com/news/security/",
      "added": "2026-10-27"
+    },
+    {
+     "name": "Anthropic Claude Code changelog",
+     "url": "https://code.claude.com/docs/en/changelog",
+     "added": "2026-11-08"
+    },
+    {
+     "name": "Google Cloud security blog (identity and security)",
+     "url": "https://cloud.google.com/blog/products/identity-security",
+     "added": "2026-11-08"
     }
    ]
   },
@@ -229,6 +239,11 @@
      "name": "The Register",
      "url": "https://www.theregister.com/security/",
      "added": "2026-10-18"
+    },
+    {
+     "name": "SecurityWeek",
+     "url": "https://www.securityweek.com/",
+     "added": "2026-11-08"
     }
    ]
   },
@@ -646,6 +661,21 @@
    "date": "2026-11-07",
    "change": "Added WorkOS to hints",
    "why": "Rule 2: WorkOS published 2 News items in the last 90 days (its 2 November breach bulletin and the 6 November update attributing it to a researcher's ARTEX agent)."
+  },
+  {
+   "date": "2026-11-08",
+   "change": "Added https://code.claude.com/docs/en/changelog to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-08",
+   "change": "Added https://cloud.google.com/blog/products/identity-security to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-08",
+   "change": "Added SecurityWeek to hints",
+   "why": "Rule 2: SecurityWeek published 2 News items in the last 90 days (US charges over AI impersonation of executives on 5 November and Japan's emergency cyber security package on 6 November)."
   }
  ]
 }
