@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e1a7d52",
+   "date": "2026-11-08",
+   "category": "Business and leadership",
+   "title": "Nvidia board opens an independent investigation after reports that CEO Jensen Huang was targeted by a foreign intelligence effort",
+   "publisher": "NVIDIA",
+   "url": "https://nvidianews.nvidia.com/news/statement-from-nvidia-board-of-directors",
+   "summary": "A committee of independent directors, advised by outside counsel, will oversee the review. The board says it has no reason to believe national security or Nvidia's secrets were compromised, and Huang has committed to cooperate.",
+   "why_not_cyber": "A corporate governance and counter-intelligence matter with no AI cyber attack or incident.",
+   "source_relation": "Original source",
+   "added": "2026-11-09"
+  },
   {
    "id": "wf-9e47b2d1f6",
    "date": "2026-11-07",

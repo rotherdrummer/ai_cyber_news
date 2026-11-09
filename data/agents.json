@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -224,7 +224,7 @@
    "name": "Meta AI (agent features)",
    "maker": "Meta",
    "maker_note": "Agent features rolled out from late July 2026, in selected countries first; WhatsApp to follow.",
-   "runs_on": "Meta's Muse Spark models (Muse Spark 1.1 at launch)",
+   "runs_on": "Meta's Muse models; from 6 November 2026 Meta is rolling out specialised versions trained using Muse Wonder (earlier Muse Spark 1.1)",
    "same_developer": "Yes",
    "type": "General-purpose agent",
    "delivery": "Hosted service",
@@ -233,8 +233,8 @@
    "access": "Public, through the Meta AI app and meta.ai in selected countries",
    "security_evidence": "Meta has not detailed how it retains data or controls permissions for email and calendar access. Users can switch to Incognito chats instead.",
    "security_url": "https://techeconomy.ng/meta-ai-grows-hands-muse-spark-1-1-turns-chatbot-into-an-agent",
-   "url": "https://techeconomy.ng/meta-ai-grows-hands-muse-spark-1-1-turns-chatbot-into-an-agent",
-   "status_as_of": "2026-10-14"
+   "url": "https://research.meta.ai/blog/specialized-models-for-muse-and-metaai",
+   "status_as_of": "2026-11-09"
   },
   {
    "id": "muse-code",

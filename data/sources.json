@@ -676,6 +676,16 @@
    "date": "2026-11-08",
    "change": "Added SecurityWeek to hints",
    "why": "Rule 2: SecurityWeek published 2 News items in the last 90 days (US charges over AI impersonation of executives on 5 November and Japan's emergency cyber security package on 6 November)."
+  },
+  {
+   "date": "2026-11-09",
+   "change": "Added https://www.gov.uk/government/organisations/ai-security-institute.atom to AISI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-09",
+   "change": "Added https://platform.claude.com/docs/en/release-notes/overview to Anthropic",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }
