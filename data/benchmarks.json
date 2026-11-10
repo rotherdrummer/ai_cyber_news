@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-09",
  "tests": [
   {
    "name": "ExploitBench",
@@ -136,6 +136,16 @@
      "date": "2026-11-05",
      "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
      "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "Claude Mythos 5.2",
+     "value": 95,
+     "display": "95% (Cap%, plain arm; 97% with AutoNudge)",
+     "date": "2026-11-09",
+     "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card",
+     "measured_by": "Anthropic (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }
@@ -276,6 +286,16 @@
      "date": "2026-11-05",
      "url": "https://deploymentsafety.openai.com/gpt-6-cyber",
      "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "Claude Mythos 5.2",
+     "value": 38.1,
+     "display": "38.1% (331 of 869 in 2 hours; 341 in 6 hours)",
+     "date": "2026-11-09",
+     "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card",
+     "measured_by": "Anthropic (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }

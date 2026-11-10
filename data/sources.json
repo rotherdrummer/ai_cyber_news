@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-08",
+ "updated": "2026-11-10",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -244,6 +244,11 @@
      "name": "SecurityWeek",
      "url": "https://www.securityweek.com/",
      "added": "2026-11-08"
+    },
+    {
+     "name": "BleepingComputer",
+     "url": "https://www.bleepingcomputer.com/news/security/",
+     "added": "2026-11-10"
     }
    ]
   },
@@ -686,6 +691,26 @@
    "date": "2026-11-09",
    "change": "Added https://platform.claude.com/docs/en/release-notes/overview to Anthropic",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-10",
+   "change": "Added https://claude.dev/blog/ to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-10",
+   "change": "Added https://openai.com/index/disrupting-malicious-uses-of-ai/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-10",
+   "change": "Added https://blog.google/technology/safety-security/rss/ to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-10",
+   "change": "Added BleepingComputer to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (27 October and 9 November 2026)."
   }
  ]
 }

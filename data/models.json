@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-06",
+ "updated": "2026-11-10",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -40,8 +40,8 @@
    "tier": "Mythos-class",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08",
-   "position": "Flagship"
+   "updated": "2026-11-10",
+   "position": "Previous generation"
   },
   {
    "id": "falcon",
@@ -320,8 +320,8 @@
    "tier": "Gated cyber tier",
    "cyber_evidence": "Mythos 5 agents behind most of AISI's August incident report",
    "evidence_url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing",
-   "updated": "2026-10-08",
-   "position": "Restricted frontier"
+   "updated": "2026-11-10",
+   "position": "Previous generation"
   },
   {
    "id": "mythos-preview",
@@ -504,6 +504,48 @@
    "cyber_evidence": "Critical in cybersecurity; self-reported 100% on ExploitBench (contamination possible), 48.45% on ExploitGym, 87.02% on SEC-Bench Pro",
    "evidence_url": "https://deploymentsafety.openai.com/gpt-6-cyber",
    "updated": "2026-11-06"
+  },
+  {
+   "id": "fable-5-2",
+   "name": "Claude Fable 5.2",
+   "developer": "Anthropic",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-09",
+   "access": "Public, including AWS, Google Cloud and Azure; safeguards block most cybersecurity tasks",
+   "tier": "Mythos-class",
+   "position": "Flagship",
+   "cyber_evidence": "Same underlying model as Mythos 5.2, with stronger cyber and biology safeguards.",
+   "evidence_url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+   "updated": "2026-11-10"
+  },
+  {
+   "id": "mythos-5-2",
+   "name": "Claude Mythos 5.2",
+   "developer": "Anthropic",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-09",
+   "access": "Vetted organisations via the Cyber Verification Program; powers Claude Security for Enterprise; Cisco and IBM plan to build it into their security products",
+   "tier": "Gated cyber tier",
+   "position": "Restricted frontier",
+   "cyber_evidence": "System card: strongest cyber capabilities of any Anthropic model, but within the lower category of its Frontier Compliance Framework. Self-reported: ExploitBench 95% Cap%, ExploitGym 331 of 869, CyScenarioBench 76.3%, CVE Rediscovery 89.6%.",
+   "evidence_url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card",
+   "updated": "2026-11-10"
+  },
+  {
+   "id": "muse-ember",
+   "name": "Muse Ember",
+   "developer": "Meta",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-09",
+   "access": "Public via Meta Model API, Muse Code, Google Cloud and Oracle Cloud",
+   "tier": "Smallest, low-cost",
+   "position": "Fast and low-cost",
+   "cyber_evidence": "Meta says it stayed below its framework's high-risk thresholds for cybersecurity; no cyber benchmark scores published.",
+   "evidence_url": "https://research.meta.ai/blog/muse-ember",
+   "updated": "2026-11-10"
   }
  ],
  "positions": [
