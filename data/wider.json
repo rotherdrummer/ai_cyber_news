@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-11",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -9,7 +9,19 @@
  ],
  "items": [
   {
-   "id": "wf-3c8e1a7d52",
+   "id": "wf-a7c3e91b04",
+   "date": "2026-11-10",
+   "category": "Business and leadership",
+   "title": "Anthropic launches its IPO roadshow, offering 825 million shares at $70 to $78 each",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/roadshow-launch",
+   "summary": "Anthropic has started its investor roadshow for a proposed IPO of 825 million Class A shares, priced at $70 to $78 each. It has applied to list on the Nasdaq Global Select Market under the ticker ANT.",
+   "why_not_cyber": "A company listing with no cyber angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-11"
+  },
+  {
+   "id": "wf-5e1b9c04d7",
    "date": "2026-11-08",
    "category": "Business and leadership",
    "title": "Nvidia board opens an independent investigation after reports that CEO Jensen Huang was targeted by a foreign intelligence effort",
@@ -405,7 +417,7 @@
    "added": "2026-10-21"
   },
   {
-   "id": "wf-3c8e1a7d52",
+   "id": "wf-c82f47a19e",
    "date": "2026-10-19",
    "category": "Legal and policy",
    "title": "Two German courts hold Google liable for what its AI Overviews say",
