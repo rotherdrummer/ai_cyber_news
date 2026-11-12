@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-10",
+ "updated": "2026-11-12",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -275,6 +275,11 @@
      "name": "CERT-In",
      "url": "https://www.cert-in.org.in/s2cMainServlet?pageid=PUBADVLIST",
      "added": "2026-11-06"
+    },
+    {
+     "name": "Australian Government",
+     "url": "https://www.pm.gov.au/media",
+     "added": "2026-11-12"
     }
    ]
   },
@@ -321,6 +326,11 @@
      "name": "Check Point Research",
      "url": "https://research.checkpoint.com/",
      "added": "2026-11-06"
+    },
+    {
+     "name": "Claroc Research",
+     "url": "https://blog.claroc.io/",
+     "added": "2026-11-12"
     }
    ]
   },
@@ -332,6 +342,11 @@
      "name": "WorkOS security bulletins",
      "url": "https://workos.com/security/bulletins",
      "added": "2026-11-07"
+    },
+    {
+     "name": "Railway",
+     "url": "https://blog.railway.com/",
+     "added": "2026-11-12"
     }
    ]
   }
@@ -711,6 +726,31 @@
    "date": "2026-11-10",
    "change": "Added BleepingComputer to hints",
    "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (27 October and 9 November 2026)."
+  },
+  {
+   "date": "2026-11-12",
+   "change": "Added https://www.gov.uk/government/organisations/department-for-digital-culture-media-and-sport.atom to Department for Science, Innovation and Technology",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-12",
+   "change": "Added https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade.atom to Department for Science, Innovation and Technology",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-12",
+   "change": "Added Australian Government to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (both 10 November 2026)."
+  },
+  {
+   "date": "2026-11-12",
+   "change": "Added Claroc Research to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (20 October and 10 November 2026)."
+  },
+  {
+   "date": "2026-11-12",
+   "change": "Added Railway to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (22 October and 10 November 2026)."
   }
  ]
 }

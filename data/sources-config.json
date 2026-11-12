@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-10",
+ "updated": "2026-11-12",
  "core": [
   {
    "name": "AISI",
@@ -272,7 +272,9 @@
     "gov.uk"
    ],
    "pages": [
-    "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology"
+    "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology",
+    "https://www.gov.uk/government/organisations/department-for-digital-culture-media-and-sport.atom",
+    "https://www.gov.uk/government/organisations/department-for-business-innovation-science-and-trade.atom"
    ],
    "feed": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology.atom",
    "added": "2026-11-07",
@@ -437,6 +439,24 @@
    "name": "BleepingComputer",
    "url": "https://www.bleepingcomputer.com/news/security/",
    "added": "2026-11-10",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Australian Government",
+   "url": "https://www.pm.gov.au/media",
+   "added": "2026-11-12",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Claroc Research",
+   "url": "https://blog.claroc.io/",
+   "added": "2026-11-12",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Railway",
+   "url": "https://blog.railway.com/",
+   "added": "2026-11-12",
    "reason": "Rule 2"
   }
  ]
