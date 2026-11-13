@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11",
+ "updated": "2026-11-13",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -68,8 +68,8 @@
    "tier": "Fast tier, with a cyber variant",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08",
-   "position": "Fast and low-cost"
+   "updated": "2026-11-13",
+   "position": "Previous generation"
   },
   {
    "id": "gemini-4-argon",
@@ -546,6 +546,20 @@
    "cyber_evidence": "Meta says it stayed below its framework's high-risk thresholds for cybersecurity; no cyber benchmark scores published.",
    "evidence_url": "https://research.meta.ai/blog/muse-ember",
    "updated": "2026-11-10"
+  },
+  {
+   "id": "gemini-4-hydrogen",
+   "name": "Gemini 4 Hydrogen",
+   "developer": "Google DeepMind",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-12",
+   "access": "Public via Gemini app (including free users), Search, Gemini API, AI Studio, Antigravity and Gemini for business",
+   "tier": "Fast, lower-cost model replacing the Flash line",
+   "position": "Fast and low-cost",
+   "cyber_evidence": "Model card says it did not reach the Cybersecurity Uplift critical capability level but reached the alert threshold, so mitigations stay in place; Google says it is more than 2.3x more resilient to indirect prompt injection on Gray Swan (self-reported)",
+   "evidence_url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
+   "updated": "2026-11-13"
   }
  ],
  "positions": [

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-12",
+ "updated": "2026-11-13",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-4c1e9a07b3",
+   "date": "2026-11-12",
+   "category": "Business and leadership",
+   "title": "Jensen Huang steps down as Nvidia CEO; CFO Colette Kress becomes interim CEO",
+   "publisher": "NVIDIA",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-announces-ceo-transition",
+   "summary": "Nvidia says Jensen Huang has resigned as president, CEO and director with immediate effect. CFO Colette Kress is interim CEO and Harvey C. Jones becomes the first board chair.",
+   "why_not_cyber": "A leadership change at a leading AI chip maker, with no cyber angle in the release.",
+   "source_relation": "Original source",
+   "added": "2026-11-13"
+  },
+  {
+   "id": "wf-8d2f61b5e0",
+   "date": "2026-11-12",
+   "category": "Legal and policy",
+   "title": "Advocacy groups sue Anthropic, Google, Meta, OpenAI and SpaceX to stop new frontier models",
+   "publisher": "BNN Bloomberg (AP)",
+   "url": "https://www.bnnbloomberg.ca/business/artificial-intelligence/2026/11/12/advocacy-groups-sue-ai-giants-to-freeze-new-models-warning-of-catastrophic-risks/",
+   "summary": "Public Citizen and three other groups filed a case in San Francisco Superior Court seeking an order to stop new frontier AI models, citing catastrophic risks.",
+   "why_not_cyber": "A legal case about AI risk in general, not a cyber security action.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-13"
+  },
   {
    "id": "wf-b7e2c95d10",
    "date": "2026-11-11",
