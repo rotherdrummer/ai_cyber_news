@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -61,10 +61,10 @@
    "open_source": "Partly (the command-line tool is open source; the app is not)",
    "can_act_on": "Files, terminal and shell, code execution in a sandbox, optional internet access, GitHub",
    "access": "Paid ChatGPT plans",
-   "security_evidence": "In March 2026 researchers found a now-patched flaw where malicious GitHub branch names could inject commands and retrieve GitHub tokens. In October 2026 Codex CLI 0.163.0 tightened network proxy and sandbox controls and turned on cyber access programmes by default for API-key sessions. On 29 October 2026 Forever Security said a Codex flaw letting local pages read files outside the permitted folder was still unpatched, and Symantec reported a relay service that rewrites Codex settings to disable the sandbox and route traffic through its servers.",
-   "security_url": "https://forever.security/blog/embrace-hacking-5-ai-assistants-embedded-browsers-technical",
+   "security_evidence": "In March 2026 researchers found a now-patched flaw where malicious GitHub branch names could inject commands and retrieve GitHub tokens. In October 2026 Codex CLI 0.163.0 tightened network proxy and sandbox controls and turned on cyber access programmes by default for API-key sessions. On 29 October 2026 Forever Security said a Codex flaw letting local pages read files outside the permitted folder was still unpatched, and Symantec reported a relay service that rewrites Codex settings to disable the sandbox and route traffic through its servers. On 11 November 2026 Depi showed a prompt injection in a GitHub issue could have led to a backdoored Codex release on npm; OpenAI fixed it. Codex CLI 0.169.0 (13 November) requires explicit project trust in non-interactive runs.",
+   "security_url": "https://depi.security/blog/20261111-backdooring-codex/",
    "url": "https://openai.com/codex/",
-   "status_as_of": "2026-10-30"
+   "status_as_of": "2026-11-14"
   },
   {
    "id": "chatgpt-agent",

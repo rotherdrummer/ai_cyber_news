@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-12",
+ "updated": "2026-11-14",
  "core": [
   {
    "name": "AISI",
@@ -60,7 +60,8 @@
   {
    "name": "OpenAI",
    "domains": [
-    "openai.com"
+    "openai.com",
+    "learn.chatgpt.com"
    ],
    "pages": [
     "https://openai.com/news/",
@@ -69,7 +70,8 @@
     "https://openai.com/news/safety-alignment/",
     "https://alignment.openai.com/",
     "https://openai.com/news/security/",
-    "https://openai.com/index/disrupting-malicious-uses-of-ai/"
+    "https://openai.com/index/disrupting-malicious-uses-of-ai/",
+    "https://learn.chatgpt.com/docs/changelog"
    ],
    "feed": "https://openai.com/news/rss.xml",
    "note": "Also its \"Disrupting malicious uses of AI\" reports.",
@@ -80,7 +82,8 @@
    "domains": [
     "cloud.google.com",
     "blog.google",
-    "deepmind.google"
+    "deepmind.google",
+    "projectzero.google"
    ],
    "pages": [
     "https://cloud.google.com/blog/topics/threat-intelligence",
@@ -88,7 +91,8 @@
     "https://deepmind.google/blog/",
     "https://blog.google/innovation-and-ai/technology/safety-security/",
     "https://cloud.google.com/blog/products/identity-security",
-    "https://blog.google/technology/safety-security/rss/"
+    "https://blog.google/technology/safety-security/rss/",
+    "https://projectzero.google/"
    ],
    "feed": "",
    "added": "2026-10-14",
@@ -457,6 +461,12 @@
    "name": "Railway",
    "url": "https://blog.railway.com/",
    "added": "2026-11-12",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Kaspersky",
+   "url": "https://securelist.com/",
+   "added": "2026-11-14",
    "reason": "Rule 2"
   }
  ]
