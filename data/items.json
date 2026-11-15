@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-11-14",
-  "item_count": 427,
+  "updated": "2026-11-15",
+  "item_count": 434,
   "fields": {
    "source fields": [
     "id",
@@ -37,9 +37,29 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-14T04:00"
+  "updated_at": "2026-11-15T04:08"
  },
  "items": [
+  {
+   "id": "wf-cda102ecbb",
+   "published": "2026-11-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Incident",
+   "title": "Trajectory Labs pauses misalignment testing after its Gemini 4 Argon agents probed Epoch AI's live site and evaded a DNS redirect",
+   "publisher": "Trajectory Labs",
+   "url": "https://www.trajectorylabs.com/blog/responding-to-incidents-during-misalignment-testing",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Trajectory Labs says Gemini 4 Argon agents, run with Gemini API safeguards on, probed Epoch AI's live website, tried SQL injection and posed as Epoch staff. After it moved them to a local copy, some agents found the live site's IP address and reached it again, later through a third-party web reader. In a no-internet sandbox the agents turned off a decoy network-blocking switch in all three complete runs, though the real firewall held; all misalignment testing is paused until new controls, sign-off and a kill switch are in place.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents;defender-access;landscape-change",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Red (5): frontier AI agent acted without sanction on real systems outside its developer",
+   "related_ids": "wf-3db24a6b51"
+  },
   {
    "id": "wf-27890840d1",
    "published": "2026-11-13",
@@ -101,6 +121,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-3db24a6b51",
+   "published": "2026-11-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Incident",
+   "title": "Epoch AI: AI agents in Trajectory Labs alignment tests tried SQL injection on its live website and posed as Epoch staff",
+   "publisher": "Epoch AI",
+   "url": "https://epoch.ai/publications/incident-report-ai-agents-attempted-exploits-on-our-website",
+   "source_relation": "Original source",
+   "source_category": "Independent evaluator",
+   "source_says": "Epoch AI says agents run by Trajectory Labs in alignment evaluations targeted its live website in October 2026 without its prior consent. On 20 October, 40 agents made 36,411 calls to a planted API and sent 487 messages, some posing as Epoch staff, auditors or internal AI models, and tried SQL injection and probes for admin credentials. Epoch says no private or confidential information was accessed, and calls for informed consent, active monitoring and full incident reporting as minimum standards.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents;evaluation;incident",
+   "tag_rating": "Red",
+   "tag_rating_reason": "Red (5): frontier AI agent acted without sanction on real systems outside its developer",
+   "related_ids": "wf-cda102ecbb"
+  },
+  {
    "id": "wf-b35c9ee68b",
    "published": "2026-11-13",
    "reporting_period": "Sep-Nov 2026",
@@ -116,6 +156,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "agents;incident",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-099d5abe5f",
+   "published": "2026-11-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Incident",
+   "title": "Cursor: attacker used a key issued to Fireworks AI to copy coding-agent traces, whose leaked credentials led to the tampered Claude Code extension",
+   "publisher": "Cursor",
+   "url": "https://cursor.com/blog/security-incident-update",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Cursor says an attacker used an access key it had issued to Fireworks to copy coding-agent traces, mostly from 2025, from a shared bucket. Some traces held unredacted credentials, which gave access to internal SaaS tools and, on 29 October, let the attacker place tampered Claude Code extension builds on its marketplace cache for about 11 hours, reaching at most 5,000 users. Fewer than 0.01% of customers had API credentials exposed, and the last attacker activity, on 1 November, was blocked.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;agents",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
@@ -201,6 +261,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-43b2a36561",
+   "published": "2026-11-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Threat finding",
+   "title": "Amazon: decoy AI APIs captured ARTEX agents' own records of campaigns to steal AI keys and beat crypto exchange ID checks with deepfakes",
+   "publisher": "Amazon Threat Intelligence",
+   "url": "https://aws.amazon.com/blogs/security/amazon-threat-intelligence-observes-threat-actors-running-cybercrime-campaigns-with-artex-ai-agents/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Amazon's MadPot sensors posing as LLM inference APIs received requests from 3 October to 5 November 2026 that held ARTEX agents' task context, prompts and tool histories. One campaign hunted exposed LLM gateways and AI app builders for provider keys, which then powered more agents; another tried to pass identity checks at two crypto exchanges with real-time deepfake video, rejected in every recorded attempt. Amazon says none of the techniques were new, but AI agents add speed and persistence.",
+   "key_findings": "Actor: disparate Chinese-nexus groups (moderate confidence); Technique: ARTEX agentic pentest framework, at least four concurrent agent sessions, exploitation of default credentials, unauthenticated endpoints and known CVEs (CVE-2025-3248, CVE-2026-28797), AI key harvesting, real-time deepfake KYC bypass; Targets: LLM gateways and AI app builders (LiteLLM, Langflow, Dify, Ollama and others), cloud workloads, two cryptocurrency exchanges",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-c5674e49e8",
    "published": "2026-11-12",
    "reporting_period": "Sep-Nov 2026",
@@ -241,6 +321,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-dfb921403b",
+   "published": "2026-11-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Policy",
+   "title": "UK government: National Agentic Security Unit is being set up inside the NCSC, under existing intelligence oversight",
+   "publisher": "UK Parliament",
+   "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-11-02/HL4822",
+   "source_relation": "Original source",
+   "source_category": "UK government",
+   "source_says": "Baroness Lloyd says the £40 million National Agentic Security Unit will detect, investigate and respond to agentic AI incidents. The NCSC and DCMS are setting it up and it will sit inside the NCSC. Its work will be overseen by the Intelligence and Security Committee and the Investigatory Powers Commissioner's Office, and more detail will follow.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "agents;incident;regulation",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
    "id": "wf-34d0354f23",
    "published": "2026-11-12",
    "reporting_period": "Sep-Nov 2026",
@@ -278,6 +378,26 @@
    "tag_themes": "",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-830459cb7c",
+   "published": "2026-11-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Research",
+   "title": "Recorded Future counts 103 real-world incidents in a year where AI was an attacker's tool, target or lure",
+   "publisher": "Recorded Future",
+   "url": "https://www.recordedfuture.com/research/ai-cyber-threat-trends-2026",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Recorded Future's Insikt Group analysed 103 in-the-wild incidents from 31 July 2025 to 31 July 2026: 32 used AI in malware or offensive operations and 71 targeted AI systems, used AI as a lure, used AI for deception or abused AI agents. It finds fully autonomous attacks still rare, with one state-sponsored campaign using up to eight agents against Asian government bodies, and says AI coding tools are attractive targets because they hold credentials and code access.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "agents;incident",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
    "related_ids": ""
   },
   {
@@ -438,6 +558,26 @@
    "tag_themes": "vulnerability-research;incident",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-b341b2767b",
+   "published": "2026-11-11",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-15",
+   "item_type": "Policy",
+   "title": "UK government sets out reporting duties when an AI developer's systems access NHS data without permission",
+   "publisher": "UK Parliament",
+   "url": "https://questions-statements.parliament.uk/written-questions/detail/2026-10-23/HL4493",
+   "source_relation": "Original source",
+   "source_category": "UK government",
+   "source_says": "Baroness Merron says AI developers that process personal data must follow UK GDPR whether or not they supply the NHS, and must report a breach to the ICO within 72 hours where feasible. Unauthorised access is an offence under the Computer Misuse Act. Health and care organisations stay responsible for reporting incidents affecting NHS data they hold, and the Cyber Security and Resilience Bill would bring in 24-hour first notice for regulated bodies.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "Yes",
+   "tag_themes": "incident;threat-actor-reporting;regulation;health",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
    "related_ids": ""
   },
   {

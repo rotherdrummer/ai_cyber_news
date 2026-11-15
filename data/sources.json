@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-14",
+ "updated": "2026-11-15",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -80,6 +80,11 @@
      "name": "Department for Science, Innovation and Technology",
      "url": "https://www.gov.uk/government/organisations/department-for-science-innovation-and-technology",
      "added": "2026-11-07"
+    },
+    {
+     "name": "GDS blog",
+     "url": "https://gds.blog.gov.uk/",
+     "added": "2026-11-15"
     }
    ]
   },
@@ -212,6 +217,16 @@
      "name": "ExploitBench (Carnegie Mellon), via Epoch AI",
      "url": "https://epoch.ai/benchmarks/exploitbench",
      "added": "2026-10-08"
+    },
+    {
+     "name": "Epoch AI publications",
+     "url": "https://epoch.ai/publications",
+     "added": "2026-11-15"
+    },
+    {
+     "name": "METR evaluations",
+     "url": "https://metr.org/evaluations/",
+     "added": "2026-11-15"
     }
    ]
   },
@@ -346,6 +361,11 @@
      "name": "Kaspersky (Securelist)",
      "url": "https://securelist.com/",
      "added": "2026-11-14"
+    },
+    {
+     "name": "Amazon Threat Intelligence and AWS security bulletins",
+     "url": "https://aws.amazon.com/blogs/security/",
+     "added": "2026-11-15"
     }
    ]
   },
@@ -362,6 +382,11 @@
      "name": "Railway",
      "url": "https://blog.railway.com/",
      "added": "2026-11-12"
+    },
+    {
+     "name": "Cursor",
+     "url": "https://cursor.com/blog",
+     "added": "2026-11-15"
     }
    ]
   }
@@ -781,6 +806,31 @@
    "date": "2026-11-14",
    "change": "Added Kaspersky to hints",
    "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (2026-11-02 and 2026-11-11)."
+  },
+  {
+   "date": "2026-11-15",
+   "change": "Added https://metr.org/evaluations/ to METR",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-15",
+   "change": "Added https://gds.blog.gov.uk/ to Government Digital Service",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-15",
+   "change": "Added Epoch AI to core",
+   "why": "Rule 1(iii): an independent AI research body whose work AISI has cross-posted on its blog, and it has published News items on 29 October and 13 November 2026."
+  },
+  {
+   "date": "2026-11-15",
+   "change": "Added Cursor to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (29 October and 13 November 2026)."
+  },
+  {
+   "date": "2026-11-15",
+   "change": "Added Amazon (AWS security bulletins and Amazon Threat Intelligence) to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (10 and 13 November 2026)."
   }
  ]
 }

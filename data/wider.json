@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-15",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "date": "2026-11-13",
+   "category": "Business and leadership",
+   "title": "Banks reportedly turn away Chinese and Hong Kong orders for Anthropic's IPO, which prices on 18 November",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/banks-bar-chinese-and-hong-kong-investors-from-anthropic-ipo-over-us-export-controls/",
+   "summary": "Citing Bloomberg, The Decoder says banks have rebuffed buy orders from mainland China and Hong Kong for Anthropic's IPO, with some sources citing US ITAR export rules. Pricing is set for 18 November, with Nasdaq trading under ANT expected the next day.",
+   "why_not_cyber": "Capital markets and export control story, no cyber security angle.",
+   "source_relation": "Third-party report",
+   "id": "wf-48306a7001",
+   "added": "2026-11-15"
+  },
+  {
+   "date": "2026-11-13",
+   "category": "Other",
+   "title": "OpenAI launches ChatGPT Wallet so its agents can buy things for users without seeing card numbers",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/13/chatgpts-new-wallet-lets-ai-agents-shop-and-check-out-for-you/",
+   "summary": "ChatGPT Wallet lets OpenAI's 'dots' agents complete purchases using a payment token, with each purchase approved by a biometric check. It is limited to a small number of US ChatGPT Pro users; spending limits and pre-approved categories are planned.",
+   "why_not_cyber": "Product launch for agent payments with security design claims but no cyber evidence or incident.",
+   "source_relation": "Third-party report",
+   "id": "wf-077dd6d15b",
+   "added": "2026-11-15"
+  },
   {
    "id": "wf-4c1e9a07b3",
    "date": "2026-11-12",
@@ -33,6 +57,18 @@
    "added": "2026-11-13"
   },
   {
+   "date": "2026-11-12",
+   "category": "Business and leadership",
+   "title": "Former Nvidia CEO Jensen Huang agrees to testify to US House committees by Thanksgiving",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/12/jensen-huang-agrees-to-testify-before-congress/",
+   "summary": "Huang agreed on 11 November to give closed-door testimony to the House Foreign Affairs, China Select and Intelligence committees after lawmakers threatened a subpoena. The questions follow reports of his relationship with an executive at Megaspeed, a firm US investigators suspect of moving Nvidia chips to China. Testimony is due by 26 November.",
+   "why_not_cyber": "Leadership and export-control scandal; no confirmed breach or AI cyber angle.",
+   "source_relation": "Third-party report",
+   "id": "wf-653d30ccb3",
+   "added": "2026-11-15"
+  },
+  {
    "id": "wf-b7e2c95d10",
    "date": "2026-11-11",
    "category": "Business and leadership",
@@ -43,6 +79,18 @@
    "why_not_cyber": "A leadership story at the leading AI chip maker, not an AI cyber incident.",
    "source_relation": "Third-party report",
    "added": "2026-11-12"
+  },
+  {
+   "date": "2026-11-11",
+   "category": "Model launch",
+   "title": "Alibaba: Qwen4-Max opens as a two-week preview",
+   "publisher": "Alibaba Cloud",
+   "url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
+   "summary": "Alibaba opened a preview of Qwen4-Max, the flagship of its next Qwen generation, from 11 to 25 November 2026 (UTC+8). Access is through Token Plan only, with no pay-as-you-go. It has a 1M-token context window. Alibaba says the preview model will be retired when the preview ends.",
+   "why_not_cyber": "No security or cyber evaluation, benchmark scores or open weights published.",
+   "source_relation": "Original source",
+   "id": "wf-805b60e9aa",
+   "added": "2026-11-15"
   },
   {
    "id": "wf-a7c3e91b04",

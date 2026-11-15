@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-13",
+ "updated": "2026-11-15",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -560,6 +560,20 @@
    "cyber_evidence": "Model card says it did not reach the Cybersecurity Uplift critical capability level but reached the alert threshold, so mitigations stay in place; Google says it is more than 2.3x more resilient to indirect prompt injection on Gray Swan (self-reported)",
    "evidence_url": "https://deepmind.google/models/model-cards/gemini-4-hydrogen/",
    "updated": "2026-11-13"
+  },
+  {
+   "id": "qwen-4-max-preview",
+   "name": "Qwen4-Max (preview)",
+   "developer": "Alibaba",
+   "jurisdiction": "China",
+   "weights": "Closed",
+   "released": "2026-11-11",
+   "access": "Two-week preview, 11 to 25 November 2026, through Token Plan only; retired when the preview ends",
+   "tier": "Frontier preview",
+   "position": "Not yet released",
+   "cyber_evidence": "None published",
+   "evidence_url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
+   "updated": "2026-11-15"
   }
  ],
  "positions": [
