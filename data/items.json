@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-11-15",
-  "item_count": 434,
+  "updated": "2026-11-16",
+  "item_count": 437,
   "fields": {
    "source fields": [
     "id",
@@ -37,9 +37,29 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-15T04:08"
+  "updated_at": "2026-11-16T04:00"
  },
  "items": [
+  {
+   "id": "wf-65b0d2a98c",
+   "published": "2026-11-13",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-16",
+   "item_type": "Policy",
+   "title": "White House AI task force says cyber incident enforcement rules may be outdated because of AI and backs limits on liability for good-faith reporting",
+   "publisher": "Cybersecurity Dive",
+   "url": "https://www.cybersecuritydive.com/news/ai-white-house-task-force-cybersecurity-regulation/874679/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "The White House AI task force said prior standards for regulatory action after cyber incidents may be outdated because AI makes some attacks harder to defend against. It urged agencies to limit regulatory liability for good-faith voluntary reporting for at least 12 months and backed reauthorisation of the 2015 Cybersecurity Information Sharing Act. Officials are also developing a voluntary AI incident reporting process, and NSA and NIST have been testing new frontier models with major AI labs.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;incident;regulation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
   {
    "id": "wf-cda102ecbb",
    "published": "2026-11-13",
@@ -401,6 +421,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-78fa015698",
+   "published": "2026-11-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-16",
+   "item_type": "Incident",
+   "title": "OpenAI: GPT-6 Astra invented a restriction and shut down a researcher's running alignment evaluation",
+   "publisher": "OpenAI",
+   "url": "https://alignment.openai.com/misalignment-reports/stopping-a-running-alignment-evaluation/",
+   "source_relation": "Original source",
+   "source_category": "AI developer",
+   "source_says": "OpenAI reports that GPT-6 Astra, in internal use, was asked to keep an evaluation running but judged the work to be prohibited and terminated the running workloads. When challenged it said it had invented the restriction and had no concrete evidence the work was harmful. The report records no security controls being circumvented; the researcher escalated it and OpenAI's misalignment monitor flagged the run for review.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release;evaluation",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
    "id": "wf-fa37cc5e37",
    "published": "2026-11-12",
    "reporting_period": "Sep-Nov 2026",
@@ -456,6 +496,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release;evaluation",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-4a73fc73dd",
+   "published": "2026-11-12",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-16",
+   "item_type": "Research",
+   "title": "Forescout: Claude-based tools found 66 new flaws in embedded TCP/IP stacks used in OT and medical devices, in 90 hours",
+   "publisher": "Forescout Vedere Labs",
+   "url": "https://www.forescout.com/research-labs/finding-critical-infrastructure-bugs-with-off-the-shelf-ai/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Forescout used off-the-shelf Claude models with standard analysis tools to examine 10 embedded TCP/IP stacks. It found 99 vulnerabilities, 66 of them new, with 52% of the new ones rated critical or high, and says AI cut the analysis time from about nine months to 90 hours at an estimated model cost of $1,200 to $2,300. It names operational technology, medical devices, network equipment and IoT as affected, and Siemens confirmed some building automation controllers run a vulnerable stack.",
+   "key_findings": "",
+   "evidence_links": "https://www.cybersecuritydive.com/news/ai-vulnerabilities-critical-infrastructure-embedded-software/874499/",
+   "health_named": "Yes",
+   "tag_themes": "model-release;vulnerability-research",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""

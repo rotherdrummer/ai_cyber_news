@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-16",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c8e1a7d52",
+   "date": "2026-11-15",
+   "category": "Legal and policy",
+   "title": "US Department of War renames its Chief Digital and AI Office the Super Intelligence Office",
+   "publisher": "SecurityWeek",
+   "url": "https://www.securityweek.com/pentagon-renames-cdao-super-intelligence-office/",
+   "summary": "The Pentagon renamed its Chief Digital and Artificial Intelligence Office the Super Intelligence Office, following a September executive order on using the term in official communications. Cameron Stanley remains in charge as Chief Super Intelligence Officer.",
+   "why_not_cyber": "A change of name and title with no cyber security content.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-16"
+  },
   {
    "date": "2026-11-13",
    "category": "Business and leadership",
