@@ -253,7 +253,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <section class="export brief" aria-labelledby="brh">
     <h2 id="brh">Public bulletin</h2>
-    <p style="flex-basis:100%">A short Word bulletin of public AI cyber news between two dates, for sharing with partners such as the 4-nations group. Red and Amber items in full, Green as titles, plus regulatory changes. Public information only.</p>
+    <p style="flex-basis:100%">A short Word bulletin of the Red items between two dates (month to date unless you change them), for sharing with partners such as the 4-nations group. Each item has its date, source, title, a one-sentence summary and a link. Public information only.</p>
     <div class="btns" style="align-items:center">
       <label class="chk">From <input id="brFrom" type="date"></label>
       <label class="chk">To <input id="brTo" type="date"></label>
@@ -425,8 +425,8 @@ function nextListen(){if(!speaking)return;paused=false;lsGen++;speechSynthesis.c
 if(window.speechSynthesis&&window.SpeechSynthesisUtterance){(function(){$("listenBar").hidden=false;pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}$("lsPlay").addEventListener("click",startListen);$("lsPause").addEventListener("click",pauseListen);$("lsResume").addEventListener("click",resumeListen);$("lsStop").addEventListener("click",stopListen);$("lsNext").addEventListener("click",nextListen)})()}
 var regData=null;
 function isoDay(d){return d.toISOString().slice(0,10)}
-function brInit(){var t=new Date(),f=new Date();f.setMonth(f.getMonth()-1);var last=null;try{last=localStorage.getItem("brLastTo")}catch(e){}
-  $("brFrom").value=last||isoDay(f);$("brTo").value=isoDay(t);$("brGo").addEventListener("click",makeBrief)}
+function brInit(){var t=new Date();var f=isoDay(t).slice(0,8)+"01";
+  $("brFrom").value=f;$("brTo").value=isoDay(t);$("brGo").addEventListener("click",makeBrief)}
 function loadDocx(cb){if(window.docx)return cb();var sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js";sc.onload=cb;sc.onerror=function(){$("brMsg").textContent="Couldn't load the Word builder. Check your connection and try again."};document.head.appendChild(sc)}
 function makeBrief(){
   var f=$("brFrom").value,t=$("brTo").value;if(!f||!t||f>t){$("brMsg").textContent="Choose a From date on or before the To date.";return}
@@ -434,38 +434,30 @@ function makeBrief(){
   var go=function(){loadDocx(function(){try{buildBrief(f,t)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the public bulletin."}})};
   if(regData)go();else fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){regData=d;go()}).catch(go);
 }
+function firstSentence(t){t=String(t||"").trim();var m=t.match(/^[\s\S]{20,}?[.!?](?=\s+[A-Z0-9"\u2018\u201C(]|$)/);return m?m[0]:t}
 function buildBrief(f,t){
   var D=window.docx,P=D.Paragraph,TR=D.TextRun,H=D.HeadingLevel;
-  var rows=all.filter(function(r){return r.published>=f&&r.published<=t}).sort(function(a,b){return a.published<b.published?1:-1});
-  var red=rows.filter(function(r){return r.tag_rating==="Red"}),amb=rows.filter(function(r){return r.tag_rating==="Amber"}),grn=rows.filter(function(r){return r.tag_rating==="Green"});
+  var red=all.filter(function(r){return r.published>=f&&r.published<=t&&r.tag_rating==="Red"}).sort(function(a,b){return a.published<b.published?1:-1});
   var kids=[];
   function para(text,opt){kids.push(new P(Object.assign({children:[new TR({text:text,font:"Arial",size:22})],spacing:{after:120}},opt||{})))}
-  function link(text,url){return new D.ExternalHyperlink({link:url,children:[new TR({text:text,style:"Hyperlink",font:"Arial",size:20})]})}
+  function link(text,url){return new D.ExternalHyperlink({link:url,children:[new TR({text:text,style:"Hyperlink",font:"Arial",size:18})]})}
   kids.push(new P({heading:H.TITLE,children:[new TR({text:"AI cyber security: public bulletin",font:"Arial"})]}));
-  para(ukd(f)+" to "+ukd(t)+" · "+rows.length+" items ("+red.length+" Red, "+amb.length+" Amber, "+grn.length+" Green)");
-  para("Compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",{children:[new TR({text:"Compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",italics:true,font:"Arial",size:20})]});
-  function section(title,list){
-    if(!list.length)return;
-    kids.push(new P({heading:H.HEADING_1,children:[new TR({text:title+" ("+list.length+")",font:"Arial"})]}));
-    list.forEach(function(r){
-      kids.push(new P({spacing:{before:160,after:40},children:[new TR({text:ukd(r.published)+" · "+r.publisher+(r.health_named==="Yes"?" · Health and care named":""),font:"Arial",size:18,color:"555555"})]}));
-      kids.push(new P({spacing:{after:40},children:[new TR({text:r.title,bold:true,font:"Arial",size:22})]}));
-      var sum=r.source_says||(r.key_findings||"");if(sum)para(sum);
-      var u=safe(r.url);if(u)kids.push(new P({spacing:{after:120},children:[link(r.source_relation==="Third-party report"?"Source (third-party report)":"Source",u)]}));
-    });
-  }
-  section("Red: real-world activity or material change",red);
-  section("Amber: significant change to watch",amb);
-  if(grn.length){kids.push(new P({heading:H.HEADING_1,children:[new TR({text:"Green: background ("+grn.length+")",font:"Arial"})]}));
-    grn.forEach(function(r){var u=safe(r.url);kids.push(new P({bullet:{level:0},children:[new TR({text:ukd(r.published)+" · ",font:"Arial",size:20})].concat(u?[link(r.title,u)]:[new TR({text:r.title,font:"Arial",size:20})])}))})}
-  var ch=[];((regData&&regData.frameworks)||[]).forEach(function(fw){(fw.changes||[]).forEach(function(c){if(c.date>=f&&c.date<=t)ch.push({date:c.date,text:fw.name+": "+c.text,url:c.url})})});
-  if(ch.length){ch.sort(function(a,b){return a.date<b.date?1:-1});kids.push(new P({heading:H.HEADING_1,children:[new TR({text:"Regulatory changes",font:"Arial"})]}));
-    ch.forEach(function(c){var u=safe(c.url);kids.push(new P({bullet:{level:0},children:[new TR({text:ukd(c.date)+" · "+c.text+" ",font:"Arial",size:20})].concat(u?[link("Source",u)]:[])}))})}
-  if(!rows.length&&!ch.length)para("No items were published in this period.");
+  para(ukd(f)+" to "+ukd(t)+" \u00b7 "+red.length+" Red items");
+  kids.push(new P({spacing:{after:200},children:[new TR({text:"The most significant public AI cyber items in this period, compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",italics:true,font:"Arial",size:18})]}));
+  red.forEach(function(r){
+    var u=safe(r.url);
+    kids.push(new P({spacing:{before:140,after:20},keepNext:true,children:[new TR({text:ukd(r.published)+" \u00b7 "+r.publisher+(r.health_named==="Yes"?" \u00b7 Health and care named":""),font:"Arial",size:16,color:"555555"})]}));
+    kids.push(new P({spacing:{after:20},keepNext:true,children:[new TR({text:r.title,bold:true,font:"Arial",size:20})]}));
+    var sum=firstSentence(r.source_says||r.key_findings||"");
+    var ch=[];if(sum)ch.push(new TR({text:sum+" ",font:"Arial",size:20}));
+    if(u)ch.push(link(r.source_relation==="Third-party report"?"Source (third-party report)":"Source",u));
+    if(ch.length)kids.push(new P({spacing:{after:60},children:ch}));
+  });
+  if(!red.length)para("No Red items were published in this period.");
   var foot=new D.Footer({children:[new P({alignment:D.AlignmentType.CENTER,children:[new TR({text:"Public information only. Not an official product of any organisation.",font:"Arial",size:16,color:"777777"})]})]});
   var doc=new D.Document({styles:{default:{document:{run:{font:"Arial"}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:1100,right:1100}}},footers:{default:foot},children:kids}]});
   D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber public bulletin "+f+" to "+t+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
-    try{localStorage.setItem("brLastTo",t)}catch(e){}$("brMsg").textContent="Downloaded. Next time the From date will start at "+ukd(t)+"."});
+    $("brMsg").textContent="Downloaded."});
 }
 brInit();
 
