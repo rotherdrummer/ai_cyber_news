@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "tests": [
   {
    "name": "ExploitBench",
@@ -146,6 +146,16 @@
      "date": "2026-11-09",
      "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card",
      "measured_by": "Anthropic (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "Gemini 4 Carbon",
+     "value": 97,
+     "display": "97% (AutoNudge, 300 turns, best of 3)",
+     "date": "2026-11-10",
+     "url": "https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_safety_report.pdf",
+     "measured_by": "Google DeepMind (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }

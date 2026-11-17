@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -366,6 +366,11 @@
      "name": "Amazon Threat Intelligence and AWS security bulletins",
      "url": "https://aws.amazon.com/blogs/security/",
      "added": "2026-11-15"
+    },
+    {
+     "name": "Elastic Security Labs",
+     "url": "https://www.elastic.co/security-labs",
+     "added": "2026-11-17"
     }
    ]
   },
@@ -836,6 +841,16 @@
    "date": "2026-11-16",
    "change": "Added https://gds.blog.gov.uk/category/ai/ to Government Digital Service",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-17",
+   "change": "Added https://metr.org/risk-assessment/ to METR, replacing https://metr.org/evaluations/",
+   "why": "Found while checking the organisation's website: the old evaluations page now redirects to it."
+  },
+  {
+   "date": "2026-11-17",
+   "change": "Added Elastic Security Labs to hints",
+   "why": "Rule 2: it is the publisher of 2 News items published in the last 90 days (12 October and 13 November 2026)."
   }
  ]
 }

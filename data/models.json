@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-15",
+ "updated": "2026-11-17",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -362,8 +362,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "",
    "evidence_url": "",
-   "updated": "2026-10-08",
-   "position": "Flagship"
+   "updated": "2026-11-17",
+   "position": "Previous generation"
   },
   {
    "id": "sonnet-5-5",
@@ -568,12 +568,40 @@
    "jurisdiction": "China",
    "weights": "Closed",
    "released": "2026-11-11",
-   "access": "Two-week preview, 11 to 25 November 2026, through Token Plan only; retired when the preview ends",
+   "access": "Preview through Token Plan, 11 to 25 November 2026; replaced by the production Qwen4-Max on 16 November 2026",
    "tier": "Frontier preview",
-   "position": "Not yet released",
+   "position": "Previous generation",
    "cyber_evidence": "None published",
    "evidence_url": "https://www.alibabacloud.com/help/en/model-studio/qwen4-max-preview",
-   "updated": "2026-11-15"
+   "updated": "2026-11-17"
+  },
+  {
+   "id": "qwen-4-max",
+   "name": "Qwen4-Max",
+   "developer": "Alibaba",
+   "jurisdiction": "China",
+   "weights": "Closed",
+   "released": "2026-11-16",
+   "access": "Public via QwenCloud Token Plan and API, QwenWork and QwenStudio; smaller open-weight Qwen4 models promised",
+   "tier": "Closed flagship, 2.4 trillion parameters (about 71 billion active)",
+   "position": "Flagship",
+   "cyber_evidence": "No cyber evaluation results published; Alibaba says it filtered offensive attack content out of cyber training data",
+   "evidence_url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max",
+   "updated": "2026-11-17"
+  },
+  {
+   "id": "longcat-2-5",
+   "name": "LongCat-2.5",
+   "developer": "Meituan",
+   "jurisdiction": "China",
+   "weights": "Open",
+   "released": "2026-11-15",
+   "access": "Open weights on Hugging Face under the MIT licence",
+   "tier": "Open agent model, 1.6 trillion parameters (about 48 billion active)",
+   "position": "Flagship",
+   "cyber_evidence": "None published",
+   "evidence_url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
+   "updated": "2026-11-17"
   }
  ],
  "positions": [
@@ -692,6 +720,11 @@
    "ceo": "Misha Laskin",
    "as_of": "2026-10-17",
    "url": "https://aimagazine.com/news/what-is-nvidia-backed-reflection-ai-its-open-weight-model"
+  },
+  "Meituan": {
+   "ceo": "Wang Xing",
+   "as_of": "2026-11-17",
+   "url": "https://www.caixinglobal.com/2026-03-14/meituan-ceo-urges-focused-global-expansion-warns-against-blind-push-102422797.html"
   }
  }
 }

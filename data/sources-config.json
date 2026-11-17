@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "core": [
   {
    "name": "AISI",
@@ -107,7 +107,7 @@
     "https://metr.org/",
     "https://metr.org/blog/",
     "https://metr.org/notes/",
-    "https://metr.org/evaluations/"
+    "https://metr.org/risk-assessment/"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -495,6 +495,12 @@
    "name": "Amazon (AWS security bulletins and Amazon Threat Intelligence)",
    "url": "https://aws.amazon.com/blogs/security/",
    "added": "2026-11-15",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Elastic Security Labs",
+   "url": "https://www.elastic.co/security-labs",
+   "added": "2026-11-17",
    "reason": "Rule 2"
   }
  ]

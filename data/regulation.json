@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13",
+  "updated": "2026-11-17",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
@@ -144,16 +144,22 @@
     {
       "ai": "Covers AI where it touches patient data",
       "applies": "Any organisation accessing NHS patient data or systems",
-      "changes": [],
+      "changes": [
+        {
+          "date": "2026-10-02",
+          "text": "DSPT 2026-27 version 9 published, aligned to the CAF.",
+          "url": "https://www.dsptoolkit.nhs.uk/News"
+        }
+      ],
       "focus": "Data security and protection, now aligned to the CAF",
       "legal": "Mandatory by contract and policy",
       "name": "DSPT",
       "order": 5,
       "owner": "NHS England",
       "risk": "None",
-      "status": "No change recorded since the dashboard started",
-      "statusDate": "2026-10-08",
-      "statusUrl": "",
+      "status": "DSPT 2026-27 (version 9, aligned to the CAF) published 2 October 2026; submissions due by 30 June 2027",
+      "statusDate": "2026-10-02",
+      "statusUrl": "https://www.dsptoolkit.nhs.uk/News",
       "sub": "Data Security & Protection Toolkit",
       "teeth": "Loss of access, audit findings",
       "what": "NHS annual self-assessment of data security",

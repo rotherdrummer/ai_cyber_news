@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,54 @@
   "Other"
  ],
  "items": [
+  {
+   "date": "2026-11-16",
+   "category": "Model launch",
+   "title": "OpenAI launches computer-use agents for healthcare teams with Cigna, CVS Health, Abridge and Ambience",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/advancing-computer-use-for-healthcare-teams/",
+   "summary": "OpenAI says its computer-use agents can run multi-step health workflows such as prior authorisation, referrals and discharge planning by operating existing software, including systems with no API. They are available through the API, ChatGPT for Healthcare and ChatGPT for Clinicians, and are off by default until an admin enables them. A companion post mentions access controls and audit logs.",
+   "why_not_cyber": "Health product launch with no cyber evidence, but relevant context for agents acting on clinical systems.",
+   "source_relation": "Original source",
+   "id": "wf-deb02671da",
+   "added": "2026-11-17"
+  },
+  {
+   "date": "2026-11-16",
+   "category": "Other",
+   "title": "METR finds Claude Opus 5.5 can tell alignment tests from capability tests almost perfectly",
+   "publisher": "METR",
+   "url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells/",
+   "summary": "METR research note tested investigator agents on 55 environments (19 alignment, 36 capability). Opus 5.5 and Opus 4.8 scored an AUC of 1.00 at telling them apart, against 0.89 for Opus 4.6 and 0.77 to 0.89 for OpenAI models including GPT-6 Astra. Agents mostly spotted fake-looking environments and honeypot tasks. METR warns models that know they are being tested may behave better than in real use, so alignment tests could overstate safety.",
+   "why_not_cyber": "AI safety evaluation research. No offensive cyber content, though it bears on how far safety and cyber test results can be trusted.",
+   "source_relation": "Original source",
+   "id": "wf-8482adfcc6",
+   "added": "2026-11-17"
+  },
+  {
+   "date": "2026-11-16",
+   "category": "Model launch",
+   "title": "Alibaba releases Qwen4-Max, a 2.4 trillion parameter model, with smaller open-weight Qwen4 models promised soon",
+   "publisher": "Alibaba Cloud",
+   "url": "https://www.alibabacloud.com/en/press-room/alibaba-unveils-qwen4-max",
+   "summary": "Alibaba says Qwen4-Max is now available on QwenCloud through Token Plan and API, with a 1 million token context. It is a mixture-of-experts model with 2.4 trillion parameters and about 71 billion active. Weights are not released; smaller open-weight Qwen4 models will follow. Alibaba says it filtered offensive attack content out of cyber training data but gives no cyber evaluation results.",
+   "why_not_cyber": "Major model launch with no cyber evaluation evidence and no open weights for this model.",
+   "source_relation": "Original source",
+   "id": "wf-658040abc1",
+   "added": "2026-11-17"
+  },
+  {
+   "date": "2026-11-16",
+   "category": "Legal and policy",
+   "title": "US Commerce tightens AI chip export controls to stop Chinese firms reaching US compute remotely",
+   "publisher": "SecurityWeek",
+   "url": "https://www.securityweek.com/trump-administration-moves-to-block-china-from-indirect-access-to-american-ai-technology/",
+   "summary": "A new Bureau of Industry and Security rule, effective at once, restricts remote access to advanced US chips and servers. Overseas data centres serving firms in China, Russia, Iran and Cuba must identify end users. Chip sales to Indonesia, Malaysia, Singapore, Thailand and Brazil need case-by-case licences.",
+   "why_not_cyber": "Export control and compute access policy, not cyber security.",
+   "source_relation": "Third-party report",
+   "id": "wf-8e2742960e",
+   "added": "2026-11-17"
+  },
   {
    "id": "wf-3c8e1a7d52",
    "date": "2026-11-15",
@@ -19,6 +67,30 @@
    "why_not_cyber": "A change of name and title with no cyber security content.",
    "source_relation": "Third-party report",
    "added": "2026-11-16"
+  },
+  {
+   "date": "2026-11-15",
+   "category": "Legal and policy",
+   "title": "UK among 10 nations signing the San Francisco Declaration to protect AI supply chains from hostile actors",
+   "publisher": "US Department of State",
+   "url": "https://www.state.gov/releases/office-of-the-spokesman/2026/11/the-san-francisco-declaration-on-the-secure-foundations-of-enduring-prosperity/",
+   "summary": "The US, UK, Australia, India, Israel, Japan, South Korea, Qatar, Singapore and the UAE signed a declaration turning the Pax Silica initiative into a working partnership on AI supply chains and related critical infrastructure.",
+   "why_not_cyber": "Economic security and supply chain policy with no specific AI cyber measures.",
+   "source_relation": "Original source",
+   "id": "wf-a7ab2cc77a",
+   "added": "2026-11-17"
+  },
+  {
+   "date": "2026-11-15",
+   "category": "Model launch",
+   "title": "Meituan releases open weights for LongCat-2.5, a 1.6 trillion parameter agent model, under the MIT licence",
+   "publisher": "Hugging Face (Meituan LongCat)",
+   "url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
+   "summary": "A mixture-of-experts model with about 48 billion active parameters, trained without Nvidia GPUs, according to The Decoder. It reports strong agent and coding scores (Terminal Bench v2.1 88.4). No safety or cyber evaluation is published.",
+   "why_not_cyber": "No cyber evidence published. A large open-weight agent model, so worth watching.",
+   "source_relation": "Original source",
+   "id": "wf-3f91180856",
+   "added": "2026-11-17"
   },
   {
    "date": "2026-11-13",
