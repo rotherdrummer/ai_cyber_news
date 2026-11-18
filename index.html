@@ -253,10 +253,9 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
 
   <section class="export brief" aria-labelledby="brh">
     <h2 id="brh">Public bulletin</h2>
-    <p style="flex-basis:100%">A short Word bulletin of the Red items between two dates (month to date unless you change them), for sharing with partners such as the 4-nations group. Each item has its date, source, title, a one-sentence summary and a link. Public information only.</p>
+    <p style="flex-basis:100%">A short Word bulletin for the 4-nations health cyber AI call: the Red items from the four weeks before the call date. Each item has its date, source, title, criterion, a one-sentence summary and a link. Public information only.</p>
     <div class="btns" style="align-items:center">
-      <label class="chk">From <input id="brFrom" type="date"></label>
-      <label class="chk">To <input id="brTo" type="date"></label>
+      <label class="chk">Call date <input id="brCall" type="date"></label>
       <button type="button" class="btn primary" id="brGo">Download public bulletin (Word)</button>
       <span class="lsnow" id="brMsg"></span>
     </div>
@@ -425,38 +424,70 @@ function nextListen(){if(!speaking)return;paused=false;lsGen++;speechSynthesis.c
 if(window.speechSynthesis&&window.SpeechSynthesisUtterance){(function(){$("listenBar").hidden=false;pickVoice();try{speechSynthesis.onvoiceschanged=pickVoice}catch(e){}$("lsPlay").addEventListener("click",startListen);$("lsPause").addEventListener("click",pauseListen);$("lsResume").addEventListener("click",resumeListen);$("lsStop").addEventListener("click",stopListen);$("lsNext").addEventListener("click",nextListen)})()}
 var regData=null;
 function isoDay(d){return d.toISOString().slice(0,10)}
-function brInit(){var t=new Date();var f=isoDay(t).slice(0,8)+"01";
-  $("brFrom").value=f;$("brTo").value=isoDay(t);$("brGo").addEventListener("click",makeBrief)}
+function addDays(iso,n){var d=new Date(iso+"T12:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
+function longDate(iso){var m=["January","February","March","April","May","June","July","August","September","October","November","December"],p=iso.split("-");return (+p[2])+" "+m[+p[1]-1]+" "+p[0]}
+function brInit(){$("brCall").value=addDays(isoDay(new Date()),1);$("brGo").addEventListener("click",makeBrief)}
 function loadDocx(cb){if(window.docx)return cb();var sc=document.createElement("script");sc.src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js";sc.onload=cb;sc.onerror=function(){$("brMsg").textContent="Couldn't load the Word builder. Check your connection and try again."};document.head.appendChild(sc)}
 function makeBrief(){
-  var f=$("brFrom").value,t=$("brTo").value;if(!f||!t||f>t){$("brMsg").textContent="Choose a From date on or before the To date.";return}
+  var c=$("brCall").value;if(!c){$("brMsg").textContent="Choose the date of the call.";return}
+  var f=addDays(c,-28),t=addDays(c,-1);
   $("brMsg").textContent="Building…";
-  var go=function(){loadDocx(function(){try{buildBrief(f,t)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the public bulletin."}})};
+  var go=function(){loadDocx(function(){try{buildBrief(f,t,c)}catch(e){console.warn(e);$("brMsg").textContent="Something went wrong building the public bulletin."}})};
   if(regData)go();else fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(function(d){regData=d;go()}).catch(go);
 }
 function firstSentence(t){t=String(t||"").trim();var m=t.match(/^[\s\S]{20,}?[.!?](?=\s+[A-Z0-9"\u2018\u201C(]|$)/);return m?m[0]:t}
-function buildBrief(f,t){
+function buildBrief(f,t,c){
   var D=window.docx,P=D.Paragraph,TR=D.TextRun,H=D.HeadingLevel;
   var red=all.filter(function(r){return r.published>=f&&r.published<=t&&r.tag_rating==="Red"}).sort(function(a,b){return a.published<b.published?1:-1});
-  var kids=[];
-  function para(text,opt){kids.push(new P(Object.assign({children:[new TR({text:text,font:"Arial",size:22})],spacing:{after:120}},opt||{})))}
+  var kids=[],RED="B3261E",REDBG="FBE4E2",GREY="555555",INK="1A1A1A";
+  var CRIT={"1":"AI-enabled attack, incident or data exposure affecting health and care, the UK public sector or critical national infrastructure","2":"Step change in AI-enabled attacks, reported by a government agency, frontier AI developer or major security research team","3":"UK or Five Eyes government warning on an AI-related threat that calls for action","4":"Frontier model at its developer's critical cyber level, or finding and exploiting serious flaws largely on its own","5":"Frontier AI agent taking unsanctioned actions on real systems outside its developer","6":"Major change to AI cyber regulation, law or official guidance that UK health and care must or is likely to follow"};
+  function critOf(r){var m=String(r.tag_rating_reason||"").match(/^Red \((\d)\):\s*(.*)$/);return m?{n:m[1],why:m[2]}:{n:null,why:r.tag_rating_reason||"Criterion not recorded"}}
+  var cnt={};red.forEach(function(r){var c=critOf(r).n;if(c)cnt[c]=(cnt[c]||0)+1});
+  function run(text,o){return new TR(Object.assign({text:text,font:"Arial",size:20,color:INK},o||{}))}
   function link(text,url){return new D.ExternalHyperlink({link:url,children:[new TR({text:text,style:"Hyperlink",font:"Arial",size:18})]})}
-  kids.push(new P({heading:H.TITLE,children:[new TR({text:"AI cyber security: public bulletin",font:"Arial"})]}));
-  para(ukd(f)+" to "+ukd(t)+" \u00b7 "+red.length+" Red items");
-  kids.push(new P({spacing:{after:200},children:[new TR({text:"The most significant public AI cyber items in this period, compiled from public sources by AI Cyber News. Ratings are AI-assigned triage against published criteria, not assessments. Check the linked source before relying on any item.",italics:true,font:"Arial",size:18})]}));
-  red.forEach(function(r){
-    var u=safe(r.url);
-    kids.push(new P({spacing:{before:140,after:20},keepNext:true,children:[new TR({text:ukd(r.published)+" \u00b7 "+r.publisher+(r.health_named==="Yes"?" \u00b7 Health and care named":""),font:"Arial",size:16,color:"555555"})]}));
-    kids.push(new P({spacing:{after:20},keepNext:true,children:[new TR({text:r.title,bold:true,font:"Arial",size:20})]}));
+  var NB={style:D.BorderStyle.NONE,size:0,color:"FFFFFF"},NOB={top:NB,bottom:NB,left:NB,right:NB,insideHorizontal:NB,insideVertical:NB};
+  function cell(children,o){return new D.TableCell(Object.assign({children:children,margins:{top:60,bottom:60,left:120,right:120}},o||{}))}
+  // Title block
+  kids.push(new P({spacing:{after:60},children:[run("AI cyber bulletin for the 4-nations healthcare group",{size:36,bold:true})]}));
+  kids.push(new P({spacing:{after:160},border:{bottom:{style:D.BorderStyle.SINGLE,size:12,color:RED,space:6}},children:[run(longDate(c),{size:22,color:GREY})]}));
+  // Scope box
+  kids.push(new D.Table({width:{size:9706,type:D.WidthType.DXA},columnWidths:[9706],borders:NOB,rows:[new D.TableRow({children:[cell([
+    new P({children:[run("Scope: ",{bold:true,size:18}),run("This bulletin covers AI cyber security only: AI-enabled attacks, AI security incidents, the cyber capability of frontier AI, and AI cyber regulation. It does not cover wider AI news, such as general model releases, business developments or AI policy outside cyber.",{size:18})]})
+  ],{width:{size:9706,type:D.WidthType.DXA},shading:{type:D.ShadingType.CLEAR,fill:"F2F2F2",color:"auto"}})]})]}));
+  kids.push(new P({spacing:{before:240,after:80},children:[run("Sources of information",{size:24,bold:true})]}));
+  kids.push(new P({spacing:{after:60},children:[run("Each night, an AI agent checks a fixed list of UK government bodies, frontier AI developers and leading research institutes. It also runs general web searches on AI cyber topics, such as AI-enabled attacks, AI security incidents, and frontier AI cyber capability.",{})]}));
+  // Ratings explained
+  kids.push(new P({spacing:{before:240,after:80},children:[run("How items are chosen for inclusion in this bulletin",{size:24,bold:true})]}));
+  kids.push(new P({spacing:{after:100},children:[run("Only items that are rated red are included in this bulletin (amber and green items are available on request). For an item to be rated red, it must meet at least one of the following criteria.",{})]}));
+  var crow=Object.keys(CRIT).map(function(k){return new D.TableRow({children:[
+    cell([new P({alignment:D.AlignmentType.CENTER,children:[run(k,{bold:true,color:"FFFFFF",size:18})]})],{width:{size:500,type:D.WidthType.DXA},shading:{type:D.ShadingType.CLEAR,fill:RED,color:"auto"},verticalAlign:D.VerticalAlign.CENTER}),
+    cell([new P({children:[run(CRIT[k],{size:18})]})],{width:{size:9206,type:D.WidthType.DXA}})]})});
+  var hb={style:D.BorderStyle.SINGLE,size:6,color:"A6A6A6"};
+  kids.push(new D.Table({width:{size:9706,type:D.WidthType.DXA},columnWidths:[500,9206],layout:D.TableLayoutType.FIXED,borders:{top:hb,bottom:hb,left:hb,right:hb,insideHorizontal:hb,insideVertical:hb},rows:crow}));
+  kids.push(new P({spacing:{after:0},children:[run("",{size:8})]}));
+  kids.push(new D.Table({width:{size:9706,type:D.WidthType.DXA},columnWidths:[9706],borders:NOB,rows:[new D.TableRow({children:[cell([new P({children:[run("Disclaimer: ",{bold:true,size:18}),run("AI has been used to sift a large volume of public information. Please check the linked source before relying on any item.",{size:18})]})],{width:{size:9706,type:D.WidthType.DXA},shading:{type:D.ShadingType.CLEAR,fill:"F2F2F2",color:"auto"}})]})]}));
+  // Items
+  kids.push(new P({spacing:{before:280,after:60},children:[run((f.slice(0,4)===t.slice(0,4)?longDate(f).replace(/ \d{4}$/,""):longDate(f))+" to "+longDate(t)+": "+red.length+" item"+(red.length===1?"":"s"),{size:24,bold:true})]}));
+  var inR=all.filter(function(r){return r.published>=f&&r.published<=t});
+  var na=inR.filter(function(r){return r.tag_rating==="Amber"}).length,ng=inR.filter(function(r){return r.tag_rating==="Green"}).length;
+  var bar={left:{style:D.BorderStyle.SINGLE,size:24,color:RED,space:10}};
+  red.forEach(function(r,i){
+    if(i)kids.push(new P({spacing:{before:0,after:0,line:120},children:[run("",{size:4})]}));
+    var u=safe(r.url),c=critOf(r);
+    var meta=[run(" RED ",{bold:true,size:16,color:"FFFFFF",shading:{type:D.ShadingType.CLEAR,fill:RED,color:"auto"}}),run("  "+(c.n?"Criterion "+c.n:"Criterion not recorded"),{bold:true,size:16,color:RED})];
+    var bits=[ukd(r.published),r.publisher].filter(Boolean);
+    meta.push(run("   "+bits.join("  ·  "),{size:16,color:GREY}));
+    kids.push(new P({spacing:{before:60,after:30},keepNext:true,border:bar,children:meta}));
+    kids.push(new P({spacing:{after:40},keepNext:true,border:bar,children:[run(r.title,{bold:true,size:21})]}));
     var sum=firstSentence(r.source_says||r.key_findings||"");
-    var ch=[];if(sum)ch.push(new TR({text:sum+" ",font:"Arial",size:20}));
-    if(u)ch.push(link(r.source_relation==="Third-party report"?"Source (third-party report)":"Source",u));
-    if(ch.length)kids.push(new P({spacing:{after:60},children:ch}));
+    var sl=[];if(sum)sl.push(run(sum+"  ",{size:19}));
+    if(u)sl.push(link(r.source_relation==="Third-party report"?"Source (third-party report)":"Source",u));
+    if(sl.length)kids.push(new P({spacing:{after:40},border:bar,children:sl}));
   });
-  if(!red.length)para("No Red items were published in this period.");
-  var foot=new D.Footer({children:[new P({alignment:D.AlignmentType.CENTER,children:[new TR({text:"Public information only. Not an official product of any organisation.",font:"Arial",size:16,color:"777777"})]})]});
+  if(!red.length)kids.push(new P({children:[run("No Red items were published in this period.")]}));
+  var foot=new D.Footer({children:[new P({alignment:D.AlignmentType.CENTER,children:[new TR({text:"Public information only",font:"Arial",size:16,color:"777777"})]})]});
   var doc=new D.Document({styles:{default:{document:{run:{font:"Arial"}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:1100,right:1100}}},footers:{default:foot},children:kids}]});
-  D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber public bulletin "+f+" to "+t+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
+  D.Packer.toBlob(doc).then(function(blob){var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="AI cyber public bulletin for 4-nations call "+c+".docx";document.body.appendChild(a);a.click();setTimeout(function(){URL.revokeObjectURL(a.href);a.remove()},1000);
     $("brMsg").textContent="Downloaded."});
 }
 brInit();
