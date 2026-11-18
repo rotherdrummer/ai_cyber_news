@@ -687,86 +687,124 @@
   "OpenAI": {
    "ceo": "Sam Altman",
    "as_of": "2026-10-14",
-   "url": "https://www.unifygtm.com/insights/executives/openai-ceo"
+   "url": "https://www.unifygtm.com/insights/executives/openai-ceo",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "Anthropic": {
    "ceo": "Dario Amodei",
    "as_of": "2026-10-14",
-   "url": "https://www.unifygtm.com/insights/executives/anthropic-ceo"
+   "url": "https://www.unifygtm.com/insights/executives/anthropic-ceo",
+   "listing": "Private (IPO 19 Nov)",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Nasdaq listing under ticker ANT expected 19 Nov 2026"
   },
   "Google DeepMind": {
    "ceo": "Koray Kavukcuoglu",
    "as_of": "2026-10-14",
    "url": "https://fortune.com/2026/08/05/demis-hassabis-steps-down-google-deepmind-ai-shakeup/",
    "label": "Led by",
-   "note": "Runs DeepMind day to day as SVP, reporting to Google CEO Sundar Pichai; Demis Hassabis stepped down as CEO in August 2026."
+   "note": "Runs DeepMind day to day as SVP, reporting to Google CEO Sundar Pichai; Demis Hassabis stepped down as CEO in August 2026.",
+   "listing": "Nasdaq: GOOGL",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Listed via parent Alphabet"
   },
   "xAI": {
    "ceo": "Elon Musk",
    "as_of": "2026-10-14",
    "url": "https://en.wikipedia.org/wiki/SpaceXAI",
    "label": "Led by",
-   "note": "Founder. xAI is now part of SpaceX and has no separately named CEO."
+   "note": "Founder. xAI is now part of SpaceX and has no separately named CEO.",
+   "listing": "Nasdaq: SPCX",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Listed via parent SpaceX"
   },
   "Meta": {
    "ceo": "Mark Zuckerberg",
    "as_of": "2026-10-14",
-   "url": "https://www.fortune.com/2026/04/08/meta-unveils-muse-spark-mark-zuckerberg-ai-push"
+   "url": "https://www.fortune.com/2026/04/08/meta-unveils-muse-spark-mark-zuckerberg-ai-push",
+   "listing": "Nasdaq: META",
+   "listing_as_of": "2026-11-18"
   },
   "Microsoft AI": {
    "ceo": "Mustafa Suleyman",
    "as_of": "2026-10-14",
-   "url": "https://publication.aimagazine.com/ai-magazine-top-100-leaders-2026/0796921001767963467/p79"
+   "url": "https://publication.aimagazine.com/ai-magazine-top-100-leaders-2026/0796921001767963467/p79",
+   "listing": "Nasdaq: MSFT",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Listed via parent Microsoft"
   },
   "Mistral AI": {
    "ceo": "Arthur Mensch",
    "as_of": "2026-10-14",
-   "url": "https://en.wikipedia.org/wiki/Arthur_Mensch"
+   "url": "https://en.wikipedia.org/wiki/Arthur_Mensch",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "DeepSeek": {
    "ceo": "Liang Wenfeng",
    "as_of": "2026-10-14",
-   "url": "https://aimagazine.com/news/liang-wenfeng-top-100-ai-leaders-2026"
+   "url": "https://aimagazine.com/news/liang-wenfeng-top-100-ai-leaders-2026",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "Moonshot AI": {
    "ceo": "Yang Zhilin",
    "as_of": "2026-10-14",
-   "url": "https://en.wikipedia.org/wiki/Moonshot_AI"
+   "url": "https://en.wikipedia.org/wiki/Moonshot_AI",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "Z.ai (Zhipu)": {
    "ceo": "Zhang Peng",
    "as_of": "2026-10-14",
-   "url": "https://www.caixinglobal.com/2026-07-02/in-profile-this-trio-is-charting-the-course-for-chinas-leading-ai-developer-102460058.html"
+   "url": "https://www.caixinglobal.com/2026-07-02/in-profile-this-trio-is-charting-the-course-for-chinas-leading-ai-developer-102460058.html",
+   "listing": "HKEX: 2513",
+   "listing_as_of": "2026-11-18"
   },
   "Alibaba": {
    "ceo": "Eddie Wu",
    "as_of": "2026-10-14",
-   "url": "https://en.wikipedia.org/wiki/Eddie_Wu"
+   "url": "https://en.wikipedia.org/wiki/Eddie_Wu",
+   "listing": "NYSE: BABA",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Also listed in Hong Kong (9988)"
   },
   "Xiaomi": {
    "ceo": "Lei Jun",
    "as_of": "2026-10-14",
-   "url": "https://en.wikipedia.org/wiki/Xiaomi_MiMo"
+   "url": "https://en.wikipedia.org/wiki/Xiaomi_MiMo",
+   "listing": "HKEX: 1810",
+   "listing_as_of": "2026-11-18"
   },
   "Technology Innovation Institute (UAE)": {
    "ceo": "Najwa Aaraj",
    "as_of": "2026-10-14",
-   "url": "https://www.tii.ae/node/4015"
+   "url": "https://www.tii.ae/node/4015",
+   "listing": "State-owned",
+   "listing_as_of": "2026-11-18",
+   "listing_note": "Part of the Abu Dhabi government's Advanced Technology Research Council"
   },
   "Cosine (UK Sovereign AI)": {
    "ceo": "Alistair Pullen",
    "as_of": "2026-10-14",
-   "url": "https://tech.eu/2026/06/08/cosine-secures-industry-backing-for-britain-s-first-sovereign-frontier-model/"
+   "url": "https://tech.eu/2026/06/08/cosine-secures-industry-backing-for-britain-s-first-sovereign-frontier-model/",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "Reflection AI": {
    "ceo": "Misha Laskin",
    "as_of": "2026-10-17",
-   "url": "https://aimagazine.com/news/what-is-nvidia-backed-reflection-ai-its-open-weight-model"
+   "url": "https://aimagazine.com/news/what-is-nvidia-backed-reflection-ai-its-open-weight-model",
+   "listing": "Private",
+   "listing_as_of": "2026-11-18"
   },
   "Meituan": {
    "ceo": "Wang Xing",
    "as_of": "2026-11-17",
-   "url": "https://www.caixinglobal.com/2026-03-14/meituan-ceo-urges-focused-global-expansion-warns-against-blind-push-102422797.html"
+   "url": "https://www.caixinglobal.com/2026-03-14/meituan-ceo-urges-focused-global-expansion-warns-against-blind-push-102422797.html",
+   "listing": "HKEX: 3690",
+   "listing_as_of": "2026-11-18"
   }
  }
 }

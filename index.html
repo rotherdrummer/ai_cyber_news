@@ -555,7 +555,7 @@ function renderModels(){
     if(m.jurisdiction!==cur){cur=m.jurisdiction;tb.appendChild(el("tr",{cls:"grp"},[el("td",{colspan:"6",text:cur})]))}
     var u=safe(m.evidence_url),pi=posInfo(m.position),dv=devs[m.developer]||{},du=safe(dv.url);
     tb.appendChild(el("tr",null,[el("td",null,[el("b",{text:m.name}),el("span",{cls:"pos",title:pi.means},[ladder(pi.rank,!pi.rank),pi.name])]),
-      el("td",null,[m.developer,dv.ceo?el("div",{cls:"pub",title:dv.note||""},[(dv.label||"CEO")+": ",du?el("a",{href:du,target:"_blank",rel:"noopener noreferrer",text:dv.ceo}):dv.ceo]):null]),
+      el("td",null,[m.developer,dv.ceo?el("div",{cls:"pub",title:dv.note||""},[(dv.label||"CEO")+": ",du?el("a",{href:du,target:"_blank",rel:"noopener noreferrer",text:dv.ceo}):dv.ceo]):null,dv.listing?el("div",{cls:"pub",title:(dv.listing_note?dv.listing_note+". ":"")+(dv.listing_as_of?"As of "+ukd(dv.listing_as_of):"")},[dv.listing]):null]),
       el("td",null,[el("span",{cls:"w"+(m.weights==="Closed"?" closed":"")}),m.weights]),el("td",{text:m.released?ukd(m.released):"\u2013"}),el("td",{text:m.access}),
       el("td",null,m.cyber_evidence?[m.cyber_evidence+" ",u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:"source"}):null]:["\u2013"])]));
   });
