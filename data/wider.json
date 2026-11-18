@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-7c3e91a0d4",
+   "date": "2026-11-17",
+   "category": "Legal and policy",
+   "title": "Quad leaders agree an Accelerator to fund 'trusted Super Intelligence'",
+   "publisher": "Prime Minister of Australia",
+   "url": "https://www.pm.gov.au/media/quad-leaders-summit-joint-press-release",
+   "summary": "The Quad leaders' joint statement includes an Accelerator to fund trusted super intelligence. It also notes rising cyber incidents in the region.",
+   "why_not_cyber": "AI funding and cooperation, with no specific AI cyber action.",
+   "source_relation": "Original source",
+   "added": "2026-11-18"
+  },
   {
    "date": "2026-11-16",
    "category": "Model launch",

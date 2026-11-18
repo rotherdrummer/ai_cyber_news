@@ -14,6 +14,8 @@ ExploitBench,Offensive cyber,Kimi K3.1 Pro,"74.7% (pass@5, 300 turns)",74.7,2026
 ExploitBench,Offensive cyber,GPT-6 Cyber,100% (ACE-normalised mean; possible contamination),100,2026-11-05,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-cyber
 ExploitBench,Offensive cyber,Claude Mythos 5.2,"95% (Cap%, plain arm; 97% with AutoNudge)",95,2026-11-09,Anthropic (self-reported),Yes,https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card
 ExploitBench,Offensive cyber,Gemini 4 Carbon,"97% (AutoNudge, 300 turns, best of 3)",97,2026-11-10,Google DeepMind (self-reported),Yes,https://storage.googleapis.com/deepmind-media/gemini/gemini_4_carbon_safety_report.pdf
+ExploitBench,Offensive cyber,GPT-6.2 Astra,100% (V8 mean capability credit; possible contamination),100,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
+ExploitBench,Offensive cyber,GPT-6.2 Sol,100% (V8 mean capability credit; possible contamination),100,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
 SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
@@ -21,6 +23,8 @@ SEC-Bench Pro,Offensive cyber,GPT-6.1 Terra,83.33%,83.33,2026-10-26,OpenAI (self
 SEC-Bench Pro,Offensive cyber,Gemini 4 Carbon,88.2%,88.2,2026-10-28,"Google DeepMind (self-reported, without guardrails)",Yes,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna (29 Oct update),51.75%,51.75,2026-10-29,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-luna-october-28-2026-addendum
 SEC-Bench Pro,Offensive cyber,GPT-6 Cyber,87.02% (pass@1),87.02,2026-11-05,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-cyber
+SEC-Bench Pro,Offensive cyber,GPT-6.2 Sol,88.34% (pass@1),88.34,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
+SEC-Bench Pro,Offensive cyber,GPT-6.2 Astra,86.75% (pass@1),86.75,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
 ExploitGym,Offensive cyber,GPT-6 Astra,42.4%,42.4,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
 ExploitGym,Offensive cyber,GPT-5.6 Sol,30.3%,30.3,2026-09-04,OpenAI (self-reported),Yes,https://www.infoworld.com/article/4218686/openai-launches-gpt-6-astra-its-first-model-to-cross-a-critical-cybersecurity-threshold-2.html
 ExploitGym,Offensive cyber,Gemini 4 Carbon,54.8%,54.8,2026-10-28,"Google DeepMind (self-reported, without guardrails)",Yes,https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/

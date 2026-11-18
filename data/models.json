@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -138,8 +138,8 @@
    "tier": "Mid",
    "cyber_evidence": "",
    "evidence_url": "https://local-ai-zone.github.io/blog/October_2026_AI_Model_Updates.html",
-   "updated": "2026-10-08",
-   "position": "Advanced"
+   "updated": "2026-11-18",
+   "position": "Previous generation"
   },
   {
    "id": "gpt-6-astra",
@@ -152,8 +152,8 @@
    "tier": "Flagship",
    "cyber_evidence": "Critical cyber threshold; 100% on ExploitBench with safeguards off; supply-chain attacks in 29.2% of AISI simulations",
    "evidence_url": "https://www.aisi.gov.uk/blog/gpt-6-astra-performs-unsanctioned-supply-chain-attacks-in-simulations",
-   "updated": "2026-10-31",
-   "position": "Flagship"
+   "updated": "2026-11-18",
+   "position": "Previous generation"
   },
   {
    "id": "gpt-6-luna",
@@ -602,6 +602,48 @@
    "cyber_evidence": "None published",
    "evidence_url": "https://huggingface.co/meituan-longcat/LongCat-2.5",
    "updated": "2026-11-17"
+  },
+  {
+   "id": "gpt-6-2-astra",
+   "name": "GPT-6.2 Astra",
+   "developer": "OpenAI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-17",
+   "access": "ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu, and the API; more permissive cyber access needs extra vetting through Daybreak",
+   "tier": "Flagship",
+   "position": "Flagship",
+   "cyber_evidence": "Critical cyber threshold (OpenAI); self-reported 86.75% on SEC-Bench Pro, 100% on ExploitBench V8, 88.6% on a UK AISI vulnerability discovery test",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+   "updated": "2026-11-18"
+  },
+  {
+   "id": "gpt-6-2-sol",
+   "name": "GPT-6.2 Sol",
+   "developer": "OpenAI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-17",
+   "access": "ChatGPT Work and Codex for Plus, Pro, Enterprise and Edu, and the API",
+   "tier": "Mid",
+   "position": "Advanced",
+   "cyber_evidence": "Critical cyber threshold (OpenAI); self-reported 88.34% on SEC-Bench Pro, 100% on ExploitBench V8",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+   "updated": "2026-11-18"
+  },
+  {
+   "id": "mai-cyber-2-flash",
+   "name": "MAI Cyber 2 Flash",
+   "developer": "Microsoft AI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-17",
+   "access": "Only inside Microsoft security products (preview in Codename MDASH); rolling out to eligible customers from mid-December 2026",
+   "tier": "Cyber specialist",
+   "position": "Not yet released",
+   "cyber_evidence": "Self-reported 92.3% on CyberGym-E2E (92 of 905 tasks excluded for training overlap) and 40.4% on WebExploitBench",
+   "evidence_url": "https://microsoft.ai/news/introducing-mai-cyber-2-flash/",
+   "updated": "2026-11-18"
   }
  ],
  "positions": [
