@@ -160,6 +160,13 @@ tr.grp td{background:var(--surface-2);font-family:var(--f-mono);font-size:10.5px
 .agfig svg{margin:0 auto}
 .reg td.rowh{min-width:96px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);background:var(--surface-2);font-weight:600}
 .reg tr.ai td{background:var(--amber-bg)}
+.std td,.std th{vertical-align:top}
+.std table{table-layout:fixed;width:100%;min-width:720px}
+.std col.c1{width:27%}.std col.c2{width:27%}.std td.n a,.std td.n .pub{white-space:normal;overflow-wrap:anywhere}.std col.c3{width:17%}.std col.c4{width:29%}
+.std .tag{display:inline-block;font-family:var(--f-mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:1px 5px;border:1px solid var(--line);border-radius:3px;color:var(--ink-3);margin-top:4px}
+.std .tag.ai{background:var(--amber-bg)}
+.std h3{margin:20px 0 2px;font-size:15px}
+.std .about{margin:0 0 8px;color:var(--ink-3);font-size:13px}
 .reg th small{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-family:var(--f-sans);font-size:11px;color:var(--ink-3)}
 .sources{margin-top:20px !important;border-top:0 !important;padding-top:0 !important}
 .tests{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;margin-top:12px}
@@ -189,7 +196,7 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="status"><div><b>Updated</b> <span id="updated">…</span></div></div>
   </header>
   <nav class="tabs" aria-label="Views">
-    <a href="#news" data-v="news" class="primary">News</a><a href="#models" data-v="models">Frontier models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulatory landscape</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources" class="dl">Download report</a>
+    <a href="#news" data-v="news" class="primary">News</a><a href="#models" data-v="models">Frontier models</a><a href="#agents" data-v="agents">Agents and assistants</a><a href="#benchmarks" data-v="benchmarks">Benchmarks</a><a href="#regulation" data-v="regulation">Regulation</a><a href="#standards" data-v="standards">Standards</a><a href="#wider" data-v="wider">Wider AI news</a><a href="#sources" data-v="sources" class="dl">Download report</a>
   </nav>
 
   <div id="view-news">
@@ -319,6 +326,14 @@ footer{margin-top:44px;border-top:2px solid var(--ink);padding-top:14px;font-fam
     <div class="tscroll reg"><table><thead id="regHead"></thead><tbody id="regBody"></tbody></table></div>
     <h3 style="margin:18px 0 6px;font-size:15px">Recent changes</h3>
     <div class="tscroll"><table><thead><tr><th>Date</th><th>Framework</th><th>Change</th></tr></thead><tbody id="regChanges"></tbody></table></div>
+  </div>
+  <div id="view-standards" hidden>
+    <div class="vhead"><h2>Frameworks and standards</h2></div>
+    <p class="says">The main frameworks and standards for governing AI risk, modelling AI threats and securing the systems AI runs in, with their current versions. Checked overnight for new versions. For reference, not an assessment; check the owner's page before quoting.</p>
+    <div class="std" id="stdGroups"></div>
+    <h3 style="margin:18px 0 6px;font-size:15px">Recent changes</h3>
+    <div class="tscroll"><table><thead><tr><th>Date</th><th>Framework</th><th>Change</th></tr></thead><tbody id="stdChanges"></tbody></table></div>
+    <p class="pub" id="stdUpdated"></p>
   </div>
   <footer>
     Every item links to its source; summaries describe what the source reports. Ratings and themes are AI-assigned and can be wrong. Check the source before you quote anything.<br>
@@ -540,7 +555,7 @@ function renderSources(d){
     $("srcCats").appendChild(el("div",{cls:"scat"},[el("h4",{text:c.name}),el("p",{text:"Why: "+c.why}),ul]))});
   (d.changes||[]).slice().sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){$("srcChanges").appendChild(el("tr",null,[el("td",{text:ukd(c.date)}),el("td",{text:c.change}),el("td",{text:c.why||""})]))});
 }
-var VIEWS=["news","models","agents","benchmarks","regulation","wider","sources"],modelsData=null,wf="",pf="";
+var VIEWS=["news","models","agents","benchmarks","regulation","standards","wider","sources"],modelsData=null,wf="",pf="";
 function syncPos(){[].forEach.call($("poskey").querySelectorAll("button[data-v]"),function(b){b.setAttribute("aria-pressed",b.getAttribute("data-v")===pf?"true":"false")});$("poskey").querySelector(".clear").hidden=!pf}
 function showView(){var v=(location.hash||"#news").slice(1);if(VIEWS.indexOf(v)<0)v="news";
   VIEWS.forEach(function(k){$("view-"+k).hidden=(k!==v)});
@@ -577,6 +592,24 @@ function loadRegulation(d){
     return el("td",{text:f[r[1]]||""})}))))});
   var ch=[];fw.forEach(function(f){(f.changes||[]).forEach(function(c){ch.push({date:c.date,fw:f.name,text:c.text,url:c.url})})});
   ch.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){var u=safe(c.url);$("regChanges").appendChild(el("tr",null,[el("td",{text:ukd(c.date)}),el("td",{text:c.fw}),el("td",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:c.text}):c.text])]))});
+}
+function loadStandards(d){
+  var sd=d.standards||[];
+  (d.groups||[]).forEach(function(g){
+    var rows=sd.filter(function(s){return s.group===g.id}).sort(function(a,b){return (a.order||0)-(b.order||0)});if(!rows.length)return;
+    var tb=el("tbody");
+    rows.forEach(function(s){var u=safe(s.url),su=safe(s.statusUrl);
+      tb.appendChild(el("tr",null,[
+        el("td",{cls:"n"},[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:s.name}):s.name,el("div",{cls:"pub",text:s.owner||""}),el("span",{cls:"tag"+(s.ai?" ai":""),text:s.ai?"AI-specific":"General"})]),
+        el("td",{text:s.what||""}),
+        el("td",{cls:"v"},[s.version||"",s.versionDate?el("div",{cls:"pub",text:ukd(s.versionDate)}):null]),
+        el("td",null,[(s.status||"")+" ",su?el("a",{href:su,target:"_blank",rel:"noopener noreferrer",text:"source"}):null,s.statusDate?el("div",{cls:"pub",text:"as of "+ukd(s.statusDate)}):null])]))});
+    $("stdGroups").appendChild(el("h3",{text:g.name}));
+    $("stdGroups").appendChild(el("p",{cls:"about",text:g.about||""}));
+    $("stdGroups").appendChild(el("div",{cls:"tscroll"},[el("table",null,[el("colgroup",null,[el("col",{cls:"c1"}),el("col",{cls:"c2"}),el("col",{cls:"c3"}),el("col",{cls:"c4"})]),el("thead",null,[el("tr",null,[el("th",{text:"Framework"}),el("th",{text:"What it is"}),el("th",{text:"Current version"}),el("th",{text:"Status and what's next"})])]),tb])]))});
+  var ch=[];sd.forEach(function(s){(s.changes||[]).forEach(function(c){ch.push({date:c.date,fw:s.name,text:c.text,url:c.url})})});
+  ch.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0}).forEach(function(c){var u=safe(c.url);$("stdChanges").appendChild(el("tr",null,[el("td",{text:ukd(c.date)}),el("td",{text:c.fw}),el("td",null,[u?el("a",{href:u,target:"_blank",rel:"noopener noreferrer",text:c.text}):c.text])]))});
+  if(d.updated)$("stdUpdated").textContent="Last checked "+ukd(d.updated)+".";
 }
 function loadBench(d){
   $("benchUpdated").textContent=d.updated?"Latest result "+ukd(d.updated)+".":"";
@@ -630,6 +663,7 @@ fetch("data/benchmarks.json",{cache:"no-store"}).then(function(r){return r.json(
 window.addEventListener("hashchange",showView);showView();
 fetch("data/models.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadModels).catch(function(){});
 fetch("data/regulation.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadRegulation).catch(function(){});
+fetch("data/standards.json",{cache:"no-store"}).then(function(r){return r.json()}).then(loadStandards).catch(function(){});
 function build(){
   PERIODS.forEach(function(p){var b=el("button",{type:"button","data-v":p[0]},[p[1]+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){period=p[0];render()});$("periods").appendChild(b)});
   [""].concat(RAGS).forEach(function(v){var b=el("button",{type:"button","data-v":v},[v?el("span",{cls:"dot "+v}):null,(v||"All")+" ",el("span",{cls:"n"})]);b.addEventListener("click",function(){rag=v;render()});$("rags").appendChild(b)});

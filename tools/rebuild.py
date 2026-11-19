@@ -207,6 +207,21 @@ def main():
     write_csv(os.path.join(DATA, "regulation.csv"),
               ["name","sub","what","legal","risk","applies","focus","owner","teeth","ai","status","statusDate","statusUrl"], regs)
 
+    spath = os.path.join(DATA, "standards.json")
+    stds = []
+    if os.path.exists(spath):
+        sdoc = json.load(open(spath, encoding="utf-8"))
+        groups = {g["id"]: g["name"] for g in sdoc.get("groups", [])}
+        for s in sdoc.get("standards", []):
+            for c in ("id", "group", "name", "version", "url"):
+                if not s.get(c):
+                    raise SystemExit(f"standards.json: {s.get('name') or s.get('id')} is missing {c}")
+            if s["group"] not in groups:
+                raise SystemExit(f"standards.json: {s['name']} has unknown group {s['group']}")
+        stds = [dict(s, group=groups[s["group"]], ai="AI-specific" if s.get("ai") else "General") for s in sdoc.get("standards", [])]
+        write_csv(os.path.join(DATA, "standards.csv"),
+                  ["group","name","owner","ai","what","version","versionDate","status","statusDate","statusUrl","url"], stds)
+
     wpath = os.path.join(DATA, "wider.json")
     if os.path.exists(wpath):
         wd = json.load(open(wpath, encoding="utf-8"))
@@ -265,7 +280,7 @@ def main():
     import zipfile
     with zipfile.ZipFile(os.path.join(DATA, "ai-cyber-news-all-data.zip"), "w", zipfile.ZIP_DEFLATED) as z:
         for name, arc in [("items.csv", "news.csv"), ("models.csv", "frontier-models.csv"), ("agents.csv", "agents-and-assistants.csv"),
-                          ("benchmarks.csv", "benchmarks.csv"), ("regulation.csv", "regulatory-landscape.csv"), ("wider.csv", "wider-ai-news.csv")]:
+                          ("benchmarks.csv", "benchmarks.csv"), ("regulation.csv", "regulatory-landscape.csv"), ("standards.csv", "frameworks-and-standards.csv"), ("wider.csv", "wider-ai-news.csv")]:
             p = os.path.join(DATA, name)
             if os.path.exists(p):
                 zi = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED
