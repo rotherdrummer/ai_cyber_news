@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-11-19",
-  "item_count": 488,
+  "item_count": 490,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-19T10:37"
+  "updated_at": "2026-11-19T10:59"
  },
  "items": [
   {
@@ -218,6 +218,26 @@
    "tag_themes": "model-release",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-cfbc308eae",
+   "published": "2026-11-18",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-19",
+   "item_type": "Threat finding",
+   "title": "Kaspersky: AuditTeam ransomware group's OpsAgent implant shows code patterns that suggest LLM-assisted development",
+   "publisher": "Kaspersky",
+   "url": "https://securelist.com/auditteam-opsagent-forced-audit/122031/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Kaspersky GReAT describes AuditTeam, which encrypts files and then demands an 'audit and consulting fee', using its OpsAgent implant. Kaspersky says dozens of organisations were infected since early 2026. It says code patterns suggest LLM-assisted development and that AI tools may be lowering the barrier to building multi-module implants.",
+   "key_findings": "Actor: AuditTeam (ransomware and extortion group); Technique: OpsAgent implant with C, .NET and Rust loaders, an EDR-killing driver posing as a signed antivirus driver, C2 settings held in a public GitHub repository, with code that Kaspersky says suggests LLM-assisted development; Targets: dozens of organisations in different industries in countries including China, the Philippines, Senegal, Italy, Finland and Russia",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
   },
   {
@@ -4736,6 +4756,26 @@
    "evidence_links": "",
    "health_named": "No",
    "tag_themes": "model-release;vulnerability-research;agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-986c8b9ab5",
+   "published": "2026-10-27",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-19",
+   "item_type": "Research",
+   "title": "Google Project Zero: its AI system Big Sleep found 45 actionable V8 flaws in six months, against 37 for the Fuzzilli fuzzer",
+   "publisher": "Google Project Zero",
+   "url": "https://projectzero.google/2026/10/fuzzing-v-AI.html",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Project Zero compared the Fuzzilli fuzzer with Big Sleep, Google's LLM-based vulnerability finder, on the V8 JavaScript engine. From April to September 2026 Big Sleep found 45 actionable vulnerabilities and Fuzzilli found 37, with about 25% overlap (20 of 81). In a separate test Big Sleep rediscovered about 62% of 112 past Fuzzilli bugs.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "vulnerability-research",
    "tag_rating": "Amber",
    "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
