@@ -498,7 +498,7 @@ function buildBrief(f,t,c){
 }
 brInit();
 
-/* any-period plain-text report: same format as tools/build_report.py */
+/* any-period plain-text report for the Copilot bulletin agent */
 function rpWrap(text,indent){var L=[],cur=indent;(text||"").split(/\s+/).forEach(function(w){if(!w)return;if(cur.length+w.length+1>100&&cur.trim()){L.push(cur.replace(/\s+$/,""));cur=indent}cur+=w+" "});if(cur.trim())L.push(cur.replace(/\s+$/,""));return L}
 function rpInit(){var f=new Date();f.setMonth(f.getMonth()-1);var last=null;try{last=localStorage.getItem("rpLastTo")}catch(e){}
   $("rpFrom").value=last||isoDay(f);$("rpTo").value=TODAY;$("rpGo").addEventListener("click",makeReport)}

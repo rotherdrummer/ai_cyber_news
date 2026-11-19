@@ -1,7 +1,7 @@
 """Rebuild every derived file from the master JSON in data/.
 
 Master files (edited by hand or by the daily update):
-  data/items.json       news items         -> items.csv, period-YYYY-MM.csv, periods.json
+  data/items.json       news items         -> items.csv
   data/models.json      frontier models    -> models.csv
   data/benchmarks.json  benchmark results  -> benchmarks.csv
   data/regulation.json  regulatory table   -> regulation.csv
@@ -166,10 +166,8 @@ def main():
         print("Validation failed, nothing written:"); [print(" -", e) for e in errors]; sys.exit(1)
 
     items.sort(key=lambda r: (r["published"], r["title"]), reverse=True)
-    quarters = {}
     for r in items:
-        k, label = reporting_quarter(r["published"]); r["reporting_period"] = label
-        quarters.setdefault(k, {"label": label, "rows": []})["rows"].append(r)
+        r["reporting_period"] = reporting_quarter(r["published"])[1]
 
     meta = doc.get("meta", {})
     try:
@@ -185,9 +183,6 @@ def main():
         return [dict(r, row_number=i, rows_in_file=n) for i, r in enumerate(rows, 1)]
     ICOLS = ["row_number", "rows_in_file"] + COLS
     write_csv(os.path.join(DATA, "items.csv"), ICOLS, numbered(items))
-    for k, v in quarters.items(): write_csv(os.path.join(DATA, f"period-{k}.csv"), ICOLS, numbered(v["rows"]))
-    json.dump([{"key": k, "label": v["label"], "file": f"data/period-{k}.csv", "items": len(v["rows"])}
-               for k, v in sorted(quarters.items(), reverse=True)], open(os.path.join(DATA, "periods.json"), "w"), indent=1)
 
     mdoc = json.load(open(os.path.join(DATA, "models.json"), encoding="utf-8"))
     models, devs = mdoc["models"], mdoc.get("developers", {})
@@ -286,12 +281,8 @@ def main():
                 zi = zipfile.ZipInfo(arc, date_time=(2026, 1, 1, 0, 0, 0)); zi.compress_type = zipfile.ZIP_DEFLATED
                 z.writestr(zi, open(p, "rb").read())
 
-    print(f"{len(items)} items;", {v['label']: len(v['rows']) for k, v in sorted(quarters.items())},
+    print(f"{len(items)} items",
           f"| {len(models)} models | {len(agents)} agents | {len(regs)} frameworks | {len(rows)} benchmark results")
 
 if __name__ == "__main__":
     main()
-    # Quarterly reports are rebuilt every time, so the download is always current.
-    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-    import build_report
-    build_report.main()
