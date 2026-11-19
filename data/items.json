@@ -2,7 +2,7 @@
  "meta": {
   "name": "AI Cyber News public dataset",
   "updated": "2026-11-19",
-  "item_count": 486,
+  "item_count": 488,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-19T04:01"
+  "updated_at": "2026-11-19T09:43"
  },
  "items": [
   {
@@ -281,6 +281,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-a3d39b42c4",
+   "published": "2026-11-18",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-19",
+   "item_type": "Incident",
+   "title": "Coinbase blocks $4.7m sent to a fake Tesla livestream that used an AI-generated video of Elon Musk",
+   "publisher": "BleepingComputer",
+   "url": "https://www.bleepingcomputer.com/news/security/coinbase-blocks-47-million-in-transfers-to-elon-musk-deepfake-scam/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Scammers ran a fake YouTube livestream of a Tesla event with an AI-generated video of Elon Musk, promising to double any crypto sent. The stream drew more than 500,000 viewers and hundreds of Coinbase customers tried to send funds over about two hours. Coinbase says its models and an AI agent stopped about 91% of the attempted transfers, worth $4.7m.",
+   "key_findings": "",
+   "evidence_links": "https://www.coinbase.com/blog/consumer-protection-tuesday-how-we-leveraged-ai-to-stop-a-popular-tesla-scam",
+   "health_named": "No",
+   "tag_themes": "model-release;agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-c7f78deeba",
    "published": "2026-11-18",
    "reporting_period": "Sep-Nov 2026",
@@ -298,6 +318,26 @@
    "tag_themes": "",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-c142ca221e",
+   "published": "2026-11-18",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-19",
+   "item_type": "Policy",
+   "title": "CISA adds an exploited LiteLLM AI gateway flaw to its Known Exploited Vulnerabilities catalogue",
+   "publisher": "CISA",
+   "url": "https://www.cisa.gov/news-events/alerts/2026/11/18/cisa-adds-four-known-exploited-vulnerabilities-catalog",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "CISA added four vulnerabilities to its Known Exploited Vulnerabilities catalogue on 18 November 2026, based on evidence of active exploitation. They include CVE-2026-40217 in the BerriAI LiteLLM AI gateway and a code injection flaw in Vanderbilt's REDCap research data tool. US federal civilian agencies must prioritise fixing them, and CISA urges all organisations to do the same.",
+   "key_findings": "",
+   "evidence_links": "https://thehackernews.com/2026/11/cisa-warns-of-4-exploited-flaws-linked.html",
+   "health_named": "No",
+   "tag_themes": "vulnerability-research",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
   },
   {

@@ -45,6 +45,18 @@
    "added": "2026-11-19"
   },
   {
+   "id": "wf-d51a59230b",
+   "date": "2026-11-17",
+   "category": "Legal and policy",
+   "title": "Oregon sues OpenAI for $2.035bn, saying it misrepresented ChatGPT as safe for children",
+   "publisher": "OPB",
+   "url": "https://www.opb.org/article/2026/11/17/oregon-ag-sues-openai-claims-company-knowingly-endangers-teens/",
+   "summary": "Oregon's Attorney General filed a $2.035bn lawsuit against OpenAI under the state's consumer protection law. It says OpenAI misrepresented ChatGPT as safe for children and asks the court to order safety protections.",
+   "why_not_cyber": "A child safety and consumer protection case with no cyber security claim.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-19"
+  },
+  {
    "date": "2026-11-16",
    "category": "Model launch",
    "title": "OpenAI launches computer-use agents for healthcare teams with Cigna, CVS Health, Abridge and Ambience",
