@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3e9a1c7b52",
+   "date": "2026-11-18",
+   "category": "Business and leadership",
+   "title": "Anthropic prices its IPO at $83 a share, trading on Nasdaq as ANT from 19 November",
+   "publisher": "Anthropic",
+   "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering",
+   "summary": "Anthropic priced 980 million Class A shares at $83 each, with trading on Nasdaq under the ticker ANT from 19 November and closing expected on 20 November.",
+   "why_not_cyber": "A company listing with no cyber angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-19"
+  },
   {
    "id": "wf-7c3e91a0d4",
    "date": "2026-11-17",
@@ -19,6 +31,18 @@
    "why_not_cyber": "AI funding and cooperation, with no specific AI cyber action.",
    "source_relation": "Original source",
    "added": "2026-11-18"
+  },
+  {
+   "id": "wf-b84d20f6a9",
+   "date": "2026-11-17",
+   "category": "Model launch",
+   "title": "Microsoft announces seven MAI models at Ignite, including MAI Code 2 in GitHub Copilot",
+   "publisher": "Microsoft AI",
+   "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
+   "summary": "Microsoft AI announced seven MAI models at Ignite 2026, including MAI Code 2 and MAI Code 2 Flash in GitHub Copilot.",
+   "why_not_cyber": "Model launches with no cyber evidence.",
+   "source_relation": "Original source",
+   "added": "2026-11-19"
   },
   {
    "date": "2026-11-16",

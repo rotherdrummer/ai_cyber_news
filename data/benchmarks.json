@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "tests": [
   {
    "name": "ExploitBench",
@@ -178,6 +178,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "MiMo-V2.6-Pro",
+     "value": 67.0,
+     "display": "67.0% (capability coverage, SCoRe, 2,000 turns)",
+     "date": "2026-11-17",
+     "url": "https://arxiv.org/abs/2611.22888",
+     "measured_by": "Kang, Gwon and Park (independent researchers)",
+     "self_reported": false,
+     "weights": "Open"
     }
    ]
   },
@@ -276,6 +286,16 @@
      "date": "2026-11-17",
      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
      "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "Gemini 4 Neon",
+     "value": 90.5,
+     "display": "90.5%",
+     "date": "2026-11-18",
+     "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+     "measured_by": "Google (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }

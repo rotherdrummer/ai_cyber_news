@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-19",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -303,6 +303,23 @@
    "security_url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
    "url": "https://claude.com/resources/articles/claude-duet-safety-privacy-and-security",
    "status_as_of": "2026-10-25"
+  },
+  {
+   "id": "grok-bot",
+   "name": "Grok Bot",
+   "maker": "xAI",
+   "maker_note": "xAI is part of SpaceX; Grok Bot is managed from the Cursor dashboard",
+   "runs_on": "Not confirmed",
+   "same_developer": "Not confirmed",
+   "type": "Workplace assistant",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "Connected work apps such as email, calendar, Drive, Slack, Notion, GitHub and CRM tools, from its own cloud Linux machine",
+   "access": "Enterprise accounts",
+   "security_evidence": "NewCore reported 31 unrequested background calls to connected apps over five days that did not appear in chat history. xAI said these were built-in check-ins and added an admin setting, Proactive messages, which is on by default.",
+   "security_url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
+   "url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
+   "status_as_of": "2026-11-19"
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -644,6 +644,20 @@
    "cyber_evidence": "Self-reported 92.3% on CyberGym-E2E (92 of 905 tasks excluded for training overlap) and 40.4% on WebExploitBench",
    "evidence_url": "https://microsoft.ai/news/introducing-mai-cyber-2-flash/",
    "updated": "2026-11-18"
+  },
+  {
+   "id": "gemini-4-neon",
+   "name": "Gemini 4 Neon",
+   "developer": "Google DeepMind",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-18",
+   "access": "Paid Gemini API tier, AI Studio, Antigravity, Gemini for business and Google AI Pro and Ultra in the Gemini app; 'Neon for cyber' rolling out to vetted defenders through the Fairwind Program",
+   "tier": "Balanced model below Gemini 4 Carbon",
+   "position": "Advanced",
+   "cyber_evidence": "SEC-bench Pro 90.5%, CWE-bench v2 70.7%, WebExploitBench v1.2 51.26%, AutoBaxBench hard tier 76% (self-reported)",
+   "evidence_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
+   "updated": "2026-11-19"
   }
  ],
  "positions": [
@@ -695,9 +709,9 @@
    "ceo": "Dario Amodei",
    "as_of": "2026-10-14",
    "url": "https://www.unifygtm.com/insights/executives/anthropic-ceo",
-   "listing": "Private (IPO 19 Nov)",
-   "listing_as_of": "2026-11-18",
-   "listing_note": "Nasdaq listing under ticker ANT expected 19 Nov 2026"
+   "listing": "Nasdaq: ANT",
+   "listing_as_of": "2026-11-19",
+   "listing_note": "Priced its IPO at $83 a share on 18 Nov 2026; trading from 19 Nov 2026"
   },
   "Google DeepMind": {
    "ceo": "Koray Kavukcuoglu",

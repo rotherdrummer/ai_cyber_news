@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -85,6 +85,16 @@
      "name": "GDS blog",
      "url": "https://gds.blog.gov.uk/",
      "added": "2026-11-15"
+    },
+    {
+     "name": "NCSC threat reports",
+     "url": "https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports",
+     "added": "2026-11-19"
+    },
+    {
+     "name": "MI5 speeches and statements",
+     "url": "https://www.mi5.gov.uk/news-categories/speeches-and-statements",
+     "added": "2026-11-19"
     }
    ]
   },
@@ -196,6 +206,11 @@
      "name": "OpenAI Codex changelog",
      "url": "https://learn.chatgpt.com/docs/changelog",
      "added": "2026-11-14"
+    },
+    {
+     "name": "OpenAI cybersecurity research hub",
+     "url": "https://openai.com/cybersecurity/",
+     "added": "2026-11-19"
     }
    ]
   },
@@ -274,6 +289,11 @@
      "name": "BleepingComputer",
      "url": "https://www.bleepingcomputer.com/news/security/",
      "added": "2026-11-10"
+    },
+    {
+     "name": "Cybersecurity Dive",
+     "url": "https://www.cybersecuritydive.com/",
+     "added": "2026-11-19"
     }
    ]
   },
@@ -305,6 +325,11 @@
      "name": "Australian Government",
      "url": "https://www.pm.gov.au/media",
      "added": "2026-11-12"
+    },
+    {
+     "name": "US Senate Commerce Committee",
+     "url": "https://www.commerce.senate.gov/press-releases",
+     "added": "2026-11-19"
     }
    ]
   },
@@ -866,6 +891,36 @@
    "date": "2026-11-18",
    "change": "Added https://reflection.ai/safety to Reflection AI",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added https://openai.com/cybersecurity/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports to NCSC",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added https://www.mi5.gov.uk/news-categories/speeches-and-statements to MI5 AI Threat Assessment Centre",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added the Google Threat Intelligence feed https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added Cybersecurity Dive to hints",
+   "why": "Rule 2: Cybersecurity Dive is the publisher of 2 items published in the last 90 days (13 Nov White House AI task force story and 17 Nov healthcare AI security survey)."
+  },
+  {
+   "date": "2026-11-19",
+   "change": "Added US Senate Commerce Committee to hints",
+   "why": "Rule 2: The US Senate Commerce Committee is the publisher of 2 items published in the last 90 days, including the 17 Nov senators' letter on AI agent security standards."
   }
  ]
 }
