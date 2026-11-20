@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -658,6 +658,34 @@
    "cyber_evidence": "SEC-bench Pro 90.5%, CWE-bench v2 70.7%, WebExploitBench v1.2 51.26%, AutoBaxBench hard tier 76% (self-reported)",
    "evidence_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
    "updated": "2026-11-19"
+  },
+  {
+   "developer": "Microsoft AI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-17",
+   "access": "GitHub Copilot",
+   "evidence_url": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=3",
+   "updated": "2026-11-20",
+   "id": "mai-code-2",
+   "name": "MAI Code 2",
+   "tier": "Coding model",
+   "position": "Advanced",
+   "cyber_evidence": "Microsoft rates it High for offensive cyber operations; self-reported 88.51% on CyberGym E2E"
+  },
+  {
+   "developer": "Microsoft AI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-17",
+   "access": "GitHub Copilot",
+   "evidence_url": "https://microsoft.ai/pdf/MAI-Code-2-And-MAI-Code-2-Flash-Model-Card.pdf?v=3",
+   "updated": "2026-11-20",
+   "id": "mai-code-2-flash",
+   "name": "MAI Code 2 Flash",
+   "tier": "Fast coding model",
+   "position": "Fast and low-cost",
+   "cyber_evidence": "Microsoft rates it High for offensive cyber operations; self-reported 60.33% on CyberGym E2E"
   }
  ],
  "positions": [

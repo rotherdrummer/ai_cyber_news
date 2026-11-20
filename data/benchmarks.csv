@@ -54,3 +54,5 @@ HealthBench Professional,Clinical,GPT-6 Astra,0.634,0.634,2026-09-24,Arcophos le
 HealthBench Professional,Clinical,Claude Fable 5.1,0.621,0.621,2026-09-24,Arcophos leaderboard,No,
 HealthBench Professional,Clinical,GPT-5.6 Sol,0.605,0.605,2026-09-24,Arcophos leaderboard,No,
 HealthBench Professional,Clinical,Claude Opus 5,0.598,0.598,2026-09-24,Arcophos leaderboard,No,
+HealthBench Professional,Clinical,GPT-6.2 Astra,0.663 (length-adjusted),0.663,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
+HealthBench Professional,Clinical,GPT-6.2 Sol,0.659 (length-adjusted),0.659,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol

@@ -638,6 +638,26 @@
      "self_reported": false,
      "weights": "Closed",
      "note": "Frontier AI Sovereignty Map, 24 Sep 2026"
+    },
+    {
+     "model": "GPT-6.2 Astra",
+     "value": 0.663,
+     "display": "0.663 (length-adjusted)",
+     "date": "2026-11-17",
+     "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6.2 Sol",
+     "value": 0.659,
+     "display": "0.659 (length-adjusted)",
+     "date": "2026-11-17",
+     "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   }

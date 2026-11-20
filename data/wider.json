@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-5904d3a0f4",
+   "date": "2026-11-19",
+   "category": "Legal and policy",
+   "title": "Sean Cairncross leaves as US National Cyber Director; DoD CIO Kirsten Davies is acting",
+   "publisher": "CyberScoop",
+   "url": "https://cyberscoop.com/sean-cairncross-out-national-cyber-director/",
+   "summary": "CyberScoop reports that Sean Cairncross is out as US National Cyber Director, with Department of Defense CIO Kirsten Davies acting in the role.",
+   "why_not_cyber": "A leadership change with no AI cyber evidence.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-20"
+  },
   {
    "id": "wf-3e9a1c7b52",
    "date": "2026-11-18",
@@ -19,6 +31,30 @@
    "why_not_cyber": "A company listing with no cyber angle.",
    "source_relation": "Original source",
    "added": "2026-11-19"
+  },
+  {
+   "id": "wf-afd9d52191",
+   "date": "2026-11-18",
+   "category": "Business and leadership",
+   "title": "Palo Alto Networks agrees to buy AI start-up Applied Compute for $4.5bn",
+   "publisher": "SecurityWeek",
+   "url": "https://www.securityweek.com/palo-alto-networks-to-buy-ai-startup-applied-compute-for-4-5-billion/",
+   "summary": "Palo Alto Networks will buy Applied Compute, which adapts open-weight models to company data, in an all-stock deal worth $4.5bn.",
+   "why_not_cyber": "Business news.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-20"
+  },
+  {
+   "id": "wf-e55af0c590",
+   "date": "2026-11-18",
+   "category": "Legal and policy",
+   "title": "More big US banks say customers are liable for losses from third-party AI agents, even if the agent is hacked",
+   "publisher": "TechCrunch",
+   "url": "https://techcrunch.com/2026/11/18/more-banks-says-customers-using-ai-agents-are-on-their-own-even-if-they-get-hacked/",
+   "summary": "TechCrunch reports that Citi, Citizens and PNC follow JPMorgan and Bank of America in making customers liable for actions of third-party AI agents, including if the agent leaks credentials or is hacked.",
+   "why_not_cyber": "Terms of service change with no reported attack.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-20"
   },
   {
    "id": "wf-7c3e91a0d4",
@@ -33,18 +69,6 @@
    "added": "2026-11-18"
   },
   {
-   "id": "wf-b84d20f6a9",
-   "date": "2026-11-17",
-   "category": "Model launch",
-   "title": "Microsoft announces seven MAI models at Ignite, including MAI Code 2 in GitHub Copilot",
-   "publisher": "Microsoft AI",
-   "url": "https://microsoft.ai/news/microsoft-ignite-2026/",
-   "summary": "Microsoft AI announced seven MAI models at Ignite 2026, including MAI Code 2 and MAI Code 2 Flash in GitHub Copilot.",
-   "why_not_cyber": "Model launches with no cyber evidence.",
-   "source_relation": "Original source",
-   "added": "2026-11-19"
-  },
-  {
    "id": "wf-d51a59230b",
    "date": "2026-11-17",
    "category": "Legal and policy",
@@ -55,6 +79,18 @@
    "why_not_cyber": "A child safety and consumer protection case with no cyber security claim.",
    "source_relation": "Third-party report",
    "added": "2026-11-19"
+  },
+  {
+   "id": "wf-a376cfd133",
+   "date": "2026-11-17",
+   "category": "Other",
+   "title": "Vals AI finds frontier models will pick civilians and ambulances as drone targets when told it is a game",
+   "publisher": "Vals AI",
+   "url": "https://www.vals.ai/blogs/autonomous-warfare",
+   "summary": "Vals AI tested frontier models in simulated drone targeting and found they selected civilians, ambulances and surrendering soldiers, with a game framing getting past refusals.",
+   "why_not_cyber": "Military misuse evaluation with no cyber angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-20"
   },
   {
    "date": "2026-11-16",
