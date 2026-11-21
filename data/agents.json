@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-19",
+ "updated": "2026-11-21",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -265,10 +265,10 @@
    "open_source": "Yes",
    "can_act_on": "Coordinates multiple AI agents against a target, sharing discovered facts and planned steps; used for penetration testing",
    "access": "Free; self-hosted with a web control panel",
-   "security_evidence": "NorForge found more than 20 exposed Cairn control panels in malicious use by three groups, attempting intrusions on over 1,200 websites; the panels leaked hundreds of secrets. On 12 November 2026 Unit 42 reported a China-nexus group (CL-STA-1238) running a customised Cairn fork with Zhipu GLM 5.2 and DeepSeek V4 models in 25 largely autonomous operations, confirming access or data theft at 10 of at least 19 organisations.",
-   "security_url": "https://unit42.paloaltonetworks.com/cairn-framework-ai-autonomous-attacks/",
+   "security_evidence": "NorForge found more than 20 exposed Cairn control panels in malicious use by three groups, attempting intrusions on over 1,200 websites; the panels leaked hundreds of secrets. On 12 November 2026 Unit 42 reported a China-nexus group (CL-STA-1238) running a customised Cairn fork with Zhipu GLM 5.2 and DeepSeek V4 models in 25 largely autonomous operations, confirming access or data theft at 10 of at least 19 organisations. On 20 November 2026 Amazon Threat Intelligence reported a China-nexus actor whose Cairn agents, given only the goal \"obtain shell access\", found and exploited a zero-day in MONAI Label to take control of a university server.",
+   "security_url": "https://aws.amazon.com/blogs/security/chinese-nexus-actors-cairn-ai-agents-found-a-zero-day-on-their-own/",
    "url": "https://norforge.com/blog/inside_cairn",
-   "status_as_of": "2026-11-13"
+   "status_as_of": "2026-11-21"
   },
   {
    "id": "opencode",
@@ -320,6 +320,23 @@
    "security_url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
    "url": "https://newcore.com/blog/grok-bot-unattended-agent-access",
    "status_as_of": "2026-11-19"
+  },
+  {
+   "id": "meta-muse",
+   "name": "Muse",
+   "maker": "Meta",
+   "maker_note": "Meta's AI agent app, launched in September 2026 with more than 10 million downloads.",
+   "runs_on": "Not confirmed",
+   "same_developer": "Not confirmed",
+   "type": "General-purpose agent",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "Not confirmed",
+   "access": "Public app",
+   "security_evidence": "On 19 November 2026 TechCrunch, citing Reuters, reported that Meta employees testing Muse saw other users' messages and data, including bank balances, in their chats. Meta said employees test versions the public does not have.",
+   "security_url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "status_as_of": "2026-11-21"
   }
  ]
 }

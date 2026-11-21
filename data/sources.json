@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -304,6 +304,11 @@
      "name": "Taipei Times",
      "url": "https://www.taipeitimes.com/News/taiwan",
      "added": "2026-11-20"
+    },
+    {
+     "name": "Reuters",
+     "url": "https://www.reuters.com/technology/cybersecurity/",
+     "added": "2026-11-21"
     }
    ]
   },
@@ -941,6 +946,11 @@
    "date": "2026-11-20",
    "change": "Added Taipei Times to hints",
    "why": "Rule 2: Taipei Times is the publisher of 2 items published in the last 90 days (5 Nov Taiwan AI cyber task force and 20 Nov Taiwan government LLM and AI agent security guidelines)."
+  },
+  {
+   "date": "2026-11-21",
+   "change": "Added Reuters to hints",
+   "why": "Rule 2: Reuters is the publisher of 3 items published in the last 90 days (reported via The Standard, TimesLIVE and The Globe and Mail), with a fourth Reuters report on Meta's Muse agent this run."
   }
  ]
 }
