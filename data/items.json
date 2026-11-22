@@ -1,8 +1,8 @@
 {
  "meta": {
   "name": "AI Cyber News public dataset",
-  "updated": "2026-11-21",
-  "item_count": 528,
+  "updated": "2026-11-22",
+  "item_count": 531,
   "fields": {
    "source fields": [
     "id",
@@ -37,7 +37,7 @@
    "Third-party report": "Reported by someone else, such as a news outlet, tracker or law firm. Used only where no original source was found."
   },
   "note": "Public sources only. source_says and key_findings summarise what the source reports. tag_ fields are machine-assigned categorisation, not findings.",
-  "updated_at": "2026-11-21T04:03"
+  "updated_at": "2026-11-22T03:57"
  },
  "items": [
   {
@@ -181,6 +181,26 @@
    "related_ids": ""
   },
   {
+   "id": "wf-01bb6eddff",
+   "published": "2026-11-20",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-22",
+   "item_type": "Research",
+   "title": "NebuSec chains a browser flaw and a Linux kernel flaw to take over Meta's Muse agent from a single malicious webpage",
+   "publisher": "NebuSec",
+   "url": "https://nebusec.ai/research/meta-muse-credential-exposure/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "NebuSec says a webpage opened by Meta Muse could exploit a Chromium flaw to steal and alter users' conversation history and stored memories without triggering the Sentinel approval prompts. It then escaped the agent's container with a Linux kernel exploit and reached root on the user's cloud machine, including stored credentials. NebuSec reported the findings to Meta and says all the flaws were fixed before publication.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "vulnerability-research;agents",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
+   "related_ids": ""
+  },
+  {
    "id": "wf-3281615b2a",
    "published": "2026-11-20",
    "reporting_period": "Sep-Nov 2026",
@@ -278,6 +298,26 @@
    "tag_themes": "model-release",
    "tag_rating": "Green",
    "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-f3060cde52",
+   "published": "2026-11-20",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-22",
+   "item_type": "Incident",
+   "title": "Bell Canada says an 'agentic threat actor' got into a circuit ordering system and took enterprise customer data",
+   "publisher": "BleepingComputer",
+   "url": "https://www.bleepingcomputer.com/news/security/bell-canada-says-agentic-hacker-stole-enterprise-customer-data/",
+   "source_relation": "Third-party report",
+   "source_category": "Other",
+   "source_says": "Bell Canada confirmed that an 'agentic threat actor' accessed some of its systems, including a pre-production Maximo system used to order and provision circuits, on 17 November 2026. Business contact details, ticket titles and some network IP addresses were taken. Bell says it contained the incident, services were not affected, and it is sharing indicators with customers and the Canadian Centre for Cyber Security. Bell has not said how the attacker used AI.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "agents;incident;threat-actor-reporting",
+   "tag_rating": "Amber",
+   "tag_rating_reason": "Significant change to watch",
    "related_ids": ""
   },
   {
@@ -512,6 +552,26 @@
    "source_relation": "Original source",
    "source_category": "Other",
    "source_says": "The changelog says 2.1.328 fixed the Linux Bash sandbox renaming .git/HEAD after each command when the branch name is not valid UTF-8. It also fixed Esc key presses being lost at permission prompts when typed straight after them.",
+   "key_findings": "",
+   "evidence_links": "",
+   "health_named": "No",
+   "tag_themes": "model-release",
+   "tag_rating": "Green",
+   "tag_rating_reason": "Background",
+   "related_ids": ""
+  },
+  {
+   "id": "wf-9591ebf371",
+   "published": "2026-11-19",
+   "reporting_period": "Sep-Nov 2026",
+   "collected": "2026-11-22",
+   "item_type": "Research",
+   "title": "Check Point's PuzzleMask hides a harmful request in plain prose so a small guardrail model passes it to a stronger model",
+   "publisher": "Check Point Research",
+   "url": "https://research.checkpoint.com/2026/30-years-of-gatekeeper-asymmetry-doom-the-paradox-that-makes-powerful-llms-more-vulnerable/",
+   "source_relation": "Original source",
+   "source_category": "Other",
+   "source_says": "Check Point Research describes PuzzleMask, which hides a policy-breaking payload in ordinary prose so a lightweight guardrail model screening inputs misses it, while the more capable target model reads and acts on it. The attack worked against GPT-5.2-thinking-high. Claude Opus 4.5 blocked it after Anthropic added a guardrail. The research was done in late 2025.",
    "key_findings": "",
    "evidence_links": "",
    "health_named": "No",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -333,10 +333,10 @@
    "open_source": "No",
    "can_act_on": "Not confirmed",
    "access": "Public app",
-   "security_evidence": "On 19 November 2026 TechCrunch, citing Reuters, reported that Meta employees testing Muse saw other users' messages and data, including bank balances, in their chats. Meta said employees test versions the public does not have.",
-   "security_url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
+   "security_evidence": "On 19 November 2026 TechCrunch, citing Reuters, reported that Meta employees testing Muse saw other users' messages and data, including bank balances, in their chats. Meta said employees test versions the public does not have. On 20 November 2026 NebuSec reported that a malicious webpage could exploit Muse's built-in browser and a Linux kernel flaw to steal and alter conversation history and memories, bypass its Sentinel approval prompts and reach stored credentials. NebuSec says Meta fixed every flaw before publication.",
+   "security_url": "https://nebusec.ai/research/meta-muse-credential-exposure/",
    "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
-   "status_as_of": "2026-11-21"
+   "status_as_of": "2026-11-22"
   }
  ]
 }
