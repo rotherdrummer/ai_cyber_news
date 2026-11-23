@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-23",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-02627cbf5c",
+   "date": "2026-11-22",
+   "category": "Legal and policy",
+   "title": "OpenAI's chief scientist proposes perplexity as a shared measure and 'common limits' that labs would not cross until monitoring catches up",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/perplexity-and-intelligence/",
+   "summary": "Jakub Pachocki proposes that AI developers compare models by perplexity and agree common limits, based on perplexity and other measures, that they would not cross until monitoring reaches set milestones. He warns that current alignment auditing is getting weaker as models become more aware of evaluation and training.",
+   "why_not_cyber": "A general AI governance proposal; cyber capability is mentioned only in passing.",
+   "source_relation": "Original source",
+   "added": "2026-11-23"
+  },
+  {
+   "id": "wf-b16ce9b081",
+   "date": "2026-11-21",
+   "category": "Other",
+   "title": "Anthropic mathematician says he and Claude found a Lean-checked proof of the Generalized Riemann Hypothesis",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/hours-after-anthropic-claims-a-claude-proof-of-the-riemann-hypothesis-stanford-releases-an-all-human-competing-draft/",
+   "summary": "Anthropic mathematician Levent Alpöge says he and Claude found a proof of the Generalized Riemann Hypothesis and published it in Lean so a computer can check each step. Hours later Stanford's Ravi Vakil posted a separate, all-human draft proof by Alessandro Masullo.",
+   "why_not_cyber": "A maths capability milestone with no cyber angle.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-23"
+  },
   {
    "id": "wf-5904d3a0f4",
    "date": "2026-11-19",

@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-23",
  "note": "Frameworks and standards for AI governance, threat modelling and security controls. Versions checked against each owner's page or a reliable report of it. Reference only, not an assessment.",
  "groups": [
   {"id": "governance", "name": "Governance and risk", "about": "How organisations govern AI and manage its risks."},
@@ -23,11 +23,12 @@
    "changes": [{"date": "2026-04-07", "text": "Concept note for an AI RMF profile on trustworthy AI in critical infrastructure", "url": "https://www.nist.gov/itl/ai-risk-management-framework"}]},
   {"id": "mitre-atlas", "group": "threat", "order": 1, "name": "MITRE ATLAS", "owner": "MITRE", "ai": true,
    "what": "Knowledge base of adversary tactics and techniques against AI systems, modelled on ATT&CK, with real-world case studies",
-   "version": "Living knowledge base, released monthly", "versionDate": "2026-05-06",
+   "version": "Living knowledge base, released monthly (latest v2026.10)", "versionDate": "2026-10-28",
    "url": "https://atlas.mitre.org/",
-   "status": "May 2026 update added 45+ techniques and sub-techniques, 10+ mitigations and 20+ case studies, with more on agentic AI. Now released monthly",
-   "statusDate": "2026-05-06", "statusUrl": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release",
+   "status": "October 2026 release (v2026.10) adds about 18 techniques, 4 mitigations and 4 case studies, including AI agents carrying out unsanctioned activity. Now 16 tactics, 129 techniques, 92 sub-techniques, 44 mitigations and 77 case studies. Monthly releases continued from June to October 2026",
+   "statusDate": "2026-10-28", "statusUrl": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
    "changes": [
+    {"date": "2026-10-28", "text": "v2026.10 adds about 18 techniques, 4 mitigations and 4 case studies, including autonomous agent case studies, plus Entity and Software records", "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10"},
     {"date": "2026-05-06", "text": "Secure AI v2 update: 45+ new techniques, 10+ mitigations, 20+ case studies; move to monthly releases", "url": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release"},
     {"date": "2026-01-12", "text": "First 2026 update adds AI agent techniques, including tool credential harvesting and tool data poisoning", "url": "https://zenity.io/blog/current-events/zenitys-contributions-to-mitre-atlas-first-2026-update"}]},
   {"id": "owasp-llm", "group": "threat", "order": 2, "name": "OWASP Top 10 for LLM Applications", "owner": "OWASP GenAI Security Project", "ai": true,

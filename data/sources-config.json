@@ -1,6 +1,6 @@
 {
  "about": "The organisations the daily routine works from. Core organisations are checked thoroughly on every run: their known pages, plus a search of their whole website for anything on AI and cyber. Hints are places to look each run, without a guaranteed check. Core is strict: only UK government departments and public bodies with an AI or cyber security remit, frontier AI developers, and leading independent AI safety or security research bodies or university groups whose work AISI, NCSC or a frontier developer has cited. Any other organisation with 2 or more News items in 90 days becomes a hint. Core organisations with nothing relevant in 180 days move to hints; hints with nothing in 365 days are removed. AISI, NCSC and the CSR Bill are fixed. Every change is logged in data/sources.json changes.",
- "updated": "2026-11-21",
+ "updated": "2026-11-23",
  "core": [
   {
    "name": "AISI",
@@ -53,7 +53,8 @@
     "https://claude.com/resources/articles",
     "https://code.claude.com/docs/en/changelog",
     "https://platform.claude.com/docs/en/release-notes/overview",
-    "https://claude.dev/blog/"
+    "https://claude.dev/blog/",
+    "https://www.anthropic.com/news/announcements"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -73,7 +74,9 @@
     "https://openai.com/news/security/",
     "https://openai.com/index/disrupting-malicious-uses-of-ai/",
     "https://learn.chatgpt.com/docs/changelog",
-    "https://openai.com/cybersecurity/"
+    "https://openai.com/cybersecurity/",
+    "https://openai.com/safety-alignment/",
+    "https://openai.com/safety-alignment/misalignment-reports/"
    ],
    "feed": "https://openai.com/news/rss.xml",
    "note": "Also its \"Disrupting malicious uses of AI\" reports.",
@@ -95,7 +98,8 @@
     "https://cloud.google.com/blog/products/identity-security",
     "https://blog.google/technology/safety-security/rss/",
     "https://projectzero.google/",
-    "https://blog.google/security/"
+    "https://blog.google/security/",
+    "https://blog.google/security/rss/"
    ],
    "feed": "https://feeds.feedburner.com/threatintelligence/pvexyqv7v0v",
    "added": "2026-10-14",
@@ -193,13 +197,15 @@
     "ai.meta.com",
     "research.meta.ai",
     "about.fb.com",
-    "transparency.meta.com"
+    "transparency.meta.com",
+    "muse.ai"
    ],
    "pages": [
     "https://ai.meta.com/blog/",
     "https://research.meta.ai/blog/",
     "https://about.fb.com/news/",
-    "https://transparency.meta.com/metasecurity/threat-reporting/"
+    "https://transparency.meta.com/metasecurity/threat-reporting/",
+    "https://muse.ai/blog"
    ],
    "feed": "",
    "added": "2026-10-15",
@@ -301,7 +307,8 @@
     "epoch.ai"
    ],
    "pages": [
-    "https://epoch.ai/publications"
+    "https://epoch.ai/publications",
+    "https://epoch.ai/data-insights/"
    ],
    "feed": "",
    "added": "2026-11-15",
@@ -533,6 +540,12 @@
    "name": "Reuters",
    "url": "https://www.reuters.com/technology/cybersecurity/",
    "added": "2026-11-21",
+   "reason": "Rule 2"
+  },
+  {
+   "name": "Prime Minister's Office",
+   "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
+   "added": "2026-11-23",
    "reason": "Rule 2"
   }
  ]

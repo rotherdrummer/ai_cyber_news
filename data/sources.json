@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21",
+ "updated": "2026-11-23",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -95,6 +95,11 @@
      "name": "MI5 speeches and statements",
      "url": "https://www.mi5.gov.uk/news-categories/speeches-and-statements",
      "added": "2026-11-19"
+    },
+    {
+     "name": "Prime Minister's Office",
+     "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
+     "added": "2026-11-23"
     }
    ]
   },
@@ -216,6 +221,26 @@
      "name": "Google security blog",
      "url": "https://blog.google/security/",
      "added": "2026-11-20"
+    },
+    {
+     "name": "Anthropic announcements",
+     "url": "https://www.anthropic.com/news/announcements",
+     "added": "2026-11-23"
+    },
+    {
+     "name": "OpenAI safety and alignment (including misalignment reports)",
+     "url": "https://openai.com/safety-alignment/",
+     "added": "2026-11-23"
+    },
+    {
+     "name": "Google security blog feed",
+     "url": "https://blog.google/security/rss/",
+     "added": "2026-11-23"
+    },
+    {
+     "name": "Meta Muse blog",
+     "url": "https://muse.ai/blog",
+     "added": "2026-11-23"
     }
    ]
   },
@@ -247,6 +272,11 @@
      "name": "METR evaluations",
      "url": "https://metr.org/evaluations/",
      "added": "2026-11-15"
+    },
+    {
+     "name": "Epoch AI data insights",
+     "url": "https://epoch.ai/data-insights/",
+     "added": "2026-11-23"
     }
    ]
   },
@@ -951,6 +981,41 @@
    "date": "2026-11-21",
    "change": "Added Reuters to hints",
    "why": "Rule 2: Reuters is the publisher of 3 items published in the last 90 days (reported via The Standard, TimesLIVE and The Globe and Mail), with a fourth Reuters report on Meta's Muse agent this run."
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://www.anthropic.com/news/announcements to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://openai.com/safety-alignment/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://openai.com/safety-alignment/misalignment-reports/ to OpenAI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://blog.google/security/rss/ to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://muse.ai/blog to Meta",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added https://epoch.ai/data-insights/ to Epoch AI",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-23",
+   "change": "Added Prime Minister's Office to hints",
+   "why": "Rule 2: the Prime Minister's Office is the publisher of 2 items published in the last 90 days (16 Nov Manchester Compact on AI guardrails and 20 Nov UK-EU Digital Partnership covering AI security)."
   }
  ]
 }
