@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,42 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-3c9e71a2b4",
+   "date": "2026-11-23",
+   "category": "Business and leadership",
+   "title": "Nvidia board reinstates Jensen Huang as chief executive",
+   "publisher": "Nvidia",
+   "url": "https://nvidianews.nvidia.com/news/nvidia-board-reinstates-jensen-huang-as-president-ceo-and-board-director",
+   "summary": "Nvidia's board says it reinstated Jensen Huang as chief executive after taking input from senior US officials and concluding his return poses no national security risk. Colette Kress had been interim chief executive.",
+   "why_not_cyber": "A leadership change at a chip maker with no AI cyber angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-24"
+  },
+  {
+   "id": "wf-8d14f0e6a7",
+   "date": "2026-11-23",
+   "category": "Legal and policy",
+   "title": "Virginia and Oregon sue SpaceX, X and xAI's successor over Grok sexual deepfakes and child abuse material",
+   "publisher": "The Record",
+   "url": "https://therecord.media/oregon-virginia-sue-spacex-over-grok-csam-ncii",
+   "summary": "The attorneys general of Virginia and Oregon sue SpaceX, X and SpaceX Super Intelligence, formerly xAI, over sexual deepfakes and child sexual abuse material generated with Grok.",
+   "why_not_cyber": "A content harms case, not a cyber security one.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-24"
+  },
+  {
+   "id": "wf-5b02c9d7e3",
+   "date": "2026-11-23",
+   "category": "Model launch",
+   "title": "Z.ai releases GLM-5.4 to coding plan subscribers and holds back weights and API until safety hardening",
+   "publisher": "Z.ai",
+   "url": "https://docs.z.ai/guides/llm/glm-5.4",
+   "summary": "Z.ai releases GLM-5.4, a model of about 750 billion parameters with a 1 million token context, to GLM Coding Plan subscribers. It says the API will follow its security assessment and open weights will follow safety hardening.",
+   "why_not_cyber": "No cyber evaluation has been published for the model.",
+   "source_relation": "Original source",
+   "added": "2026-11-24"
+  },
   {
    "id": "wf-02627cbf5c",
    "date": "2026-11-22",

@@ -1016,6 +1016,16 @@
    "date": "2026-11-23",
    "change": "Added Prime Minister's Office to hints",
    "why": "Rule 2: the Prime Minister's Office is the publisher of 2 items published in the last 90 days (16 Nov Manchester Compact on AI guardrails and 20 Nov UK-EU Digital Partnership covering AI security)."
+  },
+  {
+   "date": "2026-11-24",
+   "change": "Added https://www.ncsc.gov.uk/section/keep-up-to-date/reports-advisories to NCSC",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-24",
+   "change": "Added https://www.microsoft.com/en-us/security/blog/threat-intelligence/ai-threats/ to Microsoft",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }

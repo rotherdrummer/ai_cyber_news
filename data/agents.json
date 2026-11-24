@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -337,6 +337,23 @@
    "security_url": "https://nebusec.ai/research/meta-muse-credential-exposure/",
    "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
    "status_as_of": "2026-11-23"
+  },
+  {
+   "id": "claude-ship",
+   "name": "Claude Ship",
+   "maker": "Anthropic",
+   "maker_note": "",
+   "runs_on": "Anthropic's Claude models",
+   "same_developer": "Yes",
+   "type": "Coding agent",
+   "delivery": "Hosted service",
+   "open_source": "No",
+   "can_act_on": "GitHub pull requests: reviews code, fixes changes and can approve pull requests on its own under a policy file kept in the repository",
+   "access": "Claude Team and Enterprise plans, GitHub only; Code Review generally available, PR Steward and Claude Approvals in beta; not available with zero data retention, the HIPAA configuration or customer-managed keys",
+   "security_evidence": "Not confirmed",
+   "security_url": "https://claude.com/resources/articles/introducing-claude-ship",
+   "url": "https://claude.com/resources/articles/introducing-claude-ship",
+   "status_as_of": "2026-11-24"
   }
  ]
 }

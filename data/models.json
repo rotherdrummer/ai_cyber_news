@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-20",
+ "updated": "2026-11-24",
  "notes": [
   {
    "title": "Region hosting is not sovereignty",
@@ -110,8 +110,8 @@
    "tier": "Open flagship",
    "cyber_evidence": "Anthropic reports 50 of 410 ExploitBench successes, close to Claude Mythos Preview (56 of 410); NIST CAISI calls it the most cyber-capable open-weight model to date; Irregular: 3 of 13 multi-stage cyber scenarios completed with no refusals; Epoch AI: built Firefox exploits from published fixes for six releases",
    "evidence_url": "https://epoch.ai/publications/open-weight-models-patch-gap",
-   "updated": "2026-10-31",
-   "position": "Flagship"
+   "updated": "2026-11-24",
+   "position": "Previous generation"
   },
   {
    "id": "gpt-5-6-sol",
@@ -180,8 +180,8 @@
    "tier": "Flagship (ChatGPT)",
    "cyber_evidence": "High cyber capability, below Critical (OpenAI); 82.62% on ExploitBench (self-reported)",
    "evidence_url": "https://deploymentsafety.openai.com/gpt-6-october",
-   "updated": "2026-10-08",
-   "position": "Everyday"
+   "updated": "2026-11-24",
+   "position": "Previous generation"
   },
   {
    "id": "gpt-oss",
@@ -686,6 +686,34 @@
    "tier": "Fast coding model",
    "position": "Fast and low-cost",
    "cyber_evidence": "Microsoft rates it High for offensive cyber operations; self-reported 60.33% on CyberGym E2E"
+  },
+  {
+   "id": "gpt-6-2-chat",
+   "name": "GPT-6.2 (November 23)",
+   "developer": "OpenAI",
+   "jurisdiction": "United States",
+   "weights": "Closed",
+   "released": "2026-11-23",
+   "access": "ChatGPT chat tab for Plus and Pro users",
+   "tier": "Chat model",
+   "position": "Everyday",
+   "cyber_evidence": "Critical cyber threshold (OpenAI); self-reported 88.34% on SEC-Bench Pro, 100% on ExploitBench V8, 60% on Chrome renderer code execution",
+   "evidence_url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+   "updated": "2026-11-24"
+  },
+  {
+   "id": "glm-5-4",
+   "name": "GLM-5.4",
+   "developer": "Z.ai (Zhipu)",
+   "jurisdiction": "China",
+   "weights": "Closed",
+   "released": "2026-11-23",
+   "access": "GLM Coding Plan subscribers only; API and open weights held back until security assessment and safety hardening are complete",
+   "tier": "Flagship, about 750 billion parameters",
+   "position": "Flagship",
+   "cyber_evidence": "None published",
+   "evidence_url": "https://docs.z.ai/guides/llm/glm-5.4",
+   "updated": "2026-11-24"
   }
  ],
  "positions": [

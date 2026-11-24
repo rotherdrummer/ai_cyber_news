@@ -28,7 +28,8 @@
     "https://www.ncsc.gov.uk/collection/problem-book/ai-cyber",
     "https://www.ncsc.gov.uk/section/keep-up-to-date",
     "https://www.ncsc.gov.uk/collection/annual-review-2026",
-    "https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports"
+    "https://www.ncsc.gov.uk/section/keep-up-to-date/threat-reports",
+    "https://www.ncsc.gov.uk/section/keep-up-to-date/reports-advisories"
    ],
    "feed": "https://www.ncsc.gov.uk/api/1/services/v1/all-rss-feed.xml",
    "added": "2026-10-14",
@@ -222,7 +223,8 @@
     "https://www.microsoft.com/en-us/security/blog/topic/ai-and-machine-learning/",
     "https://blogs.microsoft.com/on-the-issues/",
     "https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/",
-    "https://microsoft.ai/news/"
+    "https://microsoft.ai/news/",
+    "https://www.microsoft.com/en-us/security/blog/threat-intelligence/ai-threats/"
    ],
    "feed": "https://www.microsoft.com/en-us/security/blog/feed/",
    "added": "2026-10-15",

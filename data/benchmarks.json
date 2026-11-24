@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-23",
  "tests": [
   {
    "name": "ExploitBench",
@@ -188,6 +188,16 @@
      "measured_by": "Kang, Gwon and Park (independent researchers)",
      "self_reported": false,
      "weights": "Open"
+    },
+    {
+     "model": "GPT-6.2 (November 23)",
+     "value": 100,
+     "display": "100% (V8 mean capability credit)",
+     "date": "2026-11-23",
+     "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -296,6 +306,16 @@
      "date": "2026-11-18",
      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-neon/",
      "measured_by": "Google (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6.2 (November 23)",
+     "value": 88.34,
+     "display": "88.34% (pass@1)",
+     "date": "2026-11-23",
+     "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
+     "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }
@@ -655,6 +675,16 @@
      "display": "0.659 (length-adjusted)",
      "date": "2026-11-17",
      "url": "https://deploymentsafety.openai.com/gpt-6-2-astra-sol",
+     "measured_by": "OpenAI (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "GPT-6.2 (November 23)",
+     "value": 0.584,
+     "display": "0.584 (length-adjusted)",
+     "date": "2026-11-23",
+     "url": "https://deploymentsafety.openai.com/gpt-6-2-chatgpt",
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
