@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-25",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -339,6 +339,11 @@
      "name": "Reuters",
      "url": "https://www.reuters.com/technology/cybersecurity/",
      "added": "2026-11-21"
+    },
+    {
+     "name": "CyberScoop",
+     "url": "https://cyberscoop.com/",
+     "added": "2026-11-25"
     }
    ]
   },
@@ -1026,6 +1031,16 @@
    "date": "2026-11-24",
    "change": "Added https://www.microsoft.com/en-us/security/blog/threat-intelligence/ai-threats/ to Microsoft",
    "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-25",
+   "change": "Added https://red.anthropic.com/research/ to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-25",
+   "change": "Added CyberScoop to hints",
+   "why": "Rule 2: CyberScoop published 2 items in data/items.json in the last 90 days (18 and 23 November 2026)."
   }
  ]
 }

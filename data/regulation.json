@@ -1,10 +1,15 @@
 {
-  "updated": "2026-11-17",
+  "updated": "2026-11-25",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
       "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
       "changes": [
+        {
+          "date": "2026-11-24",
+          "text": "Commons agreed Lords amendments including amendment 33 on AI agent loss of oversight or control, and disagreed with amendments 107 (review) and 108 (foreign powers register). The Bill returns to the Lords.",
+          "url": "https://hansard.parliament.uk/commons/2026-11-24/debates/9696CEE9-A8C3-449D-9B15-89FA9F00CF8E/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill"
+        },
         {
           "date": "2026-11-20",
           "text": "Notices of amendments for Commons consideration of Lords amendments published on 20 and 23 November. A programme motion is listed alongside consideration on 24 November.",
@@ -67,9 +72,9 @@
       "order": 1,
       "owner": "DHSC (delegated to NHS England) + NCSC",
       "risk": "None; scope depends on sector and size thresholds",
-      "status": "Commons programme motion and consideration of Lords amendments listed for 24 November 2026",
-      "statusDate": "2026-11-23",
-      "statusUrl": "https://bills-api.parliament.uk/api/v1/Bills/4035/Stages",
+      "status": "Commons agreed most Lords amendments, including the AI agent loss-of-control clause, on 24 November 2026 but disagreed with amendments 107 and 108; the Bill returns to the Lords",
+      "statusDate": "2026-11-24",
+      "statusUrl": "https://hansard.parliament.uk/commons/2026-11-24/debates/9696CEE9-A8C3-449D-9B15-89FA9F00CF8E/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill",
       "sub": "Network & Information Systems",
       "teeth": "Fines of up to £17m today, raised under the CSRB",
       "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",

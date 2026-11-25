@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -331,12 +331,12 @@
    "type": "General-purpose agent",
    "delivery": "Hosted service",
    "open_source": "No",
-   "can_act_on": "Not confirmed",
-   "access": "Public app",
-   "security_evidence": "On 19 November 2026 TechCrunch, citing Reuters, reported that Meta employees testing Muse saw other users' messages and data, including bank balances, in their chats. Meta said employees test versions the public does not have. On 20 November 2026 NebuSec reported that a malicious webpage could exploit Muse's built-in browser and a Linux kernel flaw to steal and alter conversation history and memories, bypass its Sentinel approval prompts and reach stored credentials. NebuSec says Meta fixed every flaw before publication. Meta told reporters the cases were isolated incidents and that many suspected account mix-ups were hallucinations it has fixed. On 2 November 2026 Meta said Muse's bug bounty had paid about $1.2m for 64 valid findings, including a $300,000 flaw that exposed conversations and tokens and a $90,000 prompt injection.",
+   "can_act_on": "Email, travel bookings and purchases, from an isolated cloud virtual machine per user",
+   "access": "Public app; launched for UK adults on 23 November 2026",
+   "security_evidence": "On 19 November 2026 TechCrunch, citing Reuters, reported that Meta employees testing Muse saw other users' messages and data, including bank balances, in their chats. Meta said employees test versions the public does not have. On 20 November 2026 NebuSec reported that a malicious webpage could exploit Muse's built-in browser and a Linux kernel flaw to steal and alter conversation history and memories, bypass its Sentinel approval prompts and reach stored credentials. NebuSec says Meta fixed every flaw before publication. Meta told reporters the cases were isolated incidents and that many suspected account mix-ups were hallucinations it has fixed. On 2 November 2026 Meta said Muse's bug bounty had paid about $1.2m for 64 valid findings, including a $300,000 flaw that exposed conversations and tokens and a $90,000 prompt injection. On 23 November 2026 Meta launched Muse in the UK and said a separate security agent checks Muse's actions against the permissions the user has granted, and passwords are kept in a store the model cannot see.",
    "security_url": "https://nebusec.ai/research/meta-muse-credential-exposure/",
    "url": "https://techcrunch.com/2026/11/19/metas-ai-agent-muse-is-mixing-up-conversations-and-exposing-private-data-report-says/",
-   "status_as_of": "2026-11-23"
+   "status_as_of": "2026-11-25"
   },
   {
    "id": "claude-ship",

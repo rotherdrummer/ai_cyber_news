@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24",
+ "updated": "2026-11-25",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,18 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-b5e27f19c6",
+   "date": "2026-11-24",
+   "category": "Other",
+   "title": "OpenAI says GPT-6 models designed working proteins mostly through reasoning and code",
+   "publisher": "OpenAI",
+   "url": "https://openai.com/index/gpt-6-models-demonstrate-intrinsic-protein-design-capabilities/",
+   "summary": "OpenAI says GPT-6 models designed proteins mostly through reasoning and code, and lab tests with a partner showed binding on five targets. It says its Preparedness Framework guides how it assesses biosecurity risks.",
+   "why_not_cyber": "A biology capability result with no cyber content.",
+   "source_relation": "Original source",
+   "added": "2026-11-25"
+  },
   {
    "id": "wf-3c9e71a2b4",
    "date": "2026-11-23",
@@ -43,6 +55,18 @@
    "why_not_cyber": "No cyber evaluation has been published for the model.",
    "source_relation": "Original source",
    "added": "2026-11-24"
+  },
+  {
+   "id": "wf-3c81e0a9d4",
+   "date": "2026-11-23",
+   "category": "Business and leadership",
+   "title": "Amazon agrees to buy Decart's optimisation technology and hire its founders",
+   "publisher": "Amazon",
+   "url": "https://www.aboutamazon.com/news/company-news/amazon-decart-ai-optimization",
+   "summary": "Amazon has agreed to acquire the technology behind Decart's Optimization Stack and hire its founders and engineers, subject to regulatory clearance.",
+   "why_not_cyber": "A business deal with no security angle.",
+   "source_relation": "Original source",
+   "added": "2026-11-25"
   },
   {
    "id": "wf-02627cbf5c",
