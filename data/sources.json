@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-26",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -100,6 +100,16 @@
      "name": "Prime Minister's Office",
      "url": "https://www.gov.uk/government/organisations/prime-ministers-office-10-downing-street",
      "added": "2026-11-23"
+    },
+    {
+     "name": "NCSC blog feed",
+     "url": "https://www.ncsc.gov.uk/api/1/services/v1/blog-post-rss-feed.xml",
+     "added": "2026-11-26"
+    },
+    {
+     "name": "Financial Conduct Authority",
+     "url": "https://www.fca.org.uk/news",
+     "added": "2026-11-26"
     }
    ]
   },
@@ -1041,6 +1051,16 @@
    "date": "2026-11-25",
    "change": "Added CyberScoop to hints",
    "why": "Rule 2: CyberScoop published 2 items in data/items.json in the last 90 days (18 and 23 November 2026)."
+  },
+  {
+   "date": "2026-11-26",
+   "change": "Added https://www.ncsc.gov.uk/api/1/services/v1/blog-post-rss-feed.xml to NCSC",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-26",
+   "change": "Added Financial Conduct Authority to hints",
+   "why": "Rule 2: the Financial Conduct Authority published 2 items in data/items.json in the last 90 days (19 October and 24 November 2026)."
   }
  ]
 }

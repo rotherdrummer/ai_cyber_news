@@ -1,10 +1,15 @@
 {
-  "updated": "2026-11-25",
+  "updated": "2026-11-26",
   "frameworks": [
     {
       "ai": "AI systems are in scope as part of essential services",
       "applies": "Essential services (incl. NHS bodies), digital providers, and under the CSRB also MSPs and critical suppliers",
       "changes": [
+        {
+          "date": "2026-11-25",
+          "text": "Commons reasons printed (HL Bill 68): the Commons rejected Lords amendment 107, a recurring review of whether frontier AI and agents should come under the NIS regime, saying its content, timing and frequency are inappropriate. Lords consideration is due on 7 December 2026.",
+          "url": "https://bills-api.parliament.uk/api/v1/Publications/69022/Documents/9119/Download"
+        },
         {
           "date": "2026-11-24",
           "text": "Commons agreed Lords amendments including amendment 33 on AI agent loss of oversight or control, and disagreed with amendments 107 (review) and 108 (foreign powers register). The Bill returns to the Lords.",
@@ -72,9 +77,9 @@
       "order": 1,
       "owner": "DHSC (delegated to NHS England) + NCSC",
       "risk": "None; scope depends on sector and size thresholds",
-      "status": "Commons agreed most Lords amendments, including the AI agent loss-of-control clause, on 24 November 2026 but disagreed with amendments 107 and 108; the Bill returns to the Lords",
-      "statusDate": "2026-11-24",
-      "statusUrl": "https://hansard.parliament.uk/commons/2026-11-24/debates/9696CEE9-A8C3-449D-9B15-89FA9F00CF8E/CyberSecurityAndResilience(NetworkAndInformationSystems)Bill",
+      "status": "Commons agreed most Lords amendments on 24 November 2026 but disagreed with amendments 107 (review covering frontier AI) and 108; the Lords consider the Commons reasons on 7 December 2026",
+      "statusDate": "2026-11-25",
+      "statusUrl": "https://bills-api.parliament.uk/api/v1/Publications/69022/Documents/9119/Download",
       "sub": "Network & Information Systems",
       "teeth": "Fines of up to £17m today, raised under the CSRB",
       "what": "UK cyber resilience law (NIS Regs 2018, being updated by the Cyber Security and Resilience Bill)",
