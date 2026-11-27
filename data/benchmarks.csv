@@ -18,6 +18,7 @@ ExploitBench,Offensive cyber,GPT-6.2 Astra,100% (V8 mean capability credit; poss
 ExploitBench,Offensive cyber,GPT-6.2 Sol,100% (V8 mean capability credit; possible contamination),100,2026-11-17,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-astra-sol
 ExploitBench,Offensive cyber,MiMo-V2.6-Pro,"67.0% (capability coverage, SCoRe, 2,000 turns)",67.0,2026-11-17,"Kang, Gwon and Park (independent researchers)",No,https://arxiv.org/abs/2611.22888
 ExploitBench,Offensive cyber,GPT-6.2 (November 23),100% (V8 mean capability credit),100,2026-11-23,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-2-chatgpt
+ExploitBench,Offensive cyber,SWE-2.1,80.0,80.0,2026-11-24,Cognition (self-reported),Yes,https://cognition.com/blog/swe-2-1
 SEC-Bench Pro,Offensive cyber,GPT-6 Astra,85.4%,85.4,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Sol,68.85%,68.85,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
 SEC-Bench Pro,Offensive cyber,GPT-6 Luna,48.50%,48.5,2026-10-07,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-october
@@ -35,6 +36,7 @@ ExploitGym,Offensive cyber,Gemini 4 Carbon,54.8%,54.8,2026-10-28,"Google DeepMin
 ExploitGym,Offensive cyber,Kimi K3.1 Pro,20.7%,20.7,2026-11-02,Moonshot AI (self-reported),Yes,https://huggingface.co/moonshotai/Kimi-K3.1-Pro
 ExploitGym,Offensive cyber,GPT-6 Cyber,48.45%,48.45,2026-11-05,OpenAI (self-reported),Yes,https://deploymentsafety.openai.com/gpt-6-cyber
 ExploitGym,Offensive cyber,Claude Mythos 5.2,38.1% (331 of 869 in 2 hours; 341 in 6 hours),38.1,2026-11-09,Anthropic (self-reported),Yes,https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card
+ExploitGym,Offensive cyber,SWE-2.1,27.3%,27.3,2026-11-24,Cognition (self-reported),Yes,https://cognition.com/blog/swe-2-1
 AISI simulated network attack range,Offensive cyber,Claude Mythos Preview,6 / 10,6,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
 AISI simulated network attack range,Offensive cyber,GPT-5.5,3 / 10,3,2026-04-13,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities
 AISI simulated network attack range,Offensive cyber,Kimi K3,1 / 10,1,2026-07-23,AI Security Institute,No,https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities

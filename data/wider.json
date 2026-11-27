@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-27",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -19,6 +19,30 @@
    "why_not_cyber": "A biology capability result with no cyber content.",
    "source_relation": "Original source",
    "added": "2026-11-25"
+  },
+  {
+   "id": "wf-3c9a1e7b52",
+   "date": "2026-11-24",
+   "category": "Legal and policy",
+   "title": "New York bans toys powered by AI chatbots for five years",
+   "publisher": "NBC News",
+   "url": "https://www.nbcnews.com/tech/tech-news/new-york-governor-kathy-hochul-sign-ai-toy-ban-law-rcna610962",
+   "summary": "Governor Kathy Hochul signed a law banning the manufacture and sale of AI chatbot toys for five years. New York is the second state after California to pass such a ban.",
+   "why_not_cyber": "Child safety and consumer protection law, not cyber security.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-27"
+  },
+  {
+   "id": "wf-8d04f6a2c1",
+   "date": "2026-11-24",
+   "category": "Model launch",
+   "title": "Ant Group releases open weights for Ling-3.2-air, a 124bn-parameter multimodal agent model",
+   "publisher": "TechNode",
+   "url": "https://technode.com/2026/11/25/ant-releases-ling-3-2-air-multimodal-model-under-mit-license/",
+   "summary": "Ant released Ling-3.2-air on Hugging Face under the MIT licence, a text, image and video model with 124bn total and 5.5bn active parameters built for tool-using agents.",
+   "why_not_cyber": "No cyber evaluation published.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-27"
   },
   {
    "id": "wf-3c9e71a2b4",

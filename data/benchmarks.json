@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "tests": [
   {
    "name": "ExploitBench",
@@ -198,6 +198,16 @@
      "measured_by": "OpenAI (self-reported)",
      "self_reported": true,
      "weights": "Closed"
+    },
+    {
+     "model": "SWE-2.1",
+     "value": 80.0,
+     "display": "80.0",
+     "date": "2026-11-24",
+     "url": "https://cognition.com/blog/swe-2-1",
+     "measured_by": "Cognition (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
     }
    ]
   },
@@ -386,6 +396,16 @@
      "date": "2026-11-09",
      "url": "https://www.anthropic.com/document/claude-fable-5-2-mythos-5-2-system-card",
      "measured_by": "Anthropic (self-reported)",
+     "self_reported": true,
+     "weights": "Closed"
+    },
+    {
+     "model": "SWE-2.1",
+     "value": 27.3,
+     "display": "27.3%",
+     "date": "2026-11-24",
+     "url": "https://cognition.com/blog/swe-2-1",
+     "measured_by": "Cognition (self-reported)",
      "self_reported": true,
      "weights": "Closed"
     }

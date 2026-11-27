@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "principles": [
   "Public sources only. Nothing confidential, internal or personal is collected.",
   "Original sources are preferred: the organisation that did the work or holds the evidence. A third-party report is used only when no original can be found, and is labelled as such.",
@@ -251,6 +251,11 @@
      "name": "Meta Muse blog",
      "url": "https://muse.ai/blog",
      "added": "2026-11-23"
+    },
+    {
+     "name": "Google Project Zero feed",
+     "url": "https://projectzero.google/feed.xml",
+     "added": "2026-11-27"
     }
    ]
   },
@@ -390,6 +395,11 @@
      "name": "US Senate Commerce Committee",
      "url": "https://www.commerce.senate.gov/press-releases",
      "added": "2026-11-19"
+    },
+    {
+     "name": "European Commission",
+     "url": "https://digital-strategy.ec.europa.eu/en/news",
+     "added": "2026-11-27"
     }
    ]
   },
@@ -456,6 +466,16 @@
      "name": "Elastic Security Labs",
      "url": "https://www.elastic.co/security-labs",
      "added": "2026-11-17"
+    },
+    {
+     "name": "JFrog Security Research",
+     "url": "https://research.jfrog.com/",
+     "added": "2026-11-27"
+    },
+    {
+     "name": "Aikido",
+     "url": "https://www.aikido.dev/blog",
+     "added": "2026-11-27"
     }
    ]
   },
@@ -1061,6 +1081,26 @@
    "date": "2026-11-26",
    "change": "Added Financial Conduct Authority to hints",
    "why": "Rule 2: the Financial Conduct Authority published 2 items in data/items.json in the last 90 days (19 October and 24 November 2026)."
+  },
+  {
+   "date": "2026-11-27",
+   "change": "Added https://projectzero.google/feed.xml to Google GTIG",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-27",
+   "change": "Added JFrog Security Research to hints",
+   "why": "Rule 2: JFrog Security Research published 2 items in data/items.json in the last 90 days (26 October and 24 November 2026)."
+  },
+  {
+   "date": "2026-11-27",
+   "change": "Added Aikido to hints",
+   "why": "Rule 2: Aikido published 2 items in data/items.json in the last 90 days (12 and 24 November 2026)."
+  },
+  {
+   "date": "2026-11-27",
+   "change": "Added European Commission to hints",
+   "why": "Rule 2: the European Commission published 2 items in data/items.json in the last 90 days (12 October and 25 November 2026)."
   }
  ]
 }

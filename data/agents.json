@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25",
+ "updated": "2026-11-27",
  "explainer": [
   {
    "title": "The model is the brain, the agent is the hands",
@@ -173,17 +173,17 @@
    "name": "Devin",
    "maker": "Cognition",
    "maker_note": "Cognition also owns the Windsurf editor, run as a separate product.",
-   "runs_on": "Not confirmed: Cognition does not name the models publicly",
-   "same_developer": "Not confirmed",
+   "runs_on": "SWE-2.1, Cognition's own model trained from Moonshot AI's open-weight Kimi K3; a SWE-2.1 Cyber variant powers Devin Security",
+   "same_developer": "Mixed",
    "type": "Coding agent",
    "delivery": "Hosted service",
    "open_source": "No",
    "can_act_on": "Its own cloud machine with browser, terminal and editor; GitHub, GitLab, Jira, Linear, Slack, Sentry",
    "access": "Paid plans from $20 a month; enterprise options include data residency",
-   "security_evidence": "",
-   "security_url": "",
+   "security_evidence": "Cognition says SWE-2.1 found new vulnerabilities in its training sandbox four times during training; each was caught by an escape check. The Cyber variant has looser safeguards.",
+   "security_url": "https://cognition.com/blog/swe-2-1",
    "url": "https://automationatlas.io/answers/devin-review-2026/",
-   "status_as_of": "2026-10-14"
+   "status_as_of": "2026-11-27"
   },
   {
    "id": "manus",
