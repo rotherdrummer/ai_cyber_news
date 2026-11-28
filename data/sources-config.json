@@ -57,7 +57,8 @@
     "https://platform.claude.com/docs/en/release-notes/overview",
     "https://claude.dev/blog/",
     "https://www.anthropic.com/news/announcements",
-    "https://red.anthropic.com/research/"
+    "https://red.anthropic.com/research/",
+    "https://www.anthropic.com/system-cards"
    ],
    "feed": "",
    "added": "2026-10-14"
@@ -227,7 +228,8 @@
     "https://blogs.microsoft.com/on-the-issues/",
     "https://www.microsoft.com/en-us/security/blog/topic/threat-intelligence/",
     "https://microsoft.ai/news/",
-    "https://www.microsoft.com/en-us/security/blog/threat-intelligence/ai-threats/"
+    "https://www.microsoft.com/en-us/security/blog/threat-intelligence/ai-threats/",
+    "https://devblogs.microsoft.com/agent-framework/"
    ],
    "feed": "https://www.microsoft.com/en-us/security/blog/feed/",
    "added": "2026-10-15",

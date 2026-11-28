@@ -1101,6 +1101,16 @@
    "date": "2026-11-27",
    "change": "Added European Commission to hints",
    "why": "Rule 2: the European Commission published 2 items in data/items.json in the last 90 days (12 October and 25 November 2026)."
+  },
+  {
+   "date": "2026-11-28",
+   "change": "Added https://www.anthropic.com/system-cards to Anthropic",
+   "why": "Found while checking the organisation's website"
+  },
+  {
+   "date": "2026-11-28",
+   "change": "Added https://devblogs.microsoft.com/agent-framework/ to Microsoft",
+   "why": "Found while checking the organisation's website"
   }
  ]
 }

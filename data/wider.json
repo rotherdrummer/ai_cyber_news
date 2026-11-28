@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "note": "Important AI news that isn't specifically about AI and cyber security. It is not included in the News tab, the downloaded reports or the CSV.",
  "categories": [
   "Legal and policy",
@@ -8,6 +8,30 @@
   "Other"
  ],
  "items": [
+  {
+   "id": "wf-f5bab02da3",
+   "date": "2026-11-27",
+   "category": "Legal and policy",
+   "title": "OpenAI countersues Apple, alleging trade secret theft and pressure on shared suppliers",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/openai-countersues-apple-over-trade-secret-theft-and-alleged-coercion-of-shared-suppliers/",
+   "summary": "OpenAI filed a countersuit in California accusing Apple of threatening suppliers that work with both firms and of using a returning former employee to obtain product and supplier details. Apple sued OpenAI in July 2026 over alleged leaks by former employees.",
+   "why_not_cyber": "A commercial and trade secret dispute, not an AI security incident.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-28"
+  },
+  {
+   "id": "wf-8c9e1ed6bf",
+   "date": "2026-11-26",
+   "category": "Business and leadership",
+   "title": "Nvidia halts server shipments to Malaysia, Singapore, Thailand and Indonesia after tighter US export controls",
+   "publisher": "The Decoder",
+   "url": "https://the-decoder.com/nvidia-halts-server-shipments-to-malaysia-singapore-thailand-and-indonesia-after-tighter-us-export-controls/",
+   "summary": "Nvidia told partners to stop server shipments to four Southeast Asian countries, and cloud providers there have 90 days to apply for licences. Banks halted about $500m in loans to a Singapore cloud firm that planned to rent compute to ByteDance.",
+   "why_not_cyber": "An export control and compute supply story with no security incident.",
+   "source_relation": "Third-party report",
+   "added": "2026-11-28"
+  },
   {
    "id": "wf-b5e27f19c6",
    "date": "2026-11-24",

@@ -1,84 +1,246 @@
 {
- "updated": "2026-11-23",
+ "updated": "2026-11-28",
  "note": "Frameworks and standards for AI governance, threat modelling and security controls. Versions checked against each owner's page or a reliable report of it. Reference only, not an assessment.",
  "groups": [
-  {"id": "governance", "name": "Governance and risk", "about": "How organisations govern AI and manage its risks."},
-  {"id": "threat", "name": "Threat modelling and secure AI development", "about": "How AI systems are attacked, and how to build and run them securely."},
-  {"id": "controls", "name": "Implementation controls", "about": "General cyber security controls and assurance frameworks that AI systems sit within."}
+  {
+   "id": "governance",
+   "name": "Governance and risk",
+   "about": "How organisations govern AI and manage its risks."
+  },
+  {
+   "id": "threat",
+   "name": "Threat modelling and secure AI development",
+   "about": "How AI systems are attacked, and how to build and run them securely."
+  },
+  {
+   "id": "controls",
+   "name": "Implementation controls",
+   "about": "General cyber security controls and assurance frameworks that AI systems sit within."
+  }
  ],
  "standards": [
-  {"id": "iso-42001", "group": "governance", "order": 1, "name": "ISO/IEC 42001", "owner": "ISO/IEC", "ai": true,
+  {
+   "id": "iso-42001",
+   "group": "governance",
+   "order": 1,
+   "name": "ISO/IEC 42001",
+   "owner": "ISO/IEC",
+   "ai": true,
    "what": "Certifiable management system standard for AI: policies, roles, risk and impact assessment across the AI lifecycle",
-   "version": "ISO/IEC 42001:2023 (first edition)", "versionDate": "2023-12",
+   "version": "ISO/IEC 42001:2023 (first edition)",
+   "versionDate": "2023-12",
    "url": "https://www.iso.org/standard/42001",
    "status": "No amendments. Companion standards cover impact assessment (ISO/IEC 42005, May 2025) and certification bodies (ISO/IEC 42006, July 2025). UKAS accredited BSI as the first UK certification body in January 2026",
-   "statusDate": "2026-07-24", "statusUrl": "https://vorplabs.com/security-framework-changes/iso-iec-42001",
-   "changes": [{"date": "2026-01-15", "text": "UKAS grants BSI the first UK accreditation to certify AI management systems to ISO/IEC 42001", "url": "https://vorplabs.com/security-framework-changes/iso-iec-42001"}]},
-  {"id": "nist-ai-rmf", "group": "governance", "order": 2, "name": "NIST AI Risk Management Framework", "owner": "NIST (US)", "ai": true,
+   "statusDate": "2026-07-24",
+   "statusUrl": "https://vorplabs.com/security-framework-changes/iso-iec-42001",
+   "changes": [
+    {
+     "date": "2026-01-15",
+     "text": "UKAS grants BSI the first UK accreditation to certify AI management systems to ISO/IEC 42001",
+     "url": "https://vorplabs.com/security-framework-changes/iso-iec-42001"
+    }
+   ]
+  },
+  {
+   "id": "nist-ai-rmf",
+   "group": "governance",
+   "order": 2,
+   "name": "NIST AI Risk Management Framework",
+   "owner": "NIST (US)",
+   "ai": true,
    "what": "Voluntary framework to govern, map, measure and manage AI risks, with profiles for specific uses",
-   "version": "AI RMF 1.0, plus the Generative AI Profile (NIST AI 600-1, July 2024)", "versionDate": "2023-01-26",
+   "version": "AI RMF 1.0, plus the Generative AI Profile (NIST AI 600-1, July 2024)",
+   "versionDate": "2023-01-26",
    "url": "https://www.nist.gov/itl/ai-risk-management-framework",
    "status": "Being revised under the US AI Action Plan; no revised version yet. Concept note for a critical infrastructure profile published April 2026",
-   "statusDate": "2026-04-07", "statusUrl": "https://www.nist.gov/itl/ai-risk-management-framework",
-   "changes": [{"date": "2026-04-07", "text": "Concept note for an AI RMF profile on trustworthy AI in critical infrastructure", "url": "https://www.nist.gov/itl/ai-risk-management-framework"}]},
-  {"id": "mitre-atlas", "group": "threat", "order": 1, "name": "MITRE ATLAS", "owner": "MITRE", "ai": true,
-   "what": "Knowledge base of adversary tactics and techniques against AI systems, modelled on ATT&CK, with real-world case studies",
-   "version": "Living knowledge base, released monthly (latest v2026.10)", "versionDate": "2026-10-28",
-   "url": "https://atlas.mitre.org/",
-   "status": "October 2026 release (v2026.10) adds about 18 techniques, 4 mitigations and 4 case studies, including AI agents carrying out unsanctioned activity. Now 16 tactics, 129 techniques, 92 sub-techniques, 44 mitigations and 77 case studies. Monthly releases continued from June to October 2026",
-   "statusDate": "2026-10-28", "statusUrl": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10",
+   "statusDate": "2026-04-07",
+   "statusUrl": "https://www.nist.gov/itl/ai-risk-management-framework",
    "changes": [
-    {"date": "2026-10-28", "text": "v2026.10 adds about 18 techniques, 4 mitigations and 4 case studies, including autonomous agent case studies, plus Entity and Software records", "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10"},
-    {"date": "2026-05-06", "text": "Secure AI v2 update: 45+ new techniques, 10+ mitigations, 20+ case studies; move to monthly releases", "url": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release"},
-    {"date": "2026-01-12", "text": "First 2026 update adds AI agent techniques, including tool credential harvesting and tool data poisoning", "url": "https://zenity.io/blog/current-events/zenitys-contributions-to-mitre-atlas-first-2026-update"}]},
-  {"id": "owasp-llm", "group": "threat", "order": 2, "name": "OWASP Top 10 for LLM Applications", "owner": "OWASP GenAI Security Project", "ai": true,
+    {
+     "date": "2026-04-07",
+     "text": "Concept note for an AI RMF profile on trustworthy AI in critical infrastructure",
+     "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+    }
+   ]
+  },
+  {
+   "id": "mitre-atlas",
+   "group": "threat",
+   "order": 1,
+   "name": "MITRE ATLAS",
+   "owner": "MITRE",
+   "ai": true,
+   "what": "Knowledge base of adversary tactics and techniques against AI systems, modelled on ATT&CK, with real-world case studies",
+   "version": "Living knowledge base, released monthly (latest v2026.11)",
+   "versionDate": "2026-11-27",
+   "url": "https://atlas.mitre.org/",
+   "status": "November 2026 release (v2026.11) adds ARTEX case studies, hardware attack techniques and new threat actor entries, and renames 'AI Agent Tools' to 'Agentic AI'. Now 16 tactics, 137 techniques, 98 sub-techniques, 44 mitigations and 85 case studies. Monthly releases continued from June to November 2026",
+   "statusDate": "2026-11-27",
+   "statusUrl": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.11",
+   "changes": [
+    {
+     "date": "2026-11-27",
+     "text": "v2026.11 adds ARTEX case studies, hardware attack techniques and entries for VAPOR PANDA, TAG-217, Storm-0940 and Storm-3358, and renames 'AI Agent Tools' to 'Agentic AI'.",
+     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.11"
+    },
+    {
+     "date": "2026-10-28",
+     "text": "v2026.10 adds about 18 techniques, 4 mitigations and 4 case studies, including autonomous agent case studies, plus Entity and Software records",
+     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.10"
+    },
+    {
+     "date": "2026-05-06",
+     "text": "Secure AI v2 update: 45+ new techniques, 10+ mitigations, 20+ case studies; move to monthly releases",
+     "url": "https://ctid.mitre.org/blog/2026/05/06/secure-ai-v2-release"
+    },
+    {
+     "date": "2026-01-12",
+     "text": "First 2026 update adds AI agent techniques, including tool credential harvesting and tool data poisoning",
+     "url": "https://zenity.io/blog/current-events/zenitys-contributions-to-mitre-atlas-first-2026-update"
+    }
+   ]
+  },
+  {
+   "id": "owasp-llm",
+   "group": "threat",
+   "order": 2,
+   "name": "OWASP Top 10 for LLM Applications",
+   "owner": "OWASP GenAI Security Project",
+   "ai": true,
    "what": "The ten most critical security risks for applications built on large language models",
-   "version": "2026 edition", "versionDate": "2026-09-02",
+   "version": "2026 edition",
+   "versionDate": "2026-09-02",
    "url": "https://genai.owasp.org/",
    "status": "Released with a new Agent Control Standard. Sits alongside the OWASP Top 10 for Agentic Applications",
-   "statusDate": "2026-09-02", "statusUrl": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/",
-   "changes": [{"date": "2026-09-02", "text": "2026 Top 10 for LLM Applications released, with the Agent Control Standard", "url": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/"}]},
-  {"id": "ncsc-secure-ai", "group": "threat", "order": 3, "name": "Guidelines for secure AI system development", "owner": "NCSC and CISA, with international partners", "ai": true,
+   "statusDate": "2026-09-02",
+   "statusUrl": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/",
+   "changes": [
+    {
+     "date": "2026-09-02",
+     "text": "2026 Top 10 for LLM Applications released, with the Agent Control Standard",
+     "url": "https://genai.owasp.org/2026/09/01/owasp-genai-security-project-unveils-2026-top-10-for-llm-applications-new-agent-control-standard-and-sponsors-as-community-tops-30000-members/"
+    }
+   ]
+  },
+  {
+   "id": "ncsc-secure-ai",
+   "group": "threat",
+   "order": 3,
+   "name": "Guidelines for secure AI system development",
+   "owner": "NCSC and CISA, with international partners",
+   "ai": true,
    "what": "Guidance on secure design, development, deployment, and operation and maintenance of AI systems",
-   "version": "Version 1.0", "versionDate": "2023-11-27",
+   "version": "Version 1.0",
+   "versionDate": "2023-11-27",
    "url": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development",
    "status": "No update since 2023. Built on by the DSIT AI Cyber Security Code of Practice and ETSI EN 304 223",
-   "statusDate": "2026-11-18", "statusUrl": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development/guidelines",
-   "changes": []},
-  {"id": "dsit-ai-code", "group": "threat", "order": 4, "name": "AI Cyber Security Code of Practice", "owner": "DSIT", "ai": true,
+   "statusDate": "2026-11-18",
+   "statusUrl": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development/guidelines",
+   "changes": []
+  },
+  {
+   "id": "dsit-ai-code",
+   "group": "threat",
+   "order": 4,
+   "name": "AI Cyber Security Code of Practice",
+   "owner": "DSIT",
+   "ai": true,
    "what": "Voluntary UK baseline of security principles for developers and operators of AI systems, with an implementation guide",
-   "version": "First edition", "versionDate": "2025-01-31",
+   "version": "First edition",
+   "versionDate": "2025-01-31",
    "url": "https://www.gov.uk/government/publications/ai-cyber-security-code-of-practice",
    "status": "Basis for the European standard ETSI EN 304 223 (December 2025). The Code is due to be updated to align with it",
-   "statusDate": "2026-01-15", "statusUrl": "https://www.techuk.org/insights/news/etsi-sets-out-new-european-standard-to-strengthen-ai-cyber-security",
-   "changes": [{"date": "2026-01-15", "text": "ETSI EN 304 223, built on the Code, published as a European standard; the Code will be updated to match", "url": "https://www.techuk.org/insights/news/etsi-sets-out-new-european-standard-to-strengthen-ai-cyber-security"}]},
-  {"id": "iso-27001", "group": "controls", "order": 1, "name": "ISO/IEC 27001", "owner": "ISO/IEC", "ai": false,
+   "statusDate": "2026-01-15",
+   "statusUrl": "https://www.techuk.org/insights/news/etsi-sets-out-new-european-standard-to-strengthen-ai-cyber-security",
+   "changes": [
+    {
+     "date": "2026-01-15",
+     "text": "ETSI EN 304 223, built on the Code, published as a European standard; the Code will be updated to match",
+     "url": "https://www.techuk.org/insights/news/etsi-sets-out-new-european-standard-to-strengthen-ai-cyber-security"
+    }
+   ]
+  },
+  {
+   "id": "iso-27001",
+   "group": "controls",
+   "order": 1,
+   "name": "ISO/IEC 27001",
+   "owner": "ISO/IEC",
+   "ai": false,
    "what": "Certifiable information security management system standard, with Annex A controls",
-   "version": "ISO/IEC 27001:2022, with Amendment 1:2024 (climate change)", "versionDate": "2022-10",
+   "version": "ISO/IEC 27001:2022, with Amendment 1:2024 (climate change)",
+   "versionDate": "2022-10",
    "url": "https://www.iso.org/standard/27001",
    "status": "No AI-specific requirements. Often used alongside ISO/IEC 42001",
-   "statusDate": "", "statusUrl": "",
-   "changes": []},
-  {"id": "nist-csf", "group": "controls", "order": 2, "name": "NIST Cybersecurity Framework", "owner": "NIST (US)", "ai": false,
+   "statusDate": "",
+   "statusUrl": "",
+   "changes": []
+  },
+  {
+   "id": "nist-csf",
+   "group": "controls",
+   "order": 2,
+   "name": "NIST Cybersecurity Framework",
+   "owner": "NIST (US)",
+   "ai": false,
    "what": "Outcomes to govern, identify, protect, detect, respond and recover, used to set and assess cyber security targets",
-   "version": "CSF 2.0", "versionDate": "2024-02-26",
+   "version": "CSF 2.0",
+   "versionDate": "2024-02-26",
    "url": "https://www.nist.gov/cyberframework",
    "status": "Cyber AI Profile (NIST IR 8596) in preliminary draft since December 2025; comments closed January 2026, next draft awaited",
-   "statusDate": "2025-12-16", "statusUrl": "https://csrc.nist.gov/pubs/ir/8596/iprd",
-   "changes": [{"date": "2025-12-16", "text": "Preliminary draft Cyber AI Profile (NIST IR 8596) published for comment", "url": "https://csrc.nist.gov/pubs/ir/8596/iprd"}]},
-  {"id": "ncsc-caf", "group": "controls", "order": 3, "name": "Cyber Assessment Framework (CAF)", "owner": "NCSC", "ai": false,
+   "statusDate": "2025-12-16",
+   "statusUrl": "https://csrc.nist.gov/pubs/ir/8596/iprd",
+   "changes": [
+    {
+     "date": "2025-12-16",
+     "text": "Preliminary draft Cyber AI Profile (NIST IR 8596) published for comment",
+     "url": "https://csrc.nist.gov/pubs/ir/8596/iprd"
+    }
+   ]
+  },
+  {
+   "id": "ncsc-caf",
+   "group": "controls",
+   "order": 3,
+   "name": "Cyber Assessment Framework (CAF)",
+   "owner": "NCSC",
+   "ai": false,
    "what": "Outcome-based framework for assessing the cyber resilience of essential services, used by UK regulators and the NHS",
-   "version": "CAF 4.0", "versionDate": "2025-08-06",
+   "version": "CAF 4.0",
+   "versionDate": "2025-08-06",
    "url": "https://www.ncsc.gov.uk/collection/cyber-assessment-framework",
    "status": "Version 4.0 added outcomes on AI-related risks. Further versions expected to follow the Cyber Security and Resilience Bill",
-   "statusDate": "2025-08-06", "statusUrl": "https://www.ncsc.gov.uk/sites/default/files/2026-08/Cyber-Assessment-Framework-v40-released-in-response-to-growing-threat.pdf",
-   "changes": [{"date": "2025-08-06", "text": "CAF 4.0 published, including AI-related cyber risks", "url": "https://htn.co.uk/2025/08/13/four-updates-to-cyber-assessment-framework-focus-on-ai-cyber-risks-improved-detection-software-development/"}]},
-  {"id": "dspt", "group": "controls", "order": 4, "name": "Data Security and Protection Toolkit (DSPT)", "owner": "NHS England", "ai": false,
+   "statusDate": "2025-08-06",
+   "statusUrl": "https://www.ncsc.gov.uk/sites/default/files/2026-08/Cyber-Assessment-Framework-v40-released-in-response-to-growing-threat.pdf",
+   "changes": [
+    {
+     "date": "2025-08-06",
+     "text": "CAF 4.0 published, including AI-related cyber risks",
+     "url": "https://htn.co.uk/2025/08/13/four-updates-to-cyber-assessment-framework-focus-on-ai-cyber-risks-improved-detection-software-development/"
+    }
+   ]
+  },
+  {
+   "id": "dspt",
+   "group": "controls",
+   "order": 4,
+   "name": "Data Security and Protection Toolkit (DSPT)",
+   "owner": "NHS England",
+   "ai": false,
    "what": "Annual self-assessment for organisations with access to NHS patient data and systems; CAF-aligned for larger NHS organisations",
-   "version": "2026-27 (version 9)", "versionDate": "2026-10-02",
+   "version": "2026-27 (version 9)",
+   "versionDate": "2026-10-02",
    "url": "https://www.dsptoolkit.nhs.uk/",
    "status": "2026-27 standard published with updated CAF-aligned audit guidance",
-   "statusDate": "2026-10-02", "statusUrl": "https://www.dsptoolkit.nhs.uk/news",
-   "changes": [{"date": "2026-10-02", "text": "DSPT 2026-27 (version 9) published", "url": "https://www.dsptoolkit.nhs.uk/news"}]}
+   "statusDate": "2026-10-02",
+   "statusUrl": "https://www.dsptoolkit.nhs.uk/news",
+   "changes": [
+    {
+     "date": "2026-10-02",
+     "text": "DSPT 2026-27 (version 9) published",
+     "url": "https://www.dsptoolkit.nhs.uk/news"
+    }
+   ]
+  }
  ]
 }
